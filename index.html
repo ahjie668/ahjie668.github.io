@@ -30,6 +30,8 @@
   
 
   <link href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css" rel="stylesheet" type="text/css">
+  <script src="https://leancloud.cn/scripts/lib/av-0.4.6.min.js"></script>
+    <script>AV.initialize("84Gj3MSVSWbUFORCRIOFMVrm-gzGzoHsz", "fVRKgsPJxPKQRNw94COJOHLI");</script>
 <meta name="generator" content="Hexo 5.0.2"></head>
 
 <body>
@@ -130,7 +132,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://ahjie668.github.io/ahjie668/2020/08/20/hexo/" data-id="cke2mgvhk0003esuo3sb785ts" class="article-share-link">Share</a>
+      <a data-url="https://ahjie668.github.io/ahjie668/2020/08/20/hexo/" data-id="cke2nfatk0003p8uohldng06y" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Hexo/" rel="tag">Hexo</a></li></ul>
@@ -199,7 +201,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://ahjie668.github.io/ahjie668/2020/08/20/java%E5%9F%BA%E7%A1%80/" data-id="cke2mgvih000kesuo7pv15xx3" class="article-share-link">Share</a>
+      <a data-url="https://ahjie668.github.io/ahjie668/2020/08/20/java%E5%9F%BA%E7%A1%80/" data-id="cke2nfatd0001p8uohrdg9r1v" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JAVA/" rel="tag">JAVA</a></li></ul>
@@ -264,7 +266,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://ahjie668.github.io/ahjie668/2020/08/19/%E5%85%89%E6%A0%87%E5%8A%A8%E7%94%BB/" data-id="cke2mgvhx0007esuo8ogi37ik" class="article-share-link">Share</a>
+      <a data-url="https://ahjie668.github.io/ahjie668/2020/08/19/%E5%85%89%E6%A0%87%E5%8A%A8%E7%94%BB/" data-id="cke2nfav4000ip8uobzjo4fg8" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/" rel="tag">JavaScript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/css/" rel="tag">css</a></li></ul>
@@ -348,7 +350,7 @@ Dcolor();
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://ahjie668.github.io/ahjie668/2020/08/19/%E5%BD%A9%E8%89%B2%E6%96%87%E5%AD%97/" data-id="cke2mgvh80001esuo1rtjhrhs" class="article-share-link">Share</a>
+      <a data-url="https://ahjie668.github.io/ahjie668/2020/08/19/%E5%BD%A9%E8%89%B2%E6%96%87%E5%AD%97/" data-id="cke2nfats0007p8uo5zkp3i8g" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/" rel="tag">JavaScript</a></li></ul>
@@ -427,6 +429,16 @@ Dcolor();
     </div>
   </div>
 </div>
+
+  
+    
+    <div class="widget-wrap">
+    <h3 class="widget-title">浏览数目</h3>
+    <div class="widget">
+      <ul class="popularlist">
+      </ul>
+    </div>
+  </div>
 
   
 </aside>
@@ -630,7 +642,74 @@ new WOW().init();
 
 
 
-
+<!--page counter part-->
+<script>
+function addCount (Counter) {
+        url=$('.article-date').attr('href').trim();
+    title = $('.article-title').text().trim();
+    var query=new AV.Query(Counter);
+    //use url as unique idnetfication
+    query.equalTo("url",url);
+    query.find({
+        success: function(results){
+            if(results.length>0)
+            {
+                var counter=results[0];
+                counter.fetchWhenSave(true); //get recent result
+                counter.increment("time");
+                counter.save();
+            }
+            else
+            {
+                var newcounter=new Counter();
+                newcounter.set("title",title);
+                newcounter.set("url",url);
+                newcounter.set("time",1);
+                newcounter.save(null,{
+                    success: function(newcounter){
+                    //alert('New object created');
+                    },
+                    error: function(newcounter,error){
+                    alert('Failed to create');
+                    }
+                    });
+            }
+        },
+        error: function(error){
+            //find null is not a error
+            alert('Error:'+error.code+" "+error.message);
+        }
+    });
+}
+$(function(){
+    var Counter=AV.Object.extend("Counter");
+    //only increse visit counting when intering a page
+    if ($('.article-title').length == 1)
+       addCount(Counter);
+    var query=new AV.Query(Counter);
+    query.descending("time");
+    // the sum of popular posts
+    query.limit(10); 
+    query.find({
+        success: function(results){
+                for(var i=0;i<results.length;i++)    
+                {
+                    var counter=results[i];
+                    title=counter.get("title");
+                    url=counter.get("url");
+                    time=counter.get("time");
+                    // add to the popularlist widget
+                    showcontent=title+" ("+time+")";
+                    //notice the "" in href
+                    $('.popularlist').append('<li><a href="'+url+'">'+showcontent+'</a></li>');
+                }
+            },
+        error: function(error){
+            alert("Error:"+error.code+" "+error.message);
+        }
+        }
+    )
+    });
   </div>
 </body>
 </html>
