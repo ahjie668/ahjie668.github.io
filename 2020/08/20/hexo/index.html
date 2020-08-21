@@ -13,7 +13,7 @@
 <meta property="og:description" content="404分类and标签错误处理突然发现博客中，部分分类打不开，点击出现404，在标签中查看，也是小部分标签点击404，但是在所有文章中该分类下的文章都能打开，后来发现这些404的标签或分类名都是后来修改过的，原先的名称开头是大写名称 将大写字母改成小写，hexo 部署正确，但是博客上还是不正确出现404 网上查了许多资料，才发现，git中设置了大小写不敏感">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2020-08-20T08:29:52.301Z">
-<meta property="article:modified_time" content="2020-08-20T12:03:29.568Z">
+<meta property="article:modified_time" content="2020-08-21T05:09:07.634Z">
 <meta property="article:author" content="♥Ah Jie♥">
 <meta property="article:tag" content="Hexo">
 <meta name="twitter:card" content="summary">
@@ -76,91 +76,22 @@
   </div>
 </div>
 
-        <section id="main"><article id="post-hexo" class="wow slideInRight article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/08/20/hexo/" class="article-date">
-  <time class="post-time" datetime="2020-08-20T08:29:52.301Z" itemprop="datePublished">
-    <span class="post-month">8月</span><br/>
-    <span class="post-day">20</span>
-  </time>
-</a>
-   
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 class="article-title" itemprop="name">
-      hexo分类and标签404
-    </h1>
-  
+        <section id="main"><div class="post-spread">
+      {% if theme.jiathis %}
+        {% include '_partials/share/jiathis.swig' %}
+      {% elseif theme.baidushare %}
+        {% include '_partials/share/baidushare.swig' %}
+      {% elseif theme.add_this_id %}
+        {% include '_partials/share/add-this.swig' %}
+      {% elseif theme.duoshuo_shortname and theme.duoshuo_share %}
+        {% include '_partials/share/duoshuo_share.swig' %}
+      {% elseif theme.sharesdk %}
+        {% include '_partials/share/sharesdk.swig' %}
+      {% endif %}
+	  {% elseif theme.sharesdk %}
+	          {% include '_partials/share/sharesdk.swig' %}
 
-        <div>
-          
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/%E6%89%A9%E5%B1%95/">扩展</a>
-  </div>
-
-          
-              
-  &nbsp; | &nbsp;
-  <div class="view-box">
-    <span id="/2020/08/20/hexo/" class="leancloud_visitors" data-flag-title="hexo分类and标签404">
-      &nbsp;阅读次数<span class="leancloud-visitors-count"></span>
-    </span>
-  </div>
-
-
-          
-        </div>
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="404分类and标签错误处理"><a href="#404分类and标签错误处理" class="headerlink" title="404分类and标签错误处理"></a>404分类and标签错误处理</h2><p>突然发现博客中，部分分类打不开，点击出现404，在标签中查看，也是小部分标签点击404，但是在所有文章中该分类下的文章都能打开，后来发现这些404的标签或分类名都是后来修改过的，原先的名称开头是大写名称</p>
-<p>将大写字母改成小写，hexo 部署正确，但是博客上还是不正确出现404</p>
-<p>网上查了许多资料，才发现，git中设置了大小写不敏感</p>
-<a id="more"></a>
-<h2 id="解决方法如下"><a href="#解决方法如下" class="headerlink" title="解决方法如下"></a>解决方法如下</h2><p>修改 git 设置不忽略大小写</p>
-<p>进入博客文件夹，进入 git 目录：.deploy_git ，修改 .git 文件中的配置文件 config，将ignorecase=true 改为 ignorecase=false</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">vim . deploy_git/.git/config</span><br><span class="line"></span><br><span class="line">ignorecase = <span class="keyword">false</span></span><br></pre></td></tr></table></figure>
-<p>如果还没有解决，清空部署到 github 上的文件，重新发布：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">cd .deploy_git</span><br><span class="line">git rm -rf *</span><br><span class="line">git commit -m <span class="string">&#x27;clean all file&#x27;</span></span><br><span class="line">git push</span><br></pre></td></tr></table></figure>
-<p>进入博客文件夹，用 hexo 重新生成部署</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo g </span><br><span class="line">hexo d or hexo g -d</span><br></pre></td></tr></table></figure>
-
-<p><font style="color: red;">这些问题都是自己开始搭建博客的时候出现的一些问题，希望能够帮助到各位，<br>如果那里错误，请指点出来，大家一起讨论。</font></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://ahjie668.github.io/ahjie668/2020/08/20/hexo/" data-id="cke2zy6h100015ouogptbaji8" class="article-share-link">分享</a>
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Hexo/" rel="tag">Hexo</a></li></ul>
-
-    </footer>
-  </div>
-  
-    
-<nav id="article-nav">
-  
-  
-    <a href="/2020/08/20/java%E5%9F%BA%E7%A1%80/" id="article-nav-older" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">JAVA的JDK安装步骤</div>
-    </a>
-  
-</nav>
-
-  
-</article>
-
-
-
-</section>
+</div></section>
         
           <aside id="sidebar">
   

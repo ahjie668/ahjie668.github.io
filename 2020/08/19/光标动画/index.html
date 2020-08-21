@@ -77,92 +77,22 @@
   </div>
 </div>
 
-        <section id="main"><article id="post-光标动画" class="wow slideInRight article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/08/19/%E5%85%89%E6%A0%87%E5%8A%A8%E7%94%BB/" class="article-date">
-  <time class="post-time" datetime="2020-08-19T15:24:27.295Z" itemprop="datePublished">
-    <span class="post-month">8月</span><br/>
-    <span class="post-day">19</span>
-  </time>
-</a>
-   
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 class="article-title" itemprop="name">
-      利用html+javaSrcipt+css3实现光标动画
-    </h1>
-  
+        <section id="main"><div class="post-spread">
+      {% if theme.jiathis %}
+        {% include '_partials/share/jiathis.swig' %}
+      {% elseif theme.baidushare %}
+        {% include '_partials/share/baidushare.swig' %}
+      {% elseif theme.add_this_id %}
+        {% include '_partials/share/add-this.swig' %}
+      {% elseif theme.duoshuo_shortname and theme.duoshuo_share %}
+        {% include '_partials/share/duoshuo_share.swig' %}
+      {% elseif theme.sharesdk %}
+        {% include '_partials/share/sharesdk.swig' %}
+      {% endif %}
+	  {% elseif theme.sharesdk %}
+	          {% include '_partials/share/sharesdk.swig' %}
 
-        <div>
-          
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/web%E5%89%8D%E6%AE%B5%E5%9F%BA%E7%A1%80/">web前段基础</a>
-  </div>
-
-          
-              
-  &nbsp; | &nbsp;
-  <div class="view-box">
-    <span id="/2020/08/19/%E5%85%89%E6%A0%87%E5%8A%A8%E7%94%BB/" class="leancloud_visitors" data-flag-title="利用html+javaSrcipt+css3实现光标动画">
-      &nbsp;阅读次数<span class="leancloud-visitors-count"></span>
-    </span>
-  </div>
-
-
-          
-        </div>
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>这个案例也是通过javaSrcipt(js)实现，这个案例相对比较简单，先是整体的HTML代码结构，这个案例呢javaSrcipt(js)是直接写在我们HTML的内部，<br>没有通过外链的方式实现，因为代码量较少直接写在了整体结构之中，其实这个案例不仅仅是纯的javaSrcipt(js)代码，本案例只是利用了javaSrcipt(js)<br>的一个时间来控制光标闪动的时间而已，而我们的CSS3样式呢，主要是让文字颜色，利用background使文字产生渐变的效果。</p>
-<a id="more"></a>
-<h3 id="详细代码如下"><a href="#详细代码如下" class="headerlink" title="详细代码如下"></a>详细代码如下</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">&quot;zh&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;UTF-8&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">&quot;viewport&quot;</span> <span class="attr">content</span>=<span class="string">&quot;width=device-width, initial-scale=1.0&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">http-equiv</span>=<span class="string">&quot;X-UA-Compatible&quot;</span> <span class="attr">content</span>=<span class="string">&quot;ie=edge&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>光标动画<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">style</span> <span class="attr">type</span>=<span class="string">&quot;text/css&quot;</span>&gt;</span></span><br><span class="line">        *&#123;</span><br><span class="line">            margin: 0;</span><br><span class="line">            padding: 0;</span><br><span class="line">        &#125;</span><br><span class="line">        html,body&#123;</span><br><span class="line">            height: 100%;</span><br><span class="line">            overflow: hidden;</span><br><span class="line">            background: black;</span><br><span class="line">            text-align: center;</span><br><span class="line">        &#125;</span><br><span class="line">        h1&#123;</span><br><span class="line">            margin-top: 50px;</span><br><span class="line">            display: inline-block;</span><br><span class="line"><span class="css">            <span class="selector-tag">color</span>: <span class="selector-tag">rgba</span>(255,255,255,<span class="selector-class">.3</span>);</span></span><br><span class="line"><span class="css">            <span class="selector-tag">font</span><span class="selector-pseudo">:bold</span> 80<span class="selector-tag">px</span> &quot;微软雅黑&quot;;</span></span><br><span class="line">            background: linear-gradient(120deg,rgba(255,255,255,0) 100px,rgba(255,255,255,1) 180px,rgba(255,255,255,0) 270px) no-repeat;</span><br><span class="line"><span class="css">            <span class="selector-tag">-webkit-background-clip</span><span class="selector-pseudo">:text</span>;</span></span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">    <span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">h1</span>&gt;</span>欢迎来到阿杰的博客<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line">    </span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<h4 id="在插入以下javaSrcipt-js-代码"><a href="#在插入以下javaSrcipt-js-代码" class="headerlink" title="在插入以下javaSrcipt(js)代码"></a>在<body>插入以下javaSrcipt(js)代码</body></h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&lt;script type=<span class="string">&quot;text/javascript&quot;</span>&gt;</span><br><span class="line">        <span class="keyword">var</span> h1 = <span class="built_in">document</span>.querySelector(<span class="string">&quot;h1&quot;</span>);</span><br><span class="line">        <span class="keyword">var</span> flag = <span class="number">-160</span>;</span><br><span class="line">        <span class="built_in">setInterval</span>(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">            flag+=<span class="number">10</span>;</span><br><span class="line">            <span class="keyword">if</span>(flag == <span class="number">1100</span>)&#123;</span><br><span class="line">                flag = <span class="number">-160</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            h1.style.backgroundPosition = flag +<span class="string">&quot;px&quot;</span>;</span><br><span class="line">        &#125;,<span class="number">30</span>);</span><br><span class="line">    &lt;/script&gt;</span><br></pre></td></tr></table></figure>
-<p>这个案例的话只是简单的javaSrcipt(js)基础知识，希望可以对来到阿杰博客的朋友有所帮助如代码有问题,请指点出来,大家讨论一下，谢谢!</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://ahjie668.github.io/ahjie668/2020/08/19/%E5%85%89%E6%A0%87%E5%8A%A8%E7%94%BB/" data-id="cke2zy6hl000d5ouo5ruv2uvt" class="article-share-link">分享</a>
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/" rel="tag">JavaScript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/css/" rel="tag">css</a></li></ul>
-
-    </footer>
-  </div>
-  
-    
-<nav id="article-nav">
-  
-    <a href="/2020/08/20/java%E5%9F%BA%E7%A1%80/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
-        
-          JAVA的JDK安装步骤
-        
-      </div>
-    </a>
-  
-  
-    <a href="/2020/08/19/%E5%BD%A9%E8%89%B2%E6%96%87%E5%AD%97/" id="article-nav-older" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">js文字闪动效果</div>
-    </a>
-  
-</nav>
-
-  
-</article>
-
-
-
-</section>
+</div></section>
         
           <aside id="sidebar">
   
