@@ -127,7 +127,7 @@
     </div>
 	
     <footer class="article-footer">
-      <a data-url="https://ahjie668.github.io/ahjie668/2020/08/20/hexo/" data-id="cke3xbxc2000818uo9hqhdvfv" class="article-share-link">分享</a>
+      <a data-url="https://ahjie668.github.io/ahjie668/2020/08/20/hexo/" data-id="cke3z5osw0001c8uohbma32rb" class="article-share-link">分享</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Hexo/" rel="tag">Hexo</a></li></ul>
@@ -198,7 +198,7 @@
     </div>
 	
     <footer class="article-footer">
-      <a data-url="https://ahjie668.github.io/ahjie668/2020/08/20/java%E5%9F%BA%E7%A1%80/" data-id="cke3xbxbn000118uo0yze1c38" class="article-share-link">分享</a>
+      <a data-url="https://ahjie668.github.io/ahjie668/2020/08/20/java%E5%9F%BA%E7%A1%80/" data-id="cke3z5ot60003c8uofhuc21je" class="article-share-link">分享</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JAVA/" rel="tag">JAVA</a></li></ul>
@@ -268,7 +268,7 @@
     </div>
 	
     <footer class="article-footer">
-      <a data-url="https://ahjie668.github.io/ahjie668/2020/08/19/%E5%85%89%E6%A0%87%E5%8A%A8%E7%94%BB/" data-id="cke3xbxc3000918uo9r1pax8f" class="article-share-link">分享</a>
+      <a data-url="https://ahjie668.github.io/ahjie668/2020/08/19/%E5%85%89%E6%A0%87%E5%8A%A8%E7%94%BB/" data-id="cke3z5oth0007c8uodb8g1nzc" class="article-share-link">分享</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/" rel="tag">JavaScript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/css/" rel="tag">css</a></li></ul>
@@ -356,7 +356,7 @@ Dcolor();
     </div>
 	
     <footer class="article-footer">
-      <a data-url="https://ahjie668.github.io/ahjie668/2020/08/19/%E5%BD%A9%E8%89%B2%E6%96%87%E5%AD%97/" data-id="cke3xbxc6000c18uoc2n9crhw" class="article-share-link">分享</a>
+      <a data-url="https://ahjie668.github.io/ahjie668/2020/08/19/%E5%BD%A9%E8%89%B2%E6%96%87%E5%AD%97/" data-id="cke3z5otk0008c8uo1ttde7t8" class="article-share-link">分享</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/" rel="tag">JavaScript</a></li></ul>
@@ -467,6 +467,41 @@ Dcolor();
     </div>
     
   </div>
+  <!--《添加网站运行时间  <br/>-->
+
+  <span id="timeDate">载入天数...</span><span id="times">载入时分秒...</span>
+  <script>
+  var now = new Date();
+
+  function createtime() {
+      //此处修改你的建站时间或者网站上线时间
+      var create_time = '08/18/2020 12:00:00';
+      now.setTime(now.getTime() + 250);
+      days = (now - grt) / 1000 / 60 / 60 / 24;
+      dnum = Math.floor(days);
+      hours = (now - grt) / 1000 / 60 / 60 - (24 * dnum);
+      hnum = Math.floor(hours);
+      if (String(hnum).length == 1) {
+          hnum = "0" + hnum;
+      }
+      minutes = (now - grt) / 1000 / 60 - (24 * 60 * dnum) - (60 * hnum);
+      mnum = Math.floor(minutes);
+      if (String(mnum).length == 1) {
+          mnum = "0" + mnum;
+      }
+      seconds = (now - grt) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum);
+      snum = Math.round(seconds);
+      if (String(snum).length == 1) {
+          snum = "0" + snum;
+      }
+      document.getElementById("timeDate").innerHTML = " | 本站已安全运行 " + dnum + " 天 ";
+      document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒";
+  }
+  setInterval("createtime()", 250);
+  </script>
+
+<!-- 添加网站运行时间》-->
+
 </footer>
     </div>
     

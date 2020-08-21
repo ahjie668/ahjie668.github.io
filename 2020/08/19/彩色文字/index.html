@@ -76,22 +76,110 @@
   </div>
 </div>
 
-        <section id="main"><div class="post-spread">
-      {% if theme.jiathis %}
-        {% include '_partials/share/jiathis.swig' %}
-      {% elseif theme.baidushare %}
-        {% include '_partials/share/baidushare.swig' %}
-      {% elseif theme.add_this_id %}
-        {% include '_partials/share/add-this.swig' %}
-      {% elseif theme.duoshuo_shortname and theme.duoshuo_share %}
-        {% include '_partials/share/duoshuo_share.swig' %}
-      {% elseif theme.sharesdk %}
-        {% include '_partials/share/sharesdk.swig' %}
-      {% endif %}
-	  {% elseif theme.sharesdk %}
-	          {% include '_partials/share/sharesdk.swig' %}
+        <section id="main"><article id="post-彩色文字" class="wow slideInRight article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+	<a href="/2020/08/19/%E5%BD%A9%E8%89%B2%E6%96%87%E5%AD%97/" class="article-date">
+  <time class="post-time" datetime="2020-08-19T14:17:37.253Z" itemprop="datePublished">
+    <span class="post-month">8月</span><br/>
+    <span class="post-day">19</span>
+  </time>
+</a>
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      js文字闪动效果
+    </h1>
+  
 
-</div></section>
+        <div>
+          
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/web%E5%89%8D%E6%AE%B5%E5%9F%BA%E7%A1%80/">web前段基础</a>
+  </div>
+
+          
+              
+  &nbsp; | &nbsp;
+  <div class="view-box">
+    <span id="/2020/08/19/%E5%BD%A9%E8%89%B2%E6%96%87%E5%AD%97/" class="leancloud_visitors" data-flag-title="js文字闪动效果">
+      &nbsp;阅读次数<span class="leancloud-visitors-count"></span>
+    </span>
+  </div>
+
+
+          
+        </div>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>利用javaSrcipt(js)实现对文字的如跑马灯一样的效果。</p>
+<h2 id="效果如下"><a href="#效果如下" class="headerlink" title="效果如下:"></a>效果如下:</h2><script>
+var Tname="欢迎来到阿杰的博客";
+var Tlen=Tname.length;
+document.write("<div id='a' style='font-size:40px;'>"+Tname+"</div>");
+var col=new Array("#4FFFF","#3333FF","#FFCC00","chartreuse","#FFCC00","#CC33FF");
+var ic=0;
+function Dcolor(){
+  var Strname="";
+  for (i=0;i<Tlen;++i){
+    var Strname=Strname+"<font color="+col[ic]+">"+Tname.substring(i,i+1)+"</font>";
+    ic=ic+1;
+      if (ic==col.length) ic=0;
+  }
+  a.innerHTML=Strname;
+  setTimeout("Dcolor()",200);
+}
+Dcolor();
+</script>
+<a id="more"></a>
+<h2 id="详细代码如下"><a href="#详细代码如下" class="headerlink" title="详细代码如下:"></a>详细代码如下:</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line"><span class="keyword">var</span> Tname=<span class="string">&quot;欢迎来到阿杰的博客&quot;</span>;</span><br><span class="line"><span class="keyword">var</span> Tlen=Tname.length;</span><br><span class="line"><span class="built_in">document</span>.write(<span class="string">&quot;&lt;div id=&#x27;a&#x27; style=&#x27;font-size:40px;&#x27;&gt;&quot;</span>+Tname+<span class="string">&quot;&lt;/div&gt;&quot;</span>);</span><br><span class="line"><span class="keyword">var</span> col=<span class="keyword">new</span> <span class="built_in">Array</span>(<span class="string">&quot;#4FFFF&quot;</span>,<span class="string">&quot;#3333FF&quot;</span>,<span class="string">&quot;#FFCC00&quot;</span>,<span class="string">&quot;chartreuse&quot;</span>,<span class="string">&quot;#FFCC00&quot;</span>,<span class="string">&quot;#CC33FF&quot;</span>);</span><br><span class="line"><span class="keyword">var</span> ic=<span class="number">0</span>;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Dcolor</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">  <span class="keyword">var</span> Strname=<span class="string">&quot;&quot;</span>;</span><br><span class="line">  <span class="keyword">for</span> (i=<span class="number">0</span>;i&lt;Tlen;++i)&#123;</span><br><span class="line">    <span class="keyword">var</span> Strname=Strname+<span class="string">&quot;&lt;font color=&quot;</span>+col[ic]+<span class="string">&quot;&gt;&quot;</span>+Tname.substring(i,i+<span class="number">1</span>)+<span class="string">&quot;&lt;/font&gt;&quot;</span>;</span><br><span class="line">    ic=ic+<span class="number">1</span>;</span><br><span class="line">      <span class="keyword">if</span> (ic==col.length) ic=<span class="number">0</span>;</span><br><span class="line">  &#125;</span><br><span class="line">  a.innerHTML=Strname;</span><br><span class="line">  <span class="built_in">setTimeout</span>(<span class="string">&quot;Dcolor()&quot;</span>,<span class="number">200</span>);</span><br><span class="line">&#125;</span><br><span class="line">Dcolor();</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+<hr>
+<p>这个案例的话只是简单的javaSrcipt(js)基础知识，希望可以对来到阿杰博客的朋友有所帮助<br>如代码有问题,请指点出来,大家讨论一下，谢谢!</p>
+<hr>
+
+      
+    </div>
+	
+    <footer class="article-footer">
+      <a data-url="https://ahjie668.github.io/ahjie668/2020/08/19/%E5%BD%A9%E8%89%B2%E6%96%87%E5%AD%97/" data-id="cke3z5otk0008c8uo1ttde7t8" class="article-share-link">分享</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/" rel="tag">JavaScript</a></li></ul>
+
+	  
+    </footer>
+  </div>
+ 
+    
+<nav id="article-nav">
+  
+    <a href="/2020/08/19/%E5%85%89%E6%A0%87%E5%8A%A8%E7%94%BB/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          利用html+javaSrcipt+css3实现光标动画
+        
+      </div>
+    </a>
+  
+  
+</nav>
+
+  
+  
+</article>
+
+
+
+
+
+</section>
         
           <aside id="sidebar">
   
@@ -183,6 +271,41 @@
     </div>
     
   </div>
+  <!--《添加网站运行时间  <br/>-->
+
+  <span id="timeDate">载入天数...</span><span id="times">载入时分秒...</span>
+  <script>
+  var now = new Date();
+
+  function createtime() {
+      //此处修改你的建站时间或者网站上线时间
+      var create_time = '08/18/2020 12:00:00';
+      now.setTime(now.getTime() + 250);
+      days = (now - grt) / 1000 / 60 / 60 / 24;
+      dnum = Math.floor(days);
+      hours = (now - grt) / 1000 / 60 / 60 - (24 * dnum);
+      hnum = Math.floor(hours);
+      if (String(hnum).length == 1) {
+          hnum = "0" + hnum;
+      }
+      minutes = (now - grt) / 1000 / 60 - (24 * 60 * dnum) - (60 * hnum);
+      mnum = Math.floor(minutes);
+      if (String(mnum).length == 1) {
+          mnum = "0" + mnum;
+      }
+      seconds = (now - grt) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum);
+      snum = Math.round(seconds);
+      if (String(snum).length == 1) {
+          snum = "0" + snum;
+      }
+      document.getElementById("timeDate").innerHTML = " | 本站已安全运行 " + dnum + " 天 ";
+      document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒";
+  }
+  setInterval("createtime()", 250);
+  </script>
+
+<!-- 添加网站运行时间》-->
+
 </footer>
     </div>
     
