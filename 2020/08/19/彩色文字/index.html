@@ -39,6 +39,10 @@
     <script>AV.initialize("84Gj3MSVSWbUFORCRIOFMVrm-gzGzoHsz", "fVRKgsPJxPKQRNw94COJOHLI");</script>
 <meta name="generator" content="Hexo 5.0.2"></head>
 
+<head>
+		<!-- 页面点击小桃心-->
+		  <script type="text/javascript" src="/js/src/love.js"></script>
+</head>
 <body>
   <div id="container">
     <div id="wrap">
@@ -147,7 +151,7 @@ Dcolor();
     </div>
 	
     <footer class="article-footer">
-      <a data-url="https://ahjie668.github.io/ahjie668/2020/08/19/%E5%BD%A9%E8%89%B2%E6%96%87%E5%AD%97/" data-id="cke5k1kqc0008okuohimwd1cw" class="article-share-link">分享</a>
+      <a data-url="https://ahjie668.github.io/ahjie668/2020/08/19/%E5%BD%A9%E8%89%B2%E6%96%87%E5%AD%97/" data-id="cke5who420009a0uof00te1qx" class="article-share-link">分享</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/" rel="tag">JavaScript</a></li></ul>
@@ -178,6 +182,34 @@ Dcolor();
 
 
 
+
+
+
+    <section id="comments" class="comments">
+      <style>
+        .comments{margin:30px;padding:10px;background:#fff}
+        @media screen and (max-width:800px){.comments{margin:auto;padding:10px;background:#fff}}
+      </style>
+      <div id="vcomment" class="comment"></div> 
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+<script>
+   var notify = 'false' == true ? true : false;
+   var verify = 'false' == true ? true : false;
+    window.onload = function() {
+        new Valine({
+            el: '.comment',
+            notify: notify,
+            verify: verify,
+            app_id: "84Gj3MSVSWbUFORCRIOFMVrm-gzGzoHsz",
+            app_key: "fVRKgsPJxPKQRNw94COJOHLI",
+            placeholder: "Just go go",
+            avatar:"retro"
+        });
+    }
+</script>
+
+  </section>
 
 </section>
         
@@ -262,11 +294,15 @@ Dcolor();
   
   <div class="outer">
     <div id="footer-info" class="inner">
-      &copy;2019 - 2020 ♥码坑♥<br>
-      由<a href="http://hexo.io/" target="_blank">Hexo</a>强力驱动 | 
-      主题-<a target="_blank" rel="noopener" href="https://github.com/ShanaMaid/hexo-theme-shana">Shana</a>
-      <br>
+      &copy;2019 - 2020 ♥码坑♥||
+	    <span id="busuanzi_container_site_uv">
+	      本站总访客数:<span id="busuanzi_value_site_uv"></span>&nbsp;&nbsp;| 
+	    </span>
+	    <span id="busuanzi_container_site_pv">
+	        &nbsp;本站总访问量<span id="busuanzi_value_site_pv"></span>次
+	    </span><br>
      <script type="text/javascript">document.write(unescape("%3Cspan id='cnzz_stat_icon_1279199504'%3E%3C/span%3E%3Cscript src='https://v1.cnzz.com/z_stat.php%3Fid%3D1279199504%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));</script>
+	 |
       
       <!--《添加网站运行时间 -->
             <!--<br/>-->
@@ -275,7 +311,7 @@ Dcolor();
                 var now = new Date();
 
                 function createtime() {
-                    var grt = new Date("08/18/2020 12:00:00"); //此处修改你的建站时间或者网站上线时间 
+                    var grt = new Date("08/18/2020 18:18:00"); //此处修改你的建站时间或者网站上线时间 
                     now.setTime(now.getTime() + 250);
                     days = (now - grt) / 1000 / 60 / 60 / 24;
                     dnum = Math.floor(days);
@@ -294,12 +330,18 @@ Dcolor();
                     if (String(snum).length == 1) {
                         snum = "0" + snum;
                     }
-                    document.getElementById("timeDate").innerHTML = " | 本站已安全运行 " + dnum + " 天 ";
+                    document.getElementById("timeDate").innerHTML = "  本站已安全运行 " + dnum + " 天 ";
                     document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒";
                 }
                 setInterval("createtime()", 250);
             </script>
             <!-- 添加网站运行时间》 -->
+			
+	<div class="BbeiAn-info" style="color:#4dfc23">
+	     鄂ICP备-
+	      <a target="_blank" href="http://www.miitbeian.gov.cn/" style="color:#4dfc23;"  rel="nofollow">18025394 |</a>
+	      <a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=42090202000295" style="text-decoration:none;color:#4dfc23;padding-left:30px;background:url(https://s1.ax1x.com/2018/09/29/ilmwIH.png) no-repeat left center" rel="nofollow">鄂公网安备 42090202000295</a>    <!--这里将图标作为了背景，以使得能和后面的文字在同一行-->
+	  </div>
     </div>
   </div>
 </footer>
@@ -561,5 +603,6 @@ $(function(){
     )
     });
   </div>
-</body>
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
 </html>
+ 
