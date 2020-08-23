@@ -1,601 +1,503 @@
+
 <!DOCTYPE html>
-<html>
+<html lang="zh-Hans">
 <head>
-  <meta charset="utf-8">
-  
-  <title>JAVA的JDK安装步骤 | 码坑博客</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="对于一个JAVA或android开发者来说，JDK的安装是做任何事的前提。但现在有好多教程的JDK安装配置方法繁琐重复，容易误导新手，本教程可以说是最简单经典实用的配置方法。 快速开始步骤一首先我们当然需要去oracle官网下载JDK。点击蓝色圈住的图片，选择相应版本并下载。x86是32位版，64是64位系统版。">
-<meta property="og:type" content="article">
-<meta property="og:title" content="JAVA的JDK安装步骤">
-<meta property="og:url" content="https://ahjie668.github.io/ahjie668/2020/08/20/java%E5%9F%BA%E7%A1%80/index.html">
-<meta property="og:site_name" content="码坑博客">
-<meta property="og:description" content="对于一个JAVA或android开发者来说，JDK的安装是做任何事的前提。但现在有好多教程的JDK安装配置方法繁琐重复，容易误导新手，本教程可以说是最简单经典实用的配置方法。 快速开始步骤一首先我们当然需要去oracle官网下载JDK。点击蓝色圈住的图片，选择相应版本并下载。x86是32位版，64是64位系统版。">
-<meta property="og:locale" content="en_US">
-<meta property="og:image" content="https://exp-picture.cdn.bcebos.com/2f2909e951e10ef8f928728e2324d8e9cdd2ccd1.jpg?x-bce-process=image/resize,m_lfit,w_500,limit_1">
-<meta property="og:image" content="https://exp-picture.cdn.bcebos.com/0fb94656d53da8247c976b61306651598440cbd1.jpg?x-bce-process=image/resize,m_lfit,w_500,limit_1">
-<meta property="og:image" content="https://exp-picture.cdn.bcebos.com/d9a8d2d2bb6651592d3eb7998fe23ea23b42c7d1.jpg?x-bce-process=image/resize,m_lfit,w_500,limit_1">
-<meta property="og:image" content="https://exp-picture.cdn.bcebos.com/3fe32442a07aa010134d4b8bbfbb19efa35f3ed6.jpg?x-bce-process=image/resize,m_lfit,w_500,limit_1">
-<meta property="og:image" content="https://exp-picture.cdn.bcebos.com/18aebc5f0c14c27b64fc213a2a46b7b1eff939d6.jpg?x-bce-process=image/resize,m_lfit,w_500,limit_1">
-<meta property="og:image" content="https://exp-picture.cdn.bcebos.com/a007a9b1eef97fbdf0029300b74133bad24133d6.jpg?x-bce-process=image/resize,m_lfit,w_500,limit_1">
-<meta property="og:image" content="https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=3304687086,2297012972&fm=15&gp=0.jpg">
-<meta property="article:published_time" content="2020-08-20T07:50:41.096Z">
-<meta property="article:modified_time" content="2020-08-20T12:04:10.839Z">
-<meta property="article:author" content="♥码坑♥">
-<meta property="article:tag" content="JAVA">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://exp-picture.cdn.bcebos.com/2f2909e951e10ef8f928728e2324d8e9cdd2ccd1.jpg?x-bce-process=image/resize,m_lfit,w_500,limit_1">
-  
-    <link rel="alternate" href="/atom.xml" title="码坑博客" type="application/atom+xml">
-  
-  
-    <link rel="icon" href="https://img2.woyaogexing.com/2019/01/05/8c2076a3b2e74133800848c34f9d5f62!400x400.jpeg">
-  
-  
-    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
-  
-  
-<link rel="stylesheet" href="/css/style.css">
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#FFF">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+<link rel="icon" type="image/ico" sizes="32x32" href="/images/favicon.ico">
+  <link rel="mask-icon" href="/images/logo.svg" color="">
+  <link rel="manifest" href="/images/manifest.json">
+  <meta name="msapplication-config" content="/images/browserconfig.xml">
+  <meta http-equiv="Cache-Control" content="no-transform">
+  <meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+<link rel="alternate" type="application/rss+xml" title="码坑博客" href="https://ahjie668.github.io/ahjie668/rss.xml" />
+<link rel="alternate" type="application/atom+xml" title="码坑博客" href="https://ahjie668.github.io/ahjie668/atom.xml" />
+<link rel="alternate" type="application/json" title="码坑博客" href="https://ahjie668.github.io/ahjie668/feed.json" />
+
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Fredericka the Great:300,300italic,400,400italic,700,700italic|Noto Serif JP:300,300italic,400,400italic,700,700italic|Noto Serif SC:300,300italic,400,400italic,700,700italic|Inconsolata:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+
+
+<link rel="stylesheet" href="/css/app.css">
+
 
   
-<link rel="stylesheet" href="/plugin/bganimation/bg.css">
+  <meta name="keywords" content="JAVA" />
 
-  
 
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css" rel="stylesheet" type="text/css">
-  <script src="https://leancloud.cn/scripts/lib/av-0.4.6.min.js"></script>
-    <script>AV.initialize("84Gj3MSVSWbUFORCRIOFMVrm-gzGzoHsz", "fVRKgsPJxPKQRNw94COJOHLI");</script>
+
+<meta name="description" content="" >
+
+
+<link rel="canonical" href="https://ahjie668.github.io/ahjie668/2020/08/20/java%E5%9F%BA%E7%A1%80/">
+
+
+
+  <title>
+JAVA的JDK安装步骤 - JAVA入门 |
+码坑博客 = 本人是小白,初次与各位相遇,请多多指教,谢谢 じ萌喵喵ルゞ Ю↘ 珂ル°</title>
 <meta name="generator" content="Hexo 5.0.2"></head>
-
-<head>
-		<!-- 页面点击小桃心-->
-		  <script type="text/javascript" src="/js/src/love.js"></script>
-</head>
-<body>
-  <div id="container">
-    <div id="wrap">
-      <div class="outer">
-        <div class="widget-wrap mobile-header">
-  <h3 class="widget-title"></h3>
-  <div class="widget">
-    <img class="avatar" src="https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=2604864153,593493957&amp;fm=26&amp;gp=0.jpg">
-    <h2 class="author">♥码坑♥</h2>
-    <h3 class="description"></h3>
-    <div class="count-box">
-      <a href="/archives"><div><strong>5</strong><br>文章</div></a>
-      <a href="/categories"><div><strong>3</strong><br>分类</div></a>
-      <a href="/tags"><div><strong>6</strong><br>标签</div></a>
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="loading">
+    <div class="cat">
+      <div class="body"></div>
+      <div class="body"></div>
+      <div class="tail"></div>
+      <div class="head"></div>
     </div>
-    <ul class="blog-link">
-     
-          <a href="/" title="Home">
-            <li>主页</li>
-          </a>
-        
-          <a href="/archives" title="Archives">
-            <li>归档</li>
-          </a>
-        
-          <a href="/categories" title="Categories">
-            <li>分类</li>
-          </a>
-        
-          <a href="/tags" title="Tags">
-            <li>标签</li>
-          </a>
-        
+  </div>
+
+  <div class="container">
+    <header itemscope itemtype="http://schema.org/WPHeader">
+      <div class="inner">
+        <nav>
+  <div class="inner">
+    <div class="toggle menu">
+      <div class="lines" aria-label="切换导航栏">
+        <span class="line"></span>
+        <span class="line"></span>
+        <span class="line"></span>
+      </div>
+    </div>
+    <ul class="list menu">
+      
+    
+  <li class="item">
+    <a href="/" rel="section"><i class="ic i-home"></i>首页</a>
+  </li>
+
+    
+  <li class="item">
+    <a href="/archives/" rel="section"><i class="ic i-list-alt"></i>归档</a>
+  </li>
+
+    
+  <li class="item">
+    <a href="/categories/" rel="section"><i class="ic i-th"></i>分类</a>
+  </li>
+
+    
+  <li class="item">
+    <a href="/tags/" rel="section"><i class="ic i-tags"></i>标签</a>
+  </li>
+
+    
+  <li class="item">
+    <a href="/about/" rel="section"><i class="ic i-user"></i>关于</a>
+  </li>
+
+    
+  <li class="item">
+    <a href="/friends/" rel="section"><i class="ic i-heart"></i>友链</a>
+  </li>
+
+
     </ul>
+    <div class="right menu">
+      <div class="theme-btn">
+        <i class="ic i-sun"></i>
+      </div>
+      <div class="search-btn">
+        <i class="ic i-search"></i>
+      </div>
+    </div>
+  </div>
+</nav>
+<div class="brand">
+  <div class="meta">
+    <a href="/" class="logo" rel="start">
+      <span class="artboard"></span>
+      <h1 class="title">码坑博客</h1>
+    </a>
+    <p class="subtitle" itemprop="description">= 本人是小白,初次与各位相遇,请多多指教,谢谢 じ萌喵喵ルゞ Ю↘ 珂ル° =</p>
+  </div>
+  <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+    <defs>
+      <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+    </defs>
+    <g class="parallax">
+      <use xlink:href="#gentle-wave" x="48" y="0" />
+      <use xlink:href="#gentle-wave" x="48" y="3" />
+      <use xlink:href="#gentle-wave" x="48" y="5" />
+      <use xlink:href="#gentle-wave" x="48" y="7" />
+    </g>
+  </svg>
+</div>
+<div class="search">
+  <div class="inner">
+    <div class="header">
+      <span class="icon">
+        <i class="ic i-search"></i>
+      </span>
+      <div class="search-input-container"></div>
+      <span class="close-btn">
+        <i class="ic i-times-circle"></i>
+      </span>
+    </div>
+    <div class="results">
+      <div class="inner">
+        <div id="search-stats"></div>
+        <div id="search-hits"></div>
+        <div id="search-pagination"></div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="tool">
+  <div class="item player"></div>
+  <div class="item chat"><i class="ic i-comments"></i></div>
+  <div class="item back-to-top">
+    <i class="ic i-arrow-up"></i>
+    <span>0%</span>
   </div>
 </div>
 
-        <section id="main"><article id="post-java基础" class="wow slideInRight article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-	<a href="/2020/08/20/java%E5%9F%BA%E7%A1%80/" class="article-date">
-  <time class="post-time" datetime="2020-08-20T07:50:41.096Z" itemprop="datePublished">
-    <span class="post-month">8月</span><br/>
-    <span class="post-day">20</span>
-  </time>
-</a>
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 class="article-title" itemprop="name">
-      JAVA的JDK安装步骤
-    </h1>
-  
-
-        <div>
-          
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/JAVA%E5%85%A5%E9%97%A8/">JAVA入门</a>
-  </div>
-
-          
-              
-  &nbsp; | &nbsp;
-  <div class="view-box">
-    <span id="/2020/08/20/java%E5%9F%BA%E7%A1%80/" class="leancloud_visitors" data-flag-title="JAVA的JDK安装步骤">
-      &nbsp;阅读次数<span class="leancloud-visitors-count"></span>
-    </span>
-  </div>
-
-
-          
-        </div>
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>对于一个JAVA或android开发者来说，JDK的安装是做任何事的前提。但现在有好多教程的JDK安装配置方法繁琐重复，容易误导新手，本教程可以说是最简单经典实用的配置方法。</p>
-<h2 id="快速开始"><a href="#快速开始" class="headerlink" title="快速开始"></a>快速开始</h2><h3 id="步骤一"><a href="#步骤一" class="headerlink" title="步骤一"></a>步骤一</h3><p>首先我们当然需要去oracle官网下载JDK。<br>点击蓝色圈住的图片，选择相应版本并下载。x86是32位版，64是64位系统版。<br><img src="https://exp-picture.cdn.bcebos.com/2f2909e951e10ef8f928728e2324d8e9cdd2ccd1.jpg?x-bce-process=image/resize,m_lfit,w_500,limit_1" alt="步骤一"></p>
-<a id="more"></a>
-<h3 id="步骤二"><a href="#步骤二" class="headerlink" title="步骤二"></a>步骤二</h3><p>下载完成后，双击运行，一路下一步，安装完成。<br><img src="https://exp-picture.cdn.bcebos.com/0fb94656d53da8247c976b61306651598440cbd1.jpg?x-bce-process=image/resize,m_lfit,w_500,limit_1" alt="步骤二"></p>
-<h3 id="步骤三"><a href="#步骤三" class="headerlink" title="步骤三"></a>步骤三</h3><p>安装完JDK后，国际惯例配置环境变量。首先鼠标右键点击计算机–〉属性–〉高级系统设置<br><img src="https://exp-picture.cdn.bcebos.com/d9a8d2d2bb6651592d3eb7998fe23ea23b42c7d1.jpg?x-bce-process=image/resize,m_lfit,w_500,limit_1" alt="步骤三"></p>
-<h3 id="步骤四"><a href="#步骤四" class="headerlink" title="步骤四"></a>步骤四</h3><p>进入高级系统设置后，点击高级–〉环境变量<br><img src="https://exp-picture.cdn.bcebos.com/3fe32442a07aa010134d4b8bbfbb19efa35f3ed6.jpg?x-bce-process=image/resize,m_lfit,w_500,limit_1"></p>
-<h3 id="步骤五"><a href="#步骤五" class="headerlink" title="步骤五"></a>步骤五</h3><p>环境变量中看见path一项，点击path，点击编辑。<br><img src="https://exp-picture.cdn.bcebos.com/18aebc5f0c14c27b64fc213a2a46b7b1eff939d6.jpg?x-bce-process=image/resize,m_lfit,w_500,limit_1" alt="步骤四"></p>
-<h3 id="步骤六"><a href="#步骤六" class="headerlink" title="步骤六"></a>步骤六</h3><p>在变量值的最前面，添加C:\Program Files\Java\jdk1.8.0_91\bin<br>确定即可。<br>该路径为你的jdk安装好后的bin目录的路径，注意路径要放在双引号内，且结尾加封号。<br><img src="https://exp-picture.cdn.bcebos.com/a007a9b1eef97fbdf0029300b74133bad24133d6.jpg?x-bce-process=image/resize,m_lfit,w_500,limit_1" alt="步骤六"></p>
-<h3 id="步骤七"><a href="#步骤七" class="headerlink" title="步骤七"></a>步骤七</h3><p>如何验证是否安装成功，可以在cmd命令窗口中输入javac命令来查看。返回一大堆命令参数即可说明安装成功。怎么样，是不是很简单呢。<br><img src="https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=3304687086,2297012972&fm=15&gp=0.jpg" alt="步骤七"><br>这个案例的话只是简单的javaSrcipt(js)基础知识，希望可以对来到阿杰博客的朋友有所帮助如代码有问题,请指点出来,大家讨论一下，谢谢!</p>
-
-      
-    </div>
-	
-    <footer class="article-footer">
-      <a data-url="https://ahjie668.github.io/ahjie668/2020/08/20/java%E5%9F%BA%E7%A1%80/" data-id="cke61eoqi0001qkuo4bz91vtj" class="article-share-link">分享</a>
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JAVA/" rel="tag">JAVA</a></li></ul>
-
-	  
-    </footer>
-  </div>
- 
-    
-<nav id="article-nav">
-  
-    <a href="/2020/08/20/hexo/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
-        
-          hexo分类and标签404
-        
       </div>
-    </a>
-  
-  
-    <a href="/2020/08/19/%E5%85%89%E6%A0%87%E5%8A%A8%E7%94%BB/" id="article-nav-older" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">利用html+javaSrcipt+css3实现光标动画</div>
-    </a>
-  
-</nav>
+      <ul class="lozad">
+        <li data-background-image="/images/banner/1.jpg"></li>
+        <li data-background-image="/images/banner/2.jpg"></li>
+        <li data-background-image="/images/banner/3.jpg"></li>
+        <li data-background-image="/images/banner/4.jpg"></li>
+        <li data-background-image="/images/banner/5.jpg"></li>
+        <li data-background-image="/images/banner/6.jpg"></li>
+      </ul>
+    </header>
+    <main>
+      <div class="inner">
+        <div class="content pjax">
+          
+  <div class="article wrap">
+    
+<div class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+<i class="ic i-home"></i>
+<span><a href="/">首页</a></span>
+<i class="ic i-angle-right"></i>
+<span  class="current" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a href="/categories/JAVA%E5%85%A5%E9%97%A8/" itemprop="item" rel="index" title="分类于 JAVA入门"><span itemprop="name">JAVA入门</span></a>
+<meta itemprop="position" content="1" /></span>
+</div>
+
+    <article itemscope itemtype="http://schema.org/Article" class="post block" lang="zh-Hans">
+  <link itemprop="mainEntityOfPage" href="https://ahjie668.github.io/ahjie668/2020/08/20/java%E5%9F%BA%E7%A1%80/">
+
+  <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="image" content="/images/avatar.jpg">
+    <meta itemprop="name" content="码坑">
+    <meta itemprop="description" content="本人是小白,初次与各位相遇,请多多指教,谢谢 じ萌喵喵ルゞ Ю↘ 珂ル°">
+  </span>
+
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="码坑博客">
+  </span>
+    <header>
+
+      <h1 class="title" itemprop="name headline">
+        JAVA的JDK安装步骤
+      </h1>
+      <div class="meta">
+        <span class="item" title="创建时间：2020-08-20 15:50:41">
+          <span class="icon">
+            <i class="ic i-calendar"></i>
+          </span>
+          <span class="text">发表于</span>
+          <time itemprop="dateCreated datePublished" datetime="2020-08-20T15:50:41+08:00">2020-08-20</time>
+        </span>
+      </div>
+        <div class="tags">
+            <a href="/tags/JAVA/" rel="tag"><i class="ic i-tag"></i> JAVA</a>
+        </div>
+    </header>
 
   
+  
+  
+  <div class="body md" itemprop="articleBody">
+    
+
+    <p>对于一个JAVA或android开发者来说，JDK的安装是做任何事的前提。但现在有好多教程的JDK安装配置方法繁琐重复，容易误导新手，本教程可以说是最简单经典实用的配置方法。</p>
+<h2 id="快速开始"><a href="#快速开始" class="headerlink" title="快速开始"></a>快速开始</h2><h3 id="步骤一"><a href="#步骤一" class="headerlink" title="步骤一"></a>步骤一</h3><p>首先我们当然需要去oracle官网下载JDK。<br>点击蓝色圈住的图片，选择相应版本并下载。x86是32位版，64是64位系统版。<br><img data-src="https://exp-picture.cdn.bcebos.com/2f2909e951e10ef8f928728e2324d8e9cdd2ccd1.jpg?x-bce-process=image/resize,m_lfit,w_500,limit_1" alt="步骤一"></p>
+<a id="more"></a>
+<h3 id="步骤二"><a href="#步骤二" class="headerlink" title="步骤二"></a>步骤二</h3><p>下载完成后，双击运行，一路下一步，安装完成。<br><img data-src="https://exp-picture.cdn.bcebos.com/0fb94656d53da8247c976b61306651598440cbd1.jpg?x-bce-process=image/resize,m_lfit,w_500,limit_1" alt="步骤二"></p>
+<h3 id="步骤三"><a href="#步骤三" class="headerlink" title="步骤三"></a>步骤三</h3><p>安装完JDK后，国际惯例配置环境变量。首先鼠标右键点击计算机–〉属性–〉高级系统设置<br><img data-src="https://exp-picture.cdn.bcebos.com/d9a8d2d2bb6651592d3eb7998fe23ea23b42c7d1.jpg?x-bce-process=image/resize,m_lfit,w_500,limit_1" alt="步骤三"></p>
+<h3 id="步骤四"><a href="#步骤四" class="headerlink" title="步骤四"></a>步骤四</h3><p>进入高级系统设置后，点击高级–〉环境变量<br><img data-src="https://exp-picture.cdn.bcebos.com/3fe32442a07aa010134d4b8bbfbb19efa35f3ed6.jpg?x-bce-process=image/resize,m_lfit,w_500,limit_1"></p>
+<h3 id="步骤五"><a href="#步骤五" class="headerlink" title="步骤五"></a>步骤五</h3><p>环境变量中看见path一项，点击path，点击编辑。<br><img data-src="https://exp-picture.cdn.bcebos.com/18aebc5f0c14c27b64fc213a2a46b7b1eff939d6.jpg?x-bce-process=image/resize,m_lfit,w_500,limit_1" alt="步骤四"></p>
+<h3 id="步骤六"><a href="#步骤六" class="headerlink" title="步骤六"></a>步骤六</h3><p>在变量值的最前面，添加C:\Program Files\Java\jdk1.8.0_91\bin<br>确定即可。<br>该路径为你的jdk安装好后的bin目录的路径，注意路径要放在双引号内，且结尾加封号。<br><img data-src="https://exp-picture.cdn.bcebos.com/a007a9b1eef97fbdf0029300b74133bad24133d6.jpg?x-bce-process=image/resize,m_lfit,w_500,limit_1" alt="步骤六"></p>
+<h3 id="步骤七"><a href="#步骤七" class="headerlink" title="步骤七"></a>步骤七</h3><p>如何验证是否安装成功，可以在cmd命令窗口中输入javac命令来查看。返回一大堆命令参数即可说明安装成功。怎么样，是不是很简单呢。<br><img data-src="https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=3304687086,2297012972&fm=15&gp=0.jpg" alt="步骤七"><br>这个案例的话只是简单的javaSrcipt(js)基础知识，希望可以对来到阿杰博客的朋友有所帮助如代码有问题,请指点出来,大家讨论一下，谢谢!</p>
+
+  </div>
+
+  
+  
+  
+
+   <footer>
+
+    <div class="meta">
+  <span class="item">
+    <span class="icon">
+      <i class="ic i-calendar-check"></i>
+    </span>
+    <span class="text">更新于</span>
+    <time title="修改时间：2020-08-20 20:04:10" itemprop="dateModified" datetime="2020-08-20T20:04:10+08:00">2020-08-20</time>
+  </span>
+</div>
+
+      
+<div class="reward">
+  <button><i class="ic i-heartbeat"></i> 赞赏</button>
+  <p>请我喝[茶]~(￣▽￣)~*</p>
+  <div id="qr">
+      
+      <div>
+        <img data-src="/images/wechatpay.png" alt="码坑 微信支付">
+        <p>微信支付</p>
+      </div>
+      
+      <div>
+        <img data-src="/images/alipay.png" alt="码坑 支付宝">
+        <p>支付宝</p>
+      </div>
+      
+      <div>
+        <img data-src="/images/paypal.png" alt="码坑 PayPal">
+        <p>PayPal</p>
+      </div>
+  </div>
+</div>
+
+      
+
+<div id="copyright" class="copyright">
+<ul>
+  <li class="author">
+    <strong>本文作者： </strong>码坑 @码坑博客
+  </li>
+  <li class="link">
+    <strong>本文链接：</strong>
+    <a href="https://ahjie668.github.io/ahjie668/2020/08/20/java%E5%9F%BA%E7%A1%80/" title="JAVA的JDK安装步骤">https://ahjie668.github.io/ahjie668/2020/08/20/java基础/</a>
+  </li>
+  <li class="license">
+    <strong>版权声明： </strong>本站所有文章除特别声明外，均采用 <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC96aC1IYW5z"><i class="ic i-creative-commons"></i>BY-NC-SA</span> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+  </footer>
 
 </article>
 
-
-
-
-
-
-
-    <section id="comments" class="comments">
-      <style>
-        .comments{margin:30px;padding:10px;background:#fff}
-        @media screen and (max-width:800px){.comments{margin:auto;padding:10px;background:#fff}}
-      </style>
-      <div id="vcomment" class="comment"></div> 
-<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
-<script src="//unpkg.com/valine/dist/Valine.min.js"></script>
-<script>
-   var notify = 'false' == true ? true : false;
-   var verify = 'false' == true ? true : false;
-    window.onload = function() {
-        new Valine({
-            el: '.comment',
-            notify: notify,
-            verify: verify,
-            app_id: "84Gj3MSVSWbUFORCRIOFMVrm-gzGzoHsz",
-            app_key: "fVRKgsPJxPKQRNw94COJOHLI",
-            placeholder: "Just go go",
-            avatar:"retro"
-        });
-    }
-</script>
-
-  </section>
-
-</section>
-        
-          <aside id="sidebar">
-  
-    <div class="widget-wrap">
-  <h3 class="widget-title"></h3>
-  <div class="widget">
-    <h1 class="blog-title">码坑博客</h1>
-    <h2 class="blog-subtitle">♥本人是小白,初次与各位相遇,请多多指教,谢谢 じ萌喵喵ルゞ Ю↘ 珂ル°</h2>
-    <ul class="blog-link">
-     
-          <a href="/" title="Home">
-            <li>主页</li>
-          </a>
-        
-          <a href="/archives" title="Archives">
-            <li>归档</li>
-          </a>
-        
-          <a href="/categories" title="Categories">
-            <li>分类</li>
-          </a>
-        
-          <a href="/tags" title="Tags">
-            <li>标签</li>
-          </a>
-        
-    </ul>
   </div>
-</div>
-
-  
-    <div class="widget-wrap">
-  <h3 class="widget-title"></h3>
-  <div class="widget">
-    <img class="avatar" src="https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=2604864153,593493957&amp;fm=26&amp;gp=0.jpg">
-    <h2 class="author">♥码坑♥</h2>
-    <h3 class="description"></h3>
-    <div class="count-box">
-      <a href="/archives"><div><strong>5</strong><br>文章</div></a>
-      <a href="/categories"><div><strong>3</strong><br>分类</div></a>
-      <a href="/tags"><div><strong>6</strong><br>标签</div></a>
+  <div class="nav">
+  <div class="inner">
+    <div class="item">
+      <a href="/2020/08/19/%E5%85%89%E6%A0%87%E5%8A%A8%E7%94%BB/" rel="prev">
+        <i class="ic i-chevron-left"></i> 上一篇
+      </a>
     </div>
-
-
-
-    <div class="social-link">
-      
-        <a class="hvr-bounce-in" href="/" target="_blank" title="Github">
-          Github
-        </a>
-      
-    </div>
-
-    <div class="friend-link">
-      <h2>友情链接</h2>
-      
-        <a class="hvr-bounce-in" href="http://ajwlkj.095km.cn/" target="_blank" title="阿杰代刷">
-          阿杰代刷
-        </a>
-      
+    <div class="item">
+      <a href="/2020/08/20/hexo/" rel="next">
+        下一篇 <i class="ic i-chevron-right"></i>
+      </a>
     </div>
   </div>
 </div>
 
   
-    
-    <div class="widget-wrap">
-    <h3 class="widget-title">浏览数目</h3>
-    <div class="widget">
-      <ul class="popularlist">
-      </ul>
-    </div>
-  </div>
-
-  
-</aside>
-        
-      </div>
-      <footer id="footer">
-  
-  <div class="outer">
-    <div id="footer-info" class="inner">
-      &copy;2019 - 2020 ♥码坑♥<br>
-	   由<a href="http://hexo.io/" target="_blank">Hexo</a>强力驱动 | 主题<a href="https://github.com/ShanaMaid/hexo-theme-shana" target="_blank">shana</a><br>
-	    <span id="busuanzi_container_site_uv">
-	      本站总访客数:<span id="busuanzi_value_site_uv"></span>&nbsp;&nbsp;| 
-	    </span>
-	    <span id="busuanzi_container_site_pv">
-	        &nbsp;本站总访问量<span id="busuanzi_value_site_pv"></span>次
-	    </span><br>
-     <script type="text/javascript">document.write(unescape("%3Cspan id='cnzz_stat_icon_1279199504'%3E%3C/span%3E%3Cscript src='https://v1.cnzz.com/z_stat.php%3Fid%3D1279199504%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));</script>
-	 |
-      
-      <!--《添加网站运行时间 -->
-            <!--<br/>-->
-            <span id="timeDate">载入天数...</span><span id="times">载入时分秒...</span>
-            <script>
-                var now = new Date();
-
-                function createtime() {
-                    var grt = new Date("08/18/2020 18:18:00"); //此处修改你的建站时间或者网站上线时间 
-                    now.setTime(now.getTime() + 250);
-                    days = (now - grt) / 1000 / 60 / 60 / 24;
-                    dnum = Math.floor(days);
-                    hours = (now - grt) / 1000 / 60 / 60 - (24 * dnum);
-                    hnum = Math.floor(hours);
-                    if (String(hnum).length == 1) {
-                        hnum = "0" + hnum;
-                    }
-                    minutes = (now - grt) / 1000 / 60 - (24 * 60 * dnum) - (60 * hnum);
-                    mnum = Math.floor(minutes);
-                    if (String(mnum).length == 1) {
-                        mnum = "0" + mnum;
-                    }
-                    seconds = (now - grt) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum);
-                    snum = Math.round(seconds);
-                    if (String(snum).length == 1) {
-                        snum = "0" + snum;
-                    }
-                    document.getElementById("timeDate").innerHTML = "  本站已安全运行 " + dnum + " 天 ";
-                    document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒";
-                }
-                setInterval("createtime()", 250);
-            </script>
-            <!-- 添加网站运行时间》 -->
-    </div>
-  </div>
-</footer>
+  <div class="comments wrap" id="comments" data-id="2020/08/20/java基础/"></div>
 
 
-
-    </div>
-    
-
-<script src="//apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
-<script src="//apps.bdimg.com/libs/wow/0.1.6/wow.min.js"></script>
-<script>
-new WOW().init();
-</script>   
-
-
-  
-<link rel="stylesheet" href="/plugin/fancybox/jquery.fancybox.css">
-
-  
-<script src="/plugin/fancybox/jquery.fancybox.pack.js"></script>
-
-
-
-
-  
-<link rel="stylesheet" href="/plugin/galmenu/GalMenu.css">
-
-  
-<script src="/plugin/galmenu/GalMenu.js"></script>
-
-  <div class="GalMenu GalDropDown">
-      <div class="circle" id="gal">
-        <div class="ring">
-          
-            <a href="/" title="" class="menuItem">首页</a>
-          
-            <a href="/tags" title="" class="menuItem">标签</a>
-          
-            <a href="/categories" title="" class="menuItem">分类</a>
-          
-            <a href="/archives" title="" class="menuItem">归档</a>
-          
-            <a href="/null" title="" class="menuItem">关于</a>
-          
-            <a href="/null" title="" class="menuItem">请我喝杯奶茶</a>
-          
         </div>
-        
-          <audio id="audio" src="plugin/galmenu/wulusai.mp3"></audio>
-        
-      </div> 
+        <div class="sidebar">
+          
+
+<div class="inner">
+
+  <div class="panels">
+    <div class="inner">
+      <div class="contents panel pjax" data-title="文章目录">
+          <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BF%AB%E9%80%9F%E5%BC%80%E5%A7%8B"><span class="toc-number">1.</span> <span class="toc-text">快速开始</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%AD%A5%E9%AA%A4%E4%B8%80"><span class="toc-number">1.1.</span> <span class="toc-text">步骤一</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%AD%A5%E9%AA%A4%E4%BA%8C"><span class="toc-number">1.2.</span> <span class="toc-text">步骤二</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%AD%A5%E9%AA%A4%E4%B8%89"><span class="toc-number">1.3.</span> <span class="toc-text">步骤三</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%AD%A5%E9%AA%A4%E5%9B%9B"><span class="toc-number">1.4.</span> <span class="toc-text">步骤四</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%AD%A5%E9%AA%A4%E4%BA%94"><span class="toc-number">1.5.</span> <span class="toc-text">步骤五</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%AD%A5%E9%AA%A4%E5%85%AD"><span class="toc-number">1.6.</span> <span class="toc-text">步骤六</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%AD%A5%E9%AA%A4%E4%B8%83"><span class="toc-number">1.7.</span> <span class="toc-text">步骤七</span></a></li></ol></li></ol>
+      </div>
+      <div class="related panel pjax" data-title="系列文章">
+        <ul>
+          <li class="active"><a href="/2020/08/20/java%E5%9F%BA%E7%A1%80/" rel="bookmark" title="JAVA的JDK安装步骤">JAVA的JDK安装步骤</a></li>
+        </ul>
+      </div>
+      <div class="overview panel" data-title="站点概览">
+        <div class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <img class="image" itemprop="image" alt="码坑"
+      data-src="/images/avatar.jpg">
+  <p class="name" itemprop="name">码坑</p>
+  <div class="description" itemprop="description"></div>
 </div>
-<div id="overlay" style="opacity: 1; cursor: pointer;"></div>
-  <script type="text/javascript">var items = document.querySelectorAll('.menuItem');
-    for (var i = 0,
-    l = items.length; i < l; i++) {
-      items[i].style.left = (50 - 35 * Math.cos( - 0.5 * Math.PI - 2 * (1 / l) * i * Math.PI)).toFixed(4) + "%";
-      items[i].style.top = (50 + 35 * Math.sin( - 0.5 * Math.PI - 2 * (1 / l) * i * Math.PI)).toFixed(4) + "%"
-    }</script>
-<script type="text/javascript">
-  $(document).ready(function() {
-    $('body').GalMenu({
-      'menu': 'GalDropDown'
-    })
-  });
+
+<nav class="state">
+    <div class="item posts">
+        <a href="/archives/">
+      
+        <span class="count">5</span>
+        <span class="name">文章</span>
+      </a>
+    </div>
+    <div class="item categories">
+      <a href="/categories">
+        <span class="count">3</span>
+        <span class="name">分类</span>
+      </a>
+    </div>
+    <div class="item tags">
+      <a href="/tags">
+        <span class="count">6</span>
+        <span class="name">标签</span>
+      </a>
+    </div>
+</nav>
+
+<div class="social">
+      <span class="exturl item github" data-url="aHR0cHM6Ly9naXRodWIuY29tL3lvdXJuYW1l" title="https:&#x2F;&#x2F;github.com&#x2F;yourname"><i class="ic i-github"></i></span>
+      <span class="exturl item twitter" data-url="aHR0cHM6Ly90d2l0dGVyLmNvbS95b3VybmFtZQ==" title="https:&#x2F;&#x2F;twitter.com&#x2F;yourname"><i class="ic i-twitter"></i></span>
+      <span class="exturl item zhihu" data-url="aHR0cHM6Ly93d3cuemhpaHUuY29tL3Blb3BsZS95b3VybmFtZQ==" title="https:&#x2F;&#x2F;www.zhihu.com&#x2F;people&#x2F;yourname"><i class="ic i-zhihu"></i></span>
+      <span class="exturl item music" data-url="aHR0cHM6Ly9tdXNpYy4xNjMuY29tLyMvdXNlci9ob21lP2lkPXlvdXJpZA==" title="https:&#x2F;&#x2F;music.163.com&#x2F;#&#x2F;user&#x2F;home?id&#x3D;yourid"><i class="ic i-cloud-music"></i></span>
+      <span class="exturl item weibo" data-url="aHR0cHM6Ly93ZWliby5jb20veW91cm5hbWU=" title="https:&#x2F;&#x2F;weibo.com&#x2F;yourname"><i class="ic i-weibo"></i></span>
+      <span class="exturl item about" data-url="aHR0cHM6Ly9hYm91dC5tZS95b3VybmFtZQ==" title="https:&#x2F;&#x2F;about.me&#x2F;yourname"><i class="ic i-address-card"></i></span>
+      <span class="exturl item email" data-url="bWFpbHRvOnlvdXJuYW1lQG1haWwuY29t" title="mailto:yourname@mail.com"><i class="ic i-envelope"></i></span>
+      <span class="exturl item facebook" data-url="aHR0cHM6Ly93d3cuZmFjZWJvb2suY29tL3lvdXJuYW1l" title="https:&#x2F;&#x2F;www.facebook.com&#x2F;yourname"><i class="ic i-facebook"></i></span>
+      <span class="exturl item stackoverflow" data-url="aHR0cHM6Ly9zdGFja292ZXJmbG93LmNvbS95b3VybmFtZQ==" title="https:&#x2F;&#x2F;stackoverflow.com&#x2F;yourname"><i class="ic i-stack-overflow"></i></span>
+      <span class="exturl item youtube" data-url="aHR0cHM6Ly95b3V0dWJlLmNvbS95b3VybmFtZQ==" title="https:&#x2F;&#x2F;youtube.com&#x2F;yourname"><i class="ic i-youtube"></i></span>
+      <span class="exturl item instagram" data-url="aHR0cHM6Ly9pbnN0YWdyYW0uY29tL3lvdXJuYW1l" title="https:&#x2F;&#x2F;instagram.com&#x2F;yourname"><i class="ic i-instagram"></i></span>
+      <span class="exturl item skype" data-url="c2t5cGU6eW91cm5hbWU/Y2FsbHxjaGF0" title="skype:yourname?call|chat"><i class="ic i-skype"></i></span>
+</div>
+
+<ul class="menu">
+  
+    
+  <li class="item">
+    <a href="/" rel="section"><i class="ic i-home"></i>首页</a>
+  </li>
+
+    
+  <li class="item">
+    <a href="/archives/" rel="section"><i class="ic i-list-alt"></i>归档</a>
+  </li>
+
+    
+  <li class="item">
+    <a href="/categories/" rel="section"><i class="ic i-th"></i>分类</a>
+  </li>
+
+    
+  <li class="item">
+    <a href="/tags/" rel="section"><i class="ic i-tags"></i>标签</a>
+  </li>
+
+    
+  <li class="item">
+    <a href="/about/" rel="section"><i class="ic i-user"></i>关于</a>
+  </li>
+
+    
+  <li class="item">
+    <a href="/friends/" rel="section"><i class="ic i-heart"></i>友链</a>
+  </li>
+
+
+</ul>
+
+      </div>
+    </div>
+  </div>
+
+  <ul class="quick">
+    <li class="prev pjax">
+        <a href="/2020/08/19/%E5%85%89%E6%A0%87%E5%8A%A8%E7%94%BB/" rel="prev" title="上一篇"><i class="ic i-chevron-left"></i></a>
+    </li>
+    <li class="up"><i class="ic i-arrow-up"></i></li>
+    <li class="down"><i class="ic i-arrow-down"></i></li>
+    <li class="next pjax">
+        <a href="/2020/08/20/hexo/" rel="next" title="下一篇"><i class="ic i-chevron-right"></i></a>
+    </li>
+    <li class="percent"></li>
+  </ul>
+</div>
+
+
+        </div>
+        <div class="dimmer"></div>
+      </div>
+    </main>
+
+    <footer>
+      <div class="inner">
+        <div class="copyright">
+  
+  &copy; 2019 – 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="ic i-sakura rotate"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">码坑 @ 码坑博客</span>
+</div>
+
+<div class="powered-by">
+  基于 <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & Theme.<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2FtZWhpbWUvaGV4by10aGVtZS1zaG9rYQ==">Shoka</span>
+  <br>
+  <!-- 网站运行时间的设置 -->
+<span id="timeDate">载入天数...</span>
+<span id="times">载入时分秒...</span>
+<script>
+    var now = new Date();
+    function createtime() {
+        var grt= new Date("08/18/2019 13:14:21");//此处修改你的建站时间或者网站上线时间
+        now.setTime(now.getTime()+250);
+        days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days);
+        hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours);
+        if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum);
+        mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;}
+        seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum);
+        snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;}
+        document.getElementById("timeDate").innerHTML = "本站已安全运行 "+dnum+" 天 ";
+        document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒";
+    }
+setInterval("createtime()",250);
+</script>
+</div>
+
+      </div>
+    </footer>
+  </div>
+<script data-config type="text/javascript">
+  var LOCAL = {
+    favicon: {
+      show: "码坑的博客",
+      hide: "(´Д｀)大変だ！"
+    },
+    search : {
+      placeholder: "文章搜索",
+      empty: "关于 ${query} ，什么也没搜到",
+      stats: "${time} ms 内找到 ${hits} 条结果"
+    },
+    valine: true,copyright: '复制成功，转载请遵守 <i class="ic i-creative-commons"></i>BY-NC-SA 协议。',
+    ignores : [
+      function(uri) {
+        return uri.includes('#');
+      },
+      function(uri) {
+        return uri === 'https://ahjie668.github.io/ahjie668/2020/08/20/java%E5%9F%BA%E7%A1%80/';
+      }
+    ]
+  };
 </script>
 
-  <section class="hidden-xs"> 
-  <ul class="cb-slideshow"> 
-    <li><span>苟利</span></li> 
-    <li><span>国家</span></li> 
-    <li><span>生死以</span></li> 
-    <li><span>岂能</span></li> 
-    <li><span>祸福</span></li> 
-    <li><span>趋避之</span></li> 
-  </ul>
-</section>
+<script src="//cdn.jsdelivr.net/combine/npm/pace-js@1.0.2/pace.min.js,npm/pjax@0.2.8/pjax.min.js,npm/velocity-animate@1.5.2/velocity.min.js,npm/velocity-animate@1.5.2/velocity.ui.min.js,npm/algoliasearch@4/dist/algoliasearch-lite.umd.js,npm/instantsearch.js@4/dist/instantsearch.production.min.js,npm/lozad@1/dist/lozad.min.js,npm/quicklink@2/dist/quicklink.umd.js"></script>
 
-<script src="/js/script.js"></script>
+
+<script src="/js/app.js"></script>
 
 
 
 
 
-  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.1.js"></script>
-  <script>AV.initialize("84Gj3MSVSWbUFORCRIOFMVrm-gzGzoHsz", "fVRKgsPJxPKQRNw94COJOHLI");</script>
-  <script>
-    function showTime(Counter) {
-      var query = new AV.Query(Counter);
-      var entries = [];
-      var $visitors = $(".leancloud_visitors");
-
-      $visitors.each(function () {
-        entries.push( $(this).attr("id").trim() );
-      });
-
-      query.containedIn('url', entries);
-      query.find()
-        .done(function (results) {
-          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
-
-          if (results.length === 0) {
-            $visitors.find(COUNT_CONTAINER_REF).text(0);
-            return;
-          }
-
-          for (var i = 0; i < results.length; i++) {
-            var item = results[i];
-            var url = item.get('url');
-            var time = item.get('time');
-            var element = document.getElementById(url);
-
-            $(element).find(COUNT_CONTAINER_REF).text(time);
-          }
-          for(var i = 0; i < entries.length; i++) {
-            var url = entries[i];
-            var element = document.getElementById(url);
-            var countSpan = $(element).find(COUNT_CONTAINER_REF);
-            if( countSpan.text() == '') {
-              countSpan.text(0);
-            }
-          }
-        })
-        .fail(function (object, error) {
-          console.log("Error: " + error.code + " " + error.message);
-        });
-    }
-
-    function addCount(Counter) {
-      var $visitors = $(".leancloud_visitors");
-      var url = $visitors.attr('id').trim();
-      var title = $visitors.attr('data-flag-title').trim();
-      var query = new AV.Query(Counter);
-
-      query.equalTo("url", url);
-      query.find({
-        success: function(results) {
-          if (results.length > 0) {
-            var counter = results[0];
-            counter.fetchWhenSave(true);
-            counter.increment("time");
-            counter.save(null, {
-              success: function(counter) {
-                var $element = $(document.getElementById(url));
-                $element.find('.leancloud-visitors-count').text(counter.get('time'));
-              },
-              error: function(counter, error) {
-                console.log('Failed to save Visitor num, with error message: ' + error.message);
-              }
-            });
-          } else {
-            var newcounter = new Counter();
-            /* Set ACL */
-            var acl = new AV.ACL();
-            acl.setPublicReadAccess(true);
-            acl.setPublicWriteAccess(true);
-            newcounter.setACL(acl);
-            /* End Set ACL */
-            newcounter.set("title", title);
-            newcounter.set("url", url);
-            newcounter.set("time", 1);
-            newcounter.save(null, {
-              success: function(newcounter) {
-                var $element = $(document.getElementById(url));
-                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
-              },
-              error: function(newcounter, error) {
-                console.log('Failed to create');
-              }
-            });
-          }
-        },
-        error: function(error) {
-          console.log('Error:' + error.code + " " + error.message);
-        }
-      });
-    }
-
-    $(function() {
-      var Counter = AV.Object.extend("Counter");
-      if ($('.leancloud_visitors').length == 1) {
-        addCount(Counter);
-      } else if ($('.article-title').length > 1) {
-        showTime(Counter);
-      }
-    });
-  </script>
-
-
-
-
-<!--page counter part-->
-<script>
-function addCount (Counter) {
-        url=$('.article-date').attr('href').trim();
-    title = $('.article-title').text().trim();
-    var query=new AV.Query(Counter);
-    //use url as unique idnetfication
-    query.equalTo("url",url);
-    query.find({
-        success: function(results){
-            if(results.length>0)
-            {
-                var counter=results[0];
-                counter.fetchWhenSave(true); //get recent result
-                counter.increment("time");
-                counter.save();
-            }
-            else
-            {
-                var newcounter=new Counter();
-                newcounter.set("title",title);
-                newcounter.set("url",url);
-                newcounter.set("time",1);
-                newcounter.save(null,{
-                    success: function(newcounter){
-                    //alert('New object created');
-                    },
-                    error: function(newcounter,error){
-                    alert('Failed to create');
-                    }
-                    });
-            }
-        },
-        error: function(error){
-            //find null is not a error
-            alert('Error:'+error.code+" "+error.message);
-        }
-    });
-}
-$(function(){
-    var Counter=AV.Object.extend("Counter");
-    //only increse visit counting when intering a page
-    if ($('.article-title').length == 1)
-       addCount(Counter);
-    var query=new AV.Query(Counter);
-    query.descending("time");
-    // the sum of popular posts
-    query.limit(10); 
-    query.find({
-        success: function(results){
-                for(var i=0;i<results.length;i++)    
-                {
-                    var counter=results[i];
-                    title=counter.get("title");
-                    url=counter.get("url");
-                    time=counter.get("time");
-                    // add to the popularlist widget
-                    showcontent=title+" ("+time+")";
-                    //notice the "" in href
-                    $('.popularlist').append('<li><a href="'+url+'">'+showcontent+'</a></li>');
-                }
-            },
-        error: function(error){
-            alert("Error:"+error.code+" "+error.message);
-        }
-        }
-    )
-    });
-  </div>
 <script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
 </html>
- 

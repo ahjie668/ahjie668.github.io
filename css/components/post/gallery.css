@@ -1,0 +1,14 @@
+.md > .gallery {
+  align-items: center;
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin-bottom: 20px;
+mobile()
+}
+.md > .gallery a {
+  border: 0;
+}
+.md > .gallery img {
+  margin: 0;
+}

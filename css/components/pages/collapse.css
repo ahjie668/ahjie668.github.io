@@ -1,0 +1,102 @@
+.collapse {
+  margin-left: $posts-collapse-margin;
+  position: relative;
+mobile()
+}
+.collapse small {
+  color: var(--grey-4);
+  margin: auto 5px;
+}
+.collapse .item {
+  position: relative;
+  padding: 20px 30px;
+  margin: 0;
+}
+.collapse .item::before {
+  content: "";
+  position: absolute;
+  z-index: $zindex-1;
+  box-sizing: unset;
+  top: 1.4em;
+  left: 0;
+  width: 0.6rem;
+  height: 0.6rem;
+  border: 0.15rem solid var(--primary-color);
+  border-radius: 50%;
+  background: var(--grey-1);
+}
+.collapse .item:not(:last-child):not(.title)::after {
+  content: "";
+  position: absolute;
+  top: 1.8em;
+  bottom: -1.8em;
+  left: 0.35rem;
+  border-left: 0.2rem solid var(--color-red-a3);
+}
+.collapse .item.header:not(:last-child)::after,
+.collapse .item.section:not(:last-child)::after {
+  top: 1.4em;
+  bottom: -1.4em;
+}
+.collapse .item:hover::before {
+  border-color: var(--color-blue);
+}
+.collapse .item.header::after {
+  border-left-style: dashed !important;
+}
+.collapse .item.header .cheers {
+  display: block;
+}
+.collapse .item.section::before {
+  width: 0.4rem;
+  height: 0.4rem;
+  margin-left: 0.1rem;
+}
+.collapse .item.title a,
+.collapse .item.header a,
+.collapse .item.section a {
+  border-bottom: 1px dashed var(--grey-4);
+}
+.collapse .item.title:hover a,
+.collapse .item.header:hover a,
+.collapse .item.section:hover a {
+  border-bottom-color: var(--color-blue);
+}
+.collapse .item.normal {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 10px 30px;
+}
+.collapse .item.normal::before {
+  width: 0.2rem;
+  height: 0.2rem;
+  margin-left: 0.2rem;
+  background: var(--primary-color);
+}
+.collapse .item.normal:hover::before {
+  background: var(--color-blue);
+}
+.collapse .item.normal .meta {
+  display: inline;
+  font-size: $font-size-smallest;
+  margin-right: 10px;
+}
+.collapse .item.normal .meta time {
+  color: var(--grey-4);
+}
+.collapse .item.normal .title {
+  display: inline;
+}
+.collapse .item.normal .title a,
+.collapse .item.normal .title span.exturl {
+  color: var(--primary-color);
+}
+.collapse .item.normal .title a:hover,
+.collapse .item.normal .title span.exturl:hover {
+  color: var(--color-blue);
+}
+.collapse .item.normal .title .i-link-alt {
+  font-size: $font-size-small;
+  margin-left: 5px;
+}
