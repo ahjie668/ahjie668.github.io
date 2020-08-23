@@ -613,7 +613,7 @@ const loadComments = function () {
       vendorCss('valine');
 
       if (entry.isIntersecting) {
-        var options = {"appId":null,"appKey":null,"placeholder":"ヽ(○´∀`)ﾉ♪","avatar":"mp","pageSize":10,"lang":"en","visitor":true,"recordIP":true,"serverURLs":null,"requiredFields":["nick","mail"],"enableQQ":true,"masters":["master@email.com","master2@email.com"],"masterTag":"主人","tips":"昵称框中填入QQ号，将自动获取QQ昵称&邮箱&头像；其他邮箱由Gavatar提供头像。"};
+        var options = {"appId":"84Gj3MSVSWbUFORCRIOFMVrm-gzGzoHsz","appKey":"fVRKgsPJxPKQRNw94COJOHLI","placeholder":"ヽ(○´∀`)ﾉ♪","avatar":"mp","pageSize":10,"lang":"en","visitor":true,"recordIP":true,"serverURLs":null,"requiredFields":["nick","mail"],"enableQQ":true,"masters":["master@email.com","master2@email.com"],"masterTag":"主人","tips":"昵称框中填入QQ号，将自动获取QQ昵称&邮箱&头像；其他邮箱由Gavatar提供头像。"};
         options.el = '#comments';
         options.path = element.attr('data-id');
 
