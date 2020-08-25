@@ -5,7 +5,7 @@ function snowFall(snow) {
     snow = snow || {};
     this.maxFlake = snow.maxFlake || 1000; /* 最多片数 */
     this.flakeSize = snow.flakeSize || 10; /* 雪花形状 */
-    this.fallSpeed = snow.fallSpeed || 2; /* 坠落速度 */
+    this.fallSpeed = snow.fallSpeed || 3; /* 坠落速度 */
 }
 /* 兼容写法 */
 requestAnimationFrame = window.requestAnimationFrame ||
@@ -58,7 +58,7 @@ function flakeMove(canvasWidth, canvasHeight, flakeSize, fallSpeed) {
     this.fallSpeed = fallSpeed; /* 坠落速度 */
     this.velY = this.speed; /* Y方向速度 */
     this.velX = 0; /* X方向速度 */
-    this.stepSize = Math.random() / 50; /* 步长 */
+    this.stepSize = Math.random() / 30; /* 步长 */
     this.step = 0 /* 步数 */
 }
 flakeMove.prototype.update = function () {

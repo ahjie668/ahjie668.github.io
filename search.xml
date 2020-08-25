@@ -1,26 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>JAVA的JDK安装步骤</title>
-    <url>/2020/08/20/java%E5%9F%BA%E7%A1%80/</url>
-    <content><![CDATA[<p>对于一个JAVA或android开发者来说，JDK的安装是做任何事的前提。但现在有好多教程的JDK安装配置方法繁琐重复，容易误导新手，本教程可以说是最简单经典实用的配置方法。</p>
-<h2 id="快速开始"><a href="#快速开始" class="headerlink" title="快速开始"></a>快速开始</h2><h3 id="步骤一"><a href="#步骤一" class="headerlink" title="步骤一"></a>步骤一</h3><p>首先我们当然需要去oracle官网下载JDK。<br>点击蓝色圈住的图片，选择相应版本并下载。x86是32位版，64是64位系统版。<br><img data-src="https://exp-picture.cdn.bcebos.com/2f2909e951e10ef8f928728e2324d8e9cdd2ccd1.jpg?x-bce-process=image/resize,m_lfit,w_500,limit_1" alt="步骤一"></p>
-<a id="more"></a>
-<h3 id="步骤二"><a href="#步骤二" class="headerlink" title="步骤二"></a>步骤二</h3><p>下载完成后，双击运行，一路下一步，安装完成。<br><img data-src="https://exp-picture.cdn.bcebos.com/0fb94656d53da8247c976b61306651598440cbd1.jpg?x-bce-process=image/resize,m_lfit,w_500,limit_1" alt="步骤二"></p>
-<h3 id="步骤三"><a href="#步骤三" class="headerlink" title="步骤三"></a>步骤三</h3><p>安装完JDK后，国际惯例配置环境变量。首先鼠标右键点击计算机–〉属性–〉高级系统设置<br><img data-src="https://exp-picture.cdn.bcebos.com/d9a8d2d2bb6651592d3eb7998fe23ea23b42c7d1.jpg?x-bce-process=image/resize,m_lfit,w_500,limit_1" alt="步骤三"></p>
-<h3 id="步骤四"><a href="#步骤四" class="headerlink" title="步骤四"></a>步骤四</h3><p>进入高级系统设置后，点击高级–〉环境变量<br><img data-src="https://exp-picture.cdn.bcebos.com/3fe32442a07aa010134d4b8bbfbb19efa35f3ed6.jpg?x-bce-process=image/resize,m_lfit,w_500,limit_1"></p>
-<h3 id="步骤五"><a href="#步骤五" class="headerlink" title="步骤五"></a>步骤五</h3><p>环境变量中看见path一项，点击path，点击编辑。<br><img data-src="https://exp-picture.cdn.bcebos.com/18aebc5f0c14c27b64fc213a2a46b7b1eff939d6.jpg?x-bce-process=image/resize,m_lfit,w_500,limit_1" alt="步骤四"></p>
-<h3 id="步骤六"><a href="#步骤六" class="headerlink" title="步骤六"></a>步骤六</h3><p>在变量值的最前面，添加C:\Program Files\Java\jdk1.8.0_91\bin<br>确定即可。<br>该路径为你的jdk安装好后的bin目录的路径，注意路径要放在双引号内，且结尾加封号。<br><img data-src="https://exp-picture.cdn.bcebos.com/a007a9b1eef97fbdf0029300b74133bad24133d6.jpg?x-bce-process=image/resize,m_lfit,w_500,limit_1" alt="步骤六"></p>
-<h3 id="步骤七"><a href="#步骤七" class="headerlink" title="步骤七"></a>步骤七</h3><p>如何验证是否安装成功，可以在cmd命令窗口中输入javac命令来查看。返回一大堆命令参数即可说明安装成功。怎么样，是不是很简单呢。<br><img data-src="https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=3304687086,2297012972&fm=15&gp=0.jpg" alt="步骤七"><br>这个案例的话只是简单的javaSrcipt(js)基础知识，希望可以对来到阿杰博客的朋友有所帮助如代码有问题,请指点出来,大家讨论一下，谢谢!</p>
-]]></content>
-      <categories>
-        <category>JAVA入门</category>
-      </categories>
-      <tags>
-        <tag>JAVA</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>hexo分类and标签404</title>
     <url>/2020/08/20/hexo/</url>
     <content><![CDATA[<h2 id="404分类and标签错误处理"><a href="#404分类and标签错误处理" class="headerlink" title="404分类and标签错误处理"></a>404分类and标签错误处理</h2><p>突然发现博客中，部分分类打不开，点击出现404，在标签中查看，也是小部分标签点击404，但是在所有文章中该分类下的文章都能打开，后来发现这些404的标签或分类名都是后来修改过的，原先的名称开头是大写名称</p>
@@ -42,6 +22,26 @@
       </categories>
       <tags>
         <tag>Hexo</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>JAVA的JDK安装步骤</title>
+    <url>/2020/08/20/java%E5%9F%BA%E7%A1%80/</url>
+    <content><![CDATA[<p>对于一个JAVA或android开发者来说，JDK的安装是做任何事的前提。但现在有好多教程的JDK安装配置方法繁琐重复，容易误导新手，本教程可以说是最简单经典实用的配置方法。</p>
+<h2 id="快速开始"><a href="#快速开始" class="headerlink" title="快速开始"></a>快速开始</h2><h3 id="步骤一"><a href="#步骤一" class="headerlink" title="步骤一"></a>步骤一</h3><p>首先我们当然需要去oracle官网下载JDK。<br>点击蓝色圈住的图片，选择相应版本并下载。x86是32位版，64是64位系统版。<br><img data-src="https://exp-picture.cdn.bcebos.com/2f2909e951e10ef8f928728e2324d8e9cdd2ccd1.jpg?x-bce-process=image/resize,m_lfit,w_500,limit_1" alt="步骤一"></p>
+<a id="more"></a>
+<h3 id="步骤二"><a href="#步骤二" class="headerlink" title="步骤二"></a>步骤二</h3><p>下载完成后，双击运行，一路下一步，安装完成。<br><img data-src="https://exp-picture.cdn.bcebos.com/0fb94656d53da8247c976b61306651598440cbd1.jpg?x-bce-process=image/resize,m_lfit,w_500,limit_1" alt="步骤二"></p>
+<h3 id="步骤三"><a href="#步骤三" class="headerlink" title="步骤三"></a>步骤三</h3><p>安装完JDK后，国际惯例配置环境变量。首先鼠标右键点击计算机–〉属性–〉高级系统设置<br><img data-src="https://exp-picture.cdn.bcebos.com/d9a8d2d2bb6651592d3eb7998fe23ea23b42c7d1.jpg?x-bce-process=image/resize,m_lfit,w_500,limit_1" alt="步骤三"></p>
+<h3 id="步骤四"><a href="#步骤四" class="headerlink" title="步骤四"></a>步骤四</h3><p>进入高级系统设置后，点击高级–〉环境变量<br><img data-src="https://exp-picture.cdn.bcebos.com/3fe32442a07aa010134d4b8bbfbb19efa35f3ed6.jpg?x-bce-process=image/resize,m_lfit,w_500,limit_1"></p>
+<h3 id="步骤五"><a href="#步骤五" class="headerlink" title="步骤五"></a>步骤五</h3><p>环境变量中看见path一项，点击path，点击编辑。<br><img data-src="https://exp-picture.cdn.bcebos.com/18aebc5f0c14c27b64fc213a2a46b7b1eff939d6.jpg?x-bce-process=image/resize,m_lfit,w_500,limit_1" alt="步骤四"></p>
+<h3 id="步骤六"><a href="#步骤六" class="headerlink" title="步骤六"></a>步骤六</h3><p>在变量值的最前面，添加C:\Program Files\Java\jdk1.8.0_91\bin<br>确定即可。<br>该路径为你的jdk安装好后的bin目录的路径，注意路径要放在双引号内，且结尾加封号。<br><img data-src="https://exp-picture.cdn.bcebos.com/a007a9b1eef97fbdf0029300b74133bad24133d6.jpg?x-bce-process=image/resize,m_lfit,w_500,limit_1" alt="步骤六"></p>
+<h3 id="步骤七"><a href="#步骤七" class="headerlink" title="步骤七"></a>步骤七</h3><p>如何验证是否安装成功，可以在cmd命令窗口中输入javac命令来查看。返回一大堆命令参数即可说明安装成功。怎么样，是不是很简单呢。<br><img data-src="https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=3304687086,2297012972&fm=15&gp=0.jpg" alt="步骤七"><br>这个案例的话只是简单的javaSrcipt(js)基础知识，希望可以对来到阿杰博客的朋友有所帮助如代码有问题,请指点出来,大家讨论一下，谢谢!</p>
+]]></content>
+      <categories>
+        <category>JAVA入门</category>
+      </categories>
+      <tags>
+        <tag>JAVA</tag>
       </tags>
   </entry>
   <entry>
