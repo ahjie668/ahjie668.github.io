@@ -90,30 +90,6 @@
       </tags>
   </entry>
   <entry>
-    <title>hexo分类and标签404</title>
-    <url>/2020/08/20/hexo/</url>
-    <content><![CDATA[<h2 id="404分类and标签错误处理"><a href="#404分类and标签错误处理" class="headerlink" title="404分类and标签错误处理"></a>404分类and标签错误处理</h2><p>突然发现博客中，部分分类打不开，点击出现404，在标签中查看，也是小部分标签点击404，但是在所有文章中该分类下的文章都能打开，后来发现这些404的标签或分类名都是后来修改过的，原先的名称开头是大写名称</p>
-<p>将大写字母改成小写，hexo 部署正确，但是博客上还是不正确出现404</p>
-<p>网上查了许多资料，才发现，git中设置了大小写不敏感</p>
-<a id="more"></a>
-<h2 id="解决方法如下"><a href="#解决方法如下" class="headerlink" title="解决方法如下"></a>解决方法如下</h2><p>修改 git 设置不忽略大小写</p>
-<p>进入博客文件夹，进入 git 目录：.deploy_git ，修改 .git 文件中的配置文件 config，将ignorecase=true 改为 ignorecase=false</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">vim . deploy_git/.git/config</span><br><span class="line"></span><br><span class="line">ignorecase = <span class="keyword">false</span></span><br></pre></td></tr></table></figure>
-<p>如果还没有解决，清空部署到 github 上的文件，重新发布：</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">cd .deploy_git</span><br><span class="line">git rm -rf *</span><br><span class="line">git commit -m <span class="string">&#x27;clean all file&#x27;</span></span><br><span class="line">git push</span><br></pre></td></tr></table></figure>
-<p>进入博客文件夹，用 hexo 重新生成部署</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo g </span><br><span class="line">hexo d or hexo g -d</span><br></pre></td></tr></table></figure>
-
-<p><font style="color: red;">这些问题都是自己开始搭建博客的时候出现的一些问题，希望能够帮助到各位，<br>如果那里错误，请指点出来，大家一起讨论。</font></p>
-]]></content>
-      <categories>
-        <category>扩展</category>
-      </categories>
-      <tags>
-        <tag>Hexo</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>React.js与Vue.js流行框架的比较</title>
     <url>/2020/08/21/react%E5%92%8Cvue/</url>
     <content><![CDATA[<p>JavaScript是世界上最流行的语言之一，React和Vue是JS最流行的两个框架。但哪一款最适合你？</p>
@@ -193,6 +169,30 @@
       <tags>
         <tag>React</tag>
         <tag>Vue</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>hexo分类and标签404</title>
+    <url>/2020/08/20/hexo/</url>
+    <content><![CDATA[<h2 id="404分类and标签错误处理"><a href="#404分类and标签错误处理" class="headerlink" title="404分类and标签错误处理"></a>404分类and标签错误处理</h2><p>突然发现博客中，部分分类打不开，点击出现404，在标签中查看，也是小部分标签点击404，但是在所有文章中该分类下的文章都能打开，后来发现这些404的标签或分类名都是后来修改过的，原先的名称开头是大写名称</p>
+<p>将大写字母改成小写，hexo 部署正确，但是博客上还是不正确出现404</p>
+<p>网上查了许多资料，才发现，git中设置了大小写不敏感</p>
+<a id="more"></a>
+<h2 id="解决方法如下"><a href="#解决方法如下" class="headerlink" title="解决方法如下"></a>解决方法如下</h2><p>修改 git 设置不忽略大小写</p>
+<p>进入博客文件夹，进入 git 目录：.deploy_git ，修改 .git 文件中的配置文件 config，将ignorecase=true 改为 ignorecase=false</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">vim . deploy_git/.git/config</span><br><span class="line"></span><br><span class="line">ignorecase = <span class="keyword">false</span></span><br></pre></td></tr></table></figure>
+<p>如果还没有解决，清空部署到 github 上的文件，重新发布：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">cd .deploy_git</span><br><span class="line">git rm -rf *</span><br><span class="line">git commit -m <span class="string">&#x27;clean all file&#x27;</span></span><br><span class="line">git push</span><br></pre></td></tr></table></figure>
+<p>进入博客文件夹，用 hexo 重新生成部署</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo g </span><br><span class="line">hexo d or hexo g -d</span><br></pre></td></tr></table></figure>
+
+<p><font style="color: red;">这些问题都是自己开始搭建博客的时候出现的一些问题，希望能够帮助到各位，<br>如果那里错误，请指点出来，大家一起讨论。</font></p>
+]]></content>
+      <categories>
+        <category>扩展</category>
+      </categories>
+      <tags>
+        <tag>Hexo</tag>
       </tags>
   </entry>
   <entry>
