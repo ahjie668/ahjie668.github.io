@@ -5,8 +5,8 @@
     <link href="https://ahjie668.github.io/ahjie668" />
     <updated>2020-08-20T08:29:52.301Z</updated>
     <category term="Maven" />
-    <category term="JAVA" />
     <category term="Hexo" />
+    <category term="JAVA" />
     <category term="React" />
     <category term="Vue" />
     <category term="JavaScript" />
@@ -16,14 +16,14 @@
         <id>https://ahjie668.github.io/ahjie668/2020/08/20/hexo/</id>
         <title>hexo分类and标签404</title>
         <link rel="alternate" href="https://ahjie668.github.io/ahjie668/2020/08/20/hexo/"/>
-        <content type="html">&lt;h2 id=&#34;404分类and标签错误处理&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#404分类and标签错误处理&#34;&gt;&lt;/a&gt; 💍 404分类and标签错误处理&lt;/h2&gt;
-&lt;p&gt;突然发现博客中，部分分类打不开，点击出现404，在标签中查看，也是小部分标签点击404，但是在所有文章中该分类下的文章都能打开，后来发现这些404的标签或分类名都是后来修改过的，原先的名称开头是大写名称&lt;/p&gt;
-&lt;p&gt;将大写字母改成小写，hexo 部署正确，但是博客上还是不正确出现404&lt;/p&gt;
-&lt;p&gt;网上查了许多资料，才发现，git中设置了大小写不敏感&lt;/p&gt;
+        <content type="html">&lt;h2 id=&#34;404分类and标签错误处理&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#404分类and标签错误处理&#34;&gt;#&lt;/a&gt; 💍 404 分类 and 标签错误处理&lt;/h2&gt;
+&lt;p&gt;突然发现博客中，部分分类打不开，点击出现 404，在标签中查看，也是小部分标签点击 404，但是在所有文章中该分类下的文章都能打开，后来发现这些 404 的标签或分类名都是后来修改过的，原先的名称开头是大写名称&lt;/p&gt;
+&lt;p&gt;将大写字母改成小写，hexo 部署正确，但是博客上还是不正确出现 404&lt;/p&gt;
+&lt;p&gt;网上查了许多资料，才发现，git 中设置了大小写不敏感&lt;/p&gt;
 &lt;a id=&#34;more&#34;&gt;&lt;/a&gt;
-&lt;h2 id=&#34;解决方法如下&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#解决方法如下&#34;&gt;&lt;/a&gt; 💍 解决方法如下&lt;/h2&gt;
+&lt;h2 id=&#34;解决方法如下&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#解决方法如下&#34;&gt;#&lt;/a&gt; 💍 解决方法如下&lt;/h2&gt;
 &lt;p&gt;修改 git 设置不忽略大小写&lt;/p&gt;
-&lt;p&gt;进入博客文件夹，进入 git 目录：.deploy_git ，修改 .git 文件中的配置文件 config，将ignorecase=true 改为 ignorecase=false&lt;/p&gt;
+&lt;p&gt;进入博客文件夹，进入 git 目录：.deploy_git ，修改 .git 文件中的配置文件 config，将 ignorecase=true 改为 ignorecase=false&lt;/p&gt;
 &lt;figure class=&#34;highlight yaml&#34;&gt;&lt;figcaption&gt;&lt;span&gt;Yaml&lt;/span&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;string&#34;&gt;vim&lt;/span&gt; &lt;span class=&#34;string&#34;&gt;.&lt;/span&gt; &lt;span class=&#34;string&#34;&gt;deploy_git/.git/config&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;string&#34;&gt;ignorecase&lt;/span&gt; &lt;span class=&#34;string&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;literal&#34;&gt;false&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;p&gt;如果还没有解决，清空部署到 github 上的文件，重新发布：&lt;/p&gt;
 &lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption&gt;&lt;span&gt;Bash&lt;/span&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;built_in&#34;&gt;cd&lt;/span&gt; .deploy_git&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;git rm -rf *&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;git commit -m &lt;span class=&#34;string&#34;&gt;&amp;#x27;clean all file&amp;#x27;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;git push&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;

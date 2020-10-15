@@ -76,7 +76,7 @@ js文字闪动效果 - web前端 |
       <i class="ic i-pen"></i>
     </span>
     <span class="text">本文字数</span>
-    <span>236</span>
+    <span>237</span>
     <span class="text">字</span>
   </span>
   <span class="item" title="阅读时长">
@@ -117,12 +117,12 @@ js文字闪动效果 - web前端 |
       </div>
       <div id="imgs" class="pjax">
         <ul>
-          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1giclhnx9glj20zk0m8npd.jpg"></li>
-          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1gipet8c1a2j20zk0m8kct.jpg"></li>
-          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1gicit31ffoj20zk0m8naf.jpg"></li>
-          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1gipeybxm1pj20zk0m8niv.jpg"></li>
-          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1gicit4jrvuj20zk0m8785.jpg"></li>
-          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1giclffsa1cj20zk0m811l.jpg"></li>
+          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1gicitzannuj20zk0m8b29.jpg"></li>
+          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1gicm0fdw5cj20zk0m8hdt.jpg"></li>
+          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1gipewr8iypj20zk0m8b29.jpg"></li>
+          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1gipet8c1a2j20zk0m8kct.jpg"></li>
+          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1gipevgoki5j20zk0m84qp.jpg"></li>
+          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1giclhtuo6nj20zk0m8ttm.jpg"></li>
         </ul>
       </div>
     </header>
@@ -168,8 +168,8 @@ js文字闪动效果 - web前端 |
   <div class="body md" itemprop="articleBody">
     
 
-    <p>利用javaSrcipt(js)实现对文字的如跑马灯一样的效果。</p>
-<h2 id="效果如下"><a class="markdownIt-Anchor" href="#效果如下"></a> 💍 效果如下:</h2>
+    <p>利用 javaSrcipt (js) 实现对文字的如跑马灯一样的效果。</p>
+<h2 id="效果如下"><a class="markdownIt-Anchor" href="#效果如下">#</a> 💍 效果如下:</h2>
 <script>
 var Tname="欢迎来到码坑的博客";
 var Tlen=Tname.length;
@@ -189,10 +189,10 @@ function Dcolor(){
 Dcolor();
 </script>
 <a id="more"></a>
-<h2 id="详细代码如下"><a class="markdownIt-Anchor" href="#详细代码如下"></a> 💍 详细代码如下:</h2>
+<h2 id="详细代码如下"><a class="markdownIt-Anchor" href="#详细代码如下">#</a> 💍 详细代码如下:</h2>
 <figure class="highlight js"><figcaption><span>Js</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line"><span class="keyword">var</span> Tname=<span class="string">&quot;欢迎来到码坑的博客&quot;</span>;</span><br><span class="line"><span class="keyword">var</span> Tlen=Tname.length;</span><br><span class="line"><span class="built_in">document</span>.write(<span class="string">&quot;&lt;div id=&#x27;a&#x27; style=&#x27;font-size:40px;&#x27;&gt;&quot;</span>+Tname+<span class="string">&quot;&lt;/div&gt;&quot;</span>);</span><br><span class="line"><span class="keyword">var</span> col=<span class="keyword">new</span> <span class="built_in">Array</span>(<span class="string">&quot;#4FFFF&quot;</span>,<span class="string">&quot;#3333FF&quot;</span>,<span class="string">&quot;#FFCC00&quot;</span>,<span class="string">&quot;chartreuse&quot;</span>,<span class="string">&quot;#FFCC00&quot;</span>,<span class="string">&quot;#CC33FF&quot;</span>);</span><br><span class="line"><span class="keyword">var</span> ic=<span class="number">0</span>;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Dcolor</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">  <span class="keyword">var</span> Strname=<span class="string">&quot;&quot;</span>;</span><br><span class="line">  <span class="keyword">for</span> (i=<span class="number">0</span>;i&lt;Tlen;++i)&#123;</span><br><span class="line">    <span class="keyword">var</span> Strname=Strname+<span class="string">&quot;&lt;font color=&quot;</span>+col[ic]+<span class="string">&quot;&gt;&quot;</span>+Tname.substring(i,i+<span class="number">1</span>)+<span class="string">&quot;&lt;/font&gt;&quot;</span>;</span><br><span class="line">	ic=ic+<span class="number">1</span>;</span><br><span class="line">  	<span class="keyword">if</span> (ic==col.length) ic=<span class="number">0</span>;</span><br><span class="line">  &#125;</span><br><span class="line">  a.innerHTML=Strname;</span><br><span class="line">  <span class="built_in">setTimeout</span>(<span class="string">&quot;Dcolor()&quot;</span>,<span class="number">200</span>);</span><br><span class="line">&#125;</span><br><span class="line">Dcolor();</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
-<p>这个案例的话只是简单的javaSrcipt(js)基础知识，希望可以对来到阿杰博客的朋友有所帮助<br>
-如代码有问题,请指点出来,大家讨论一下，谢谢!</p>
+<p>这个案例的话只是简单的 javaSrcipt (js) 基础知识，希望可以对来到阿杰博客的朋友有所帮助<br>
+如代码有问题，请指点出来，大家讨论一下，谢谢！</p>
 
       <div class="tags">
           <a href="/tags/JavaScript/" rel="tag"><i class="ic i-tag"></i> JavaScript</a>
@@ -272,7 +272,7 @@ Dcolor();
     <div class="item right">
       
 
-  <a href="/2020/08/19/%E5%85%89%E6%A0%87%E5%8A%A8%E7%94%BB/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;tva3.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1gicli3sbvtj20zk0m8x6p.jpg" title="利用html+javaSrcipt+css3实现光标动画">
+  <a href="/2020/08/19/%E5%85%89%E6%A0%87%E5%8A%A8%E7%94%BB/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1gipeun65urj20zk0m81ii.jpg" title="利用html+javaSrcipt+css3实现光标动画">
   <span class="type">下一篇</span>
   <span class="category"><i class="ic i-flag"></i> web前端</span>
   <h3>利用html+javaSrcipt+css3实现光标动画</h3>
@@ -410,10 +410,12 @@ Dcolor();
   <li class="item">
     
 <div class="breadcrumb">
-<a href="/categories/web%E5%89%8D%E7%AB%AF/" title="分类于 web前端">web前端</a>
+<a href="/categories/JAVA/" title="分类于 JAVA">JAVA</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/JAVA/Maven/" title="分类于 Maven">Maven</a>
 </div>
 
-    <span><a href="/2020/08/21/react%E5%92%8Cvue/" title="React.js与Vue.js流行框架的比较">React.js与Vue.js流行框架的比较</a></span>
+    <span><a href="/2020/08/25/Maven%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE/" title="Maven的安装及配置">Maven的安装及配置</a></span>
   </li>
 
       
@@ -423,27 +425,7 @@ Dcolor();
 <a href="/categories/JAVA/" title="分类于 JAVA">JAVA</a>
 </div>
 
-    <span><a href="/2020/08/25/pom%E6%8A%A5%E9%94%99/" title="pom.xml的标签报错 Element ‘project‘ cannot have character [children], because the type‘s content**">pom.xml的标签报错 Element ‘project‘ cannot have character [children], because the type‘s content**</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/web%E5%89%8D%E7%AB%AF/" title="分类于 web前端">web前端</a>
-</div>
-
-    <span><a href="/2020/08/19/%E5%85%89%E6%A0%87%E5%8A%A8%E7%94%BB/" title="利用html+javaSrcipt+css3实现光标动画">利用html+javaSrcipt+css3实现光标动画</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/JAVA/" title="分类于 JAVA">JAVA</a>
-</div>
-
-    <span><a href="/2020/08/20/java%E5%9F%BA%E7%A1%80/" title="JAVA的JDK安装步骤">JAVA的JDK安装步骤</a></span>
+    <span><a href="/2020/10/15/sort/" title="Java中的数组排序">Java中的数组排序</a></span>
   </li>
 
       
@@ -472,10 +454,30 @@ Dcolor();
   <li class="item">
     
 <div class="breadcrumb">
+<a href="/categories/web%E5%89%8D%E7%AB%AF/" title="分类于 web前端">web前端</a>
+</div>
+
+    <span><a href="/2020/08/21/react%E5%92%8Cvue/" title="React.js与Vue.js流行框架的比较">React.js与Vue.js流行框架的比较</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/web%E5%89%8D%E7%AB%AF/" title="分类于 web前端">web前端</a>
+</div>
+
+    <span><a href="/2020/08/19/%E5%85%89%E6%A0%87%E5%8A%A8%E7%94%BB/" title="利用html+javaSrcipt+css3实现光标动画">利用html+javaSrcipt+css3实现光标动画</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
 <a href="/categories/JAVA/" title="分类于 JAVA">JAVA</a>
 </div>
 
-    <span><a href="/2020/10/15/sort/" title="Java中的数组排序">Java中的数组排序</a></span>
+    <span><a href="/2020/08/20/java%E5%9F%BA%E7%A1%80/" title="JAVA的JDK安装步骤">JAVA的JDK安装步骤</a></span>
   </li>
 
       
@@ -493,11 +495,9 @@ Dcolor();
     
 <div class="breadcrumb">
 <a href="/categories/JAVA/" title="分类于 JAVA">JAVA</a>
-<i class="ic i-angle-right"></i>
-<a href="/categories/JAVA/Maven/" title="分类于 Maven">Maven</a>
 </div>
 
-    <span><a href="/2020/08/25/Maven%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE/" title="Maven的安装及配置">Maven的安装及配置</a></span>
+    <span><a href="/2020/08/25/pom%E6%8A%A5%E9%94%99/" title="pom.xml的标签报错 Element ‘project‘ cannot have character [children], because the type‘s content**">pom.xml的标签报错 Element ‘project‘ cannot have character [children], because the type‘s content**</a></span>
   </li>
 
   </ul>
