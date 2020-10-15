@@ -65,6 +65,32 @@ MAVEN_HOME:</li>
       </tags>
   </entry>
   <entry>
+    <title>hexo分类and标签404</title>
+    <url>/2020/08/20/hexo/</url>
+    <content><![CDATA[<h2 id="404分类and标签错误处理"><a class="markdownIt-Anchor" href="#404分类and标签错误处理">#</a> 💍 404 分类 and 标签错误处理</h2>
+<p>突然发现博客中，部分分类打不开，点击出现 404，在标签中查看，也是小部分标签点击 404，但是在所有文章中该分类下的文章都能打开，后来发现这些 404 的标签或分类名都是后来修改过的，原先的名称开头是大写名称</p>
+<p>将大写字母改成小写，hexo 部署正确，但是博客上还是不正确出现 404</p>
+<p>网上查了许多资料，才发现，git 中设置了大小写不敏感</p>
+<a id="more"></a>
+<h2 id="解决方法如下"><a class="markdownIt-Anchor" href="#解决方法如下">#</a> 💍 解决方法如下</h2>
+<p>修改 git 设置不忽略大小写</p>
+<p>进入博客文件夹，进入 git 目录：.deploy_git ，修改 .git 文件中的配置文件 config，将 ignorecase=true 改为 ignorecase=false</p>
+<figure class="highlight yaml"><figcaption><span>Yaml</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="string">vim</span> <span class="string">.</span> <span class="string">deploy_git/.git/config</span></span><br><span class="line"></span><br><span class="line"><span class="string">ignorecase</span> <span class="string">=</span> <span class="literal">false</span></span><br></pre></td></tr></table></figure>
+<p>如果还没有解决，清空部署到 github 上的文件，重新发布：</p>
+<figure class="highlight bash"><figcaption><span>Bash</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> .deploy_git</span><br><span class="line">git rm -rf *</span><br><span class="line">git commit -m <span class="string">&#x27;clean all file&#x27;</span></span><br><span class="line">git push</span><br></pre></td></tr></table></figure>
+<p>进入博客文件夹，用 hexo 重新生成部署</p>
+<figure class="highlight plain"><figcaption><span>Hexo</span></figcaption><table><tr><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo g </span><br><span class="line">hexo d or hexo g -d</span><br></pre></td></tr></table></figure>
+<p><font style="color: red;">这些问题都是自己开始搭建博客的时候出现的一些问题，希望能够帮助到各位，<br>
+如果那里错误，请指点出来，大家一起讨论。</font></p>
+]]></content>
+      <categories>
+        <category>扩展</category>
+      </categories>
+      <tags>
+        <tag>Hexo</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>JAVA的JDK安装步骤</title>
     <url>/2020/08/20/java%E5%9F%BA%E7%A1%80/</url>
     <content><![CDATA[<p>对于一个 JAVA 或 android 开发者来说，JDK 的安装是做任何事的前提。但现在有好多教程的 JDK 安装配置方法繁琐重复，容易误导新手，本教程可以说是最简单经典实用的配置方法。</p>
@@ -100,32 +126,6 @@ MAVEN_HOME:</li>
       </categories>
       <tags>
         <tag>JAVA</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>hexo分类and标签404</title>
-    <url>/2020/08/20/hexo/</url>
-    <content><![CDATA[<h2 id="404分类and标签错误处理"><a class="markdownIt-Anchor" href="#404分类and标签错误处理">#</a> 💍 404 分类 and 标签错误处理</h2>
-<p>突然发现博客中，部分分类打不开，点击出现 404，在标签中查看，也是小部分标签点击 404，但是在所有文章中该分类下的文章都能打开，后来发现这些 404 的标签或分类名都是后来修改过的，原先的名称开头是大写名称</p>
-<p>将大写字母改成小写，hexo 部署正确，但是博客上还是不正确出现 404</p>
-<p>网上查了许多资料，才发现，git 中设置了大小写不敏感</p>
-<a id="more"></a>
-<h2 id="解决方法如下"><a class="markdownIt-Anchor" href="#解决方法如下">#</a> 💍 解决方法如下</h2>
-<p>修改 git 设置不忽略大小写</p>
-<p>进入博客文件夹，进入 git 目录：.deploy_git ，修改 .git 文件中的配置文件 config，将 ignorecase=true 改为 ignorecase=false</p>
-<figure class="highlight yaml"><figcaption><span>Yaml</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="string">vim</span> <span class="string">.</span> <span class="string">deploy_git/.git/config</span></span><br><span class="line"></span><br><span class="line"><span class="string">ignorecase</span> <span class="string">=</span> <span class="literal">false</span></span><br></pre></td></tr></table></figure>
-<p>如果还没有解决，清空部署到 github 上的文件，重新发布：</p>
-<figure class="highlight bash"><figcaption><span>Bash</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> .deploy_git</span><br><span class="line">git rm -rf *</span><br><span class="line">git commit -m <span class="string">&#x27;clean all file&#x27;</span></span><br><span class="line">git push</span><br></pre></td></tr></table></figure>
-<p>进入博客文件夹，用 hexo 重新生成部署</p>
-<figure class="highlight plain"><figcaption><span>Hexo</span></figcaption><table><tr><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo g </span><br><span class="line">hexo d or hexo g -d</span><br></pre></td></tr></table></figure>
-<p><font style="color: red;">这些问题都是自己开始搭建博客的时候出现的一些问题，希望能够帮助到各位，<br>
-如果那里错误，请指点出来，大家一起讨论。</font></p>
-]]></content>
-      <categories>
-        <category>扩展</category>
-      </categories>
-      <tags>
-        <tag>Hexo</tag>
       </tags>
   </entry>
   <entry>
