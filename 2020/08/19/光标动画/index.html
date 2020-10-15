@@ -117,12 +117,12 @@
       </div>
       <div id="imgs" class="pjax">
         <ul>
-          <li class="item" data-background-image="https://tva4.sinaimg.cn/large/6833939bly1giclxxcb6rj20zk0m8b29.jpg"></li>
-          <li class="item" data-background-image="https://tva4.sinaimg.cn/large/6833939bly1gicm07ih54j20zk0m84qp.jpg"></li>
-          <li class="item" data-background-image="https://tva4.sinaimg.cn/large/6833939bly1gicm0fdw5cj20zk0m8hdt.jpg"></li>
-          <li class="item" data-background-image="https://tva4.sinaimg.cn/large/6833939bly1giclga70tsj20zk0m84mr.jpg"></li>
-          <li class="item" data-background-image="https://tva4.sinaimg.cn/large/6833939bly1gipeyvx1d4j20zk0m8hdt.jpg"></li>
-          <li class="item" data-background-image="https://tva4.sinaimg.cn/large/6833939bly1gipetlbztpj20zk0m84qp.jpg"></li>
+          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1gipeyonbf9j20zk0m8e81.jpg"></li>
+          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1gipet4bz0yj20zk0m8e81.jpg"></li>
+          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1gipeuv80yoj20zk0m8kjl.jpg"></li>
+          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1gipexw3o58j20zk0m8e81.jpg"></li>
+          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1gipewkhf1zj20zk0m81kx.jpg"></li>
+          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1gipeubcbajj20zk0m8h1h.jpg"></li>
         </ul>
       </div>
     </header>
@@ -168,15 +168,15 @@
   <div class="body md" itemprop="articleBody">
     
 
-    <p>这个案例也是通过 javaSrcipt (js) 实现，这个案例相对比较简单，先是整体的 HTML 代码结构，这个案例呢 javaSrcipt (js) 是直接写在我们 HTML 的内部，<br>
-没有通过外链的方式实现，因为代码量较少直接写在了整体结构之中，其实这个案例不仅仅是纯的 javaSrcipt (js) 代码，本案例只是利用了 javaSrcipt (js)<br>
- 的一个时间来控制光标闪动的时间而已，而我们的 CSS3 样式呢，主要是让文字颜色，利用 background 使文字产生渐变的效果。</p>
+    <p>这个案例也是通过javaSrcipt(js)实现，这个案例相对比较简单，先是整体的HTML代码结构，这个案例呢javaSrcipt(js)是直接写在我们HTML的内部，<br>
+没有通过外链的方式实现，因为代码量较少直接写在了整体结构之中，其实这个案例不仅仅是纯的javaSrcipt(js)代码，本案例只是利用了javaSrcipt(js)<br>
+的一个时间来控制光标闪动的时间而已，而我们的CSS3样式呢，主要是让文字颜色，利用background使文字产生渐变的效果。</p>
 <a id="more"></a>
-<h3 id="详细代码如下"><a class="markdownIt-Anchor" href="#详细代码如下">#</a> 💍 详细代码如下</h3>
+<h3 id="详细代码如下"><a class="markdownIt-Anchor" href="#详细代码如下"></a> 💍 详细代码如下</h3>
 <figure class="highlight html"><figcaption><span>Html</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">&quot;zh&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;UTF-8&quot;</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">&quot;viewport&quot;</span> <span class="attr">content</span>=<span class="string">&quot;width=device-width, initial-scale=1.0&quot;</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">meta</span> <span class="attr">http-equiv</span>=<span class="string">&quot;X-UA-Compatible&quot;</span> <span class="attr">content</span>=<span class="string">&quot;ie=edge&quot;</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">title</span>&gt;</span>光标动画<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">style</span> <span class="attr">type</span>=<span class="string">&quot;text/css&quot;</span>&gt;</span></span><br><span class="line">		*&#123;</span><br><span class="line">			margin: 0;</span><br><span class="line">			padding: 0;</span><br><span class="line">		&#125;</span><br><span class="line">		html,body&#123;</span><br><span class="line">			height: 100%;</span><br><span class="line">			overflow: hidden;</span><br><span class="line">			background: black;</span><br><span class="line">			text-align: center;</span><br><span class="line">		&#125;</span><br><span class="line">		h1&#123;</span><br><span class="line">			margin-top: 50px;</span><br><span class="line">			display: inline-block;</span><br><span class="line"><span class="css">			<span class="selector-tag">color</span>: <span class="selector-tag">rgba</span>(255,255,255,<span class="selector-class">.3</span>);</span></span><br><span class="line"><span class="css">			<span class="selector-tag">font</span><span class="selector-pseudo">:bold</span> 80<span class="selector-tag">px</span> &quot;微软雅黑&quot;;</span></span><br><span class="line">			background: linear-gradient(120deg,rgba(255,255,255,0) 100px,rgba(255,255,255,1) 180px,rgba(255,255,255,0) 270px) no-repeat;</span><br><span class="line"><span class="css">			<span class="selector-tag">-webkit-background-clip</span><span class="selector-pseudo">:text</span>;</span></span><br><span class="line">		&#125;</span><br><span class="line">		</span><br><span class="line">	<span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">h1</span>&gt;</span>欢迎来到阿杰的博客<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line">	</span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<h4 id="在body插入以下javasrciptjs代码body"><a class="markdownIt-Anchor" href="#在body插入以下javasrciptjs代码body">#</a> 💍 在<body>插入以下 javaSrcipt (js) 代码</body></h4>
+<h4 id="在body插入以下javasrciptjs代码body"><a class="markdownIt-Anchor" href="#在body插入以下javasrciptjs代码body"></a> 💍 在<body>插入以下javaSrcipt(js)代码</body></h4>
 <figure class="highlight js"><figcaption><span>Js</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&lt;script type=<span class="string">&quot;text/javascript&quot;</span>&gt;</span><br><span class="line">		<span class="keyword">var</span> h1 = <span class="built_in">document</span>.querySelector(<span class="string">&quot;h1&quot;</span>);</span><br><span class="line">		<span class="keyword">var</span> flag = <span class="number">-160</span>;</span><br><span class="line">		<span class="built_in">setInterval</span>(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">			flag+=<span class="number">10</span>;</span><br><span class="line">			<span class="keyword">if</span>(flag == <span class="number">1100</span>)&#123;</span><br><span class="line">				flag = <span class="number">-160</span>;</span><br><span class="line">			&#125;</span><br><span class="line">			h1.style.backgroundPosition = flag +<span class="string">&quot;px&quot;</span>;</span><br><span class="line">		&#125;,<span class="number">30</span>);</span><br><span class="line">	&lt;/script&gt;</span><br></pre></td></tr></table></figure>
-<p>这个案例的话只是简单的 javaSrcipt (js) 基础知识，希望可以对来到阿杰博客的朋友有所帮助如代码有问题，请指点出来，大家讨论一下，谢谢！</p>
+<p>这个案例的话只是简单的javaSrcipt(js)基础知识，希望可以对来到阿杰博客的朋友有所帮助如代码有问题,请指点出来,大家讨论一下，谢谢!</p>
 
       <div class="tags">
           <a href="/tags/JavaScript/" rel="tag"><i class="ic i-tag"></i> JavaScript</a>
@@ -216,13 +216,13 @@
       </div>
       
       <div>
-        <img data-src="/images/alipay.png" alt="码坑 支付宝">
-        <p>支付宝</p>
+        <img data-src="/images/alipay.png" alt="码坑 支付宝支付">
+        <p>支付宝支付</p>
       </div>
       
       <div>
-        <img data-src="/images/paypal.png" alt="码坑 贝宝">
-        <p>贝宝</p>
+        <img data-src="/images/paypal.png" alt="码坑 QQ支付">
+        <p>QQ支付</p>
       </div>
   </div>
 </div>
@@ -255,7 +255,7 @@
     <div class="item left">
       
 
-  <a href="/2020/08/19/%E5%BD%A9%E8%89%B2%E6%96%87%E5%AD%97/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;tva4.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1giclhpw3lwj20zk0m8gvw.jpg" title="js文字闪动效果">
+  <a href="/2020/08/19/%E5%BD%A9%E8%89%B2%E6%96%87%E5%AD%97/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;tva3.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1giclhpw3lwj20zk0m8gvw.jpg" title="js文字闪动效果">
   <span class="type">上一篇</span>
   <span class="category"><i class="ic i-flag"></i> web前端</span>
   <h3>js文字闪动效果</h3>
@@ -265,7 +265,7 @@
     <div class="item right">
       
 
-  <a href="/2020/08/20/java%E5%9F%BA%E7%A1%80/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;tva4.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1gicm0n457cj20zk0m8e81.jpg" title="JAVA的JDK安装步骤">
+  <a href="/2020/08/20/java%E5%9F%BA%E7%A1%80/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;tva3.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1gipet4bz0yj20zk0m8e81.jpg" title="JAVA的JDK安装步骤">
   <span class="type">下一篇</span>
   <span class="category"><i class="ic i-flag"></i> JAVA</span>
   <h3>JAVA的JDK安装步骤</h3>
@@ -287,7 +287,7 @@
   <div class="panels">
     <div class="inner">
       <div class="contents panel pjax" data-title="文章目录">
-          <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AF%A6%E7%BB%86%E4%BB%A3%E7%A0%81%E5%A6%82%E4%B8%8B"><span class="toc-number">1.</span> <span class="toc-text"> 💍 详细代码如下</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%9C%A8body%E6%8F%92%E5%85%A5%E4%BB%A5%E4%B8%8Bjavasrciptjs%E4%BB%A3%E7%A0%81body"><span class="toc-number">1.1.</span> <span class="toc-text"> 💍 在插入以下 javaSrcipt (js) 代码</span></a></li></ol></li></ol>
+          <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AF%A6%E7%BB%86%E4%BB%A3%E7%A0%81%E5%A6%82%E4%B8%8B"><span class="toc-number">1.</span> <span class="toc-text"> 💍 详细代码如下</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%9C%A8body%E6%8F%92%E5%85%A5%E4%BB%A5%E4%B8%8Bjavasrciptjs%E4%BB%A3%E7%A0%81body"><span class="toc-number">1.1.</span> <span class="toc-text"> 💍 在插入以下javaSrcipt(js)代码</span></a></li></ol></li></ol>
       </div>
       <div class="related panel pjax" data-title="系列文章">
         <ul>
@@ -405,32 +405,10 @@
   <li class="item">
     
 <div class="breadcrumb">
-<a href="/categories/web%E5%89%8D%E7%AB%AF/" title="分类于 web前端">web前端</a>
-</div>
-
-    <span><a href="/2020/08/19/%E5%85%89%E6%A0%87%E5%8A%A8%E7%94%BB/" title="利用html+javaSrcipt+css3实现光标动画">利用html+javaSrcipt+css3实现光标动画</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
 <a href="/categories/JAVA/" title="分类于 JAVA">JAVA</a>
-<i class="ic i-angle-right"></i>
-<a href="/categories/JAVA/Docker/" title="分类于 Docker">Docker</a>
 </div>
 
-    <span><a href="/2020/08/27/docker/" title="Docker安装部署">Docker安装部署</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/web%E5%89%8D%E7%AB%AF/" title="分类于 web前端">web前端</a>
-</div>
-
-    <span><a href="/2020/08/21/react%E5%92%8Cvue/" title="React.js与Vue.js流行框架的比较">React.js与Vue.js流行框架的比较</a></span>
+    <span><a href="/2020/08/25/pom%E6%8A%A5%E9%94%99/" title="pom.xml的标签报错 Element ‘project‘ cannot have character [children], because the type‘s content**">pom.xml的标签报错 Element ‘project‘ cannot have character [children], because the type‘s content**</a></span>
   </li>
 
       
@@ -460,7 +438,7 @@
 <a href="/categories/JAVA/" title="分类于 JAVA">JAVA</a>
 </div>
 
-    <span><a href="/2020/08/25/pom%E6%8A%A5%E9%94%99/" title="pom.xml的标签报错 Element ‘project‘ cannot have character [children], because the type‘s content**">pom.xml的标签报错 Element ‘project‘ cannot have character [children], because the type‘s content**</a></span>
+    <span><a href="/2020/08/20/java%E5%9F%BA%E7%A1%80/" title="JAVA的JDK安装步骤">JAVA的JDK安装步骤</a></span>
   </li>
 
       
@@ -479,20 +457,42 @@
   <li class="item">
     
 <div class="breadcrumb">
-<a href="/categories/JAVA/" title="分类于 JAVA">JAVA</a>
+<a href="/categories/%E6%89%A9%E5%B1%95/" title="分类于 扩展">扩展</a>
 </div>
 
-    <span><a href="/2020/08/20/java%E5%9F%BA%E7%A1%80/" title="JAVA的JDK安装步骤">JAVA的JDK安装步骤</a></span>
+    <span><a href="/2020/08/20/hexo/" title="hexo分类and标签404">hexo分类and标签404</a></span>
   </li>
 
       
   <li class="item">
     
 <div class="breadcrumb">
-<a href="/categories/%E6%89%A9%E5%B1%95/" title="分类于 扩展">扩展</a>
+<a href="/categories/JAVA/" title="分类于 JAVA">JAVA</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/JAVA/Docker/" title="分类于 Docker">Docker</a>
 </div>
 
-    <span><a href="/2020/08/20/hexo/" title="hexo分类and标签404">hexo分类and标签404</a></span>
+    <span><a href="/2020/08/27/docker/" title="Docker安装部署">Docker安装部署</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/web%E5%89%8D%E7%AB%AF/" title="分类于 web前端">web前端</a>
+</div>
+
+    <span><a href="/2020/08/19/%E5%85%89%E6%A0%87%E5%8A%A8%E7%94%BB/" title="利用html+javaSrcipt+css3实现光标动画">利用html+javaSrcipt+css3实现光标动画</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/web%E5%89%8D%E7%AB%AF/" title="分类于 web前端">web前端</a>
+</div>
+
+    <span><a href="/2020/08/21/react%E5%92%8Cvue/" title="React.js与Vue.js流行框架的比较">React.js与Vue.js流行框架的比较</a></span>
   </li>
 
   </ul>
