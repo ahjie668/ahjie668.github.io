@@ -1,6 +1,54 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>pom.xml的标签报错 Element ‘project‘ cannot have character [children], because the type‘s content**</title>
+    <url>/java/pom%E6%8A%A5%E9%94%99/</url>
+    <content><![CDATA[<p><strong>CSDN 地址:<span class="exturl" data-url="aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ0ODQxNDMyL2FydGljbGUvZGV0YWlscy8xMDc3NjgxOTc=">https://blog.csdn.net/qq_44841432/article/details/107768197</span></strong></p>
+<h2 id="pomxml的报错"><a class="markdownIt-Anchor" href="#pomxml的报错">#</a> 💍 pom.xml 的报错</h2>
+<p><img data-src="https://img-blog.csdnimg.cn/20200803164619221.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ0ODQxNDMy,size_16,color_FFFFFF,t_70#pic_center" alt></p>
+<figure class="highlight"><figcaption><span>JAVA</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="comment">//首先看到的报错的标签</span></span><br><span class="line">&lt;project&gt;</span><br><span class="line">.......</span><br><span class="line">.......</span><br><span class="line">&lt;/project&gt;</span><br></pre></td></tr></table></figure>
+<p>其实这个错误的来源是某些编译器导致的，比如现在我们常用的开发工具 -&gt;IDEA -&gt;Eclipse, 这个两种工具，其中 IDEA 他的弊端在于有时候导致明明写对的代码报错出现红杠，<br>
+这个也是编译器导致的，当然这种情况不会频繁的出现，只是偶尔出现，对比起来这个两个工具 IDEA 的好用些，代码提示功能强大，也不同自己去导 jar 包，也大大的提升了开发的效率.</p>
+<h2 id="解决方法"><a class="markdownIt-Anchor" href="#解决方法">#</a> 💍 解决方法</h2>
+<p>把 pom.xml 文件里面的代码全选复制粘贴到一个外部工具上，这里推荐 Notepad++，复制到 Notepad++ 上面以后把无效的空格删除，删除以后呢在复制粘贴到 IDEA 中，这样就可以解决的报错.</p>
+<h3 id="各位有问题也可以搜索微信公众号码坑私信我大家一起讨论学习"><a class="markdownIt-Anchor" href="#各位有问题也可以搜索微信公众号码坑私信我大家一起讨论学习">#</a> 💍 各位有问题也可以搜索微信公众号” 码坑” 私信我，大家一起讨论学习。</h3>
+<p><img data-src="https://qr.api.cli.im/newqr/create?data=http%253A%252F%252Fweixin.qq.com%252Fr%252FxTkRCRjERUU6rVxq92zX&amp;level=H&amp;transparent=0&amp;bgcolor=%23ffffff&amp;forecolor=%2368B56B&amp;blockpixel=12&amp;marginblock=2&amp;logourl=https://mhimg.clewm.net/cli/images/beautify/new/logo/35.png&amp;size=400&amp;logoshape=ellipse&amp;foretype=2&amp;gradient_way=vertical&amp;forecolor2=%2304777A&amp;eye_use_fore=1&amp;background=//static.clewm.net/cli/images/background/31.png&amp;qrcode_eyes=circle_circle&amp;outcolor=%23063492&amp;incolor=%231183E8&amp;body_type=17&amp;water_ratio=1&amp;qr_rotate=0&amp;text=&amp;kid=bizcliim&amp;time=1598267946&amp;key=5d831a6325d08f0fe6e1b90c8f28ea26" alt="微信公众号"></p>
+]]></content>
+      <categories>
+        <category>JAVA编程语言</category>
+      </categories>
+      <tags>
+        <tag>JAVA</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>hexo分类and标签404</title>
+    <url>/Other-extensions/hexo/</url>
+    <content><![CDATA[<h2 id="404分类and标签错误处理"><a class="markdownIt-Anchor" href="#404分类and标签错误处理">#</a> 💍 404 分类 and 标签错误处理</h2>
+<p>突然发现博客中，部分分类打不开，点击出现 404，在标签中查看，也是小部分标签点击 404，但是在所有文章中该分类下的文章都能打开，后来发现这些 404 的标签或分类名都是后来修改过的，原先的名称开头是大写名称</p>
+<p>将大写字母改成小写，hexo 部署正确，但是博客上还是不正确出现 404</p>
+<p>网上查了许多资料，才发现，git 中设置了大小写不敏感</p>
+<a id="more"></a>
+<h2 id="解决方法如下"><a class="markdownIt-Anchor" href="#解决方法如下">#</a> 💍 解决方法如下</h2>
+<p>修改 git 设置不忽略大小写</p>
+<p>进入博客文件夹，进入 git 目录：.deploy_git ，修改 .git 文件中的配置文件 config，将 ignorecase=true 改为 ignorecase=false</p>
+<figure class="highlight yaml"><figcaption><span>Yaml</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="string">vim</span> <span class="string">.</span> <span class="string">deploy_git/.git/config</span></span><br><span class="line"></span><br><span class="line"><span class="string">ignorecase</span> <span class="string">=</span> <span class="literal">false</span></span><br></pre></td></tr></table></figure>
+<p>如果还没有解决，清空部署到 github 上的文件，重新发布：</p>
+<figure class="highlight bash"><figcaption><span>Bash</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> .deploy_git</span><br><span class="line">git rm -rf *</span><br><span class="line">git commit -m <span class="string">&#x27;clean all file&#x27;</span></span><br><span class="line">git push</span><br></pre></td></tr></table></figure>
+<p>进入博客文件夹，用 hexo 重新生成部署</p>
+<figure class="highlight plain"><figcaption><span>Hexo</span></figcaption><table><tr><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo g </span><br><span class="line">hexo d or hexo g -d</span><br></pre></td></tr></table></figure>
+<p><font style="color: red;">这些问题都是自己开始搭建博客的时候出现的一些问题，希望能够帮助到各位，<br>
+如果那里错误，请指点出来，大家一起讨论。</font></p>
+]]></content>
+      <categories>
+        <category>其他扩展</category>
+        <category>hexo分类and标签404</category>
+      </categories>
+      <tags>
+        <tag>Hexo</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Maven的安装及配置</title>
     <url>/java/Maven%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE/</url>
     <content><![CDATA[<h2 id="安装本地maven"><a class="markdownIt-Anchor" href="#安装本地maven">#</a> 💍安装本地 Maven</h2>
@@ -64,21 +112,38 @@ MAVEN_HOME:</li>
       </tags>
   </entry>
   <entry>
-    <title>pom.xml的标签报错 Element ‘project‘ cannot have character [children], because the type‘s content**</title>
-    <url>/java/pom%E6%8A%A5%E9%94%99/</url>
-    <content><![CDATA[<p><strong>CSDN 地址:<span class="exturl" data-url="aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ0ODQxNDMyL2FydGljbGUvZGV0YWlscy8xMDc3NjgxOTc=">https://blog.csdn.net/qq_44841432/article/details/107768197</span></strong></p>
-<h2 id="pomxml的报错"><a class="markdownIt-Anchor" href="#pomxml的报错">#</a> 💍 pom.xml 的报错</h2>
-<p><img data-src="https://img-blog.csdnimg.cn/20200803164619221.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ0ODQxNDMy,size_16,color_FFFFFF,t_70#pic_center" alt></p>
-<figure class="highlight"><figcaption><span>JAVA</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="comment">//首先看到的报错的标签</span></span><br><span class="line">&lt;project&gt;</span><br><span class="line">.......</span><br><span class="line">.......</span><br><span class="line">&lt;/project&gt;</span><br></pre></td></tr></table></figure>
-<p>其实这个错误的来源是某些编译器导致的，比如现在我们常用的开发工具 -&gt;IDEA -&gt;Eclipse, 这个两种工具，其中 IDEA 他的弊端在于有时候导致明明写对的代码报错出现红杠，<br>
-这个也是编译器导致的，当然这种情况不会频繁的出现，只是偶尔出现，对比起来这个两个工具 IDEA 的好用些，代码提示功能强大，也不同自己去导 jar 包，也大大的提升了开发的效率.</p>
-<h2 id="解决方法"><a class="markdownIt-Anchor" href="#解决方法">#</a> 💍 解决方法</h2>
-<p>把 pom.xml 文件里面的代码全选复制粘贴到一个外部工具上，这里推荐 Notepad++，复制到 Notepad++ 上面以后把无效的空格删除，删除以后呢在复制粘贴到 IDEA 中，这样就可以解决的报错.</p>
-<h3 id="各位有问题也可以搜索微信公众号码坑私信我大家一起讨论学习"><a class="markdownIt-Anchor" href="#各位有问题也可以搜索微信公众号码坑私信我大家一起讨论学习">#</a> 💍 各位有问题也可以搜索微信公众号” 码坑” 私信我，大家一起讨论学习。</h3>
-<p><img data-src="https://qr.api.cli.im/newqr/create?data=http%253A%252F%252Fweixin.qq.com%252Fr%252FxTkRCRjERUU6rVxq92zX&amp;level=H&amp;transparent=0&amp;bgcolor=%23ffffff&amp;forecolor=%2368B56B&amp;blockpixel=12&amp;marginblock=2&amp;logourl=https://mhimg.clewm.net/cli/images/beautify/new/logo/35.png&amp;size=400&amp;logoshape=ellipse&amp;foretype=2&amp;gradient_way=vertical&amp;forecolor2=%2304777A&amp;eye_use_fore=1&amp;background=//static.clewm.net/cli/images/background/31.png&amp;qrcode_eyes=circle_circle&amp;outcolor=%23063492&amp;incolor=%231183E8&amp;body_type=17&amp;water_ratio=1&amp;qr_rotate=0&amp;text=&amp;kid=bizcliim&amp;time=1598267946&amp;key=5d831a6325d08f0fe6e1b90c8f28ea26" alt="微信公众号"></p>
+    <title>Java中的数组排序</title>
+    <url>/java/sort/</url>
+    <content><![CDATA[<h2 id="冒泡排序"><a class="markdownIt-Anchor" href="#冒泡排序">#</a> 💍 冒泡排序</h2>
+<div class="note info">
+<p><span class="rainbow">基本思想:</span></p>
+<p>冒泡排序法：顾名思义，从下到上，两两进行比较，越小的越往上，从而形成由小到大的排序。冒泡排序的基本思想是对比相邻的原始值，如果满足条件就交换元素值，把较小的元素移到数组前面，把大的元素移动到数组的后面，这样较小的元素就像气泡从底部上升到顶部。</p>
+</div>
+<figure class="highlight java"><figcaption><span>JAVA</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Demo</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">int</span>[] arr1 = &#123;<span class="number">3</span>, <span class="number">22</span>, <span class="number">5</span>, <span class="number">3</span>, <span class="number">66</span>, <span class="number">2</span>, <span class="number">9</span>&#125;;</span><br><span class="line"></span><br><span class="line">        sort1(arr1);</span><br><span class="line"></span><br><span class="line">        <span class="comment">//使用foreach循环输出</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> x : arr1) &#123;</span><br><span class="line">            System.out.println(x + <span class="string">&quot; &quot;</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">//使用字符串表达形式输出，输出形式更为直观</span></span><br><span class="line">        System.out.println(Arrays.toString(arr));</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">sort1</span><span class="params">(<span class="keyword">int</span>[] arr1)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> temp;</span><br><span class="line">        <span class="comment">//根据角标进行比较，</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; arr1.length; i++) &#123;</span><br><span class="line">            <span class="comment">//j是数组的最后一个角标</span></span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> j = arr1.length - <span class="number">1</span>; j &gt; i; j--) &#123;</span><br><span class="line">                <span class="keyword">if</span> (arr1[j] &lt; arr1[j - <span class="number">1</span>]) &#123;</span><br><span class="line">                    <span class="comment">//从后往前进行比较，小数往前，一轮之后最小数就在最前面了</span></span><br><span class="line">                    temp = arr1[j - <span class="number">1</span>];</span><br><span class="line">                    arr1[j - <span class="number">1</span>] = arr1[j];</span><br><span class="line">                    arr1[j] = temp;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h2 id="调用arrayssort类方法进行排序"><a class="markdownIt-Anchor" href="#调用arrayssort类方法进行排序">#</a> 💍 调用 Arrays.sort 类方法进行排序</h2>
+<div class="note info">
+<p><span class="rainbow">网上一些说法</span><br>
+快速排序主要是对哪些基本类型数据（int,short,long 等）排序， 而合并排序用于对对象类型进行排序。<br>
+使用不同类型的排序算法主要是由于快速排序是不稳定的，而合并排序是稳定的。这里的稳定是指比较相等的数据在排序之后仍然按照排序之前的前后顺序排列。对于基本数据类型，稳定性没有意义，而对于对象类型，稳定性是比较重要的，因为对象相等的判断可能只是判断关键属性，最好保持相等对象的非关键属性的顺序与排序前一直；另外一个原因是由于合并排序相对而言比较次数比快速排序少，移动（对象引用的移动）次数比快速排序多，而对于对象来说，比较一般比移动耗时。<br>
+补充一点合并排序的时间复杂度是 nlogn, 快速排序的平均时间复杂度也是 nlogn，但是合并排序的需要额外的 n 个引用的空间 ……</p>
+</div>
+<figure class="highlight java"><figcaption><span>JAVA</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Demo</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">    <span class="comment">// 第一种    </span></span><br><span class="line">    <span class="keyword">int</span>[] arr2 = &#123;<span class="number">0</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">6</span>,<span class="number">8</span>,<span class="number">9</span>,<span class="number">2</span>,<span class="number">5</span>,<span class="number">1</span>,<span class="number">7</span>&#125;;</span><br><span class="line">        Arrays.sort(arr2);</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; arr2.length ; i++)&#123;</span><br><span class="line">             System.out.print(arr2[i]+<span class="string">&quot; &quot;</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    <span class="comment">// 第二种调用本类方法实现    </span></span><br><span class="line">    <span class="keyword">int</span>[] arr2 = &#123;<span class="number">89</span>,<span class="number">59</span>,<span class="number">12</span>,<span class="number">36</span>,<span class="number">45</span>,<span class="number">0</span>,<span class="number">6</span>,<span class="number">1</span>,<span class="number">3</span>,<span class="number">2</span>&#125;;</span><br><span class="line">    Arrays.sort(arr2);</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt;arr2.length ; i++) &#123;</span><br><span class="line">            System.out.print(arr2[i]+<span class="string">&quot; &quot;</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    sort2(arr2);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// 第三种</span></span><br><span class="line">     <span class="keyword">int</span>[] arr = &#123;<span class="number">4</span>, <span class="number">3</span>, <span class="number">5</span>, <span class="number">1</span>, <span class="number">2</span>, <span class="number">9</span>, <span class="number">3</span>, <span class="number">0</span>&#125;;</span><br><span class="line"></span><br><span class="line">        Arrays.sort(arr, <span class="number">1</span>, <span class="number">4</span>);</span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; arr.length; i++) &#123;</span><br><span class="line">            System.out.print(arr[i] + <span class="string">&quot;,&quot;</span>);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">sort2</span><span class="params">(<span class="keyword">int</span>[] arr2)</span> </span>&#123;</span><br><span class="line">    <span class="comment">//第二种调用本类方法实现    </span></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="选择排序"><a class="markdownIt-Anchor" href="#选择排序">#</a> 💍 选择排序</h2>
+<div class="note info">
+<p><span class="rainbow">基本思想:</span><br>
+ 直接选择排序的基本思想是将指定排序位置与其他数组元素分别对比，如果满足条件就交换元素值，指定这里区别冒泡排序，不是交换相邻元素，而是把满足条件的元素与指定的排序位置交换（如果最后一个元素开始排序，第一步就是将数组中的最大数值与数组最后一位交换位置，以此类推），这样排序好的位置就会逐渐扩大，最好整个数组都成为已经排序好的格式。</p>
+</div>
+<figure class="highlight java"><figcaption><span>JAVA</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Demo</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        sort();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">sort</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span>[] arr3 = <span class="keyword">new</span> <span class="keyword">int</span>[]&#123;<span class="number">45</span>, <span class="number">23</span>, <span class="number">15</span>, <span class="number">89</span>, <span class="number">68</span>, <span class="number">12</span>, <span class="number">0</span>, <span class="number">1</span>, <span class="number">3</span>, <span class="number">2</span>&#125;;</span><br><span class="line">        <span class="comment">// int temp = 0;</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; arr3.length; i++) &#123;</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> j = i + <span class="number">1</span>; j &lt; arr3.length; j++) &#123;</span><br><span class="line">                <span class="keyword">if</span> (arr3[i] &gt; arr3[j]) &#123;</span><br><span class="line">                   <span class="keyword">int</span> temp = arr3[i];</span><br><span class="line">                    arr3[i] = arr3[j];</span><br><span class="line">                    arr3[j] = temp;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; arr.length; i++) &#123;</span><br><span class="line">            System.out.print(arr[i] + <span class="string">&quot; &quot;</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="总结"><a class="markdownIt-Anchor" href="#总结">#</a> 💍 总结</h2>
+<h2 id="以上就是本文关于java中的数组排序代码详解的全部内容希望对大家有所帮助-感兴趣的朋友可以继续参阅本站其他java相关专题如有不足之处欢迎留言指出-感谢朋友们对本站的支持"><a class="markdownIt-Anchor" href="#以上就是本文关于java中的数组排序代码详解的全部内容希望对大家有所帮助-感兴趣的朋友可以继续参阅本站其他java相关专题如有不足之处欢迎留言指出-感谢朋友们对本站的支持">#</a> 💍 以上就是本文关于 Java 中的数组排序代码详解的全部内容，希望对大家有所帮助。感兴趣的朋友可以继续参阅本站其他 Java 相关专题，如有不足之处，欢迎留言指出。感谢朋友们对本站的支持！</h2>
 ]]></content>
       <categories>
         <category>JAVA编程语言</category>
+        <category>java基础</category>
+        <category>Maven安装配置</category>
+        <category>docker</category>
+        <category>pom报错</category>
+        <category>sort</category>
       </categories>
       <tags>
         <tag>JAVA</tag>
@@ -123,99 +188,26 @@ MAVEN_HOME:</li>
       </tags>
   </entry>
   <entry>
-    <title>Java中的数组排序</title>
-    <url>/java/sort/</url>
-    <content><![CDATA[<h2 id="冒泡排序"><a class="markdownIt-Anchor" href="#冒泡排序">#</a> 💍 冒泡排序</h2>
-<div class="note info">
-<p><span class="rainbow">基本思想:</span></p>
-<p><span class="rainbow">冒泡排序法：顾名思义，从下到上，两两进行比较，越小的越往上，从而形成由小到大的排序。冒泡排序的基本思想是对比相邻的原始值，如果满足条件就交换元素值，把较小的元素移到数组前面，把大的元素移动到数组的后面，这样较小的元素就像气泡从底部上升到顶部。</span></p>
-</div>
-<figure class="highlight java"><figcaption><span>JAVA</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Demo</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">int</span>[] arr1 = &#123;<span class="number">3</span>, <span class="number">22</span>, <span class="number">5</span>, <span class="number">3</span>, <span class="number">66</span>, <span class="number">2</span>, <span class="number">9</span>&#125;;</span><br><span class="line"></span><br><span class="line">        sort1(arr1);</span><br><span class="line"></span><br><span class="line">        <span class="comment">//使用foreach循环输出</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> x : arr1) &#123;</span><br><span class="line">            System.out.println(x + <span class="string">&quot; &quot;</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">//使用字符串表达形式输出，输出形式更为直观</span></span><br><span class="line">        System.out.println(Arrays.toString(arr));</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">sort1</span><span class="params">(<span class="keyword">int</span>[] arr1)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> temp;</span><br><span class="line">        <span class="comment">//根据角标进行比较，</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; arr1.length; i++) &#123;</span><br><span class="line">            <span class="comment">//j是数组的最后一个角标</span></span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> j = arr1.length - <span class="number">1</span>; j &gt; i; j--) &#123;</span><br><span class="line">                <span class="keyword">if</span> (arr1[j] &lt; arr1[j - <span class="number">1</span>]) &#123;</span><br><span class="line">                    <span class="comment">//从后往前进行比较，小数往前，一轮之后最小数就在最前面了</span></span><br><span class="line">                    temp = arr1[j - <span class="number">1</span>];</span><br><span class="line">                    arr1[j - <span class="number">1</span>] = arr1[j];</span><br><span class="line">                    arr1[j] = temp;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<h2 id="调用arrayssort类方法进行排序"><a class="markdownIt-Anchor" href="#调用arrayssort类方法进行排序">#</a> 💍 调用 Arrays.sort 类方法进行排序</h2>
-<div class="note info">
-<p><span class="rainbow">网上一些说法</span><br>
-<span class="rainbow">快速排序主要是对哪些基本类型数据（int,short,long 等）排序， 而合并排序用于对对象类型进行排序。<br>
-使用不同类型的排序算法主要是由于快速排序是不稳定的，而合并排序是稳定的。这里的稳定是指比较相等的数据在排序之后仍然按照排序之前的前后顺序排列。对于基本数据类型，稳定性没有意义，而对于对象类型，稳定性是比较重要的，因为对象相等的判断可能只是判断关键属性，最好保持相等对象的非关键属性的顺序与排序前一直；另外一个原因是由于合并排序相对而言比较次数比快速排序少，移动（对象引用的移动）次数比快速排序多，而对于对象来说，比较一般比移动耗时。<br>
-补充一点合并排序的时间复杂度是 nlogn, 快速排序的平均时间复杂度也是 nlogn，但是合并排序的需要额外的 n 个引用的空间 ……</span></p>
-</div>
-<figure class="highlight java"><figcaption><span>JAVA</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Demo</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">    <span class="comment">// 第一种    </span></span><br><span class="line">    <span class="keyword">int</span>[] arr2 = &#123;<span class="number">0</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">6</span>,<span class="number">8</span>,<span class="number">9</span>,<span class="number">2</span>,<span class="number">5</span>,<span class="number">1</span>,<span class="number">7</span>&#125;;</span><br><span class="line">        Arrays.sort(arr2);</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; arr2.length ; i++)&#123;</span><br><span class="line">             System.out.print(arr2[i]+<span class="string">&quot; &quot;</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    <span class="comment">// 第二种调用本类方法实现    </span></span><br><span class="line">    <span class="keyword">int</span>[] arr2 = &#123;<span class="number">89</span>,<span class="number">59</span>,<span class="number">12</span>,<span class="number">36</span>,<span class="number">45</span>,<span class="number">0</span>,<span class="number">6</span>,<span class="number">1</span>,<span class="number">3</span>,<span class="number">2</span>&#125;;</span><br><span class="line">    Arrays.sort(arr2);</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt;arr2.length ; i++) &#123;</span><br><span class="line">            System.out.print(arr2[i]+<span class="string">&quot; &quot;</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    sort2(arr2);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// 第三种</span></span><br><span class="line">     <span class="keyword">int</span>[] arr = &#123;<span class="number">4</span>, <span class="number">3</span>, <span class="number">5</span>, <span class="number">1</span>, <span class="number">2</span>, <span class="number">9</span>, <span class="number">3</span>, <span class="number">0</span>&#125;;</span><br><span class="line"></span><br><span class="line">        Arrays.sort(arr, <span class="number">1</span>, <span class="number">4</span>);</span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; arr.length; i++) &#123;</span><br><span class="line">            System.out.print(arr[i] + <span class="string">&quot;,&quot;</span>);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">sort2</span><span class="params">(<span class="keyword">int</span>[] arr2)</span> </span>&#123;</span><br><span class="line">    <span class="comment">//第二种调用本类方法实现    </span></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="选择排序"><a class="markdownIt-Anchor" href="#选择排序">#</a> 💍 选择排序</h2>
-<div class="note info">
-<p><span class="rainbow">基本思想:</span><br>
-<span class="rainbow"> 直接选择排序的基本思想是将指定排序位置与其他数组元素分别对比，如果满足条件就交换元素值，指定这里区别冒泡排序，不是交换相邻元素，而是把满足条件的元素与指定的排序位置交换（如果最后一个元素开始排序，第一步就是将数组中的最大数值与数组最后一位交换位置，以此类推），这样排序好的位置就会逐渐扩大，最好整个数组都成为已经排序好的格式。</span></p>
-</div>
-<figure class="highlight java"><figcaption><span>JAVA</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Demo</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        sort();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">sort</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span>[] arr3 = <span class="keyword">new</span> <span class="keyword">int</span>[]&#123;<span class="number">45</span>, <span class="number">23</span>, <span class="number">15</span>, <span class="number">89</span>, <span class="number">68</span>, <span class="number">12</span>, <span class="number">0</span>, <span class="number">1</span>, <span class="number">3</span>, <span class="number">2</span>&#125;;</span><br><span class="line">        <span class="comment">// int temp = 0;</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; arr3.length; i++) &#123;</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> j = i + <span class="number">1</span>; j &lt; arr3.length; j++) &#123;</span><br><span class="line">                <span class="keyword">if</span> (arr3[i] &gt; arr3[j]) &#123;</span><br><span class="line">                   <span class="keyword">int</span> temp = arr3[i];</span><br><span class="line">                    arr3[i] = arr3[j];</span><br><span class="line">                    arr3[j] = temp;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; arr.length; i++) &#123;</span><br><span class="line">            System.out.print(arr[i] + <span class="string">&quot; &quot;</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="总结"><a class="markdownIt-Anchor" href="#总结">#</a> 💍 总结</h2>
-<p><span class="rainbow">以上就是本文关于 Java 中的数组排序代码详解的全部内容，希望对大家有所帮助。感兴趣的朋友可以继续参阅本站其他 Java 相关专题，如有不足之处，欢迎留言指出。感谢朋友们对本站的支持！</span></p>
-]]></content>
-      <categories>
-        <category>JAVA编程语言</category>
-        <category>java基础</category>
-        <category>Maven安装配置</category>
-        <category>docker</category>
-        <category>pom报错</category>
-        <category>sort</category>
-      </categories>
-      <tags>
-        <tag>JAVA</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>利用html+javaSrcipt+css3实现光标动画</title>
-    <url>/web/%E5%85%89%E6%A0%87%E5%8A%A8%E7%94%BB/</url>
-    <content><![CDATA[<p>这个案例也是通过 javaSrcipt (js) 实现，这个案例相对比较简单，先是整体的 HTML 代码结构，这个案例呢 javaSrcipt (js) 是直接写在我们 HTML 的内部，<br>
-没有通过外链的方式实现，因为代码量较少直接写在了整体结构之中，其实这个案例不仅仅是纯的 javaSrcipt (js) 代码，本案例只是利用了 javaSrcipt (js)<br>
- 的一个时间来控制光标闪动的时间而已，而我们的 CSS3 样式呢，主要是让文字颜色，利用 background 使文字产生渐变的效果。</p>
-<a id="more"></a>
-<h3 id="详细代码如下"><a class="markdownIt-Anchor" href="#详细代码如下">#</a> 💍 详细代码如下</h3>
-<figure class="highlight html"><figcaption><span>Html</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">&quot;zh&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;UTF-8&quot;</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">&quot;viewport&quot;</span> <span class="attr">content</span>=<span class="string">&quot;width=device-width, initial-scale=1.0&quot;</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">meta</span> <span class="attr">http-equiv</span>=<span class="string">&quot;X-UA-Compatible&quot;</span> <span class="attr">content</span>=<span class="string">&quot;ie=edge&quot;</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">title</span>&gt;</span>光标动画<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">style</span> <span class="attr">type</span>=<span class="string">&quot;text/css&quot;</span>&gt;</span></span><br><span class="line">		*&#123;</span><br><span class="line">			margin: 0;</span><br><span class="line">			padding: 0;</span><br><span class="line">		&#125;</span><br><span class="line">		html,body&#123;</span><br><span class="line">			height: 100%;</span><br><span class="line">			overflow: hidden;</span><br><span class="line">			background: black;</span><br><span class="line">			text-align: center;</span><br><span class="line">		&#125;</span><br><span class="line">		h1&#123;</span><br><span class="line">			margin-top: 50px;</span><br><span class="line">			display: inline-block;</span><br><span class="line"><span class="css">			<span class="selector-tag">color</span>: <span class="selector-tag">rgba</span>(255,255,255,<span class="selector-class">.3</span>);</span></span><br><span class="line"><span class="css">			<span class="selector-tag">font</span><span class="selector-pseudo">:bold</span> 80<span class="selector-tag">px</span> &quot;微软雅黑&quot;;</span></span><br><span class="line">			background: linear-gradient(120deg,rgba(255,255,255,0) 100px,rgba(255,255,255,1) 180px,rgba(255,255,255,0) 270px) no-repeat;</span><br><span class="line"><span class="css">			<span class="selector-tag">-webkit-background-clip</span><span class="selector-pseudo">:text</span>;</span></span><br><span class="line">		&#125;</span><br><span class="line">		</span><br><span class="line">	<span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">h1</span>&gt;</span>欢迎来到阿杰的博客<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line">	</span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<h4 id="在body插入以下javasrciptjs代码body"><a class="markdownIt-Anchor" href="#在body插入以下javasrciptjs代码body">#</a> 💍 在<body>插入以下 javaSrcipt (js) 代码</body></h4>
-<figure class="highlight js"><figcaption><span>Js</span></figcaption><table><tr><td class="code"><pre><span class="line">&lt;script type=<span class="string">&quot;text/javascript&quot;</span>&gt;</span><br><span class="line">		<span class="keyword">var</span> h1 = <span class="built_in">document</span>.querySelector(<span class="string">&quot;h1&quot;</span>);</span><br><span class="line">		<span class="keyword">var</span> flag = <span class="number">-160</span>;</span><br><span class="line">		<span class="built_in">setInterval</span>(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">			flag+=<span class="number">10</span>;</span><br><span class="line">			<span class="keyword">if</span>(flag == <span class="number">1100</span>)&#123;</span><br><span class="line">				flag = <span class="number">-160</span>;</span><br><span class="line">			&#125;</span><br><span class="line">			h1.style.backgroundPosition = flag +<span class="string">&quot;px&quot;</span>;</span><br><span class="line">		&#125;,<span class="number">30</span>);</span><br><span class="line">	&lt;/script&gt;</span><br></pre></td></tr></table></figure>
-<p>这个案例的话只是简单的 javaSrcipt (js) 基础知识，希望可以对来到阿杰博客的朋友有所帮助如代码有问题，请指点出来，大家讨论一下，谢谢！</p>
+    <title>随机图片API</title>
+    <url>/web/imageAPI/</url>
+    <content><![CDATA[<h2 id="使用步骤如下"><a class="markdownIt-Anchor" href="#使用步骤如下">#</a> 💍 <span class="rainbow">使用步骤如下:</span></h2>
+<ul>
+<li>本 API 只适合做背景图，详细请看下图，介绍在里面，</li>
+</ul>
+<p><img data-src="https://shitu-query-nj.su.bcebos.com/2020-10-17/01/760c39aa9131cec5?authorization=bce-auth-v1%2F7e22d8caf5af46cc9310f1e3021709f3%2F2020-10-16T17%3A45%3A58Z%2F300%2Fhost%2Fc2d37fa8b66983d77cb42b591a65cbe86b70d580dffb1b41066f20b2db4fa5be" alt="二次元"></p>
+<figure class="highlight html"><figcaption><span>html</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;UTF-8&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">&quot;viewport&quot;</span> <span class="attr">content</span>=<span class="string">&quot;width=device-width, initial-scale=1.0&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">http-equiv</span>=<span class="string">&quot;X-UA-Compatible&quot;</span> <span class="attr">content</span>=<span class="string">&quot;ie=edge&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>images<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">style</span> <span class="attr">type</span>=<span class="string">&quot;text/css&quot;</span>&gt;</span></span><br><span class="line"><span class="css">        <span class="selector-class">.row</span>&#123;</span></span><br><span class="line">            width: 500px;   //方便测试效果</span><br><span class="line">            height: 900px;  //方便测试效果</span><br><span class="line">            background: url(&quot;http://www.dmoe.cc/random.php&quot;)</span><br><span class="line">        &#125;</span><br><span class="line">    <span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    //第一种</span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;row&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    //第二种</span><br><span class="line">    <span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">&quot; http://www.dmoe.cc/random.php&quot;</span>&gt;</span>  </span><br><span class="line"> <span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"> <span class="tag">&lt;/<span class="name">html</span>&gt;</span>     </span><br></pre></td></tr></table></figure>
+<ul>
+<li><strong>随机图片 https://uploadbeta.com/api/pictures/random</strong> 这个 API 的图片是其他类型列如风景或其他的一些图片</li>
+</ul>
+<h2 id="以上就是两个api的使用方式如果那里有不足之处请下方评论我会及时纠正错误有其他相关内容请收藏码坑的博客谢谢"><a class="markdownIt-Anchor" href="#以上就是两个api的使用方式如果那里有不足之处请下方评论我会及时纠正错误有其他相关内容请收藏码坑的博客谢谢">#</a> 💍 以上就是两个 API 的使用方式，如果那里有不足之处请下方评论，我会及时纠正错误，有其他相关内容请收藏 “码坑的博客”，谢谢！</h2>
 ]]></content>
       <categories>
         <category>web前端</category>
       </categories>
       <tags>
+        <tag>html</tag>
         <tag>JavaScript</tag>
         <tag>css</tag>
-        <tag>html</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>js文字闪动效果</title>
-    <url>/web/%E5%BD%A9%E8%89%B2%E6%96%87%E5%AD%97/</url>
-    <content><![CDATA[<p>利用 javaSrcipt (js) 实现对文字的如跑马灯一样的效果。</p>
-<h2 id="效果如下"><a class="markdownIt-Anchor" href="#效果如下">#</a> 💍 效果如下:</h2>
-<script>
-var Tname="欢迎来到码坑的博客";
-var Tlen=Tname.length;
-document.write("<div id='a' style='font-size:40px;'>"+Tname+"</div>");
-var col=new Array("#4FFFF","#3333FF","#FFCC00","chartreuse","#FFCC00","#CC33FF");
-var ic=0;
-function Dcolor(){
-  var Strname="";
-  for (i=0;i<Tlen;++i){
-    var Strname=Strname+"<font color="+col[ic]+">"+Tname.substring(i,i+1)+"</font>";
-	ic=ic+1;
-  	if (ic==col.length) ic=0;
-  }
-  a.innerHTML=Strname;
-  setTimeout("Dcolor()",200);
-}
-Dcolor();
-</script>
-<a id="more"></a>
-<h2 id="详细代码如下"><a class="markdownIt-Anchor" href="#详细代码如下">#</a> 💍 详细代码如下:</h2>
-<figure class="highlight js"><figcaption><span>Js</span></figcaption><table><tr><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line"><span class="keyword">var</span> Tname=<span class="string">&quot;欢迎来到码坑的博客&quot;</span>;</span><br><span class="line"><span class="keyword">var</span> Tlen=Tname.length;</span><br><span class="line"><span class="built_in">document</span>.write(<span class="string">&quot;&lt;div id=&#x27;a&#x27; style=&#x27;font-size:40px;&#x27;&gt;&quot;</span>+Tname+<span class="string">&quot;&lt;/div&gt;&quot;</span>);</span><br><span class="line"><span class="keyword">var</span> col=<span class="keyword">new</span> <span class="built_in">Array</span>(<span class="string">&quot;#4FFFF&quot;</span>,<span class="string">&quot;#3333FF&quot;</span>,<span class="string">&quot;#FFCC00&quot;</span>,<span class="string">&quot;chartreuse&quot;</span>,<span class="string">&quot;#FFCC00&quot;</span>,<span class="string">&quot;#CC33FF&quot;</span>);</span><br><span class="line"><span class="keyword">var</span> ic=<span class="number">0</span>;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Dcolor</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">  <span class="keyword">var</span> Strname=<span class="string">&quot;&quot;</span>;</span><br><span class="line">  <span class="keyword">for</span> (i=<span class="number">0</span>;i&lt;Tlen;++i)&#123;</span><br><span class="line">    <span class="keyword">var</span> Strname=Strname+<span class="string">&quot;&lt;font color=&quot;</span>+col[ic]+<span class="string">&quot;&gt;&quot;</span>+Tname.substring(i,i+<span class="number">1</span>)+<span class="string">&quot;&lt;/font&gt;&quot;</span>;</span><br><span class="line">	ic=ic+<span class="number">1</span>;</span><br><span class="line">  	<span class="keyword">if</span> (ic==col.length) ic=<span class="number">0</span>;</span><br><span class="line">  &#125;</span><br><span class="line">  a.innerHTML=Strname;</span><br><span class="line">  <span class="built_in">setTimeout</span>(<span class="string">&quot;Dcolor()&quot;</span>,<span class="number">200</span>);</span><br><span class="line">&#125;</span><br><span class="line">Dcolor();</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
-<p>这个案例的话只是简单的 javaSrcipt (js) 基础知识，希望可以对来到阿杰博客的朋友有所帮助<br>
-如代码有问题，请指点出来，大家讨论一下，谢谢！</p>
-]]></content>
-      <categories>
-        <category>web前端</category>
-      </categories>
-      <tags>
-        <tag>JavaScript</tag>
       </tags>
   </entry>
   <entry>
@@ -331,6 +323,64 @@ Vue.js 是一个开源 JavaScript 框架，能够开发单页面应用程序。�
       <tags>
         <tag>React</tag>
         <tag>Vue</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>利用html+javaSrcipt+css3实现光标动画</title>
+    <url>/web/%E5%85%89%E6%A0%87%E5%8A%A8%E7%94%BB/</url>
+    <content><![CDATA[<p>这个案例也是通过 javaSrcipt (js) 实现，这个案例相对比较简单，先是整体的 HTML 代码结构，这个案例呢 javaSrcipt (js) 是直接写在我们 HTML 的内部，<br>
+没有通过外链的方式实现，因为代码量较少直接写在了整体结构之中，其实这个案例不仅仅是纯的 javaSrcipt (js) 代码，本案例只是利用了 javaSrcipt (js)<br>
+ 的一个时间来控制光标闪动的时间而已，而我们的 CSS3 样式呢，主要是让文字颜色，利用 background 使文字产生渐变的效果。</p>
+<a id="more"></a>
+<h3 id="详细代码如下"><a class="markdownIt-Anchor" href="#详细代码如下">#</a> 💍 详细代码如下</h3>
+<figure class="highlight html"><figcaption><span>Html</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">&quot;zh&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;UTF-8&quot;</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">&quot;viewport&quot;</span> <span class="attr">content</span>=<span class="string">&quot;width=device-width, initial-scale=1.0&quot;</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">meta</span> <span class="attr">http-equiv</span>=<span class="string">&quot;X-UA-Compatible&quot;</span> <span class="attr">content</span>=<span class="string">&quot;ie=edge&quot;</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">title</span>&gt;</span>光标动画<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">style</span> <span class="attr">type</span>=<span class="string">&quot;text/css&quot;</span>&gt;</span></span><br><span class="line">		*&#123;</span><br><span class="line">			margin: 0;</span><br><span class="line">			padding: 0;</span><br><span class="line">		&#125;</span><br><span class="line">		html,body&#123;</span><br><span class="line">			height: 100%;</span><br><span class="line">			overflow: hidden;</span><br><span class="line">			background: black;</span><br><span class="line">			text-align: center;</span><br><span class="line">		&#125;</span><br><span class="line">		h1&#123;</span><br><span class="line">			margin-top: 50px;</span><br><span class="line">			display: inline-block;</span><br><span class="line"><span class="css">			<span class="selector-tag">color</span>: <span class="selector-tag">rgba</span>(255,255,255,<span class="selector-class">.3</span>);</span></span><br><span class="line"><span class="css">			<span class="selector-tag">font</span><span class="selector-pseudo">:bold</span> 80<span class="selector-tag">px</span> &quot;微软雅黑&quot;;</span></span><br><span class="line">			background: linear-gradient(120deg,rgba(255,255,255,0) 100px,rgba(255,255,255,1) 180px,rgba(255,255,255,0) 270px) no-repeat;</span><br><span class="line"><span class="css">			<span class="selector-tag">-webkit-background-clip</span><span class="selector-pseudo">:text</span>;</span></span><br><span class="line">		&#125;</span><br><span class="line">		</span><br><span class="line">	<span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">h1</span>&gt;</span>欢迎来到阿杰的博客<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line">	</span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h4 id="在body插入以下javasrciptjs代码body"><a class="markdownIt-Anchor" href="#在body插入以下javasrciptjs代码body">#</a> 💍 在<body>插入以下 javaSrcipt (js) 代码</body></h4>
+<figure class="highlight js"><figcaption><span>Js</span></figcaption><table><tr><td class="code"><pre><span class="line">&lt;script type=<span class="string">&quot;text/javascript&quot;</span>&gt;</span><br><span class="line">		<span class="keyword">var</span> h1 = <span class="built_in">document</span>.querySelector(<span class="string">&quot;h1&quot;</span>);</span><br><span class="line">		<span class="keyword">var</span> flag = <span class="number">-160</span>;</span><br><span class="line">		<span class="built_in">setInterval</span>(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">			flag+=<span class="number">10</span>;</span><br><span class="line">			<span class="keyword">if</span>(flag == <span class="number">1100</span>)&#123;</span><br><span class="line">				flag = <span class="number">-160</span>;</span><br><span class="line">			&#125;</span><br><span class="line">			h1.style.backgroundPosition = flag +<span class="string">&quot;px&quot;</span>;</span><br><span class="line">		&#125;,<span class="number">30</span>);</span><br><span class="line">	&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+<p>这个案例的话只是简单的 javaSrcipt (js) 基础知识，希望可以对来到阿杰博客的朋友有所帮助如代码有问题，请指点出来，大家讨论一下，谢谢！</p>
+]]></content>
+      <categories>
+        <category>web前端</category>
+      </categories>
+      <tags>
+        <tag>html</tag>
+        <tag>JavaScript</tag>
+        <tag>css</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>js文字闪动效果</title>
+    <url>/web/%E5%BD%A9%E8%89%B2%E6%96%87%E5%AD%97/</url>
+    <content><![CDATA[<p>利用 javaSrcipt (js) 实现对文字的如跑马灯一样的效果。</p>
+<h2 id="效果如下"><a class="markdownIt-Anchor" href="#效果如下">#</a> 💍 效果如下:</h2>
+<script>
+var Tname="欢迎来到码坑的博客";
+var Tlen=Tname.length;
+document.write("<div id='a' style='font-size:40px;'>"+Tname+"</div>");
+var col=new Array("#4FFFF","#3333FF","#FFCC00","chartreuse","#FFCC00","#CC33FF");
+var ic=0;
+function Dcolor(){
+  var Strname="";
+  for (i=0;i<Tlen;++i){
+    var Strname=Strname+"<font color="+col[ic]+">"+Tname.substring(i,i+1)+"</font>";
+	ic=ic+1;
+  	if (ic==col.length) ic=0;
+  }
+  a.innerHTML=Strname;
+  setTimeout("Dcolor()",200);
+}
+Dcolor();
+</script>
+<a id="more"></a>
+<h2 id="详细代码如下"><a class="markdownIt-Anchor" href="#详细代码如下">#</a> 💍 详细代码如下:</h2>
+<figure class="highlight js"><figcaption><span>Js</span></figcaption><table><tr><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line"><span class="keyword">var</span> Tname=<span class="string">&quot;欢迎来到码坑的博客&quot;</span>;</span><br><span class="line"><span class="keyword">var</span> Tlen=Tname.length;</span><br><span class="line"><span class="built_in">document</span>.write(<span class="string">&quot;&lt;div id=&#x27;a&#x27; style=&#x27;font-size:40px;&#x27;&gt;&quot;</span>+Tname+<span class="string">&quot;&lt;/div&gt;&quot;</span>);</span><br><span class="line"><span class="keyword">var</span> col=<span class="keyword">new</span> <span class="built_in">Array</span>(<span class="string">&quot;#4FFFF&quot;</span>,<span class="string">&quot;#3333FF&quot;</span>,<span class="string">&quot;#FFCC00&quot;</span>,<span class="string">&quot;chartreuse&quot;</span>,<span class="string">&quot;#FFCC00&quot;</span>,<span class="string">&quot;#CC33FF&quot;</span>);</span><br><span class="line"><span class="keyword">var</span> ic=<span class="number">0</span>;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Dcolor</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">  <span class="keyword">var</span> Strname=<span class="string">&quot;&quot;</span>;</span><br><span class="line">  <span class="keyword">for</span> (i=<span class="number">0</span>;i&lt;Tlen;++i)&#123;</span><br><span class="line">    <span class="keyword">var</span> Strname=Strname+<span class="string">&quot;&lt;font color=&quot;</span>+col[ic]+<span class="string">&quot;&gt;&quot;</span>+Tname.substring(i,i+<span class="number">1</span>)+<span class="string">&quot;&lt;/font&gt;&quot;</span>;</span><br><span class="line">	ic=ic+<span class="number">1</span>;</span><br><span class="line">  	<span class="keyword">if</span> (ic==col.length) ic=<span class="number">0</span>;</span><br><span class="line">  &#125;</span><br><span class="line">  a.innerHTML=Strname;</span><br><span class="line">  <span class="built_in">setTimeout</span>(<span class="string">&quot;Dcolor()&quot;</span>,<span class="number">200</span>);</span><br><span class="line">&#125;</span><br><span class="line">Dcolor();</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+<p>这个案例的话只是简单的 javaSrcipt (js) 基础知识，希望可以对来到阿杰博客的朋友有所帮助<br>
+如代码有问题，请指点出来，大家讨论一下，谢谢！</p>
+]]></content>
+      <categories>
+        <category>web前端</category>
+      </categories>
+      <tags>
+        <tag>JavaScript</tag>
       </tags>
   </entry>
   <entry>
@@ -615,56 +665,6 @@ SELINUXTYPE=targeted</p>
       </categories>
       <tags>
         <tag>Docker</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>hexo分类and标签404</title>
-    <url>/Other-extensions/hexo/</url>
-    <content><![CDATA[<h2 id="404分类and标签错误处理"><a class="markdownIt-Anchor" href="#404分类and标签错误处理">#</a> 💍 404 分类 and 标签错误处理</h2>
-<p>突然发现博客中，部分分类打不开，点击出现 404，在标签中查看，也是小部分标签点击 404，但是在所有文章中该分类下的文章都能打开，后来发现这些 404 的标签或分类名都是后来修改过的，原先的名称开头是大写名称</p>
-<p>将大写字母改成小写，hexo 部署正确，但是博客上还是不正确出现 404</p>
-<p>网上查了许多资料，才发现，git 中设置了大小写不敏感</p>
-<a id="more"></a>
-<h2 id="解决方法如下"><a class="markdownIt-Anchor" href="#解决方法如下">#</a> 💍 解决方法如下</h2>
-<p>修改 git 设置不忽略大小写</p>
-<p>进入博客文件夹，进入 git 目录：.deploy_git ，修改 .git 文件中的配置文件 config，将 ignorecase=true 改为 ignorecase=false</p>
-<figure class="highlight yaml"><figcaption><span>Yaml</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="string">vim</span> <span class="string">.</span> <span class="string">deploy_git/.git/config</span></span><br><span class="line"></span><br><span class="line"><span class="string">ignorecase</span> <span class="string">=</span> <span class="literal">false</span></span><br></pre></td></tr></table></figure>
-<p>如果还没有解决，清空部署到 github 上的文件，重新发布：</p>
-<figure class="highlight bash"><figcaption><span>Bash</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> .deploy_git</span><br><span class="line">git rm -rf *</span><br><span class="line">git commit -m <span class="string">&#x27;clean all file&#x27;</span></span><br><span class="line">git push</span><br></pre></td></tr></table></figure>
-<p>进入博客文件夹，用 hexo 重新生成部署</p>
-<figure class="highlight plain"><figcaption><span>Hexo</span></figcaption><table><tr><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo g </span><br><span class="line">hexo d or hexo g -d</span><br></pre></td></tr></table></figure>
-<p><font style="color: red;">这些问题都是自己开始搭建博客的时候出现的一些问题，希望能够帮助到各位，<br>
-如果那里错误，请指点出来，大家一起讨论。</font></p>
-]]></content>
-      <categories>
-        <category>其他扩展</category>
-        <category>hexo分类and标签404</category>
-      </categories>
-      <tags>
-        <tag>Hexo</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>随机图片API</title>
-    <url>/web/imageAPI/</url>
-    <content><![CDATA[<h1 id="使用步骤如下"><a class="markdownIt-Anchor" href="#使用步骤如下">#</a> <span class="rainbow">使用步骤如下:</span></h1>
-<ul>
-<li><span class="rainbow">本 API 只适合做背景图，详细请看下图，介绍在里面，</span></li>
-</ul>
-<p><img data-src="https://shitu-query-nj.su.bcebos.com/2020-10-17/01/760c39aa9131cec5?authorization=bce-auth-v1%2F7e22d8caf5af46cc9310f1e3021709f3%2F2020-10-16T17%3A02%3A20Z%2F300%2Fhost%2F5d6cf5ac87b2bb2ccff99c43e223668fff7f761c624f61d668d2135ecb3ede09" alt="二次元"></p>
-<figure class="highlight html"><figcaption><span>html</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;UTF-8&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">&quot;viewport&quot;</span> <span class="attr">content</span>=<span class="string">&quot;width=device-width, initial-scale=1.0&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">http-equiv</span>=<span class="string">&quot;X-UA-Compatible&quot;</span> <span class="attr">content</span>=<span class="string">&quot;ie=edge&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>images<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">style</span> <span class="attr">type</span>=<span class="string">&quot;text/css&quot;</span>&gt;</span></span><br><span class="line"><span class="css">        <span class="selector-class">.row</span>&#123;</span></span><br><span class="line">            width: 500px;   //方便测试效果</span><br><span class="line">            height: 900px;  //方便测试效果</span><br><span class="line">            background: url(&quot;http://www.dmoe.cc/random.php&quot;)</span><br><span class="line">        &#125;</span><br><span class="line">    <span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    //第一种</span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;row&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    //第二种</span><br><span class="line">    <span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">&quot; http://www.dmoe.cc/random.php&quot;</span>&gt;</span>  </span><br><span class="line"> <span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"> <span class="tag">&lt;/<span class="name">html</span>&gt;</span>     </span><br></pre></td></tr></table></figure>
-<ul>
-<li><span class="rainbow"><strong>随机图片 https://uploadbeta.com/api/pictures/random</strong> 这个 API 的图片是其他类型列如风景或其他的一些图片</span></li>
-</ul>
-<h2 id="以上就是两个api的使用方式如果那里有不足之处请下方评论我会及时纠正错误有其他相关内容请收藏码坑的博客谢谢"><a class="markdownIt-Anchor" href="#以上就是两个api的使用方式如果那里有不足之处请下方评论我会及时纠正错误有其他相关内容请收藏码坑的博客谢谢">#</a> <span class="rainbow">以上就是两个 API 的使用方式，如果那里有不足之处请下方评论，我会及时纠正错误，有其他相关内容请收藏 “码坑的博客”，谢谢！</span></h2>
-]]></content>
-      <categories>
-        <category>web前端</category>
-      </categories>
-      <tags>
-        <tag>JavaScript</tag>
-        <tag>css</tag>
-        <tag>html</tag>
       </tags>
   </entry>
 </search>

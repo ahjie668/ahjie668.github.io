@@ -117,12 +117,12 @@ Code pit = 码坑的博客 = 请多指教</title>
       </div>
       <div id="imgs" class="pjax">
         <ul>
-          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1gipewf5l51j20zk0m8b29.jpg"></li>
-          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1gicitcxhpij20zk0m8hdt.jpg"></li>
-          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1gipetlbztpj20zk0m84qp.jpg"></li>
-          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1gipev1x5e4j20zk0m8b29.jpg"></li>
-          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1giclflwv2aj20zk0m84qp.jpg"></li>
+          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1giciub8ja1j20zk0m81ky.jpg"></li>
           <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1gicitht3xtj20zk0m8k5v.jpg"></li>
+          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1gipexoj0moj20zk0m8kgu.jpg"></li>
+          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1giclgrvbd6j20zk0m8qv5.jpg"></li>
+          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1giclfb3vzhj20zk0m8wny.jpg"></li>
+          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1gipeyhsblkj20zk0m81kx.jpg"></li>
         </ul>
       </div>
     </header>
@@ -186,25 +186,25 @@ Code pit = 码坑的博客 = 请多指教</title>
     <h2 id="冒泡排序"><a class="markdownIt-Anchor" href="#冒泡排序">#</a> 💍 冒泡排序</h2>
 <div class="note info">
 <p><span class="rainbow">基本思想:</span></p>
-<p><span class="rainbow">冒泡排序法：顾名思义，从下到上，两两进行比较，越小的越往上，从而形成由小到大的排序。冒泡排序的基本思想是对比相邻的原始值，如果满足条件就交换元素值，把较小的元素移到数组前面，把大的元素移动到数组的后面，这样较小的元素就像气泡从底部上升到顶部。</span></p>
+<p>冒泡排序法：顾名思义，从下到上，两两进行比较，越小的越往上，从而形成由小到大的排序。冒泡排序的基本思想是对比相邻的原始值，如果满足条件就交换元素值，把较小的元素移到数组前面，把大的元素移动到数组的后面，这样较小的元素就像气泡从底部上升到顶部。</p>
 </div>
 <figure class="highlight java"><figcaption><span>JAVA</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Demo</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">int</span>[] arr1 = &#123;<span class="number">3</span>, <span class="number">22</span>, <span class="number">5</span>, <span class="number">3</span>, <span class="number">66</span>, <span class="number">2</span>, <span class="number">9</span>&#125;;</span><br><span class="line"></span><br><span class="line">        sort1(arr1);</span><br><span class="line"></span><br><span class="line">        <span class="comment">//使用foreach循环输出</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> x : arr1) &#123;</span><br><span class="line">            System.out.println(x + <span class="string">&quot; &quot;</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">//使用字符串表达形式输出，输出形式更为直观</span></span><br><span class="line">        System.out.println(Arrays.toString(arr));</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">sort1</span><span class="params">(<span class="keyword">int</span>[] arr1)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> temp;</span><br><span class="line">        <span class="comment">//根据角标进行比较，</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; arr1.length; i++) &#123;</span><br><span class="line">            <span class="comment">//j是数组的最后一个角标</span></span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> j = arr1.length - <span class="number">1</span>; j &gt; i; j--) &#123;</span><br><span class="line">                <span class="keyword">if</span> (arr1[j] &lt; arr1[j - <span class="number">1</span>]) &#123;</span><br><span class="line">                    <span class="comment">//从后往前进行比较，小数往前，一轮之后最小数就在最前面了</span></span><br><span class="line">                    temp = arr1[j - <span class="number">1</span>];</span><br><span class="line">                    arr1[j - <span class="number">1</span>] = arr1[j];</span><br><span class="line">                    arr1[j] = temp;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 <h2 id="调用arrayssort类方法进行排序"><a class="markdownIt-Anchor" href="#调用arrayssort类方法进行排序">#</a> 💍 调用 Arrays.sort 类方法进行排序</h2>
 <div class="note info">
 <p><span class="rainbow">网上一些说法</span><br>
-<span class="rainbow">快速排序主要是对哪些基本类型数据（int,short,long 等）排序， 而合并排序用于对对象类型进行排序。<br>
+快速排序主要是对哪些基本类型数据（int,short,long 等）排序， 而合并排序用于对对象类型进行排序。<br>
 使用不同类型的排序算法主要是由于快速排序是不稳定的，而合并排序是稳定的。这里的稳定是指比较相等的数据在排序之后仍然按照排序之前的前后顺序排列。对于基本数据类型，稳定性没有意义，而对于对象类型，稳定性是比较重要的，因为对象相等的判断可能只是判断关键属性，最好保持相等对象的非关键属性的顺序与排序前一直；另外一个原因是由于合并排序相对而言比较次数比快速排序少，移动（对象引用的移动）次数比快速排序多，而对于对象来说，比较一般比移动耗时。<br>
-补充一点合并排序的时间复杂度是 nlogn, 快速排序的平均时间复杂度也是 nlogn，但是合并排序的需要额外的 n 个引用的空间 ……</span></p>
+补充一点合并排序的时间复杂度是 nlogn, 快速排序的平均时间复杂度也是 nlogn，但是合并排序的需要额外的 n 个引用的空间 ……</p>
 </div>
 <figure class="highlight java"><figcaption><span>JAVA</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Demo</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">    <span class="comment">// 第一种    </span></span><br><span class="line">    <span class="keyword">int</span>[] arr2 = &#123;<span class="number">0</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">6</span>,<span class="number">8</span>,<span class="number">9</span>,<span class="number">2</span>,<span class="number">5</span>,<span class="number">1</span>,<span class="number">7</span>&#125;;</span><br><span class="line">        Arrays.sort(arr2);</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; arr2.length ; i++)&#123;</span><br><span class="line">             System.out.print(arr2[i]+<span class="string">&quot; &quot;</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    <span class="comment">// 第二种调用本类方法实现    </span></span><br><span class="line">    <span class="keyword">int</span>[] arr2 = &#123;<span class="number">89</span>,<span class="number">59</span>,<span class="number">12</span>,<span class="number">36</span>,<span class="number">45</span>,<span class="number">0</span>,<span class="number">6</span>,<span class="number">1</span>,<span class="number">3</span>,<span class="number">2</span>&#125;;</span><br><span class="line">    Arrays.sort(arr2);</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt;arr2.length ; i++) &#123;</span><br><span class="line">            System.out.print(arr2[i]+<span class="string">&quot; &quot;</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    sort2(arr2);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// 第三种</span></span><br><span class="line">     <span class="keyword">int</span>[] arr = &#123;<span class="number">4</span>, <span class="number">3</span>, <span class="number">5</span>, <span class="number">1</span>, <span class="number">2</span>, <span class="number">9</span>, <span class="number">3</span>, <span class="number">0</span>&#125;;</span><br><span class="line"></span><br><span class="line">        Arrays.sort(arr, <span class="number">1</span>, <span class="number">4</span>);</span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; arr.length; i++) &#123;</span><br><span class="line">            System.out.print(arr[i] + <span class="string">&quot;,&quot;</span>);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">sort2</span><span class="params">(<span class="keyword">int</span>[] arr2)</span> </span>&#123;</span><br><span class="line">    <span class="comment">//第二种调用本类方法实现    </span></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h2 id="选择排序"><a class="markdownIt-Anchor" href="#选择排序">#</a> 💍 选择排序</h2>
 <div class="note info">
 <p><span class="rainbow">基本思想:</span><br>
-<span class="rainbow"> 直接选择排序的基本思想是将指定排序位置与其他数组元素分别对比，如果满足条件就交换元素值，指定这里区别冒泡排序，不是交换相邻元素，而是把满足条件的元素与指定的排序位置交换（如果最后一个元素开始排序，第一步就是将数组中的最大数值与数组最后一位交换位置，以此类推），这样排序好的位置就会逐渐扩大，最好整个数组都成为已经排序好的格式。</span></p>
+ 直接选择排序的基本思想是将指定排序位置与其他数组元素分别对比，如果满足条件就交换元素值，指定这里区别冒泡排序，不是交换相邻元素，而是把满足条件的元素与指定的排序位置交换（如果最后一个元素开始排序，第一步就是将数组中的最大数值与数组最后一位交换位置，以此类推），这样排序好的位置就会逐渐扩大，最好整个数组都成为已经排序好的格式。</p>
 </div>
 <figure class="highlight java"><figcaption><span>JAVA</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Demo</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        sort();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">sort</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span>[] arr3 = <span class="keyword">new</span> <span class="keyword">int</span>[]&#123;<span class="number">45</span>, <span class="number">23</span>, <span class="number">15</span>, <span class="number">89</span>, <span class="number">68</span>, <span class="number">12</span>, <span class="number">0</span>, <span class="number">1</span>, <span class="number">3</span>, <span class="number">2</span>&#125;;</span><br><span class="line">        <span class="comment">// int temp = 0;</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; arr3.length; i++) &#123;</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> j = i + <span class="number">1</span>; j &lt; arr3.length; j++) &#123;</span><br><span class="line">                <span class="keyword">if</span> (arr3[i] &gt; arr3[j]) &#123;</span><br><span class="line">                   <span class="keyword">int</span> temp = arr3[i];</span><br><span class="line">                    arr3[i] = arr3[j];</span><br><span class="line">                    arr3[j] = temp;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; arr.length; i++) &#123;</span><br><span class="line">            System.out.print(arr[i] + <span class="string">&quot; &quot;</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h2 id="总结"><a class="markdownIt-Anchor" href="#总结">#</a> 💍 总结</h2>
-<p><span class="rainbow">以上就是本文关于 Java 中的数组排序代码详解的全部内容，希望对大家有所帮助。感兴趣的朋友可以继续参阅本站其他 Java 相关专题，如有不足之处，欢迎留言指出。感谢朋友们对本站的支持！</span></p>
+<h2 id="以上就是本文关于java中的数组排序代码详解的全部内容希望对大家有所帮助-感兴趣的朋友可以继续参阅本站其他java相关专题如有不足之处欢迎留言指出-感谢朋友们对本站的支持"><a class="markdownIt-Anchor" href="#以上就是本文关于java中的数组排序代码详解的全部内容希望对大家有所帮助-感兴趣的朋友可以继续参阅本站其他java相关专题如有不足之处欢迎留言指出-感谢朋友们对本站的支持">#</a> 💍 以上就是本文关于 Java 中的数组排序代码详解的全部内容，希望对大家有所帮助。感兴趣的朋友可以继续参阅本站其他 Java 相关专题，如有不足之处，欢迎留言指出。感谢朋友们对本站的支持！</h2>
 
       <div class="tags">
           <a href="/tags/JAVA/" rel="tag"><i class="ic i-tag"></i> JAVA</a>
@@ -219,7 +219,7 @@ Code pit = 码坑的博客 = 请多指教</title>
       <i class="ic i-calendar-check"></i>
     </span>
     <span class="text">更新于</span>
-    <time title="修改时间：2020-10-17 00:29:04" itemprop="dateModified" datetime="2020-10-17T00:29:04+08:00">2020-10-17</time>
+    <time title="修改时间：2020-10-17 01:42:56" itemprop="dateModified" datetime="2020-10-17T01:42:56+08:00">2020-10-17</time>
   </span>
   <span id="java/sort/" class="item leancloud_visitors" data-flag-title="Java中的数组排序" title="阅读次数">
       <span class="icon">
@@ -282,7 +282,7 @@ Code pit = 码坑的博客 = 请多指教</title>
     <div class="item left">
       
 
-  <a href="/java/docker/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;tva2.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1giciuja1j1j20zk0m8kjl.jpg" title="Docker安装部署">
+  <a href="/java/docker/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;tva2.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1gicivghyooj20zk0m8dir.jpg" title="Docker安装部署">
   <span class="type">上一篇</span>
   <span class="category"><i class="ic i-flag"></i> JAVA编程语言</span>
   <h3>Docker安装部署</h3>
@@ -314,7 +314,7 @@ Code pit = 码坑的博客 = 请多指教</title>
   <div class="panels">
     <div class="inner">
       <div class="contents panel pjax" data-title="文章目录">
-          <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%86%92%E6%B3%A1%E6%8E%92%E5%BA%8F"><span class="toc-number">1.</span> <span class="toc-text"> 💍 冒泡排序</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%B0%83%E7%94%A8arrayssort%E7%B1%BB%E6%96%B9%E6%B3%95%E8%BF%9B%E8%A1%8C%E6%8E%92%E5%BA%8F"><span class="toc-number">2.</span> <span class="toc-text"> 💍 调用 Arrays.sort 类方法进行排序</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%80%89%E6%8B%A9%E6%8E%92%E5%BA%8F"><span class="toc-number">3.</span> <span class="toc-text"> 💍 选择排序</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%80%BB%E7%BB%93"><span class="toc-number">4.</span> <span class="toc-text"> 💍 总结</span></a></li></ol>
+          <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%86%92%E6%B3%A1%E6%8E%92%E5%BA%8F"><span class="toc-number">1.</span> <span class="toc-text"> 💍 冒泡排序</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%B0%83%E7%94%A8arrayssort%E7%B1%BB%E6%96%B9%E6%B3%95%E8%BF%9B%E8%A1%8C%E6%8E%92%E5%BA%8F"><span class="toc-number">2.</span> <span class="toc-text"> 💍 调用 Arrays.sort 类方法进行排序</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%80%89%E6%8B%A9%E6%8E%92%E5%BA%8F"><span class="toc-number">3.</span> <span class="toc-text"> 💍 选择排序</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%80%BB%E7%BB%93"><span class="toc-number">4.</span> <span class="toc-text"> 💍 总结</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BB%A5%E4%B8%8A%E5%B0%B1%E6%98%AF%E6%9C%AC%E6%96%87%E5%85%B3%E4%BA%8Ejava%E4%B8%AD%E7%9A%84%E6%95%B0%E7%BB%84%E6%8E%92%E5%BA%8F%E4%BB%A3%E7%A0%81%E8%AF%A6%E8%A7%A3%E7%9A%84%E5%85%A8%E9%83%A8%E5%86%85%E5%AE%B9%E5%B8%8C%E6%9C%9B%E5%AF%B9%E5%A4%A7%E5%AE%B6%E6%9C%89%E6%89%80%E5%B8%AE%E5%8A%A9-%E6%84%9F%E5%85%B4%E8%B6%A3%E7%9A%84%E6%9C%8B%E5%8F%8B%E5%8F%AF%E4%BB%A5%E7%BB%A7%E7%BB%AD%E5%8F%82%E9%98%85%E6%9C%AC%E7%AB%99%E5%85%B6%E4%BB%96java%E7%9B%B8%E5%85%B3%E4%B8%93%E9%A2%98%E5%A6%82%E6%9C%89%E4%B8%8D%E8%B6%B3%E4%B9%8B%E5%A4%84%E6%AC%A2%E8%BF%8E%E7%95%99%E8%A8%80%E6%8C%87%E5%87%BA-%E6%84%9F%E8%B0%A2%E6%9C%8B%E5%8F%8B%E4%BB%AC%E5%AF%B9%E6%9C%AC%E7%AB%99%E7%9A%84%E6%94%AF%E6%8C%81"><span class="toc-number">5.</span> <span class="toc-text"> 💍 以上就是本文关于 Java 中的数组排序代码详解的全部内容，希望对大家有所帮助。感兴趣的朋友可以继续参阅本站其他 Java 相关专题，如有不足之处，欢迎留言指出。感谢朋友们对本站的支持！</span></a></li></ol>
       </div>
       <div class="related panel pjax" data-title="系列文章">
         <ul>
@@ -433,90 +433,12 @@ Code pit = 码坑的博客 = 请多指教</title>
   <li class="item">
     
 <div class="breadcrumb">
-<a href="/categories/java/" title="分类于 JAVA编程语言">JAVA编程语言</a>
-</div>
-
-    <span><a href="/java/java%E5%9F%BA%E7%A1%80/" title="JAVA的JDK安装步骤">JAVA的JDK安装步骤</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/java/" title="分类于 JAVA编程语言">JAVA编程语言</a>
-</div>
-
-    <span><a href="/java/pom%E6%8A%A5%E9%94%99/" title="pom.xml的标签报错 Element ‘project‘ cannot have character [children], because the type‘s content**">pom.xml的标签报错 Element ‘project‘ cannot have character [children], because the type‘s content**</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/java/" title="分类于 JAVA编程语言">JAVA编程语言</a>
-</div>
-
-    <span><a href="/java/Maven%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE/" title="Maven的安装及配置">Maven的安装及配置</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/web/" title="分类于 web前端">web前端</a>
-</div>
-
-    <span><a href="/web/%E5%85%89%E6%A0%87%E5%8A%A8%E7%94%BB/" title="利用html+javaSrcipt+css3实现光标动画">利用html+javaSrcipt+css3实现光标动画</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/web/" title="分类于 web前端">web前端</a>
-</div>
-
-    <span><a href="/web/%E5%BD%A9%E8%89%B2%E6%96%87%E5%AD%97/" title="js文字闪动效果">js文字闪动效果</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/java/" title="分类于 JAVA编程语言">JAVA编程语言</a>
-</div>
-
-    <span><a href="/java/docker/" title="Docker安装部署">Docker安装部署</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/web/" title="分类于 web前端">web前端</a>
-</div>
-
-    <span><a href="/web/imageAPI/" title="随机图片API">随机图片API</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/java/" title="分类于 JAVA编程语言">JAVA编程语言</a>
+<a href="/categories/Other-extensions/" title="分类于 其他扩展">其他扩展</a>
 <i class="ic i-angle-right"></i>
-<a href="/categories/java/java%E5%9F%BA%E7%A1%80/" title="分类于 java基础">java基础</a>
-<i class="ic i-angle-right"></i>
-<a href="/categories/java/java%E5%9F%BA%E7%A1%80/Maven%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE/" title="分类于 Maven安装配置">Maven安装配置</a>
-<i class="ic i-angle-right"></i>
-<a href="/categories/java/java%E5%9F%BA%E7%A1%80/Maven%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE/docker/" title="分类于 docker">docker</a>
-<i class="ic i-angle-right"></i>
-<a href="/categories/java/java%E5%9F%BA%E7%A1%80/Maven%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE/docker/pom%E6%8A%A5%E9%94%99/" title="分类于 pom报错">pom报错</a>
-<i class="ic i-angle-right"></i>
-<a href="/categories/java/java%E5%9F%BA%E7%A1%80/Maven%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE/docker/pom%E6%8A%A5%E9%94%99/sort/" title="分类于 sort">sort</a>
+<a href="/categories/Other-extensions/hexo%E5%88%86%E7%B1%BBand%E6%A0%87%E7%AD%BE404/" title="分类于 hexo分类and标签404">hexo分类and标签404</a>
 </div>
 
-    <span><a href="/java/sort/" title="Java中的数组排序">Java中的数组排序</a></span>
+    <span><a href="/Other-extensions/hexo/" title="hexo分类and标签404">hexo分类and标签404</a></span>
   </li>
 
       
@@ -539,12 +461,90 @@ Code pit = 码坑的博客 = 请多指教</title>
   <li class="item">
     
 <div class="breadcrumb">
-<a href="/categories/Other-extensions/" title="分类于 其他扩展">其他扩展</a>
-<i class="ic i-angle-right"></i>
-<a href="/categories/Other-extensions/hexo%E5%88%86%E7%B1%BBand%E6%A0%87%E7%AD%BE404/" title="分类于 hexo分类and标签404">hexo分类and标签404</a>
+<a href="/categories/java/" title="分类于 JAVA编程语言">JAVA编程语言</a>
 </div>
 
-    <span><a href="/Other-extensions/hexo/" title="hexo分类and标签404">hexo分类and标签404</a></span>
+    <span><a href="/java/java%E5%9F%BA%E7%A1%80/" title="JAVA的JDK安装步骤">JAVA的JDK安装步骤</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/java/" title="分类于 JAVA编程语言">JAVA编程语言</a>
+</div>
+
+    <span><a href="/java/pom%E6%8A%A5%E9%94%99/" title="pom.xml的标签报错 Element ‘project‘ cannot have character [children], because the type‘s content**">pom.xml的标签报错 Element ‘project‘ cannot have character [children], because the type‘s content**</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/web/" title="分类于 web前端">web前端</a>
+</div>
+
+    <span><a href="/web/imageAPI/" title="随机图片API">随机图片API</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/web/" title="分类于 web前端">web前端</a>
+</div>
+
+    <span><a href="/web/%E5%85%89%E6%A0%87%E5%8A%A8%E7%94%BB/" title="利用html+javaSrcipt+css3实现光标动画">利用html+javaSrcipt+css3实现光标动画</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/java/" title="分类于 JAVA编程语言">JAVA编程语言</a>
+</div>
+
+    <span><a href="/java/Maven%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE/" title="Maven的安装及配置">Maven的安装及配置</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/java/" title="分类于 JAVA编程语言">JAVA编程语言</a>
+</div>
+
+    <span><a href="/java/docker/" title="Docker安装部署">Docker安装部署</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/web/" title="分类于 web前端">web前端</a>
+</div>
+
+    <span><a href="/web/%E5%BD%A9%E8%89%B2%E6%96%87%E5%AD%97/" title="js文字闪动效果">js文字闪动效果</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/java/" title="分类于 JAVA编程语言">JAVA编程语言</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/java/java%E5%9F%BA%E7%A1%80/" title="分类于 java基础">java基础</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/java/java%E5%9F%BA%E7%A1%80/Maven%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE/" title="分类于 Maven安装配置">Maven安装配置</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/java/java%E5%9F%BA%E7%A1%80/Maven%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE/docker/" title="分类于 docker">docker</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/java/java%E5%9F%BA%E7%A1%80/Maven%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE/docker/pom%E6%8A%A5%E9%94%99/" title="分类于 pom报错">pom报错</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/java/java%E5%9F%BA%E7%A1%80/Maven%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE/docker/pom%E6%8A%A5%E9%94%99/sort/" title="分类于 sort">sort</a>
+</div>
+
+    <span><a href="/java/sort/" title="Java中的数组排序">Java中的数组排序</a></span>
   </li>
 
   </ul>
