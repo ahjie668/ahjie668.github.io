@@ -1,21 +1,21 @@
 <?xml version="1.0"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://ahjie668.github.io/ahjie668</id>
-    <title>Hexo • Posts by &#34;javascript&#34; tag</title>
+    <title>码坑的博客 • Posts by &#34;javascript&#34; tag</title>
     <link href="https://ahjie668.github.io/ahjie668" />
     <updated>2020-08-19T15:24:27.295Z</updated>
-    <category term="Maven" />
     <category term="Hexo" />
+    <category term="Maven" />
     <category term="JAVA" />
-    <category term="React" />
-    <category term="Vue" />
     <category term="JavaScript" />
     <category term="css" />
+    <category term="React" />
+    <category term="Vue" />
     <category term="Docker" />
     <entry>
-        <id>https://ahjie668.github.io/ahjie668/2020/08/19/%E5%85%89%E6%A0%87%E5%8A%A8%E7%94%BB/</id>
+        <id>https://ahjie668.github.io/ahjie668/2020/08/19/web/%E5%85%89%E6%A0%87%E5%8A%A8%E7%94%BB/</id>
         <title>利用html+javaSrcipt+css3实现光标动画</title>
-        <link rel="alternate" href="https://ahjie668.github.io/ahjie668/2020/08/19/%E5%85%89%E6%A0%87%E5%8A%A8%E7%94%BB/"/>
+        <link rel="alternate" href="https://ahjie668.github.io/ahjie668/2020/08/19/web/%E5%85%89%E6%A0%87%E5%8A%A8%E7%94%BB/"/>
         <content type="html">&lt;p&gt;这个案例也是通过 javaSrcipt (js) 实现，这个案例相对比较简单，先是整体的 HTML 代码结构，这个案例呢 javaSrcipt (js) 是直接写在我们 HTML 的内部，&lt;br&gt;
 没有通过外链的方式实现，因为代码量较少直接写在了整体结构之中，其实这个案例不仅仅是纯的 javaSrcipt (js) 代码，本案例只是利用了 javaSrcipt (js)&lt;br&gt;
  的一个时间来控制光标闪动的时间而已，而我们的 CSS3 样式呢，主要是让文字颜色，利用 background 使文字产生渐变的效果。&lt;/p&gt;
@@ -31,9 +31,9 @@
         <updated>2020-08-19T15:24:27.295Z</updated>
     </entry>
     <entry>
-        <id>https://ahjie668.github.io/ahjie668/2020/08/19/%E5%BD%A9%E8%89%B2%E6%96%87%E5%AD%97/</id>
+        <id>https://ahjie668.github.io/ahjie668/2020/08/19/web/%E5%BD%A9%E8%89%B2%E6%96%87%E5%AD%97/</id>
         <title>js文字闪动效果</title>
-        <link rel="alternate" href="https://ahjie668.github.io/ahjie668/2020/08/19/%E5%BD%A9%E8%89%B2%E6%96%87%E5%AD%97/"/>
+        <link rel="alternate" href="https://ahjie668.github.io/ahjie668/2020/08/19/web/%E5%BD%A9%E8%89%B2%E6%96%87%E5%AD%97/"/>
         <content type="html">&lt;p&gt;利用 javaSrcipt (js) 实现对文字的如跑马灯一样的效果。&lt;/p&gt;
 &lt;h2 id=&#34;效果如下&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#效果如下&#34;&gt;#&lt;/a&gt; 💍 效果如下:&lt;/h2&gt;
 &lt;script&gt;

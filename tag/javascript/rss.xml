@@ -1,24 +1,24 @@
 <?xml version="1.0"?>
 <rss version="2.0">
     <channel>
-        <title>Hexo • Posts by &#34;javascript&#34; tag</title>
+        <title>码坑的博客 • Posts by &#34;javascript&#34; tag</title>
         <link>https://ahjie668.github.io/ahjie668</link>
-        <description></description>
+        <description>本人是小白,初次与各位相遇,请多多指教,谢谢 じ萌喵喵ルゞ Ю↘ 珂ル°</description>
         <language>zh-Hans</language>
         <pubDate>Wed, 19 Aug 2020 23:24:27 +0800</pubDate>
         <lastBuildDate>Wed, 19 Aug 2020 23:24:27 +0800</lastBuildDate>
-        <category>Maven</category>
         <category>Hexo</category>
+        <category>Maven</category>
         <category>JAVA</category>
-        <category>React</category>
-        <category>Vue</category>
         <category>JavaScript</category>
         <category>css</category>
+        <category>React</category>
+        <category>Vue</category>
         <category>Docker</category>
         <item>
-            <guid isPermalink="true">https://ahjie668.github.io/ahjie668/2020/08/19/%E5%85%89%E6%A0%87%E5%8A%A8%E7%94%BB/</guid>
+            <guid isPermalink="true">https://ahjie668.github.io/ahjie668/2020/08/19/web/%E5%85%89%E6%A0%87%E5%8A%A8%E7%94%BB/</guid>
             <title>利用html+javaSrcipt+css3实现光标动画</title>
-            <link>https://ahjie668.github.io/ahjie668/2020/08/19/%E5%85%89%E6%A0%87%E5%8A%A8%E7%94%BB/</link>
+            <link>https://ahjie668.github.io/ahjie668/2020/08/19/web/%E5%85%89%E6%A0%87%E5%8A%A8%E7%94%BB/</link>
             <category>JavaScript</category>
             <category>css</category>
             <pubDate>Wed, 19 Aug 2020 23:24:27 +0800</pubDate>
@@ -34,9 +34,9 @@
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">https://ahjie668.github.io/ahjie668/2020/08/19/%E5%BD%A9%E8%89%B2%E6%96%87%E5%AD%97/</guid>
+            <guid isPermalink="true">https://ahjie668.github.io/ahjie668/2020/08/19/web/%E5%BD%A9%E8%89%B2%E6%96%87%E5%AD%97/</guid>
             <title>js文字闪动效果</title>
-            <link>https://ahjie668.github.io/ahjie668/2020/08/19/%E5%BD%A9%E8%89%B2%E6%96%87%E5%AD%97/</link>
+            <link>https://ahjie668.github.io/ahjie668/2020/08/19/web/%E5%BD%A9%E8%89%B2%E6%96%87%E5%AD%97/</link>
             <category>JavaScript</category>
             <pubDate>Wed, 19 Aug 2020 22:17:37 +0800</pubDate>
             <description><![CDATA[ &lt;p&gt;利用 javaSrcipt (js) 实现对文字的如跑马灯一样的效果。&lt;/p&gt;

@@ -1,19 +1,19 @@
 <?xml version="1.0"?>
 <rss version="2.0">
     <channel>
-        <title>Hexo • Posts by &#34;hexo&#34; tag</title>
+        <title>码坑的博客 • Posts by &#34;hexo&#34; tag</title>
         <link>https://ahjie668.github.io/ahjie668</link>
-        <description></description>
+        <description>本人是小白,初次与各位相遇,请多多指教,谢谢 じ萌喵喵ルゞ Ю↘ 珂ル°</description>
         <language>zh-Hans</language>
         <pubDate>Thu, 20 Aug 2020 16:29:52 +0800</pubDate>
         <lastBuildDate>Thu, 20 Aug 2020 16:29:52 +0800</lastBuildDate>
-        <category>Maven</category>
         <category>Hexo</category>
+        <category>Maven</category>
         <category>JAVA</category>
-        <category>React</category>
-        <category>Vue</category>
         <category>JavaScript</category>
         <category>css</category>
+        <category>React</category>
+        <category>Vue</category>
         <category>Docker</category>
         <item>
             <guid isPermalink="true">https://ahjie668.github.io/ahjie668/2020/08/20/hexo/</guid>

@@ -1,21 +1,21 @@
 <?xml version="1.0"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://ahjie668.github.io/ahjie668</id>
-    <title>Hexo • Posts by &#34;java&#34; tag</title>
+    <title>码坑的博客 • Posts by &#34;java&#34; tag</title>
     <link href="https://ahjie668.github.io/ahjie668" />
     <updated>2020-10-15T12:08:10.455Z</updated>
-    <category term="Maven" />
     <category term="Hexo" />
+    <category term="Maven" />
     <category term="JAVA" />
-    <category term="React" />
-    <category term="Vue" />
     <category term="JavaScript" />
     <category term="css" />
+    <category term="React" />
+    <category term="Vue" />
     <category term="Docker" />
     <entry>
-        <id>https://ahjie668.github.io/ahjie668/2020/10/15/sort/</id>
+        <id>https://ahjie668.github.io/ahjie668/2020/10/15/java/sort/</id>
         <title>Java中的数组排序</title>
-        <link rel="alternate" href="https://ahjie668.github.io/ahjie668/2020/10/15/sort/"/>
+        <link rel="alternate" href="https://ahjie668.github.io/ahjie668/2020/10/15/java/sort/"/>
         <content type="html">&lt;h2 id=&#34;冒泡排序&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#冒泡排序&#34;&gt;#&lt;/a&gt; 💍 冒泡排序&lt;/h2&gt;
 &lt;div class=&#34;note info&#34;&gt;
 &lt;p&gt;&lt;span class=&#34;rainbow&#34;&gt;基本思想:&lt;/span&gt;&lt;/p&gt;
@@ -43,9 +43,9 @@
         <updated>2020-10-15T12:08:10.455Z</updated>
     </entry>
     <entry>
-        <id>https://ahjie668.github.io/ahjie668/2020/08/25/pom%E6%8A%A5%E9%94%99/</id>
+        <id>https://ahjie668.github.io/ahjie668/2020/08/25/java/pom%E6%8A%A5%E9%94%99/</id>
         <title>pom.xml的标签报错 Element ‘project‘ cannot have character [children], because the type‘s content**</title>
-        <link rel="alternate" href="https://ahjie668.github.io/ahjie668/2020/08/25/pom%E6%8A%A5%E9%94%99/"/>
+        <link rel="alternate" href="https://ahjie668.github.io/ahjie668/2020/08/25/java/pom%E6%8A%A5%E9%94%99/"/>
         <content type="html">&lt;p&gt;&lt;strong&gt;CSDN 地址:&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ0ODQxNDMyL2FydGljbGUvZGV0YWlscy8xMDc3NjgxOTc=&#34;&gt;https://blog.csdn.net/qq_44841432/article/details/107768197&lt;/span&gt;&lt;/strong&gt;&lt;/p&gt;
 &lt;h2 id=&#34;pomxml的报错&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#pomxml的报错&#34;&gt;#&lt;/a&gt; 💍 pom.xml 的报错&lt;/h2&gt;
 &lt;p&gt;&lt;img data-src=&#34;https://img-blog.csdnimg.cn/20200803164619221.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ0ODQxNDMy,size_16,color_FFFFFF,t_70#pic_center&#34; alt&gt;&lt;/p&gt;
@@ -61,9 +61,9 @@
         <updated>2020-08-25T13:45:50.197Z</updated>
     </entry>
     <entry>
-        <id>https://ahjie668.github.io/ahjie668/2020/08/20/java%E5%9F%BA%E7%A1%80/</id>
+        <id>https://ahjie668.github.io/ahjie668/2020/08/20/java/java%E5%9F%BA%E7%A1%80/</id>
         <title>JAVA的JDK安装步骤</title>
-        <link rel="alternate" href="https://ahjie668.github.io/ahjie668/2020/08/20/java%E5%9F%BA%E7%A1%80/"/>
+        <link rel="alternate" href="https://ahjie668.github.io/ahjie668/2020/08/20/java/java%E5%9F%BA%E7%A1%80/"/>
         <content type="html">&lt;p&gt;对于一个 JAVA 或 android 开发者来说，JDK 的安装是做任何事的前提。但现在有好多教程的 JDK 安装配置方法繁琐重复，容易误导新手，本教程可以说是最简单经典实用的配置方法。&lt;/p&gt;
 &lt;h2 id=&#34;快速开始&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#快速开始&#34;&gt;#&lt;/a&gt; 💍 快速开始&lt;/h2&gt;
 &lt;h3 id=&#34;步骤一&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#步骤一&#34;&gt;#&lt;/a&gt; 💍步骤一&lt;/h3&gt;

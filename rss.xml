@@ -1,24 +1,24 @@
 <?xml version="1.0"?>
 <rss version="2.0">
     <channel>
-        <title>Hexo</title>
+        <title>码坑的博客</title>
         <link>https://ahjie668.github.io/ahjie668</link>
-        <description></description>
+        <description>本人是小白,初次与各位相遇,请多多指教,谢谢 じ萌喵喵ルゞ Ю↘ 珂ル°</description>
         <language>zh-Hans</language>
         <pubDate>Thu, 15 Oct 2020 20:08:10 +0800</pubDate>
         <lastBuildDate>Thu, 15 Oct 2020 20:08:10 +0800</lastBuildDate>
-        <category>Maven</category>
         <category>Hexo</category>
+        <category>Maven</category>
         <category>JAVA</category>
-        <category>React</category>
-        <category>Vue</category>
         <category>JavaScript</category>
         <category>css</category>
+        <category>React</category>
+        <category>Vue</category>
         <category>Docker</category>
         <item>
-            <guid isPermalink="true">https://ahjie668.github.io/ahjie668/2020/10/15/sort/</guid>
+            <guid isPermalink="true">https://ahjie668.github.io/ahjie668/2020/10/15/java/sort/</guid>
             <title>Java中的数组排序</title>
-            <link>https://ahjie668.github.io/ahjie668/2020/10/15/sort/</link>
+            <link>https://ahjie668.github.io/ahjie668/2020/10/15/java/sort/</link>
             <category>JAVA</category>
             <pubDate>Thu, 15 Oct 2020 20:08:10 +0800</pubDate>
             <description><![CDATA[ &lt;h2 id=&#34;冒泡排序&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#冒泡排序&#34;&gt;#&lt;/a&gt; 💍 冒泡排序&lt;/h2&gt;
@@ -46,9 +46,9 @@
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">https://ahjie668.github.io/ahjie668/2020/08/27/docker/</guid>
+            <guid isPermalink="true">https://ahjie668.github.io/ahjie668/2020/08/27/java/docker/</guid>
             <title>Docker安装部署</title>
-            <link>https://ahjie668.github.io/ahjie668/2020/08/27/docker/</link>
+            <link>https://ahjie668.github.io/ahjie668/2020/08/27/java/docker/</link>
             <category>Docker</category>
             <pubDate>Thu, 27 Aug 2020 23:39:38 +0800</pubDate>
             <description><![CDATA[ &lt;h2 id=&#34;前言&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#前言&#34;&gt;#&lt;/a&gt; 💍 前言&lt;/h2&gt;
@@ -327,9 +327,9 @@ SELINUXTYPE=targeted&lt;/p&gt;
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">https://ahjie668.github.io/ahjie668/2020/08/25/Maven%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE/</guid>
+            <guid isPermalink="true">https://ahjie668.github.io/ahjie668/2020/08/25/java/Maven%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE/</guid>
             <title>Maven的安装及配置</title>
-            <link>https://ahjie668.github.io/ahjie668/2020/08/25/Maven%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE/</link>
+            <link>https://ahjie668.github.io/ahjie668/2020/08/25/java/Maven%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE/</link>
             <category>Maven</category>
             <pubDate>Tue, 25 Aug 2020 22:19:12 +0800</pubDate>
             <description><![CDATA[ &lt;h2 id=&#34;安装本地maven&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#安装本地maven&#34;&gt;#&lt;/a&gt; 💍安装本地 Maven&lt;/h2&gt;
@@ -387,9 +387,9 @@ MAVEN_HOME:&lt;/li&gt;
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">https://ahjie668.github.io/ahjie668/2020/08/25/pom%E6%8A%A5%E9%94%99/</guid>
+            <guid isPermalink="true">https://ahjie668.github.io/ahjie668/2020/08/25/java/pom%E6%8A%A5%E9%94%99/</guid>
             <title>pom.xml的标签报错 Element ‘project‘ cannot have character [children], because the type‘s content**</title>
-            <link>https://ahjie668.github.io/ahjie668/2020/08/25/pom%E6%8A%A5%E9%94%99/</link>
+            <link>https://ahjie668.github.io/ahjie668/2020/08/25/java/pom%E6%8A%A5%E9%94%99/</link>
             <category>JAVA</category>
             <pubDate>Tue, 25 Aug 2020 21:45:50 +0800</pubDate>
             <description><![CDATA[ &lt;p&gt;&lt;strong&gt;CSDN 地址:&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ0ODQxNDMyL2FydGljbGUvZGV0YWlscy8xMDc3NjgxOTc=&#34;&gt;https://blog.csdn.net/qq_44841432/article/details/107768197&lt;/span&gt;&lt;/strong&gt;&lt;/p&gt;
@@ -405,9 +405,9 @@ MAVEN_HOME:&lt;/li&gt;
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">https://ahjie668.github.io/ahjie668/2020/08/21/react%E5%92%8Cvue/</guid>
+            <guid isPermalink="true">https://ahjie668.github.io/ahjie668/2020/08/21/web/react%E5%92%8Cvue/</guid>
             <title>React.js与Vue.js流行框架的比较</title>
-            <link>https://ahjie668.github.io/ahjie668/2020/08/21/react%E5%92%8Cvue/</link>
+            <link>https://ahjie668.github.io/ahjie668/2020/08/21/web/react%E5%92%8Cvue/</link>
             <category>React</category>
             <category>Vue</category>
             <pubDate>Fri, 21 Aug 2020 20:33:25 +0800</pubDate>
@@ -537,9 +537,9 @@ Vue.js 是一个开源 JavaScript 框架，能够开发单页面应用程序。�
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">https://ahjie668.github.io/ahjie668/2020/08/20/java%E5%9F%BA%E7%A1%80/</guid>
+            <guid isPermalink="true">https://ahjie668.github.io/ahjie668/2020/08/20/java/java%E5%9F%BA%E7%A1%80/</guid>
             <title>JAVA的JDK安装步骤</title>
-            <link>https://ahjie668.github.io/ahjie668/2020/08/20/java%E5%9F%BA%E7%A1%80/</link>
+            <link>https://ahjie668.github.io/ahjie668/2020/08/20/java/java%E5%9F%BA%E7%A1%80/</link>
             <category>JAVA</category>
             <pubDate>Thu, 20 Aug 2020 15:50:41 +0800</pubDate>
             <description><![CDATA[ &lt;p&gt;对于一个 JAVA 或 android 开发者来说，JDK 的安装是做任何事的前提。但现在有好多教程的 JDK 安装配置方法繁琐重复，容易误导新手，本教程可以说是最简单经典实用的配置方法。&lt;/p&gt;
@@ -572,9 +572,9 @@ Vue.js 是一个开源 JavaScript 框架，能够开发单页面应用程序。�
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">https://ahjie668.github.io/ahjie668/2020/08/19/%E5%85%89%E6%A0%87%E5%8A%A8%E7%94%BB/</guid>
+            <guid isPermalink="true">https://ahjie668.github.io/ahjie668/2020/08/19/web/%E5%85%89%E6%A0%87%E5%8A%A8%E7%94%BB/</guid>
             <title>利用html+javaSrcipt+css3实现光标动画</title>
-            <link>https://ahjie668.github.io/ahjie668/2020/08/19/%E5%85%89%E6%A0%87%E5%8A%A8%E7%94%BB/</link>
+            <link>https://ahjie668.github.io/ahjie668/2020/08/19/web/%E5%85%89%E6%A0%87%E5%8A%A8%E7%94%BB/</link>
             <category>JavaScript</category>
             <category>css</category>
             <pubDate>Wed, 19 Aug 2020 23:24:27 +0800</pubDate>
@@ -590,9 +590,9 @@ Vue.js 是一个开源 JavaScript 框架，能够开发单页面应用程序。�
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">https://ahjie668.github.io/ahjie668/2020/08/19/%E5%BD%A9%E8%89%B2%E6%96%87%E5%AD%97/</guid>
+            <guid isPermalink="true">https://ahjie668.github.io/ahjie668/2020/08/19/web/%E5%BD%A9%E8%89%B2%E6%96%87%E5%AD%97/</guid>
             <title>js文字闪动效果</title>
-            <link>https://ahjie668.github.io/ahjie668/2020/08/19/%E5%BD%A9%E8%89%B2%E6%96%87%E5%AD%97/</link>
+            <link>https://ahjie668.github.io/ahjie668/2020/08/19/web/%E5%BD%A9%E8%89%B2%E6%96%87%E5%AD%97/</link>
             <category>JavaScript</category>
             <pubDate>Wed, 19 Aug 2020 22:17:37 +0800</pubDate>
             <description><![CDATA[ &lt;p&gt;利用 javaSrcipt (js) 实现对文字的如跑马灯一样的效果。&lt;/p&gt;

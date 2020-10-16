@@ -1,21 +1,21 @@
 <?xml version="1.0"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://ahjie668.github.io/ahjie668</id>
-    <title>Hexo • Posts by &#34;web前端&#34; category</title>
+    <title>码坑的博客 • Posts by &#34;web前端&#34; category</title>
     <link href="https://ahjie668.github.io/ahjie668" />
     <updated>2020-08-21T12:33:25.646Z</updated>
-    <category term="Maven" />
     <category term="Hexo" />
+    <category term="Maven" />
     <category term="JAVA" />
-    <category term="React" />
-    <category term="Vue" />
     <category term="JavaScript" />
     <category term="css" />
+    <category term="React" />
+    <category term="Vue" />
     <category term="Docker" />
     <entry>
-        <id>https://ahjie668.github.io/ahjie668/2020/08/21/react%E5%92%8Cvue/</id>
+        <id>https://ahjie668.github.io/ahjie668/2020/08/21/web/react%E5%92%8Cvue/</id>
         <title>React.js与Vue.js流行框架的比较</title>
-        <link rel="alternate" href="https://ahjie668.github.io/ahjie668/2020/08/21/react%E5%92%8Cvue/"/>
+        <link rel="alternate" href="https://ahjie668.github.io/ahjie668/2020/08/21/web/react%E5%92%8Cvue/"/>
         <content type="html">&lt;p&gt;JavaScript 是世界上最流行的语言之一，React 和 Vue 是 JS 最流行的两个框架。但哪一款最适合你？&lt;/p&gt;
 &lt;p&gt;JavaScript 越来越受欢迎，许多科技巨头正在从中获益。每天都会出现大量的框架和语言，我们无法跟上所有这些框架和语言的步伐。很难确定哪些值得关注。&lt;/p&gt;
 &lt;p&gt;JavaScript 的世界正以前所未有的速度和作为软件开发的公司，我们无法承受忽视这个时代的讨论最多的框架 - React.js 和 Vue.js。因此，在 React 与 Vue 的比较中，我们将根据每个框架的重要优缺点，以及市场趋势和见解，帮助您选择最佳框架。我们拥有一批技术娴熟的开发人员，他们可以随时了解 Vue.js 和 React 开发的各个方面。&lt;/p&gt;
@@ -122,9 +122,9 @@ Vue.js 是一个开源 JavaScript 框架，能够开发单页面应用程序。�
         <updated>2020-08-21T12:33:25.646Z</updated>
     </entry>
     <entry>
-        <id>https://ahjie668.github.io/ahjie668/2020/08/19/%E5%85%89%E6%A0%87%E5%8A%A8%E7%94%BB/</id>
+        <id>https://ahjie668.github.io/ahjie668/2020/08/19/web/%E5%85%89%E6%A0%87%E5%8A%A8%E7%94%BB/</id>
         <title>利用html+javaSrcipt+css3实现光标动画</title>
-        <link rel="alternate" href="https://ahjie668.github.io/ahjie668/2020/08/19/%E5%85%89%E6%A0%87%E5%8A%A8%E7%94%BB/"/>
+        <link rel="alternate" href="https://ahjie668.github.io/ahjie668/2020/08/19/web/%E5%85%89%E6%A0%87%E5%8A%A8%E7%94%BB/"/>
         <content type="html">&lt;p&gt;这个案例也是通过 javaSrcipt (js) 实现，这个案例相对比较简单，先是整体的 HTML 代码结构，这个案例呢 javaSrcipt (js) 是直接写在我们 HTML 的内部，&lt;br&gt;
 没有通过外链的方式实现，因为代码量较少直接写在了整体结构之中，其实这个案例不仅仅是纯的 javaSrcipt (js) 代码，本案例只是利用了 javaSrcipt (js)&lt;br&gt;
  的一个时间来控制光标闪动的时间而已，而我们的 CSS3 样式呢，主要是让文字颜色，利用 background 使文字产生渐变的效果。&lt;/p&gt;
@@ -140,9 +140,9 @@ Vue.js 是一个开源 JavaScript 框架，能够开发单页面应用程序。�
         <updated>2020-08-19T15:24:27.295Z</updated>
     </entry>
     <entry>
-        <id>https://ahjie668.github.io/ahjie668/2020/08/19/%E5%BD%A9%E8%89%B2%E6%96%87%E5%AD%97/</id>
+        <id>https://ahjie668.github.io/ahjie668/2020/08/19/web/%E5%BD%A9%E8%89%B2%E6%96%87%E5%AD%97/</id>
         <title>js文字闪动效果</title>
-        <link rel="alternate" href="https://ahjie668.github.io/ahjie668/2020/08/19/%E5%BD%A9%E8%89%B2%E6%96%87%E5%AD%97/"/>
+        <link rel="alternate" href="https://ahjie668.github.io/ahjie668/2020/08/19/web/%E5%BD%A9%E8%89%B2%E6%96%87%E5%AD%97/"/>
         <content type="html">&lt;p&gt;利用 javaSrcipt (js) 实现对文字的如跑马灯一样的效果。&lt;/p&gt;
 &lt;h2 id=&#34;效果如下&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#效果如下&#34;&gt;#&lt;/a&gt; 💍 效果如下:&lt;/h2&gt;
 &lt;script&gt;

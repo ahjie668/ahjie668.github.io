@@ -1,21 +1,21 @@
 <?xml version="1.0"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://ahjie668.github.io/ahjie668</id>
-    <title>Hexo</title>
+    <title>码坑的博客</title>
     <link href="https://ahjie668.github.io/ahjie668" />
     <updated>2020-10-15T12:08:10.455Z</updated>
-    <category term="Maven" />
     <category term="Hexo" />
+    <category term="Maven" />
     <category term="JAVA" />
-    <category term="React" />
-    <category term="Vue" />
     <category term="JavaScript" />
     <category term="css" />
+    <category term="React" />
+    <category term="Vue" />
     <category term="Docker" />
     <entry>
-        <id>https://ahjie668.github.io/ahjie668/2020/10/15/sort/</id>
+        <id>https://ahjie668.github.io/ahjie668/2020/10/15/java/sort/</id>
         <title>Java中的数组排序</title>
-        <link rel="alternate" href="https://ahjie668.github.io/ahjie668/2020/10/15/sort/"/>
+        <link rel="alternate" href="https://ahjie668.github.io/ahjie668/2020/10/15/java/sort/"/>
         <content type="html">&lt;h2 id=&#34;冒泡排序&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#冒泡排序&#34;&gt;#&lt;/a&gt; 💍 冒泡排序&lt;/h2&gt;
 &lt;div class=&#34;note info&#34;&gt;
 &lt;p&gt;&lt;span class=&#34;rainbow&#34;&gt;基本思想:&lt;/span&gt;&lt;/p&gt;
@@ -43,9 +43,9 @@
         <updated>2020-10-15T12:08:10.455Z</updated>
     </entry>
     <entry>
-        <id>https://ahjie668.github.io/ahjie668/2020/08/27/docker/</id>
+        <id>https://ahjie668.github.io/ahjie668/2020/08/27/java/docker/</id>
         <title>Docker安装部署</title>
-        <link rel="alternate" href="https://ahjie668.github.io/ahjie668/2020/08/27/docker/"/>
+        <link rel="alternate" href="https://ahjie668.github.io/ahjie668/2020/08/27/java/docker/"/>
         <content type="html">&lt;h2 id=&#34;前言&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#前言&#34;&gt;#&lt;/a&gt; 💍 前言&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;
@@ -324,9 +324,9 @@ SELINUXTYPE=targeted&lt;/p&gt;
         <updated>2020-08-27T15:39:38.159Z</updated>
     </entry>
     <entry>
-        <id>https://ahjie668.github.io/ahjie668/2020/08/25/Maven%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE/</id>
+        <id>https://ahjie668.github.io/ahjie668/2020/08/25/java/Maven%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE/</id>
         <title>Maven的安装及配置</title>
-        <link rel="alternate" href="https://ahjie668.github.io/ahjie668/2020/08/25/Maven%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE/"/>
+        <link rel="alternate" href="https://ahjie668.github.io/ahjie668/2020/08/25/java/Maven%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE/"/>
         <content type="html">&lt;h2 id=&#34;安装本地maven&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#安装本地maven&#34;&gt;#&lt;/a&gt; 💍安装本地 Maven&lt;/h2&gt;
 &lt;p&gt;&lt;strong&gt;Maven 下载地址:&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9tYXZlbi5hcGFjaGUub3JnL2Rvd25sb2FkLmNnaQ==&#34;&gt;https://maven.apache.org/download.cgi&lt;/span&gt;&lt;/strong&gt;&lt;/p&gt;
 &lt;blockquote&gt;
@@ -384,9 +384,9 @@ MAVEN_HOME:&lt;/li&gt;
         <updated>2020-08-25T14:19:12.817Z</updated>
     </entry>
     <entry>
-        <id>https://ahjie668.github.io/ahjie668/2020/08/25/pom%E6%8A%A5%E9%94%99/</id>
+        <id>https://ahjie668.github.io/ahjie668/2020/08/25/java/pom%E6%8A%A5%E9%94%99/</id>
         <title>pom.xml的标签报错 Element ‘project‘ cannot have character [children], because the type‘s content**</title>
-        <link rel="alternate" href="https://ahjie668.github.io/ahjie668/2020/08/25/pom%E6%8A%A5%E9%94%99/"/>
+        <link rel="alternate" href="https://ahjie668.github.io/ahjie668/2020/08/25/java/pom%E6%8A%A5%E9%94%99/"/>
         <content type="html">&lt;p&gt;&lt;strong&gt;CSDN 地址:&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ0ODQxNDMyL2FydGljbGUvZGV0YWlscy8xMDc3NjgxOTc=&#34;&gt;https://blog.csdn.net/qq_44841432/article/details/107768197&lt;/span&gt;&lt;/strong&gt;&lt;/p&gt;
 &lt;h2 id=&#34;pomxml的报错&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#pomxml的报错&#34;&gt;#&lt;/a&gt; 💍 pom.xml 的报错&lt;/h2&gt;
 &lt;p&gt;&lt;img data-src=&#34;https://img-blog.csdnimg.cn/20200803164619221.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ0ODQxNDMy,size_16,color_FFFFFF,t_70#pic_center&#34; alt&gt;&lt;/p&gt;
@@ -402,9 +402,9 @@ MAVEN_HOME:&lt;/li&gt;
         <updated>2020-08-25T13:45:50.197Z</updated>
     </entry>
     <entry>
-        <id>https://ahjie668.github.io/ahjie668/2020/08/21/react%E5%92%8Cvue/</id>
+        <id>https://ahjie668.github.io/ahjie668/2020/08/21/web/react%E5%92%8Cvue/</id>
         <title>React.js与Vue.js流行框架的比较</title>
-        <link rel="alternate" href="https://ahjie668.github.io/ahjie668/2020/08/21/react%E5%92%8Cvue/"/>
+        <link rel="alternate" href="https://ahjie668.github.io/ahjie668/2020/08/21/web/react%E5%92%8Cvue/"/>
         <content type="html">&lt;p&gt;JavaScript 是世界上最流行的语言之一，React 和 Vue 是 JS 最流行的两个框架。但哪一款最适合你？&lt;/p&gt;
 &lt;p&gt;JavaScript 越来越受欢迎，许多科技巨头正在从中获益。每天都会出现大量的框架和语言，我们无法跟上所有这些框架和语言的步伐。很难确定哪些值得关注。&lt;/p&gt;
 &lt;p&gt;JavaScript 的世界正以前所未有的速度和作为软件开发的公司，我们无法承受忽视这个时代的讨论最多的框架 - React.js 和 Vue.js。因此，在 React 与 Vue 的比较中，我们将根据每个框架的重要优缺点，以及市场趋势和见解，帮助您选择最佳框架。我们拥有一批技术娴熟的开发人员，他们可以随时了解 Vue.js 和 React 开发的各个方面。&lt;/p&gt;
@@ -534,9 +534,9 @@ Vue.js 是一个开源 JavaScript 框架，能够开发单页面应用程序。�
         <updated>2020-08-20T08:29:52.301Z</updated>
     </entry>
     <entry>
-        <id>https://ahjie668.github.io/ahjie668/2020/08/20/java%E5%9F%BA%E7%A1%80/</id>
+        <id>https://ahjie668.github.io/ahjie668/2020/08/20/java/java%E5%9F%BA%E7%A1%80/</id>
         <title>JAVA的JDK安装步骤</title>
-        <link rel="alternate" href="https://ahjie668.github.io/ahjie668/2020/08/20/java%E5%9F%BA%E7%A1%80/"/>
+        <link rel="alternate" href="https://ahjie668.github.io/ahjie668/2020/08/20/java/java%E5%9F%BA%E7%A1%80/"/>
         <content type="html">&lt;p&gt;对于一个 JAVA 或 android 开发者来说，JDK 的安装是做任何事的前提。但现在有好多教程的 JDK 安装配置方法繁琐重复，容易误导新手，本教程可以说是最简单经典实用的配置方法。&lt;/p&gt;
 &lt;h2 id=&#34;快速开始&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#快速开始&#34;&gt;#&lt;/a&gt; 💍 快速开始&lt;/h2&gt;
 &lt;h3 id=&#34;步骤一&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#步骤一&#34;&gt;#&lt;/a&gt; 💍步骤一&lt;/h3&gt;
@@ -569,9 +569,9 @@ Vue.js 是一个开源 JavaScript 框架，能够开发单页面应用程序。�
         <updated>2020-08-20T07:50:41.096Z</updated>
     </entry>
     <entry>
-        <id>https://ahjie668.github.io/ahjie668/2020/08/19/%E5%85%89%E6%A0%87%E5%8A%A8%E7%94%BB/</id>
+        <id>https://ahjie668.github.io/ahjie668/2020/08/19/web/%E5%85%89%E6%A0%87%E5%8A%A8%E7%94%BB/</id>
         <title>利用html+javaSrcipt+css3实现光标动画</title>
-        <link rel="alternate" href="https://ahjie668.github.io/ahjie668/2020/08/19/%E5%85%89%E6%A0%87%E5%8A%A8%E7%94%BB/"/>
+        <link rel="alternate" href="https://ahjie668.github.io/ahjie668/2020/08/19/web/%E5%85%89%E6%A0%87%E5%8A%A8%E7%94%BB/"/>
         <content type="html">&lt;p&gt;这个案例也是通过 javaSrcipt (js) 实现，这个案例相对比较简单，先是整体的 HTML 代码结构，这个案例呢 javaSrcipt (js) 是直接写在我们 HTML 的内部，&lt;br&gt;
 没有通过外链的方式实现，因为代码量较少直接写在了整体结构之中，其实这个案例不仅仅是纯的 javaSrcipt (js) 代码，本案例只是利用了 javaSrcipt (js)&lt;br&gt;
  的一个时间来控制光标闪动的时间而已，而我们的 CSS3 样式呢，主要是让文字颜色，利用 background 使文字产生渐变的效果。&lt;/p&gt;
@@ -587,9 +587,9 @@ Vue.js 是一个开源 JavaScript 框架，能够开发单页面应用程序。�
         <updated>2020-08-19T15:24:27.295Z</updated>
     </entry>
     <entry>
-        <id>https://ahjie668.github.io/ahjie668/2020/08/19/%E5%BD%A9%E8%89%B2%E6%96%87%E5%AD%97/</id>
+        <id>https://ahjie668.github.io/ahjie668/2020/08/19/web/%E5%BD%A9%E8%89%B2%E6%96%87%E5%AD%97/</id>
         <title>js文字闪动效果</title>
-        <link rel="alternate" href="https://ahjie668.github.io/ahjie668/2020/08/19/%E5%BD%A9%E8%89%B2%E6%96%87%E5%AD%97/"/>
+        <link rel="alternate" href="https://ahjie668.github.io/ahjie668/2020/08/19/web/%E5%BD%A9%E8%89%B2%E6%96%87%E5%AD%97/"/>
         <content type="html">&lt;p&gt;利用 javaSrcipt (js) 实现对文字的如跑马灯一样的效果。&lt;/p&gt;
 &lt;h2 id=&#34;效果如下&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#效果如下&#34;&gt;#&lt;/a&gt; 💍 效果如下:&lt;/h2&gt;
 &lt;script&gt;

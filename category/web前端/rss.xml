@@ -1,24 +1,24 @@
 <?xml version="1.0"?>
 <rss version="2.0">
     <channel>
-        <title>Hexo • Posts by &#34;web前端&#34; category</title>
+        <title>码坑的博客 • Posts by &#34;web前端&#34; category</title>
         <link>https://ahjie668.github.io/ahjie668</link>
-        <description></description>
+        <description>本人是小白,初次与各位相遇,请多多指教,谢谢 じ萌喵喵ルゞ Ю↘ 珂ル°</description>
         <language>zh-Hans</language>
         <pubDate>Fri, 21 Aug 2020 20:33:25 +0800</pubDate>
         <lastBuildDate>Fri, 21 Aug 2020 20:33:25 +0800</lastBuildDate>
-        <category>Maven</category>
         <category>Hexo</category>
+        <category>Maven</category>
         <category>JAVA</category>
-        <category>React</category>
-        <category>Vue</category>
         <category>JavaScript</category>
         <category>css</category>
+        <category>React</category>
+        <category>Vue</category>
         <category>Docker</category>
         <item>
-            <guid isPermalink="true">https://ahjie668.github.io/ahjie668/2020/08/21/react%E5%92%8Cvue/</guid>
+            <guid isPermalink="true">https://ahjie668.github.io/ahjie668/2020/08/21/web/react%E5%92%8Cvue/</guid>
             <title>React.js与Vue.js流行框架的比较</title>
-            <link>https://ahjie668.github.io/ahjie668/2020/08/21/react%E5%92%8Cvue/</link>
+            <link>https://ahjie668.github.io/ahjie668/2020/08/21/web/react%E5%92%8Cvue/</link>
             <category>React</category>
             <category>Vue</category>
             <pubDate>Fri, 21 Aug 2020 20:33:25 +0800</pubDate>
@@ -125,9 +125,9 @@ Vue.js 是一个开源 JavaScript 框架，能够开发单页面应用程序。�
 &lt;p style=&#34;color:red; size:40&#34;&gt;此文章是我个人从网上看到的，感觉还不错，所以发出来与大家共享&lt;/p&gt; ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">https://ahjie668.github.io/ahjie668/2020/08/19/%E5%85%89%E6%A0%87%E5%8A%A8%E7%94%BB/</guid>
+            <guid isPermalink="true">https://ahjie668.github.io/ahjie668/2020/08/19/web/%E5%85%89%E6%A0%87%E5%8A%A8%E7%94%BB/</guid>
             <title>利用html+javaSrcipt+css3实现光标动画</title>
-            <link>https://ahjie668.github.io/ahjie668/2020/08/19/%E5%85%89%E6%A0%87%E5%8A%A8%E7%94%BB/</link>
+            <link>https://ahjie668.github.io/ahjie668/2020/08/19/web/%E5%85%89%E6%A0%87%E5%8A%A8%E7%94%BB/</link>
             <category>JavaScript</category>
             <category>css</category>
             <pubDate>Wed, 19 Aug 2020 23:24:27 +0800</pubDate>
@@ -143,9 +143,9 @@ Vue.js 是一个开源 JavaScript 框架，能够开发单页面应用程序。�
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">https://ahjie668.github.io/ahjie668/2020/08/19/%E5%BD%A9%E8%89%B2%E6%96%87%E5%AD%97/</guid>
+            <guid isPermalink="true">https://ahjie668.github.io/ahjie668/2020/08/19/web/%E5%BD%A9%E8%89%B2%E6%96%87%E5%AD%97/</guid>
             <title>js文字闪动效果</title>
-            <link>https://ahjie668.github.io/ahjie668/2020/08/19/%E5%BD%A9%E8%89%B2%E6%96%87%E5%AD%97/</link>
+            <link>https://ahjie668.github.io/ahjie668/2020/08/19/web/%E5%BD%A9%E8%89%B2%E6%96%87%E5%AD%97/</link>
             <category>JavaScript</category>
             <pubDate>Wed, 19 Aug 2020 22:17:37 +0800</pubDate>
             <description><![CDATA[ &lt;p&gt;利用 javaSrcipt (js) 实现对文字的如跑马灯一样的效果。&lt;/p&gt;
