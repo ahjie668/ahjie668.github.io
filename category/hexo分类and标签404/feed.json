@@ -1,0 +1,18 @@
+{
+    "version": "https://jsonfeed.org/version/1",
+    "title": "码坑的博客 • All posts by \"hexo分类and标签404\" category",
+    "description": "本人是小白,初次与各位相遇,请多多指教,谢谢 じ萌喵喵ルゞ Ю↘ 珂ル°",
+    "home_page_url": "https://ahjie668.github.io/ahjie668",
+    "items": [
+        {
+            "id": "https://ahjie668.github.io/ahjie668/Other-extensions/hexo/",
+            "url": "https://ahjie668.github.io/ahjie668/Other-extensions/hexo/",
+            "title": "hexo分类and标签404",
+            "date_published": "2020-08-20T08:29:52.301Z",
+            "content_html": "<h2 id=\"404分类and标签错误处理\"><a class=\"markdownIt-Anchor\" href=\"#404分类and标签错误处理\">#</a> 💍 404 分类 and 标签错误处理</h2>\n<p>突然发现博客中，部分分类打不开，点击出现 404，在标签中查看，也是小部分标签点击 404，但是在所有文章中该分类下的文章都能打开，后来发现这些 404 的标签或分类名都是后来修改过的，原先的名称开头是大写名称</p>\n<p>将大写字母改成小写，hexo 部署正确，但是博客上还是不正确出现 404</p>\n<p>网上查了许多资料，才发现，git 中设置了大小写不敏感</p>\n<a id=\"more\"></a>\n<h2 id=\"解决方法如下\"><a class=\"markdownIt-Anchor\" href=\"#解决方法如下\">#</a> 💍 解决方法如下</h2>\n<p>修改 git 设置不忽略大小写</p>\n<p>进入博客文件夹，进入 git 目录：.deploy_git ，修改 .git 文件中的配置文件 config，将 ignorecase=true 改为 ignorecase=false</p>\n<figure class=\"highlight yaml\"><figcaption><span>Yaml</span></figcaption><table><tr><td class=\"gutter\"><pre><span class=\"line\">1</span><br><span class=\"line\">2</span><br><span class=\"line\">3</span><br></pre></td><td class=\"code\"><pre><span class=\"line\"><span class=\"string\">vim</span> <span class=\"string\">.</span> <span class=\"string\">deploy_git/.git/config</span></span><br><span class=\"line\"></span><br><span class=\"line\"><span class=\"string\">ignorecase</span> <span class=\"string\">=</span> <span class=\"literal\">false</span></span><br></pre></td></tr></table></figure>\n<p>如果还没有解决，清空部署到 github 上的文件，重新发布：</p>\n<figure class=\"highlight bash\"><figcaption><span>Bash</span></figcaption><table><tr><td class=\"gutter\"><pre><span class=\"line\">1</span><br><span class=\"line\">2</span><br><span class=\"line\">3</span><br><span class=\"line\">4</span><br></pre></td><td class=\"code\"><pre><span class=\"line\"><span class=\"built_in\">cd</span> .deploy_git</span><br><span class=\"line\">git rm -rf *</span><br><span class=\"line\">git commit -m <span class=\"string\">&#x27;clean all file&#x27;</span></span><br><span class=\"line\">git push</span><br></pre></td></tr></table></figure>\n<p>进入博客文件夹，用 hexo 重新生成部署</p>\n<figure class=\"highlight plain\"><figcaption><span>Hexo</span></figcaption><table><tr><td class=\"gutter\"><pre><span class=\"line\">1</span><br><span class=\"line\">2</span><br><span class=\"line\">3</span><br></pre></td><td class=\"code\"><pre><span class=\"line\">hexo clean</span><br><span class=\"line\">hexo g </span><br><span class=\"line\">hexo d or hexo g -d</span><br></pre></td></tr></table></figure>\n<p><font style=\"color: red;\">这些问题都是自己开始搭建博客的时候出现的一些问题，希望能够帮助到各位，<br>\n如果那里错误，请指点出来，大家一起讨论。</font></p>\n",
+            "tags": [
+                "Hexo"
+            ]
+        }
+    ]
+}

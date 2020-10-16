@@ -12,10 +12,11 @@
     <category term="React" />
     <category term="Vue" />
     <category term="Docker" />
+    <category term="html" />
     <entry>
-        <id>https://ahjie668.github.io/ahjie668/2020/08/20/hexo/</id>
+        <id>https://ahjie668.github.io/ahjie668/Other-extensions/hexo/</id>
         <title>hexo分类and标签404</title>
-        <link rel="alternate" href="https://ahjie668.github.io/ahjie668/2020/08/20/hexo/"/>
+        <link rel="alternate" href="https://ahjie668.github.io/ahjie668/Other-extensions/hexo/"/>
         <content type="html">&lt;h2 id=&#34;404分类and标签错误处理&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#404分类and标签错误处理&#34;&gt;#&lt;/a&gt; 💍 404 分类 and 标签错误处理&lt;/h2&gt;
 &lt;p&gt;突然发现博客中，部分分类打不开，点击出现 404，在标签中查看，也是小部分标签点击 404，但是在所有文章中该分类下的文章都能打开，后来发现这些 404 的标签或分类名都是后来修改过的，原先的名称开头是大写名称&lt;/p&gt;
 &lt;p&gt;将大写字母改成小写，hexo 部署正确，但是博客上还是不正确出现 404&lt;/p&gt;

@@ -1,0 +1,742 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#FFF">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+<link rel="icon" type="image/ico" sizes="32x32" href="/images/favicon.ico">
+  <meta http-equiv="Cache-Control" content="no-transform">
+  <meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+<link rel="alternate" type="application/rss+xml" title="码坑的博客" href="https://ahjie668.github.io/ahjie668/rss.xml" />
+<link rel="alternate" type="application/atom+xml" title="码坑的博客" href="https://ahjie668.github.io/ahjie668/atom.xml" />
+<link rel="alternate" type="application/json" title="码坑的博客" href="https://ahjie668.github.io/ahjie668/feed.json" />
+
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Mulish:300,300italic,400,400italic,700,700italic%7CFredericka%20the%20Great:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20JP:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20SC:300,300italic,400,400italic,700,700italic%7CInconsolata:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="/css/app.css?v=0.2.3">
+
+  
+  <meta name="keywords" content="React,Vue" />
+
+
+<link rel="canonical" href="https://ahjie668.github.io/ahjie668/web/react%E5%92%8Cvue/">
+
+
+
+  <title>
+React.js与Vue.js流行框架的比较 - 光标动画 - 彩色文字 - react和vue - web前端 |
+Code pit = 码坑的博客 = 请多指教</title>
+<meta name="generator" content="Hexo 5.0.2"></head>
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div id="loading">
+    <div class="cat">
+      <div class="body"></div>
+      <div class="head">
+        <div class="face"></div>
+      </div>
+      <div class="foot">
+        <div class="tummy-end"></div>
+        <div class="bottom"></div>
+        <div class="legs left"></div>
+        <div class="legs right"></div>
+      </div>
+      <div class="paw">
+        <div class="hands left"></div>
+        <div class="hands right"></div>
+      </div>
+    </div>
+  </div>
+  <div id="container">
+    <header id="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="inner">
+        <div id="brand">
+          <div class="pjax">
+          
+  <h1 itemprop="name headline">React.js与Vue.js流行框架的比较
+  </h1>
+  
+<div class="meta">
+  <span class="item" title="创建时间：2020-08-21 20:33:25">
+    <span class="icon">
+      <i class="ic i-calendar"></i>
+    </span>
+    <span class="text">发表于</span>
+    <time itemprop="dateCreated datePublished" datetime="2020-08-21T20:33:25+08:00">2020-08-21</time>
+  </span>
+  <span class="item" title="本文字数">
+    <span class="icon">
+      <i class="ic i-pen"></i>
+    </span>
+    <span class="text">本文字数</span>
+    <span>4.1k</span>
+    <span class="text">字</span>
+  </span>
+  <span class="item" title="阅读时长">
+    <span class="icon">
+      <i class="ic i-clock"></i>
+    </span>
+    <span class="text">阅读时长</span>
+    <span>4 分钟</span>
+  </span>
+</div>
+
+
+          </div>
+        </div>
+        <nav id="nav">
+  <div class="inner">
+    <div class="toggle">
+      <div class="lines" aria-label="切换导航栏">
+        <span class="line"></span>
+        <span class="line"></span>
+        <span class="line"></span>
+      </div>
+    </div>
+    <ul class="menu">
+      <li class="item title"><a href="/" rel="start">Code pit</a></li>
+    </ul>
+    <ul class="right">
+      <li class="item theme">
+        <i class="ic i-sun"></i>
+      </li>
+      <li class="item search">
+        <i class="ic i-search"></i>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+      </div>
+      <div id="imgs" class="pjax">
+        <ul>
+          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1giclxxcb6rj20zk0m8b29.jpg"></li>
+          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1giclfdu6exj20zk0m87hw.jpg"></li>
+          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1giclxfdlttj20zk0m8npd.jpg"></li>
+          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1giclx29mstj20zk0m8hdt.jpg"></li>
+          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1giciukx8a7j20zk0m8aio.jpg"></li>
+          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1gipeudstjqj20zk0m8k3r.jpg"></li>
+        </ul>
+      </div>
+    </header>
+    <div id="waves">
+      <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+        <defs>
+          <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+        </defs>
+        <g class="parallax">
+          <use xlink:href="#gentle-wave" x="48" y="0" />
+          <use xlink:href="#gentle-wave" x="48" y="3" />
+          <use xlink:href="#gentle-wave" x="48" y="5" />
+          <use xlink:href="#gentle-wave" x="48" y="7" />
+        </g>
+      </svg>
+    </div>
+    <main id="main">
+      <div class="inner">
+        <div id="content" class="pjax">
+          
+  <div class="article wrap">
+    
+<div class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+<i class="ic i-home"></i>
+<span><a href="/">首页</a></span><i class="ic i-angle-right"></i>
+<span  itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a href="/categories/web/" itemprop="item" rel="index" title="分类于 web前端"><span itemprop="name">web前端</span></a>
+<meta itemprop="position" content="1" /></span>
+<i class="ic i-angle-right"></i>
+<span  itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a href="/categories/web/react%E5%92%8Cvue/" itemprop="item" rel="index" title="分类于 react和vue"><span itemprop="name">react和vue</span></a>
+<meta itemprop="position" content="2" /></span>
+<i class="ic i-angle-right"></i>
+<span  itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a href="/categories/web/react%E5%92%8Cvue/%E5%BD%A9%E8%89%B2%E6%96%87%E5%AD%97/" itemprop="item" rel="index" title="分类于 彩色文字"><span itemprop="name">彩色文字</span></a>
+<meta itemprop="position" content="3" /></span>
+<i class="ic i-angle-right"></i>
+<span  class="current" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a href="/categories/web/react%E5%92%8Cvue/%E5%BD%A9%E8%89%B2%E6%96%87%E5%AD%97/%E5%85%89%E6%A0%87%E5%8A%A8%E7%94%BB/" itemprop="item" rel="index" title="分类于 光标动画"><span itemprop="name">光标动画</span></a>
+<meta itemprop="position" content="4" /></span>
+</div>
+
+    <article itemscope itemtype="http://schema.org/Article" class="post block" lang="zh-Hans">
+  <link itemprop="mainEntityOfPage" href="https://ahjie668.github.io/ahjie668/web/react%E5%92%8Cvue/">
+
+  <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="image" content="/images/avatar.jpg">
+    <meta itemprop="name" content="码坑">
+    <meta itemprop="description" content="请多指教, 本人是小白,初次与各位相遇,请多多指教,谢谢 じ萌喵喵ルゞ Ю↘ 珂ル°">
+  </span>
+
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="码坑的博客">
+  </span>
+
+  <div class="body md" itemprop="articleBody">
+    
+
+    <p>JavaScript 是世界上最流行的语言之一，React 和 Vue 是 JS 最流行的两个框架。但哪一款最适合你？</p>
+<p>JavaScript 越来越受欢迎，许多科技巨头正在从中获益。每天都会出现大量的框架和语言，我们无法跟上所有这些框架和语言的步伐。很难确定哪些值得关注。</p>
+<p>JavaScript 的世界正以前所未有的速度和作为软件开发的公司，我们无法承受忽视这个时代的讨论最多的框架 - React.js 和 Vue.js。因此，在 React 与 Vue 的比较中，我们将根据每个框架的重要优缺点，以及市场趋势和见解，帮助您选择最佳框架。我们拥有一批技术娴熟的开发人员，他们可以随时了解 Vue.js 和 React 开发的各个方面。</p>
+<h3 id="让我们深入了解细节"><a class="markdownIt-Anchor" href="#让我们深入了解细节">#</a> 💍 让我们深入了解细节：</h3>
+<p>在进一步阅读之前，请确保您清楚地了解 React 和 Vue.js 是什么。它们是高度重视且广泛使用的 JavaScript 框架，用于界面设计。</p>
+<a id="more"></a>
+<h3 id="什么是react它为什么如此受欢迎"><a class="markdownIt-Anchor" href="#什么是react它为什么如此受欢迎">#</a> 💍 什么是 React？它为什么如此受欢迎？</h3>
+<p>React 得到了 Facebook 社区的支持，使得构建交互式 UI 非常容易。<br>
+<img data-src="https://ss0.baidu.com/6ONWsjip0QIZ8tyhnq/it/u=127440984,4244182077&amp;fm=173&amp;app=25&amp;f=JPEG?w=639&amp;h=360&amp;s=33B347264791486348926353020030B9" alt></p>
+<h3 id="react不是mvc框架"><a class="markdownIt-Anchor" href="#react不是mvc框架">#</a> 💍 React 不是 MVC 框架</h3>
+<p>市场上有许多 JavaScript MVC 框架在性能和可靠性方面做得相当不错。那么，为什么 React 如此受欢迎？为什么有人会使用 React 而不是依赖其他一些 MVC 框架？</p>
+<p>React 是一个用于创建可重用且有吸引力的 UI 组件的库。它非常适合代表经常变化的数据的组件。使用 React，您可以通过将它们分解为组件而不是使用模板或 HTML 来构建可重用的用户界面。</p>
+<h3 id="学习一次随处写作"><a class="markdownIt-Anchor" href="#学习一次随处写作">#</a> 💍 学习一次，随处写作</h3>
+<p>React 的官方网站提到了这个关键功能，它说你可以使用 React Native 框架在 JavaScript 中构建移动应用程序。</p>
+<p>React 还介绍了 JavaScript XML 或 JSX 的使用，它是 JavaScript 的语法扩展。React 不一定需要 JSX，但它在创建 UI 组件和调试时非常简单有用。</p>
+<h3 id="使用reactjs的公司"><a class="markdownIt-Anchor" href="#使用reactjs的公司">#</a> 💍 使用 React.js 的公司</h3>
+<p>Facebook，Instagram，Netflix，纽约时报，雅虎，WhatsApp，Codecademy，Dropbox，Airbnb，Asana，微软</p>
+<h3 id="vuejs简介渐进式javascript框架"><a class="markdownIt-Anchor" href="#vuejs简介渐进式javascript框架">#</a> 💍 Vue.js 简介：渐进式 JavaScript 框架</h3>
+<p><img data-src="https://ss2.baidu.com/6ONYsjip0QIZ8tyhnq/it/u=2728952600,851841068&amp;fm=173&amp;app=25&amp;f=JPEG?w=640&amp;h=360&amp;s=AFE35A7E7B6456054D5FB34D030060FD" alt><br>
+React 和 Angular 是用于构建 Web 应用程序的两个顶级 JavaScript 框架。<br>
+Vue.js 是一个开源 JavaScript 框架，能够开发单页面应用程序。它还可以用作 Web 应用程序框架，旨在简化 Web 开发。Vue.js 应用程序开发引起了全球开发人员的极大关注，以构建令人惊叹的 Web 应用程序。</p>
+<p>Vue 或 Vue.js 是一个用于为 Web 构建引人注目的 UI 的渐进式框架。它最初于 2014 年由前 Google 开发人员 Evan You 发布，他使用 AngularJS 并决定排除 Angular 框架的痛点并构建轻量级的东西。</p>
+<p>它的流行有很多原因，其中一个关键原因是它能够在没有任何动作的情况下重新渲染。它允许您构建可重用，小巧但功能强大的组件，因此，它提供了一个可组合的框架，允许您在需要时添加组件。</p>
+<h3 id="使用vuejs的公司"><a class="markdownIt-Anchor" href="#使用vuejs的公司">#</a> 💍 使用 Vue.js 的公司</h3>
+<figure class="highlight bash"><figcaption><span>Bash</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Facebook，Netflix，Adobe，Grammarly，Behance，小米，阿里巴巴，Codeship，Gitlab和Laracasts</span><br></pre></td></tr></table></figure>
+<h3 id="reactjs-vs-vuejs谁赢了这场战斗"><a class="markdownIt-Anchor" href="#reactjs-vs-vuejs谁赢了这场战斗">#</a> 💍 React.js vs Vue.js：谁赢了这场战斗？</h3>
+<p>这两个框架之间有许多相似之处，例如：</p>
+<ul>
+<li>两者都是为了与根库一起使用而构建的。</li>
+<li>React.js 和 Vue.js 基于 Virtual DOM 模型。</li>
+<li>这两种工具都具有基于组件的结构。</li>
+</ul>
+<p>当然，这两种工具之间存在差异。每个框架都有自己的优点和缺点需要考虑。让我们一个一个地看看每个框架。</p>
+<h3 id="reactjs的优点"><a class="markdownIt-Anchor" href="#reactjs的优点">#</a> 💍 React.js 的优点：</h3>
+<ul>
+<li>灵活性和响应性：它提供最大的灵活性和响应能力。</li>
+<li>虚拟 DOM：由于它基于文档对象模型，因此它允许浏览器友好地以 HTML，XHTML 或 XML 格式排列文档。</li>
+<li>丰富的 JavaScript 库：来自世界各地的贡献者正在努力添加更多功能。</li>
+<li>可扩展性：由于其灵活的结构和可扩展性，React 已被证明对大型应用程序更好。</li>
+<li>不断发展： React 得到了 Facebook 专业开发人员的支持，他们不断寻找改进方法。</li>
+<li>Web 或移动平台： React 提供 React Native 平台，可通过相同的 React 组件模型为 iOS 和 Android 开发本机呈现的应用程序。</li>
+<li>无论是 Web 还是本机移动开发，React 都是大多数用户界面设计平台的理想选择。</li>
+</ul>
+<h3 id="reactjs的缺点"><a class="markdownIt-Anchor" href="#reactjs的缺点">#</a> 💍 React.js 的缺点：</h3>
+<ul>
+<li>陡峭的学习曲线：由于复杂的设置过程，属性，功能和结构，它需要深入的知识来构建应用程序。</li>
+</ul>
+<p>现在，让我们转到 Vue.js 并谈谈它的优点和缺点：</p>
+<p>与 React 相比，Vue.js 的下载量更少，并且主要用于构建有吸引力的单页面应用程序和 Web 应用程序。但是，Vue.js 具有适应性强的体系结构，使其成为广泛使用的框架之一，具有最新的库和包。</p>
+<h3 id="使用vuejs的优点"><a class="markdownIt-Anchor" href="#使用vuejs的优点">#</a> 💍 使用 Vue.Js 的优点</h3>
+<ul>
+<li>易于使用： Vue.js 包含基于 HTML 的标准模板，可以更轻松地使用和修改现有应用程序。</li>
+<li>更顺畅的集成：无论是单页应用程序还是复杂的 Web 界面，Vue.js 都可以更平滑地集成更小的部件，而不会对整个系统产生任何影响。</li>
+<li>更好的性能，更小的尺寸：它占用更少的空间，并且往往比其他框架提供更好的性能。</li>
+<li>精心编写的文档：通过详细的文档提供简单的学习曲线，无需额外的知识；HTML 和 JavaScript 将完成工作。</li>
+<li>适应性：整体声音设计和架构使其成为一种流行的 JavaScript 框架。它提供无障碍的迁移，简单有效的结构和可重用的模板。</li>
+</ul>
+<h4 id="使用vuejs的缺点"><a class="markdownIt-Anchor" href="#使用vuejs的缺点">#</a> 💍 使用 Vue.js 的缺点</h4>
+<p>与 Angular 和 React 相比，Vue.js 框架的市场份额仍然很小。它正在快速流行，但与此同时，在使用 Vue.js 时，可能会出现大规模应用程序开发方面的问题。</p>
+<p>好吧，考虑到其现代功能，速度和灵活性，Vue.js 有可能实现 Web 应用程序开发的里程碑。</p>
+<h4 id="两个框架的深入比较"><a class="markdownIt-Anchor" href="#两个框架的深入比较">#</a> 💍 两个框架的深入比较</h4>
+<h4 id="重新渲染和优化"><a class="markdownIt-Anchor" href="#重新渲染和优化">#</a> 💍 重新渲染和优化</h4>
+<p>当你比较 React 和 Vue 时，速度不能成为决定哪个更好的重要比较因素。在性能方面，让我们考虑重新渲染功能。当组件的状态发生变化时，React 的机制会触发整个组件树的重新呈现。您可能需要使用额外的属性来避免不必要地重新渲染子组件。</p>
+<p>虽然 Vue 的重新渲染功能是开箱即用的，但 Vue 提供了优化的重新渲染，其中系统在渲染过程中跟踪依赖关系并相应地工作。</p>
+<p>重新渲染 Vue 是最显着的特征，使其成为全世界开发人员广泛接受的框架。</p>
+<h4 id="jsx与html"><a class="markdownIt-Anchor" href="#jsx与html">#</a> 💍 JSX 与 HTML</h4>
+<p>React 使用 JSX - 一种声明性 JavaScript XML，允许开发人员利用 JavaScript 的强大功能编写组件，而 Vue.js 使用 HTML 模板创建视图。</p>
+<p>基于 HTML 的模板更加熟悉，在改进现有应用程序以获得 Vue 反应性功能的好处方面也是有益的。这为初学者和有经验的专业人士提供了一个简单的学习曲线，因为他们中的大多数人都以这种或那种方式使用 HTML。</p>
+<h4 id="路由和状态管理解决方案"><a class="markdownIt-Anchor" href="#路由和状态管理解决方案">#</a> 💍 路由和状态管理解决方案</h4>
+<p>在像 React 和 Vue 这样的基于组件的框架中，当您开始扩展应用程序时，需要更加关注状态管理和数据流。这是因为有许多组件相互交互并共享数据。</p>
+<p>在这种情况下，React 提供了一种称为 Flux / Redux 架构的创新解决方案，它代表单向数据流，是着名 MVC 架构的替代方案。现在，如果我们考虑 Vue.js 框架，就会有一个名为 Vuex 的更高级架构，它集成到 Vue 中并提供无与伦比的体验。</p>
+<h4 id="建筑工具"><a class="markdownIt-Anchor" href="#建筑工具">#</a> 💍 建筑工具</h4>
+<p>React 和 Vue 都有一个非常好的开发环境。只需很少或没有配置，您就可以创建应用程序，使您能够使用最新的实践和模板。在 React 中，有一个 Create React App（CRA），在 Vue 中，它是 vue-cli。</p>
+<p>这两种引导工具都倾向于为您提供舒适灵活的开发环境，并为您提供开始编码的出色起点。</p>
+<h3 id="跨平台应用程序开发谁是赢家"><a class="markdownIt-Anchor" href="#跨平台应用程序开发谁是赢家">#</a> 💍 跨平台应用程序开发：谁是赢家？</h3>
+<p>跨平台应用程序开发已经广泛流行，两个框架都在竞相提供卓越的跨平台应用程序开发体验。React 的 React Native 是一个成熟且广泛使用的本机渲染应用程序平台。另一方面，Vue 的 Weex 仍在不断发展，旨在为 iOS 和 Android 创建应用程序提供流畅的开发体验。</p>
+<h3 id="何时使用vuejs-over-react"><a class="markdownIt-Anchor" href="#何时使用vuejs-over-react">#</a> 💍 何时使用 Vue.js Over React</h3>
+<p>如果您想要一个轻量级，更快速，更现代的 UI 库来制作一流的 SPA（单页面应用程序），您应该选择 Vue.js. 对于习惯使用 HTML 的开发人员来说，这是有利的。此外，它还提供了组件的可重用性，使其成为开发人员在 Web 应用程序中构建无与伦比的用户体验的选择。</p>
+<h3 id="何时选择react-over-vuejs"><a class="markdownIt-Anchor" href="#何时选择react-over-vuejs">#</a> 💍 何时选择 React Over Vue.js</h3>
+<p>当你是 JavaScript 的粉丝！React 拥有一个成熟且规模更大的专业开发团队，致力于使其更先进。React 由 Facebook 提供支持，其中包含许多用例，解决方案，资源和项目。此外，由于成熟的用户群，React 适用于大规模应用程序和移动应用程序。很明显，如果您想使用 JavaScript 构建移动应用程序，React Native 绝对是您的选择。</p>
+<p>但是，要么是构建现代 JavaScript 应用程序的一个很好的选择，它高度依赖于团队，应用程序大小和可行的方法。</p>
+<p>以下是整个评估的快速概述：</p>
+<h3 id="在以下场景中vue比反应更好"><a class="markdownIt-Anchor" href="#在以下场景中vue比反应更好">#</a> 💍 在以下场景中，Vue 比反应更好：</h3>
+<ul>
+<li>最新文档和更简单的语法。</li>
+<li>更小，更快，更灵活。</li>
+<li>丰富的 HTML 模板，易于开发。</li>
+</ul>
+<h3 id="react比vuejs好"><a class="markdownIt-Anchor" href="#react比vuejs好">#</a> 💍 React 比 Vue.js 好：</h3>
+<ul>
+<li>需要构建移动应用程序。</li>
+<li>专业和出色的社区支持，以解决任何问题。</li>
+<li>需要构建大型应用程序。</li>
+<li>轻量级，易于版本迁移。</li>
+</ul>
+<h3 id="快速reactjs与vuejs比较"><a class="markdownIt-Anchor" href="#快速reactjs与vuejs比较">#</a> 💍 快速 React.js 与 Vue.js 比较</h3>
+<p><img data-src="https://ss0.baidu.com/6ONWsjip0QIZ8tyhnq/it/u=559265463,225886790&amp;fm=173&amp;app=25&amp;f=JPEG?w=640&amp;h=743&amp;s=3D287433195F604F5AFD11CA0000C0B1" alt></p>
+<h3 id="总结"><a class="markdownIt-Anchor" href="#总结">#</a> 💍 总结</h3>
+<p>无论您选择 React.js 还是 Vue.js，两个框架都没有相当大的差异，根据您的要求，这个决定是非常主观的。如果您想将前端 JavaScript 框架集成到现有应用程序中，Vue.js 是更好的选择，如果您想使用 JavaScript 构建移动应用程序，React 绝对是您的选择。</p>
+<p>在这里，我们尽量不要偏向任何框架。如果我们遗漏任何可以使本文更全面有价值的重要观点或概念，您可以通过以下评论告诉我们！</p>
+<p style="color:red; size:40">此文章是我个人从网上看到的，感觉还不错，所以发出来与大家共享</p>
+      <div class="tags">
+          <a href="/tags/React/" rel="tag"><i class="ic i-tag"></i> React</a>
+          <a href="/tags/Vue/" rel="tag"><i class="ic i-tag"></i> Vue</a>
+      </div>
+  </div>
+
+   <footer>
+
+    <div class="meta">
+  <span class="item">
+    <span class="icon">
+      <i class="ic i-calendar-check"></i>
+    </span>
+    <span class="text">更新于</span>
+    <time title="修改时间：2020-10-17 00:28:06" itemprop="dateModified" datetime="2020-10-17T00:28:06+08:00">2020-10-17</time>
+  </span>
+  <span id="web/react和vue/" class="item leancloud_visitors" data-flag-title="React.js与Vue.js流行框架的比较" title="阅读次数">
+      <span class="icon">
+        <i class="ic i-eye"></i>
+      </span>
+      <span class="text">阅读次数</span>
+      <span class="leancloud-visitors-count"></span>
+      <span class="text">次</span>
+  </span>
+</div>
+
+      
+<div class="reward">
+  <button><i class="ic i-heartbeat"></i> 赞赏</button>
+  <p>请我喝[茶]~(￣▽￣)~*</p>
+  <div id="qr">
+      
+      <div>
+        <img data-src="/images/wechatpay.png" alt="码坑 微信支付">
+        <p>微信支付</p>
+      </div>
+      
+      <div>
+        <img data-src="/images/alipay.png" alt="码坑 支付宝支付">
+        <p>支付宝支付</p>
+      </div>
+      
+      <div>
+        <img data-src="/images/paypal.png" alt="码坑 QQ支付">
+        <p>QQ支付</p>
+      </div>
+  </div>
+</div>
+
+      
+
+<div id="copyright">
+<ul>
+  <li class="author">
+    <strong>本文作者： </strong>码坑 <i class="ic i-at"><em>@</em></i>码坑的博客
+  </li>
+  <li class="link">
+    <strong>本文链接：</strong>
+    <a href="https://ahjie668.github.io/ahjie668/web/react%E5%92%8Cvue/" title="React.js与Vue.js流行框架的比较">https://ahjie668.github.io/ahjie668/web/react和vue/</a>
+  </li>
+  <li class="license">
+    <strong>版权声明： </strong>本站所有文章除特别声明外，均采用 <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC9kZWVkLnpo"><i class="ic i-creative-commons"><em>(CC)</em></i>BY-NC-SA</span> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+  </footer>
+
+</article>
+
+  </div>
+  
+
+<div class="nav">
+    <div class="item left">
+      
+
+  <a href="/Other-extensions/hexo/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;tva2.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1gipeyhsblkj20zk0m81kx.jpg" title="hexo分类and标签404">
+  <span class="type">上一篇</span>
+  <span class="category"><i class="ic i-flag"></i> hexo分类and标签404</span>
+  <h3>hexo分类and标签404</h3>
+  </a>
+
+    </div>
+    <div class="item right">
+      
+
+  <a href="/java/pom%E6%8A%A5%E9%94%99/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;tva2.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1giclhtuo6nj20zk0m8ttm.jpg" title="pom.xml的标签报错 Element ‘project‘ cannot have character [children], because the type‘s content**">
+  <span class="type">下一篇</span>
+  <span class="category"><i class="ic i-flag"></i> JAVA编程语言</span>
+  <h3>pom.xml的标签报错 Element ‘project‘ cannot have character [children], because the type‘s content**</h3>
+  </a>
+
+    </div>
+</div>
+
+  
+  <div class="wrap" id="comments"></div>
+
+
+        </div>
+        <div id="sidebar">
+          
+
+<div class="inner">
+
+  <div class="panels">
+    <div class="inner">
+      <div class="contents panel pjax" data-title="文章目录">
+          <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AE%A9%E6%88%91%E4%BB%AC%E6%B7%B1%E5%85%A5%E4%BA%86%E8%A7%A3%E7%BB%86%E8%8A%82"><span class="toc-number">1.</span> <span class="toc-text"> 💍 让我们深入了解细节：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BB%80%E4%B9%88%E6%98%AFreact%E5%AE%83%E4%B8%BA%E4%BB%80%E4%B9%88%E5%A6%82%E6%AD%A4%E5%8F%97%E6%AC%A2%E8%BF%8E"><span class="toc-number">2.</span> <span class="toc-text"> 💍 什么是 React？它为什么如此受欢迎？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#react%E4%B8%8D%E6%98%AFmvc%E6%A1%86%E6%9E%B6"><span class="toc-number">3.</span> <span class="toc-text"> 💍 React 不是 MVC 框架</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AD%A6%E4%B9%A0%E4%B8%80%E6%AC%A1%E9%9A%8F%E5%A4%84%E5%86%99%E4%BD%9C"><span class="toc-number">4.</span> <span class="toc-text"> 💍 学习一次，随处写作</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8reactjs%E7%9A%84%E5%85%AC%E5%8F%B8"><span class="toc-number">5.</span> <span class="toc-text"> 💍 使用 React.js 的公司</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#vuejs%E7%AE%80%E4%BB%8B%E6%B8%90%E8%BF%9B%E5%BC%8Fjavascript%E6%A1%86%E6%9E%B6"><span class="toc-number">6.</span> <span class="toc-text"> 💍 Vue.js 简介：渐进式 JavaScript 框架</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8vuejs%E7%9A%84%E5%85%AC%E5%8F%B8"><span class="toc-number">7.</span> <span class="toc-text"> 💍 使用 Vue.js 的公司</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#reactjs-vs-vuejs%E8%B0%81%E8%B5%A2%E4%BA%86%E8%BF%99%E5%9C%BA%E6%88%98%E6%96%97"><span class="toc-number">8.</span> <span class="toc-text"> 💍 React.js vs Vue.js：谁赢了这场战斗？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#reactjs%E7%9A%84%E4%BC%98%E7%82%B9"><span class="toc-number">9.</span> <span class="toc-text"> 💍 React.js 的优点：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#reactjs%E7%9A%84%E7%BC%BA%E7%82%B9"><span class="toc-number">10.</span> <span class="toc-text"> 💍 React.js 的缺点：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8vuejs%E7%9A%84%E4%BC%98%E7%82%B9"><span class="toc-number">11.</span> <span class="toc-text"> 💍 使用 Vue.Js 的优点</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8vuejs%E7%9A%84%E7%BC%BA%E7%82%B9"><span class="toc-number">11.1.</span> <span class="toc-text"> 💍 使用 Vue.js 的缺点</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%B8%A4%E4%B8%AA%E6%A1%86%E6%9E%B6%E7%9A%84%E6%B7%B1%E5%85%A5%E6%AF%94%E8%BE%83"><span class="toc-number">11.2.</span> <span class="toc-text"> 💍 两个框架的深入比较</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%87%8D%E6%96%B0%E6%B8%B2%E6%9F%93%E5%92%8C%E4%BC%98%E5%8C%96"><span class="toc-number">11.3.</span> <span class="toc-text"> 💍 重新渲染和优化</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#jsx%E4%B8%8Ehtml"><span class="toc-number">11.4.</span> <span class="toc-text"> 💍 JSX 与 HTML</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%B7%AF%E7%94%B1%E5%92%8C%E7%8A%B6%E6%80%81%E7%AE%A1%E7%90%86%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88"><span class="toc-number">11.5.</span> <span class="toc-text"> 💍 路由和状态管理解决方案</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%BB%BA%E7%AD%91%E5%B7%A5%E5%85%B7"><span class="toc-number">11.6.</span> <span class="toc-text"> 💍 建筑工具</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%B7%A8%E5%B9%B3%E5%8F%B0%E5%BA%94%E7%94%A8%E7%A8%8B%E5%BA%8F%E5%BC%80%E5%8F%91%E8%B0%81%E6%98%AF%E8%B5%A2%E5%AE%B6"><span class="toc-number">12.</span> <span class="toc-text"> 💍 跨平台应用程序开发：谁是赢家？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BD%95%E6%97%B6%E4%BD%BF%E7%94%A8vuejs-over-react"><span class="toc-number">13.</span> <span class="toc-text"> 💍 何时使用 Vue.js Over React</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BD%95%E6%97%B6%E9%80%89%E6%8B%A9react-over-vuejs"><span class="toc-number">14.</span> <span class="toc-text"> 💍 何时选择 React Over Vue.js</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9C%A8%E4%BB%A5%E4%B8%8B%E5%9C%BA%E6%99%AF%E4%B8%ADvue%E6%AF%94%E5%8F%8D%E5%BA%94%E6%9B%B4%E5%A5%BD"><span class="toc-number">15.</span> <span class="toc-text"> 💍 在以下场景中，Vue 比反应更好：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#react%E6%AF%94vuejs%E5%A5%BD"><span class="toc-number">16.</span> <span class="toc-text"> 💍 React 比 Vue.js 好：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BF%AB%E9%80%9Freactjs%E4%B8%8Evuejs%E6%AF%94%E8%BE%83"><span class="toc-number">17.</span> <span class="toc-text"> 💍 快速 React.js 与 Vue.js 比较</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%80%BB%E7%BB%93"><span class="toc-number">18.</span> <span class="toc-text"> 💍 总结</span></a></li></ol>
+      </div>
+      <div class="related panel pjax" data-title="系列文章">
+        <ul>
+          <li class="active"><a href="/web/react%E5%92%8Cvue/" rel="bookmark" title="React.js与Vue.js流行框架的比较">React.js与Vue.js流行框架的比较</a></li>
+        </ul>
+      </div>
+      <div class="overview panel" data-title="站点概览">
+        <div class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <img class="image" itemprop="image" alt="码坑"
+      data-src="/images/avatar.jpg">
+  <p class="name" itemprop="name">码坑</p>
+  <div class="description" itemprop="description">本人是小白,初次与各位相遇,请多多指教,谢谢 じ萌喵喵ルゞ Ю↘ 珂ル°</div>
+</div>
+
+<nav class="state">
+    <div class="item posts">
+      <a href="/archives/">
+        <span class="count">10</span>
+        <span class="name">文章</span>
+      </a>
+    </div>
+    <div class="item categories">
+      <a href="/categories/">
+        <span class="count">12</span>
+        <span class="name">分类</span>
+      </a>
+    </div>
+    <div class="item tags">
+      <a href="/tags/">
+        <span class="count">9</span>
+        <span class="name">标签</span>
+      </a>
+    </div>
+</nav>
+
+<div class="social">
+      <span class="exturl item github" data-url="aHR0cHM6Ly9naXRodWIuY29tL3lvdXJuYW1l" title="https:&#x2F;&#x2F;github.com&#x2F;yourname"><i class="ic i-github"></i></span>
+      <span class="exturl item twitter" data-url="aHR0cHM6Ly90d2l0dGVyLmNvbS95b3VybmFtZQ==" title="https:&#x2F;&#x2F;twitter.com&#x2F;yourname"><i class="ic i-twitter"></i></span>
+      <span class="exturl item zhihu" data-url="aHR0cHM6Ly93d3cuemhpaHUuY29tL3Blb3BsZS95b3VybmFtZQ==" title="https:&#x2F;&#x2F;www.zhihu.com&#x2F;people&#x2F;yourname"><i class="ic i-zhihu"></i></span>
+      <span class="exturl item music" data-url="aHR0cHM6Ly9tdXNpYy4xNjMuY29tLyMvdXNlci9ob21lP2lkPXlvdXJpZA==" title="https:&#x2F;&#x2F;music.163.com&#x2F;#&#x2F;user&#x2F;home?id&#x3D;yourid"><i class="ic i-cloud-music"></i></span>
+      <span class="exturl item weibo" data-url="aHR0cHM6Ly93ZWliby5jb20veW91cm5hbWU=" title="https:&#x2F;&#x2F;weibo.com&#x2F;yourname"><i class="ic i-weibo"></i></span>
+      <span class="exturl item about" data-url="aHR0cHM6Ly9hYm91dC5tZS95b3VybmFtZQ==" title="https:&#x2F;&#x2F;about.me&#x2F;yourname"><i class="ic i-address-card"></i></span>
+</div>
+
+<ul class="menu">
+  
+    
+  <li class="item">
+    <a href="/" rel="section"><i class="ic i-home"></i>首页</a>
+  </li>
+
+        
+  <li class="item dropdown">
+    <a href="javascript:void(0);"><i class="ic i-feather"></i>文章</a>
+    <ul class="submenu">
+
+        
+  <li class="item">
+    <a href="/archives/" rel="section"><i class="ic i-list-alt"></i>归档</a>
+  </li>
+
+        
+  <li class="item">
+    <a href="/categories/" rel="section"><i class="ic i-th"></i>分类</a>
+  </li>
+
+        
+  <li class="item">
+    <a href="/tags/" rel="section"><i class="ic i-tags"></i>标签</a>
+  </li>
+
+  </ul>
+    
+  <li class="item">
+    <a href="/about/" rel="section"><i class="ic i-user"></i>关于</a>
+  </li>
+
+    
+  <li class="item">
+    <a href="/friends/" rel="section"><i class="ic i-heart"></i>友链</a>
+  </li>
+
+
+</ul>
+
+      </div>
+    </div>
+  </div>
+
+  <ul id="quick">
+    <li class="prev pjax">
+        <a href="/Other-extensions/hexo/" rel="prev" title="上一篇"><i class="ic i-chevron-left"></i></a>
+    </li>
+    <li class="up"><i class="ic i-arrow-up"></i></li>
+    <li class="down"><i class="ic i-arrow-down"></i></li>
+    <li class="next pjax">
+        <a href="/java/pom%E6%8A%A5%E9%94%99/" rel="next" title="下一篇"><i class="ic i-chevron-right"></i></a>
+    </li>
+    <li class="percent"></li>
+  </ul>
+</div>
+
+
+        </div>
+        <div class="dimmer"></div>
+      </div>
+    </main>
+    <footer id="footer">
+      <div class="inner">
+        <div class="widgets">
+          
+<div class="rpost pjax">
+  <h2>随机文章</h2>
+  <ul>
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/java/" title="分类于 JAVA编程语言">JAVA编程语言</a>
+</div>
+
+    <span><a href="/java/Maven%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE/" title="Maven的安装及配置">Maven的安装及配置</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/web/" title="分类于 web前端">web前端</a>
+</div>
+
+    <span><a href="/web/%E5%BD%A9%E8%89%B2%E6%96%87%E5%AD%97/" title="js文字闪动效果">js文字闪动效果</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/web/" title="分类于 web前端">web前端</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/web/react%E5%92%8Cvue/" title="分类于 react和vue">react和vue</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/web/react%E5%92%8Cvue/%E5%BD%A9%E8%89%B2%E6%96%87%E5%AD%97/" title="分类于 彩色文字">彩色文字</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/web/react%E5%92%8Cvue/%E5%BD%A9%E8%89%B2%E6%96%87%E5%AD%97/%E5%85%89%E6%A0%87%E5%8A%A8%E7%94%BB/" title="分类于 光标动画">光标动画</a>
+</div>
+
+    <span><a href="/web/react%E5%92%8Cvue/" title="React.js与Vue.js流行框架的比较">React.js与Vue.js流行框架的比较</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/java/" title="分类于 JAVA编程语言">JAVA编程语言</a>
+</div>
+
+    <span><a href="/java/pom%E6%8A%A5%E9%94%99/" title="pom.xml的标签报错 Element ‘project‘ cannot have character [children], because the type‘s content**">pom.xml的标签报错 Element ‘project‘ cannot have character [children], because the type‘s content**</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/web/" title="分类于 web前端">web前端</a>
+</div>
+
+    <span><a href="/web/%E5%85%89%E6%A0%87%E5%8A%A8%E7%94%BB/" title="利用html+javaSrcipt+css3实现光标动画">利用html+javaSrcipt+css3实现光标动画</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/java/" title="分类于 JAVA编程语言">JAVA编程语言</a>
+</div>
+
+    <span><a href="/java/docker/" title="Docker安装部署">Docker安装部署</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/java/" title="分类于 JAVA编程语言">JAVA编程语言</a>
+</div>
+
+    <span><a href="/java/java%E5%9F%BA%E7%A1%80/" title="JAVA的JDK安装步骤">JAVA的JDK安装步骤</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/web/" title="分类于 web前端">web前端</a>
+</div>
+
+    <span><a href="/web/imageAPI/" title="随机图片API">随机图片API</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/Other-extensions/" title="分类于 其他扩展">其他扩展</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/Other-extensions/hexo%E5%88%86%E7%B1%BBand%E6%A0%87%E7%AD%BE404/" title="分类于 hexo分类and标签404">hexo分类and标签404</a>
+</div>
+
+    <span><a href="/Other-extensions/hexo/" title="hexo分类and标签404">hexo分类and标签404</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/java/" title="分类于 JAVA编程语言">JAVA编程语言</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/java/java%E5%9F%BA%E7%A1%80/" title="分类于 java基础">java基础</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/java/java%E5%9F%BA%E7%A1%80/Maven%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE/" title="分类于 Maven安装配置">Maven安装配置</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/java/java%E5%9F%BA%E7%A1%80/Maven%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE/docker/" title="分类于 docker">docker</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/java/java%E5%9F%BA%E7%A1%80/Maven%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE/docker/pom%E6%8A%A5%E9%94%99/" title="分类于 pom报错">pom报错</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/java/java%E5%9F%BA%E7%A1%80/Maven%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE/docker/pom%E6%8A%A5%E9%94%99/sort/" title="分类于 sort">sort</a>
+</div>
+
+    <span><a href="/java/sort/" title="Java中的数组排序">Java中的数组排序</a></span>
+  </li>
+
+  </ul>
+</div>
+<div>
+  <h2>最新评论</h2>
+  <ul class="leancloud-recent-comment"></ul>
+</div>
+
+        </div>
+        <div class="status">
+  <div class="copyright">
+    
+    &copy; 
+    <span itemprop="copyrightYear">2020</span>
+    <span class="with-love">
+      <i class="ic i-sakura rotate"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">码坑 @ Code pit</span>
+  </div>
+  <div class="count">
+    <span class="post-meta-item-icon">
+      <i class="ic i-chart-area"></i>
+    </span>
+    <span title="站点总字数">29k 字</span>
+
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="ic i-coffee"></i>
+    </span>
+    <span title="站点阅读时长">26 分钟</span>
+  </div>
+  <div class="powered-by">
+    基于 <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & Theme.<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2FtZWhpbWUvaGV4by10aGVtZS1zaG9rYQ==">Shoka</span>
+  </div>
+
+  <script type="text/javascript">document.write(unescape("%3Cspan id='cnzz_stat_icon_1279352119'%3E%3C/span%3E%3Cscript src='https://s4.cnzz.com/z_stat.php%3Fid%3D1279352119%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));</script>
+
+<span id="momk"></span><span id="momk" style="color: #ff0000;"></span>
+<script type="text/javascript">
+function NewDate(str) {
+str = str.split('-');
+var date = new Date();
+date.setUTCFullYear(str[0], str[1] - 1, str[2]);
+date.setUTCHours(0, 0, 0, 0);
+return date;
+}
+function momxc() {
+var birthDay =NewDate("2020-8-18");
+var today=new Date();
+var timeold=today.getTime()-birthDay.getTime();
+var sectimeold=timeold/1000
+var secondsold=Math.floor(sectimeold);
+var msPerDay=24*60*60*1000; var e_daysold=timeold/msPerDay;
+var daysold=Math.floor(e_daysold);
+var e_hrsold=(daysold-e_daysold)*-24;
+var hrsold=Math.floor(e_hrsold);
+var e_minsold=(hrsold-e_hrsold)*-60;
+var minsold=Math.floor((hrsold-e_hrsold)*-60); var seconds=Math.floor((minsold-e_minsold)*-60).toString();
+document.getElementById("momk").innerHTML = "本站已安全运行"+daysold+"天"+hrsold+"小时"+minsold+"分"+seconds+"秒";
+setTimeout(momxc, 1000);
+}momxc();
+</script>  <style>
+#momk{animation:change 10s infinite;font-weight:800; }
+@keyframes change{0%{color:#5cb85c;}25%{color:#556bd8;}50%{color:#e40707;}75%{color:#66e616;}100% {color:#67bd31;}}
+</style>
+ <br>
+ <!-- 整站统计 -->
+ <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+ <span id="busuanzi_container_site_pv">本站总访问量<span id="busuanzi_value_site_pv"></span>次</span>
+ <span class="post-meta-divider">|</span>
+ <span id="busuanzi_container_site_uv">本站访客数<span id="busuanzi_value_site_uv"</span>人</span>
+</div>
+
+      </div>
+    </footer>
+  </div>
+<script data-config type="text/javascript">
+  var LOCAL = {
+    path: 'web/react和vue/',
+    favicon: {
+      show: "码坑的博客",
+      hide: "码坑的博客"
+    },
+    search : {
+      placeholder: "文章搜索",
+      empty: "关于 「 ${query} 」，什么也没搜到",
+      stats: "${time} ms 内找到 ${hits} 条结果"
+    },
+    valine: true,fancybox: true,copyright: '复制成功，转载请遵守 <i class="ic i-creative-commons"></i>BY-NC-SA 协议。',
+    ignores : [
+      function(uri) {
+        return uri.includes('#');
+      },
+      function(uri) {
+        return new RegExp(LOCAL.path+"$").test(uri);
+      }
+    ]
+  };
+</script>
+
+<script src="https://cdn.polyfill.io/v2/polyfill.js"></script>
+
+<script src="//cdn.jsdelivr.net/combine/npm/pace-js@1.0.2/pace.min.js,npm/pjax@0.2.8/pjax.min.js,npm/whatwg-fetch@3.4.0/dist/fetch.umd.min.js,npm/animejs@3.2.0/lib/anime.min.js,npm/algoliasearch@4/dist/algoliasearch-lite.umd.js,npm/instantsearch.js@4/dist/instantsearch.production.min.js,npm/lozad@1/dist/lozad.min.js,npm/quicklink@2/dist/quicklink.umd.js"></script>
+
+<script src="/js/app.js?v=0.2.3"></script>
+
+
+  <script data-pjax>
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?iASNGexQaR5ypf8WgXK9KWr9-9Nh9j0Va";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
+ <script src='https://api.vvhan.com/api/snow'></script>  
+</html>

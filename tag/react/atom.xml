@@ -12,10 +12,11 @@
     <category term="React" />
     <category term="Vue" />
     <category term="Docker" />
+    <category term="html" />
     <entry>
-        <id>https://ahjie668.github.io/ahjie668/2020/08/21/web/react%E5%92%8Cvue/</id>
+        <id>https://ahjie668.github.io/ahjie668/web/react%E5%92%8Cvue/</id>
         <title>React.js与Vue.js流行框架的比较</title>
-        <link rel="alternate" href="https://ahjie668.github.io/ahjie668/2020/08/21/web/react%E5%92%8Cvue/"/>
+        <link rel="alternate" href="https://ahjie668.github.io/ahjie668/web/react%E5%92%8Cvue/"/>
         <content type="html">&lt;p&gt;JavaScript 是世界上最流行的语言之一，React 和 Vue 是 JS 最流行的两个框架。但哪一款最适合你？&lt;/p&gt;
 &lt;p&gt;JavaScript 越来越受欢迎，许多科技巨头正在从中获益。每天都会出现大量的框架和语言，我们无法跟上所有这些框架和语言的步伐。很难确定哪些值得关注。&lt;/p&gt;
 &lt;p&gt;JavaScript 的世界正以前所未有的速度和作为软件开发的公司，我们无法承受忽视这个时代的讨论最多的框架 - React.js 和 Vue.js。因此，在 React 与 Vue 的比较中，我们将根据每个框架的重要优缺点，以及市场趋势和见解，帮助您选择最佳框架。我们拥有一批技术娴熟的开发人员，他们可以随时了解 Vue.js 和 React 开发的各个方面。&lt;/p&gt;

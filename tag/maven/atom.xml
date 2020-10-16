@@ -12,10 +12,11 @@
     <category term="React" />
     <category term="Vue" />
     <category term="Docker" />
+    <category term="html" />
     <entry>
-        <id>https://ahjie668.github.io/ahjie668/2020/08/25/java/Maven%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE/</id>
+        <id>https://ahjie668.github.io/ahjie668/java/Maven%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE/</id>
         <title>Maven的安装及配置</title>
-        <link rel="alternate" href="https://ahjie668.github.io/ahjie668/2020/08/25/java/Maven%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE/"/>
+        <link rel="alternate" href="https://ahjie668.github.io/ahjie668/java/Maven%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE/"/>
         <content type="html">&lt;h2 id=&#34;安装本地maven&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#安装本地maven&#34;&gt;#&lt;/a&gt; 💍安装本地 Maven&lt;/h2&gt;
 &lt;p&gt;&lt;strong&gt;Maven 下载地址:&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9tYXZlbi5hcGFjaGUub3JnL2Rvd25sb2FkLmNnaQ==&#34;&gt;https://maven.apache.org/download.cgi&lt;/span&gt;&lt;/strong&gt;&lt;/p&gt;
 &lt;blockquote&gt;

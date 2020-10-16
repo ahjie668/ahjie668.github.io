@@ -3,7 +3,7 @@
     <id>https://ahjie668.github.io/ahjie668</id>
     <title>码坑的博客 • Posts by &#34;web前端&#34; category</title>
     <link href="https://ahjie668.github.io/ahjie668" />
-    <updated>2020-08-21T12:33:25.646Z</updated>
+    <updated>2020-10-16T16:26:58.317Z</updated>
     <category term="Hexo" />
     <category term="Maven" />
     <category term="JAVA" />
@@ -12,10 +12,31 @@
     <category term="React" />
     <category term="Vue" />
     <category term="Docker" />
+    <category term="html" />
     <entry>
-        <id>https://ahjie668.github.io/ahjie668/2020/08/21/web/react%E5%92%8Cvue/</id>
+        <id>https://ahjie668.github.io/ahjie668/web/imageAPI/</id>
+        <title>随机图片API</title>
+        <link rel="alternate" href="https://ahjie668.github.io/ahjie668/web/imageAPI/"/>
+        <content type="html">&lt;h1 id=&#34;使用步骤如下&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#使用步骤如下&#34;&gt;#&lt;/a&gt; &lt;span class=&#34;rainbow&#34;&gt;使用步骤如下:&lt;/span&gt;&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span class=&#34;rainbow&#34;&gt;本 API 只适合做背景图，详细请看下图，介绍在里面，&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://shitu-query-nj.su.bcebos.com/2020-10-17/01/760c39aa9131cec5?authorization=bce-auth-v1%2F7e22d8caf5af46cc9310f1e3021709f3%2F2020-10-16T17%3A02%3A20Z%2F300%2Fhost%2F5d6cf5ac87b2bb2ccff99c43e223668fff7f761c624f61d668d2135ecb3ede09&#34; alt=&#34;二次元&#34;&gt;&lt;/p&gt;
+&lt;figure class=&#34;highlight html&#34;&gt;&lt;figcaption&gt;&lt;span&gt;html&lt;/span&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;20&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;21&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;22&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;meta&#34;&gt;&amp;lt;!DOCTYPE &lt;span class=&#34;meta-keyword&#34;&gt;html&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;tag&#34;&gt;&amp;lt;&lt;span class=&#34;name&#34;&gt;html&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;tag&#34;&gt;&amp;lt;&lt;span class=&#34;name&#34;&gt;head&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &lt;span class=&#34;tag&#34;&gt;&amp;lt;&lt;span class=&#34;name&#34;&gt;meta&lt;/span&gt; &lt;span class=&#34;attr&#34;&gt;charset&lt;/span&gt;=&lt;span class=&#34;string&#34;&gt;&amp;quot;UTF-8&amp;quot;&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &lt;span class=&#34;tag&#34;&gt;&amp;lt;&lt;span class=&#34;name&#34;&gt;meta&lt;/span&gt; &lt;span class=&#34;attr&#34;&gt;name&lt;/span&gt;=&lt;span class=&#34;string&#34;&gt;&amp;quot;viewport&amp;quot;&lt;/span&gt; &lt;span class=&#34;attr&#34;&gt;content&lt;/span&gt;=&lt;span class=&#34;string&#34;&gt;&amp;quot;width=device-width, initial-scale=1.0&amp;quot;&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &lt;span class=&#34;tag&#34;&gt;&amp;lt;&lt;span class=&#34;name&#34;&gt;meta&lt;/span&gt; &lt;span class=&#34;attr&#34;&gt;http-equiv&lt;/span&gt;=&lt;span class=&#34;string&#34;&gt;&amp;quot;X-UA-Compatible&amp;quot;&lt;/span&gt; &lt;span class=&#34;attr&#34;&gt;content&lt;/span&gt;=&lt;span class=&#34;string&#34;&gt;&amp;quot;ie=edge&amp;quot;&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &lt;span class=&#34;tag&#34;&gt;&amp;lt;&lt;span class=&#34;name&#34;&gt;title&lt;/span&gt;&amp;gt;&lt;/span&gt;images&lt;span class=&#34;tag&#34;&gt;&amp;lt;/&lt;span class=&#34;name&#34;&gt;title&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &lt;span class=&#34;tag&#34;&gt;&amp;lt;&lt;span class=&#34;name&#34;&gt;style&lt;/span&gt; &lt;span class=&#34;attr&#34;&gt;type&lt;/span&gt;=&lt;span class=&#34;string&#34;&gt;&amp;quot;text/css&amp;quot;&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;css&#34;&gt;        &lt;span class=&#34;selector-class&#34;&gt;.row&lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;            width: 500px;   //方便测试效果&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;            height: 900px;  //方便测试效果&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;            background: url(&amp;quot;http://www.dmoe.cc/random.php&amp;quot;)&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;        &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &lt;span class=&#34;tag&#34;&gt;&amp;lt;/&lt;span class=&#34;name&#34;&gt;style&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;tag&#34;&gt;&amp;lt;/&lt;span class=&#34;name&#34;&gt;head&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;tag&#34;&gt;&amp;lt;&lt;span class=&#34;name&#34;&gt;body&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    //第一种&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &lt;span class=&#34;tag&#34;&gt;&amp;lt;&lt;span class=&#34;name&#34;&gt;div&lt;/span&gt; &lt;span class=&#34;attr&#34;&gt;class&lt;/span&gt;=&lt;span class=&#34;string&#34;&gt;&amp;quot;row&amp;quot;&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;span class=&#34;tag&#34;&gt;&amp;lt;/&lt;span class=&#34;name&#34;&gt;div&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    //第二种&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &lt;span class=&#34;tag&#34;&gt;&amp;lt;&lt;span class=&#34;name&#34;&gt;img&lt;/span&gt; &lt;span class=&#34;attr&#34;&gt;src&lt;/span&gt;=&lt;span class=&#34;string&#34;&gt;&amp;quot; http://www.dmoe.cc/random.php&amp;quot;&lt;/span&gt;&amp;gt;&lt;/span&gt;  &lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt; &lt;span class=&#34;tag&#34;&gt;&amp;lt;/&lt;span class=&#34;name&#34;&gt;body&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt; &lt;span class=&#34;tag&#34;&gt;&amp;lt;/&lt;span class=&#34;name&#34;&gt;html&lt;/span&gt;&amp;gt;&lt;/span&gt;     &lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span class=&#34;rainbow&#34;&gt;&lt;strong&gt;随机图片 https://uploadbeta.com/api/pictures/random&lt;/strong&gt; 这个 API 的图片是其他类型列如风景或其他的一些图片&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;以上就是两个api的使用方式如果那里有不足之处请下方评论我会及时纠正错误有其他相关内容请收藏码坑的博客谢谢&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#以上就是两个api的使用方式如果那里有不足之处请下方评论我会及时纠正错误有其他相关内容请收藏码坑的博客谢谢&#34;&gt;#&lt;/a&gt; &lt;span class=&#34;rainbow&#34;&gt;以上就是两个 API 的使用方式，如果那里有不足之处请下方评论，我会及时纠正错误，有其他相关内容请收藏 “码坑的博客”，谢谢！&lt;/span&gt;&lt;/h2&gt;
+</content>
+        <category term="JavaScript" />
+        <category term="css" />
+        <category term="html" />
+        <updated>2020-10-16T16:26:58.317Z</updated>
+    </entry>
+    <entry>
+        <id>https://ahjie668.github.io/ahjie668/web/react%E5%92%8Cvue/</id>
         <title>React.js与Vue.js流行框架的比较</title>
-        <link rel="alternate" href="https://ahjie668.github.io/ahjie668/2020/08/21/web/react%E5%92%8Cvue/"/>
+        <link rel="alternate" href="https://ahjie668.github.io/ahjie668/web/react%E5%92%8Cvue/"/>
         <content type="html">&lt;p&gt;JavaScript 是世界上最流行的语言之一，React 和 Vue 是 JS 最流行的两个框架。但哪一款最适合你？&lt;/p&gt;
 &lt;p&gt;JavaScript 越来越受欢迎，许多科技巨头正在从中获益。每天都会出现大量的框架和语言，我们无法跟上所有这些框架和语言的步伐。很难确定哪些值得关注。&lt;/p&gt;
 &lt;p&gt;JavaScript 的世界正以前所未有的速度和作为软件开发的公司，我们无法承受忽视这个时代的讨论最多的框架 - React.js 和 Vue.js。因此，在 React 与 Vue 的比较中，我们将根据每个框架的重要优缺点，以及市场趋势和见解，帮助您选择最佳框架。我们拥有一批技术娴熟的开发人员，他们可以随时了解 Vue.js 和 React 开发的各个方面。&lt;/p&gt;
@@ -122,9 +143,9 @@ Vue.js 是一个开源 JavaScript 框架，能够开发单页面应用程序。�
         <updated>2020-08-21T12:33:25.646Z</updated>
     </entry>
     <entry>
-        <id>https://ahjie668.github.io/ahjie668/2020/08/19/web/%E5%85%89%E6%A0%87%E5%8A%A8%E7%94%BB/</id>
+        <id>https://ahjie668.github.io/ahjie668/web/%E5%85%89%E6%A0%87%E5%8A%A8%E7%94%BB/</id>
         <title>利用html+javaSrcipt+css3实现光标动画</title>
-        <link rel="alternate" href="https://ahjie668.github.io/ahjie668/2020/08/19/web/%E5%85%89%E6%A0%87%E5%8A%A8%E7%94%BB/"/>
+        <link rel="alternate" href="https://ahjie668.github.io/ahjie668/web/%E5%85%89%E6%A0%87%E5%8A%A8%E7%94%BB/"/>
         <content type="html">&lt;p&gt;这个案例也是通过 javaSrcipt (js) 实现，这个案例相对比较简单，先是整体的 HTML 代码结构，这个案例呢 javaSrcipt (js) 是直接写在我们 HTML 的内部，&lt;br&gt;
 没有通过外链的方式实现，因为代码量较少直接写在了整体结构之中，其实这个案例不仅仅是纯的 javaSrcipt (js) 代码，本案例只是利用了 javaSrcipt (js)&lt;br&gt;
  的一个时间来控制光标闪动的时间而已，而我们的 CSS3 样式呢，主要是让文字颜色，利用 background 使文字产生渐变的效果。&lt;/p&gt;
@@ -137,12 +158,13 @@ Vue.js 是一个开源 JavaScript 框架，能够开发单页面应用程序。�
 </content>
         <category term="JavaScript" />
         <category term="css" />
+        <category term="html" />
         <updated>2020-08-19T15:24:27.295Z</updated>
     </entry>
     <entry>
-        <id>https://ahjie668.github.io/ahjie668/2020/08/19/web/%E5%BD%A9%E8%89%B2%E6%96%87%E5%AD%97/</id>
+        <id>https://ahjie668.github.io/ahjie668/web/%E5%BD%A9%E8%89%B2%E6%96%87%E5%AD%97/</id>
         <title>js文字闪动效果</title>
-        <link rel="alternate" href="https://ahjie668.github.io/ahjie668/2020/08/19/web/%E5%BD%A9%E8%89%B2%E6%96%87%E5%AD%97/"/>
+        <link rel="alternate" href="https://ahjie668.github.io/ahjie668/web/%E5%BD%A9%E8%89%B2%E6%96%87%E5%AD%97/"/>
         <content type="html">&lt;p&gt;利用 javaSrcipt (js) 实现对文字的如跑马灯一样的效果。&lt;/p&gt;
 &lt;h2 id=&#34;效果如下&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#效果如下&#34;&gt;#&lt;/a&gt; 💍 效果如下:&lt;/h2&gt;
 &lt;script&gt;

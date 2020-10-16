@@ -12,10 +12,11 @@
     <category term="React" />
     <category term="Vue" />
     <category term="Docker" />
+    <category term="html" />
     <entry>
-        <id>https://ahjie668.github.io/ahjie668/2020/08/27/java/docker/</id>
+        <id>https://ahjie668.github.io/ahjie668/java/docker/</id>
         <title>Docker安装部署</title>
-        <link rel="alternate" href="https://ahjie668.github.io/ahjie668/2020/08/27/java/docker/"/>
+        <link rel="alternate" href="https://ahjie668.github.io/ahjie668/java/docker/"/>
         <content type="html">&lt;h2 id=&#34;前言&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#前言&#34;&gt;#&lt;/a&gt; 💍 前言&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;

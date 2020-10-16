@@ -1,0 +1,905 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#FFF">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+<link rel="icon" type="image/ico" sizes="32x32" href="/images/favicon.ico">
+  <meta http-equiv="Cache-Control" content="no-transform">
+  <meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+<link rel="alternate" type="application/rss+xml" title="码坑的博客" href="https://ahjie668.github.io/ahjie668/rss.xml" />
+<link rel="alternate" type="application/atom+xml" title="码坑的博客" href="https://ahjie668.github.io/ahjie668/atom.xml" />
+<link rel="alternate" type="application/json" title="码坑的博客" href="https://ahjie668.github.io/ahjie668/feed.json" />
+
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Mulish:300,300italic,400,400italic,700,700italic%7CFredericka%20the%20Great:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20JP:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20SC:300,300italic,400,400italic,700,700italic%7CInconsolata:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="/css/app.css?v=0.2.3">
+
+  
+  <meta name="keywords" content="Docker" />
+
+
+<link rel="canonical" href="https://ahjie668.github.io/ahjie668/java/docker/">
+
+
+
+  <title>
+Docker安装部署 - JAVA编程语言 |
+Code pit = 码坑的博客 = 请多指教</title>
+<meta name="generator" content="Hexo 5.0.2"></head>
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div id="loading">
+    <div class="cat">
+      <div class="body"></div>
+      <div class="head">
+        <div class="face"></div>
+      </div>
+      <div class="foot">
+        <div class="tummy-end"></div>
+        <div class="bottom"></div>
+        <div class="legs left"></div>
+        <div class="legs right"></div>
+      </div>
+      <div class="paw">
+        <div class="hands left"></div>
+        <div class="hands right"></div>
+      </div>
+    </div>
+  </div>
+  <div id="container">
+    <header id="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="inner">
+        <div id="brand">
+          <div class="pjax">
+          
+  <h1 itemprop="name headline">Docker安装部署
+  </h1>
+  
+<div class="meta">
+  <span class="item" title="创建时间：2020-08-27 23:39:38">
+    <span class="icon">
+      <i class="ic i-calendar"></i>
+    </span>
+    <span class="text">发表于</span>
+    <time itemprop="dateCreated datePublished" datetime="2020-08-27T23:39:38+08:00">2020-08-27</time>
+  </span>
+  <span class="item" title="本文字数">
+    <span class="icon">
+      <i class="ic i-pen"></i>
+    </span>
+    <span class="text">本文字数</span>
+    <span>6.4k</span>
+    <span class="text">字</span>
+  </span>
+  <span class="item" title="阅读时长">
+    <span class="icon">
+      <i class="ic i-clock"></i>
+    </span>
+    <span class="text">阅读时长</span>
+    <span>6 分钟</span>
+  </span>
+</div>
+
+
+          </div>
+        </div>
+        <nav id="nav">
+  <div class="inner">
+    <div class="toggle">
+      <div class="lines" aria-label="切换导航栏">
+        <span class="line"></span>
+        <span class="line"></span>
+        <span class="line"></span>
+      </div>
+    </div>
+    <ul class="menu">
+      <li class="item title"><a href="/" rel="start">Code pit</a></li>
+    </ul>
+    <ul class="right">
+      <li class="item theme">
+        <i class="ic i-sun"></i>
+      </li>
+      <li class="item search">
+        <i class="ic i-search"></i>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+      </div>
+      <div id="imgs" class="pjax">
+        <ul>
+          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1giciuv0socj20zk0m8qes.jpg"></li>
+          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1giclx29mstj20zk0m8hdt.jpg"></li>
+          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1giciryrr3rj20zk0m8nhk.jpg"></li>
+          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1gicitzannuj20zk0m8b29.jpg"></li>
+          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1giclh5u05ej20zk0m87df.jpg"></li>
+          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1gipetv6p75j20zk0m8x6p.jpg"></li>
+        </ul>
+      </div>
+    </header>
+    <div id="waves">
+      <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+        <defs>
+          <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+        </defs>
+        <g class="parallax">
+          <use xlink:href="#gentle-wave" x="48" y="0" />
+          <use xlink:href="#gentle-wave" x="48" y="3" />
+          <use xlink:href="#gentle-wave" x="48" y="5" />
+          <use xlink:href="#gentle-wave" x="48" y="7" />
+        </g>
+      </svg>
+    </div>
+    <main id="main">
+      <div class="inner">
+        <div id="content" class="pjax">
+          
+  <div class="article wrap">
+    
+<div class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+<i class="ic i-home"></i>
+<span><a href="/">首页</a></span><i class="ic i-angle-right"></i>
+<span  class="current" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a href="/categories/java/" itemprop="item" rel="index" title="分类于 JAVA编程语言"><span itemprop="name">JAVA编程语言</span></a>
+<meta itemprop="position" content="1" /></span>
+</div>
+
+    <article itemscope itemtype="http://schema.org/Article" class="post block" lang="zh-Hans">
+  <link itemprop="mainEntityOfPage" href="https://ahjie668.github.io/ahjie668/java/docker/">
+
+  <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="image" content="/images/avatar.jpg">
+    <meta itemprop="name" content="码坑">
+    <meta itemprop="description" content="请多指教, 本人是小白,初次与各位相遇,请多多指教,谢谢 じ萌喵喵ルゞ Ю↘ 珂ル°">
+  </span>
+
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="码坑的博客">
+  </span>
+
+  <div class="body md" itemprop="articleBody">
+    
+
+    <h2 id="前言"><a class="markdownIt-Anchor" href="#前言">#</a> 💍 前言</h2>
+<ul>
+<li>
+<p>从 2017 年 3 月开始 docker 在原来的基础上分为两个分支版本: Docker CE 和 Docker EE。</p>
+</li>
+<li>
+<p>Docker CE 即社区免费版，Docker EE 即企业版，强调安全，但需付费使用。</p>
+</li>
+<li>
+<p>Docker 官方建议要 CentOS7.0 及以上系统版本，本文介绍 Docker CE 在 CentOS 下的安装使用。</p>
+</li>
+</ul>
+<h2 id="1前提条件"><a class="markdownIt-Anchor" href="#1前提条件">#</a> 💍 1. 前提条件</h2>
+<h3 id="11内核"><a class="markdownIt-Anchor" href="#11内核">#</a> 💍 1.1. 内核</h3>
+<p>Docker 运行对内核要求比较高，因此一般建议直接在 Ubuntu 这样的平台运行。但作为一个容器标准，Docker 也是支持其他如 CentOS, Mac OS X, Windows 等平台。目前 Docker 支持以下版本 CentOS:</p>
+<ul>
+<li>
+<p>CentOS 7 (64 位)</p>
+</li>
+<li>
+<p>CentOS 6.5 (64 位) 及以后</p>
+</li>
+</ul>
+<p>在运行 CentOS 6.5 及以后版本时，需要内核版本 &gt;=2.6.32-431，因为这些内核包含了运行 Docker 的一些特定修改。</p>
+<figure class="highlight yaml"><figcaption><span>Yaml</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">$</span> <span class="string">uname</span> <span class="string">-r</span></span><br><span class="line"><span class="number">2.6</span><span class="number">.32</span><span class="number">-431.17</span><span class="number">.1</span><span class="string">.el6.x86_64</span></span><br></pre></td></tr></table></figure>
+<p><font style="color:red">注：网上很多教程说 CentOS6.5 必须要升级内核到 3.10 才能使用 docker，其实是【可选】升级，但最好升级。</font></p>
+<h3 id="12device-mapper"><a class="markdownIt-Anchor" href="#12device-mapper">#</a> 💍 1.2.Device Mapper</h3>
+<p>Docker 默认使用 AUFS 作为存储驱动，但是 AUFS 并没有被包括在 Linux 的主线内核中。CentOS 中可以使用 Device Mapper 作为存储驱动，这是在 2.6.9 内核版本引入的新功能。我们需要先确认是否启用该功能:</p>
+<figure class="highlight bash"><figcaption><span>Bash</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ ls -l /sys/class/misc/device-mapper</span><br><span class="line">lrwxrwxrwx 1 root root 0 May  1 20:55 /sys/class/misc/device-mapper -&gt; ../../devices/virtual/misc/device-mapper</span><br></pre></td></tr></table></figure>
+<p>如果没有检测到 Device Mapper，需要安装 device-mapper 软件包:</p>
+<figure class="highlight bash"><figcaption><span>Bash</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo yum install -y device-mapper</span><br></pre></td></tr></table></figure>
+<p>然后重新加载 dm_mod 内核模块:</p>
+<figure class="highlight bash"><figcaption><span>Bash</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo modprobe dm_mod</span><br></pre></td></tr></table></figure>
+<h2 id="2安装"><a class="markdownIt-Anchor" href="#2安装">#</a> 💍 2. 安装</h2>
+<h3 id="221准备"><a class="markdownIt-Anchor" href="#221准备">#</a> 💍 2.2.1. 准备</h3>
+<ul>
+<li>CentOS7 能上外网</li>
+<li>yum -y install gcc</li>
+<li>yum -y install gcc-c++</li>
+</ul>
+<p><img data-src="https://shitu-query-gz.gz.bcebos.com/2020-08-28/01/ed0ab81d1dcc230b?authorization=bce-auth-v1%2F7e22d8caf5af46cc9310f1e3021709f3%2F2020-08-28T01%3A01%3A59Z%2F300%2Fhost%2F634aab59f3d5d36da29d98a241da51dd90e8d70f6d24504b1da50457f55afe50" alt></p>
+<ul>
+<li>卸载旧版本</li>
+</ul>
+<blockquote>
+<p>yum remove docker \ docker-client \ docker-client-latest \ docker-common \ docker-latest \ docker-latest-logrotate \ docker-logrotate \ docker-selinux \ docker-engine-selinux \ docker-engine</p>
+</blockquote>
+<p><img data-src="https://shitu-query-gz.gz.bcebos.com/2020-08-28/01/c554d270e1a2b109?authorization=bce-auth-v1%2F7e22d8caf5af46cc9310f1e3021709f3%2F2020-08-28T01%3A03%3A52Z%2F300%2Fhost%2Fc0f440a9352663decd956cdc123b27574700d95edc2924fda325423dbf82bbf3" alt></p>
+<p>如果 yum 报告未安装任何这些软件包，这表示情况正常。</p>
+<h3 id="222安装"><a class="markdownIt-Anchor" href="#222安装">#</a> 💍 2.2.2. 安装</h3>
+<ul>
+<li>安装依赖包</li>
+</ul>
+<figure class="highlight yaml"><figcaption><span>Yaml</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">yum</span> <span class="string">install</span> <span class="string">-y</span> <span class="string">yum-utils</span> <span class="string">device-mapper-persistent-data</span> <span class="string">lvm2</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>设置 stable 镜像仓库</li>
+</ul>
+<figure class="highlight yaml"><figcaption><span>Yaml</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">yum-config-manager</span> <span class="string">--add-repo</span> <span class="string">https://download.docker.com/linux/centos/docker-ce.repo</span></span><br><span class="line"><span class="string">或</span></span><br><span class="line"><span class="string">yum-config-manager</span> <span class="string">--add-repo</span> <span class="string">http://mirrors.aliyun.com/docker-ce/linux/centos/docker-ce.repo</span></span><br></pre></td></tr></table></figure>
+<p><img data-src="https://shitu-query-gz.gz.bcebos.com/2020-08-28/01/fc2f3365576d36b7?authorization=bce-auth-v1%2F7e22d8caf5af46cc9310f1e3021709f3%2F2020-08-28T01%3A04%3A35Z%2F300%2Fhost%2Fb07a7486e8145e8eb5acc0a5f85e278a8d0f74d63611bcf8a3419b65905cf642" alt></p>
+<ul>
+<li>更新 yum 软件包索引</li>
+</ul>
+<figure class="highlight yaml"><figcaption><span>Yaml</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">yum</span> <span class="string">makecache</span> <span class="string">fast</span></span><br></pre></td></tr></table></figure>
+<p><img data-src="https://shitu-query-gz.gz.bcebos.com/2020-08-28/01/f751ea6cf6e3995b?authorization=bce-auth-v1%2F7e22d8caf5af46cc9310f1e3021709f3%2F2020-08-28T01%3A05%3A12Z%2F300%2Fhost%2F606e1c388cd1e73cc29f1ad1d0a13addb5eeb4bfa8f73a09b18f4162608d73de" alt></p>
+<p>如果这是自添加 Docker 镜像仓库以来您首次刷新软件包索引，系统将提示您接受 GPG 密钥，并且将显示此密钥的指纹。验证指纹是否正确，并且在正确的情况下接受此密钥。指纹应匹配 060A 61C5 1B55 8A7F 742B 77AA C52F EB6B 621E 9F35</p>
+<ul>
+<li>安装 docker</li>
+</ul>
+<ol>
+<li>安装指定版本</li>
+</ol>
+<figure class="highlight yaml"><figcaption><span>Yaml</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">yum</span> <span class="string">list</span> <span class="string">docker-ce.x86_64</span>  <span class="string">--showduplicates</span> <span class="string">|</span> <span class="string">sort</span> <span class="string">-r</span>    <span class="comment">#从高到低列出Docker-ce的版本</span></span><br></pre></td></tr></table></figure>
+<p><img data-src="https://shitu-query-gz.gz.bcebos.com/2020-08-28/01/ed0ab81d1dcc230b?authorization=bce-auth-v1%2F7e22d8caf5af46cc9310f1e3021709f3%2F2020-08-28T01%3A05%3A39Z%2F300%2Fhost%2Fc6ab7f450ff4e7557ffdea771708eb1c5d2378b1b7142b3bcba7c29c80038e1c" alt></p>
+<p>该软件包名称是软件包名称（docker-ce）加上版本字符串（第二列），从第一个冒号（:）一直到第一个连字符，并用连字符（-）分隔。</p>
+<p>例如：指定版本（docker-ce-18.09.9）进行安装</p>
+<figure class="highlight yaml"><figcaption><span>Yaml</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">yum</span> <span class="string">install</span> <span class="string">docker-ce-&lt;VERSION_STRING&gt;</span> <span class="string">docker-ce-cli-&lt;VERSION_STRING&gt;</span> <span class="string">containerd.io</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 例如：</span></span><br><span class="line"><span class="string">yum</span> <span class="string">install</span> <span class="string">docker-ce-18.09.9</span> <span class="string">docker-ce-cli-18.09.9</span> <span class="string">containerd.io</span></span><br></pre></td></tr></table></figure>
+<p><img data-src="https://shitu-query-gz.gz.bcebos.com/2020-08-28/01/81869032252db180?authorization=bce-auth-v1%2F7e22d8caf5af46cc9310f1e3021709f3%2F2020-08-28T01%3A06%3A08Z%2F300%2Fhost%2Fc52bb05fb58b234101ee4bbb59591d43201394970fdb59613f90cfb1ea1ccd15" alt></p>
+<h2 id="安装最新版本"><a class="markdownIt-Anchor" href="#安装最新版本">#</a> 💍 安装最新版本：</h2>
+<figure class="highlight yaml"><figcaption><span>Yaml</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">yum</span> <span class="string">-y</span> <span class="string">install</span> <span class="string">docker-ce</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>启动 docker</li>
+</ul>
+<p>执行以下命令启动 docker：</p>
+<figure class="highlight yaml"><figcaption><span>Yaml</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">systemctl</span> <span class="string">start</span> <span class="string">docker</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>测试 docker</li>
+</ul>
+<p><img data-src="https://shitu-query-gz.gz.bcebos.com/2020-08-28/01/e9d27a5b57d76515?authorization=bce-auth-v1%2F7e22d8caf5af46cc9310f1e3021709f3%2F2020-08-28T01%3A06%3A34Z%2F300%2Fhost%2F46703f90d9f0047f8e4446a97a31815179f4339227e179273753d9424b52d3f4" alt></p>
+<ul>
+<li>2.2.CentOS 6.5</li>
+</ul>
+<h3 id="221准备-2"><a class="markdownIt-Anchor" href="#221准备-2">#</a> 💍 2.2.1. 准备</h3>
+<ul>
+<li>禁用 selinux [可选]</li>
+</ul>
+<p>由于 Selinux 和 LXC 有冲突，所以需要禁用 selinux. 编辑 /etc/selinux/config, 设置两个关键变量.</p>
+<blockquote>
+<p>SELINUX=disabled<br>
+SELINUXTYPE=targeted</p>
+</blockquote>
+<p><font style="color:red">注：网上有教程说要设置，但我建议不要设置，因为会影响安全性</font></p>
+<ul>
+<li>安装 Fedora EPEL 源</li>
+</ul>
+<figure class="highlight bash"><figcaption><span>Bash</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum install http://ftp.riken.jp/Linux/fedora/epel/6/x86_64/epel-release-6-8.noarch.rpm</span><br></pre></td></tr></table></figure>
+<p><img data-src="https://shitu-query-gz.gz.bcebos.com/2020-08-28/01/da3a46b7ccca7f74?authorization=bce-auth-v1%2F7e22d8caf5af46cc9310f1e3021709f3%2F2020-08-28T01%3A07%3A00Z%2F300%2Fhost%2F6d91c880fb4850d7e08d04ae8331b1a3cf43c363770b075e82efc39ca62c96a1" alt></p>
+<ul>
+<li>添加 hop5.repo 源</li>
+</ul>
+<figure class="highlight bash"><figcaption><span>Bash</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> /etc/yum.repos.d</span><br><span class="line">wget http://www.hop5.in/yum/el6/hop5.repo</span><br></pre></td></tr></table></figure>
+<h3 id="222yum安装"><a class="markdownIt-Anchor" href="#222yum安装">#</a> 2.2.2.yum 安装</h3>
+<ul>
+<li>升级带 aufs 模块的 3.10 内核【可选】</li>
+</ul>
+<figure class="highlight bash"><figcaption><span>Bash</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">yum install kernel-ml-aufs kernel-ml-aufs-devel</span><br><span class="line">``` </span><br><span class="line"></span><br><span class="line">修改grub的主配置文件/etc/grub.conf，设置default=0，表示第一个title下的内容为默认启动的kernel（一般新安装的内核在第一个位置）：</span><br><span class="line"></span><br><span class="line">![](https://shitu-query-gz.gz.bcebos.com/2020-08-28/01/8787f7baffc1d2c7?authorization=bce-auth-v1%2F7e22d8caf5af46cc9310f1e3021709f3%2F2020-08-28T01%3A07%3A30Z%2F300%2Fhost%2Ff45db2d0ee924eec42ee7e01b707c67e15d01884c4212369dde2a4d1439ec9c0)</span><br><span class="line"></span><br><span class="line">&lt;font style=<span class="string">&quot;color:red&quot;</span>&gt;重启系统 reboot now，&lt;/font&gt;然后执行以下命令查看是否已经是3.10内核：</span><br><span class="line"></span><br><span class="line">``` bash Bash</span><br><span class="line">[root@localhost ~]<span class="comment"># uname -r</span></span><br><span class="line">3.18.5-3.el6.x86_64</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><figcaption><span>Bash</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost ~]<span class="comment"># grep aufs /proc/filesystems</span></span><br><span class="line">nodev aufs</span><br></pre></td></tr></table></figure>
+<ul>
+<li>安装 docker<br>
+ 安装依赖：</li>
+</ul>
+<figure class="highlight yaml"><figcaption><span>Yaml</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">yum</span> <span class="string">install</span> <span class="string">redhat-lsb</span></span><br><span class="line"><span class="string">yum</span> <span class="string">install</span> <span class="string">device-mapper-libs</span></span><br><span class="line"><span class="string">yum</span> <span class="string">install</span> <span class="string">libcgroup*</span></span><br></pre></td></tr></table></figure>
+<p>如出现以下错误：</p>
+<p><img data-src="https://shitu-query-gz.gz.bcebos.com/2020-08-28/01/13ebc06b505c6a21?authorization=bce-auth-v1%2F7e22d8caf5af46cc9310f1e3021709f3%2F2020-08-28T01%3A08%3A12Z%2F300%2Fhost%2F2a402a31df4351d43653860b223abeddbc059ae97c18321aae4b0345ee3d6f2f" alt></p>
+<p>解决办法是编辑 /etc/yum.repos.d/epel.repo，把基础的恢复 (baseurl)，镜像 (mirrorlist) 的地址注释掉：<br>
+<img data-src="https://shitu-query-gz.gz.bcebos.com/2020-08-28/01/ec8e184d768f30c0?authorization=bce-auth-v1%2F7e22d8caf5af46cc9310f1e3021709f3%2F2020-08-28T01%3A08%3A39Z%2F300%2Fhost%2F9de3eb462adbd75ebcac43110605bafdd98f03743ccdd6cf7ec7585231f7c26f" alt></p>
+<p>安装 docker：</p>
+<figure class="highlight yaml"><figcaption><span>Yaml</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">yum</span> <span class="string">install</span> <span class="string">docker-io</span></span><br></pre></td></tr></table></figure>
+<p>如出现以下报错：</p>
+<figure class="highlight bash"><figcaption><span>Bash</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Error: Cannot retrieve metalink <span class="keyword">for</span> repository: epel. Please verify its path and try again</span><br></pre></td></tr></table></figure>
+<p>解决办法是编辑 /etc/yum.repos.d/epel.repo，把基础的恢复 (baseurl)，镜像 (mirrorlist) 的地址注释掉：</p>
+<p><img data-src="https://shitu-query-gz.gz.bcebos.com/2020-08-28/01/ec8e184d768f30c0?authorization=bce-auth-v1%2F7e22d8caf5af46cc9310f1e3021709f3%2F2020-08-28T01%3A09%3A38Z%2F300%2Fhost%2F765d91ff1b6904826410054e6625f82cf9f4f979f0336efd540d2c8f430bcf66" alt></p>
+<p>如出现如下错误：</p>
+<p><img data-src="https://shitu-query-gz.gz.bcebos.com/2020-08-28/01/5312413caa618726?authorization=bce-auth-v1%2F7e22d8caf5af46cc9310f1e3021709f3%2F2020-08-28T01%3A10%3A03Z%2F300%2Fhost%2F07e568e538dd43682b9e125f2f245eca7411ec3d9b19ff4b5e9ce2a1df202652" alt></p>
+<p>原因是：网络问题，下载失败。解决办法：则执行多几次 yum install docker-io 命令，直至下载并安装成功（我这里耗时 1 个多小时）。</p>
+<p>继续安装，如出现以下信息，则说明能正常安装：<br>
+<img data-src="https://shitu-query-gz.gz.bcebos.com/2020-08-28/01/35fd5585bfdebb05?authorization=bce-auth-v1%2F7e22d8caf5af46cc9310f1e3021709f3%2F2020-08-28T01%3A10%3A35Z%2F300%2Fhost%2F7b5411a84e678ab1c7308683b688c75d125e7249fb26f4ebeb7a30e254c7bd01" alt></p>
+<ul>
+<li>启动 docker<br>
+ 执行以下命令启动 docker：</li>
+</ul>
+<figure class="highlight yaml"><figcaption><span>Yaml</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">service</span> <span class="string">docker</span> <span class="string">start</span></span><br></pre></td></tr></table></figure>
+<p><img data-src="https://shitu-query-gz.gz.bcebos.com/2020-08-28/01/1d8fcd1b367944cd?authorization=bce-auth-v1%2F7e22d8caf5af46cc9310f1e3021709f3%2F2020-08-28T01%3A11%3A00Z%2F300%2Fhost%2Fbcb0232d276bdd0d84872adc9d8dcf81bb6ee9ed161db990c10962a3b24b0c37" alt></p>
+<p>如出现以上提示则说明安装并启动成功。<br>
+<font style="color:red">如出现以下提示则说明安装失败：</font></p>
+<p><img data-src="https://shitu-query-gz.gz.bcebos.com/2020-08-28/01/18fd6190b3857225?authorization=bce-auth-v1%2F7e22d8caf5af46cc9310f1e3021709f3%2F2020-08-28T01%3A11%3A26Z%2F300%2Fhost%2Ff231a526c44b5ca649f8fa37ebb1fb0eb0039b1586d0b5b20239ccab42ad53e3" alt></p>
+<p>解决方法：执行以下命令删除 docker-io</p>
+<figure class="highlight yaml"><figcaption><span>Yaml</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">sudo</span> <span class="string">yum</span> <span class="string">remove</span> <span class="string">docker-io</span></span><br></pre></td></tr></table></figure>
+<p><img data-src="https://shitu-query-gz.gz.bcebos.com/2020-08-28/01/cb46ef455d0b81d2?authorization=bce-auth-v1%2F7e22d8caf5af46cc9310f1e3021709f3%2F2020-08-28T01%3A11%3A54Z%2F300%2Fhost%2F4bee577772e56129297a0043d61f2b154f7e9c1949ec9b28f424e17381823323" alt></p>
+<p>执行以下命令手工安装 docker：</p>
+<figure class="highlight bash"><figcaption><span>Bash</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">rpm -ivh ./docker-engine-1.7.1-1.el6.x86_64.rpm</span><br></pre></td></tr></table></figure>
+<p><img data-src="https://shitu-query-gz.gz.bcebos.com/2020-08-28/01/7fe9307f292ca386?authorization=bce-auth-v1%2F7e22d8caf5af46cc9310f1e3021709f3%2F2020-08-28T01%3A12%3A23Z%2F300%2Fhost%2Fc790a97fc5dcccb05f8c03d59c623d2778c182a09525670bbf38bebb511b2631" alt></p>
+<p><strong>注：安装包下载地址：<span class="exturl" data-url="aHR0cHM6Ly95dW0uZG9ja2VycHJvamVjdC5vcmcvcmVwby9tYWluL2NlbnRvcy82L1BhY2thZ2VzLw==">https://yum.dockerproject.org/repo/main/centos/6/Packages/</span></strong></p>
+<p>再次执行以下命令启动 docker：</p>
+<figure class="highlight yaml"><figcaption><span>Yaml</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">service</span> <span class="string">docker</span> <span class="string">start</span></span><br></pre></td></tr></table></figure>
+<p><img data-src="https://shitu-query-gz.gz.bcebos.com/2020-08-28/01/3e2403bc544fc204?authorization=bce-auth-v1%2F7e22d8caf5af46cc9310f1e3021709f3%2F2020-08-28T01%3A12%3A49Z%2F300%2Fhost%2Fa8be4b8ad534a6b9780860ea80eab54a2438ee6d9195d154d6e96cf292b117ff" alt></p>
+<p><strong>【可选】设置在服务器启动时启动:</strong></p>
+<figure class="highlight yaml"><figcaption><span>Yaml</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">chkconfig</span> <span class="string">docker</span> <span class="string">on</span></span><br></pre></td></tr></table></figure>
+<h2 id="3使用"><a class="markdownIt-Anchor" href="#3使用">#</a> 3. 使用</h2>
+<ul>
+<li>查看 docker 版本</li>
+</ul>
+<figure class="highlight yaml"><figcaption><span>Yaml</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">docker</span> <span class="string">version</span></span><br></pre></td></tr></table></figure>
+<p><img data-src="https://shitu-query-gz.gz.bcebos.com/2020-08-28/01/5e3ebe14d6fd1c11?authorization=bce-auth-v1%2F7e22d8caf5af46cc9310f1e3021709f3%2F2020-08-28T01%3A13%3A19Z%2F300%2Fhost%2F7de7f561a2efe2fdf28f7d5d72aa5152bcd599ba1d36a3a0bd304d733ab3cb95" alt></p>
+<ul>
+<li>查看 docker 日志</li>
+</ul>
+<figure class="highlight yaml"><figcaption><span>Yaml</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">cat</span> <span class="string">/var/log/docker</span></span><br></pre></td></tr></table></figure>
+<p><img data-src="https://shitu-query-gz.gz.bcebos.com/2020-08-28/01/3ce96acb6c55efbc?authorization=bce-auth-v1%2F7e22d8caf5af46cc9310f1e3021709f3%2F2020-08-28T01%3A13%3A46Z%2F300%2Fhost%2Ffe806a69518d875bcb884bab8229316588faf2e47a25fb7d24a9caf668caee24" alt></p>
+<ul>
+<li>搜索镜像</li>
+</ul>
+<figure class="highlight yaml"><figcaption><span>Yaml</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">docker</span> <span class="string">search</span> <span class="string">tomcat</span></span><br></pre></td></tr></table></figure>
+<p><img data-src="https://shitu-query-gz.gz.bcebos.com/2020-08-28/01/122f16183ed2f643?authorization=bce-auth-v1%2F7e22d8caf5af46cc9310f1e3021709f3%2F2020-08-28T01%3A14%3A24Z%2F300%2Fhost%2F9174bb3f36619a834e734011e419c38127fbb15db4cbdba54bccbcea220603d3" alt></p>
+<p><font style="color:red"> 注：start 代表受欢迎程度。OFFICIAL 代表官方版本</font></p>
+<ul>
+<li>查看当前所有镜像</li>
+</ul>
+<figure class="highlight yaml"><figcaption><span>Yaml</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">docker</span> <span class="string">images</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>下载镜像</li>
+</ul>
+<figure class="highlight yaml"><figcaption><span>Yaml</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">docker</span> <span class="string">pull</span> <span class="string">centos</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>运行容器</li>
+</ul>
+<figure class="highlight yaml"><figcaption><span>Yaml</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">docker</span> <span class="string">run</span> <span class="string">centos</span> <span class="string">echo</span> <span class="string">&quot;hello word&quot;</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>运行容器 hello word</li>
+</ul>
+<figure class="highlight yaml"><figcaption><span>Yaml</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">docker</span> <span class="string">run</span> <span class="string">hello-world</span></span><br></pre></td></tr></table></figure>
+<p><img data-src="https://shitu-query-gz.gz.bcebos.com/2020-08-28/01/919f874ae7f7f9ee?authorization=bce-auth-v1%2F7e22d8caf5af46cc9310f1e3021709f3%2F2020-08-28T01%3A15%3A03Z%2F300%2Fhost%2Ffdc7677fa86d4123c796679e7842e2dfdb7bcb04dd7f20a07ea58b15cb9b8a86" alt></p>
+<p>输出这段提示以后，hello world 就会停止运行，容器自动终止。</p>
+<h2 id="4删除"><a class="markdownIt-Anchor" href="#4删除">#</a> 💍 4. 删除</h2>
+<p>可以使用 yum 来删除 docker</p>
+<ul>
+<li>查询删除 docker</li>
+</ul>
+<ol>
+<li>列出 docker 包的具体的名字</li>
+</ol>
+<figure class="highlight yaml"><figcaption><span>Yaml</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">$</span> <span class="string">sudo</span> <span class="string">yum</span> <span class="string">list</span>  <span class="string">installed</span> <span class="string">|</span> <span class="string">grep</span> <span class="string">docker</span></span><br><span class="line"><span class="string">containerd.io.x86_64</span>                 <span class="number">1.2</span><span class="number">.4</span><span class="number">-3.1</span><span class="string">.el7</span> </span><br><span class="line"><span class="string">docker-ce.x86_64</span>                     <span class="number">3</span><span class="string">:18.09.3-3.el7</span></span><br><span class="line"><span class="string">docker-ce-cli.x86_64</span>                 <span class="number">1</span><span class="string">:18.09.3-3.el7</span></span><br></pre></td></tr></table></figure>
+<ol start="2">
+<li>删除 docker</li>
+</ol>
+<figure class="highlight yaml"><figcaption><span>Yaml</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">$</span> <span class="string">sudo</span> <span class="string">yum</span> <span class="string">-y</span> <span class="string">remove</span> <span class="string">containerd.io.x86_64</span> <span class="string">\</span></span><br><span class="line">                     <span class="string">docker-ce.x86_64</span> <span class="string">\</span></span><br><span class="line">                     <span class="string">docker-ce-cli.x86_64</span>  </span><br></pre></td></tr></table></figure>
+<ul>
+<li>直接删除 docker</li>
+</ul>
+<figure class="highlight yaml"><figcaption><span>Yaml</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">sudo</span> <span class="string">yum</span> <span class="string">remove</span> <span class="string">docker</span> <span class="string">\</span></span><br><span class="line">                  <span class="string">docker-io</span> <span class="string">\</span></span><br><span class="line">                  <span class="string">docker-client</span> <span class="string">\</span></span><br><span class="line">                  <span class="string">docker-client-latest</span> <span class="string">\</span></span><br><span class="line">                  <span class="string">docker-common</span> <span class="string">\</span></span><br><span class="line">                  <span class="string">docker-latest</span> <span class="string">\</span></span><br><span class="line">                  <span class="string">docker-latest-logrotate</span> <span class="string">\</span></span><br><span class="line">                  <span class="string">docker-logrotate</span> <span class="string">\</span></span><br><span class="line">                  <span class="string">docker-engine</span></span><br></pre></td></tr></table></figure>
+<p>备注：以上命令只会删除 docker 运行环境，并不会删除镜像，容器，卷文件，以及用户创建的配置文件。</p>
+<p>清除镜像和容器文件：</p>
+<figure class="highlight yaml"><figcaption><span>Yaml</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">sudo</span> <span class="string">rm</span> <span class="string">-rf</span> <span class="string">/var/lib/docker</span></span><br></pre></td></tr></table></figure>
+<p>手动查找并删除用户创建的配置文件</p>
+<h2 id="5注意"><a class="markdownIt-Anchor" href="#5注意">#</a> 💍 5. 注意</h2>
+<h3 id="51手动挂载cgroup"><a class="markdownIt-Anchor" href="#51手动挂载cgroup">#</a> 💍 5.1. 手动挂载 cgroup</h3>
+<p>低版本的 Redhat (6.3) 可能要手动挂载 cgroup，具体操作方法如下：</p>
+<ul>
+<li>首选禁用 cgroup 对应服务 cgconfig</li>
+</ul>
+<figure class="highlight yaml"><figcaption><span>Yaml</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">service</span> <span class="string">cgconfig</span> <span class="string">stop</span> <span class="comment"># 关闭服务 </span></span><br><span class="line"><span class="string">chkconfig</span> <span class="string">cgconfig</span> <span class="string">off</span> <span class="comment"># 取消开机启动</span></span><br><span class="line"><span class="string">```</span> </span><br><span class="line"></span><br><span class="line"><span class="bullet">-</span> <span class="string">然后挂载cgroup,可以命令行挂载</span></span><br><span class="line"></span><br><span class="line"><span class="string">```yaml</span> <span class="string">Yaml</span></span><br><span class="line"><span class="string">mount</span> <span class="string">-t</span> <span class="string">cgroup</span> <span class="string">none</span> <span class="string">/cgroup</span>  <span class="comment">#仅本次有效</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>或者修改配置文件，编辑 /etc/fstab, 加入</li>
+</ul>
+<blockquote>
+<p>none                    /cgroup                 cgroup  defaults        0 0</p>
+</blockquote>
+<p><img data-src="https://img2018.cnblogs.com/i-beta/1577453/202001/1577453-20200114105456092-1793581430.png" alt></p>
+<h3 id="52以非root用户管理docker"><a class="markdownIt-Anchor" href="#52以非root用户管理docker">#</a> 💍 5.2. 以非 root 用户管理 docker</h3>
+<p>Docker 守护程序绑定到 Unix socket 而不是 TCP 端口。默认情况下，Unix socke 是 root 用户才有，而其他用户只能通过使用 sudo 使用它。Docker 守护程序始终以 root 用户身份运行。</p>
+<p>如果您不想在 docker 命令前加上 sudo，请创建一个名为 docker 的 Unix 组并向其添加用户。当 Docker 守护程序启动时，它会创建一个可由该 docker 组成员访问的 Unix socket。</p>
+<ul>
+<li>1. 创建 docker 组</li>
+</ul>
+<figure class="highlight yaml"><figcaption><span>Yaml</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">sudo</span> <span class="string">groupadd</span> <span class="string">docker</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>2. 添加 user 到 docker 组</li>
+</ul>
+<figure class="highlight yaml"><figcaption><span>Yaml</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">sudo</span> <span class="string">usermod</span> <span class="string">-aG</span> <span class="string">docker</span> <span class="string">$USER</span></span><br></pre></td></tr></table></figure>
+<p>请将 $USER 替换为系统中你的除 root 外的某个用户。</p>
+<ul>
+<li>
+<p>3. 注销并重新登录，以便重新评估您的组成员身份。<br>
+如果在虚拟机上进行测试，则可能需要重新启动虚拟机才能使更改生效。</p>
+</li>
+<li>
+<p>4. 验证是否可以通过不使用 sudo 运行 docker 命令。</p>
+</li>
+</ul>
+<figure class="highlight yaml"><figcaption><span>Yaml</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">docker</span> <span class="string">run</span> <span class="string">hello-world</span></span><br></pre></td></tr></table></figure>
+<p>如果最初在添加用户到 docker 组之前，使用的是 sudo 的 Dokcer CLI 命令。你可能会出现如下错误，表明你的～/.docker 目录由于 sudo 命令而创建的权限不正确。</p>
+<figure class="highlight yaml"><figcaption><span>Yaml</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">WARNING: Error loading config file:</span> <span class="string">/home/user/.docker/config.json</span> <span class="bullet">-</span></span><br><span class="line"><span class="attr">stat /home/user/.docker/config.json:</span> <span class="string">permission</span> <span class="string">denied</span></span><br></pre></td></tr></table></figure>
+<p>要解决此问题，请删除～/.docker/ 目录（它会自动重新创建，但任何自定义设置都会丢失），或使用以下命令更改其所有权和权限：</p>
+<figure class="highlight yaml"><figcaption><span>Yaml</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">$</span> <span class="string">sudo</span> <span class="string">chown</span> <span class="string">&quot;$USER&quot;</span><span class="string">:&quot;$USER&quot;</span> <span class="string">/home/&quot;$USER&quot;/.docker</span> <span class="string">-R</span></span><br><span class="line"><span class="string">$</span> <span class="string">sudo</span> <span class="string">chmod</span> <span class="string">g+rwx</span> <span class="string">&quot;$HOME/.docker&quot;</span> <span class="string">-R</span></span><br></pre></td></tr></table></figure>
+<h3 id="53镜像加速"><a class="markdownIt-Anchor" href="#53镜像加速">#</a> 💍 5.3. 镜像加速</h3>
+<p>鉴于国内网络问题，后续拉取 Docker 镜像十分缓慢，我们可以需要配置加速器来解决。</p>
+<p>Docker 国内镜像：</p>
+<ul>
+<li>网易加速器：<span class="exturl" data-url="aHR0cDovL2h1Yi1taXJyb3IuYy4xNjMuY29t">http://hub-mirror.c.163.com</span></li>
+<li>官方中国加速器：<span class="exturl" data-url="aHR0cHM6Ly9yZWdpc3RyeS5kb2NrZXItY24uY29t">https://registry.docker-cn.com</span></li>
+<li>ustc 的镜像：<span class="exturl" data-url="aHR0cHM6Ly9kb2NrZXIubWlycm9ycy51c3RjLmVkdS5jbg==">https://docker.mirrors.ustc.edu.cn</span></li>
+</ul>
+<p>也可使用私人镜像加速器地址，如使用阿里云的镜像加速器：登录阿里云 -&gt; 产品 -&gt; 搜索 &quot;容器镜像服务&quot;-&gt; 镜像库 -&gt; 镜像加速器。</p>
+<p>新版的 Docker 使用 /etc/docker/daemon.json（Linux） 来配置 Daemon。</p>
+<p>请在该配置文件中加入（没有该文件的话，请先建一个）：</p>
+<figure class="highlight json"><figcaption><span>Json</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">vi /etc/docker/daemon.json </span><br><span class="line">&#123; </span><br><span class="line">　　<span class="attr">&quot;registry-mirrors&quot;</span>: [<span class="string">&quot;https://hub-mirror.c.163.com&quot;</span>] </span><br><span class="line">&#125; </span><br></pre></td></tr></table></figure>
+<p>配置成功后，CentOS6.5 重启：</p>
+<figure class="highlight yaml"><figcaption><span>Yaml</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">service</span> <span class="string">docker</span> <span class="string">restart</span></span><br></pre></td></tr></table></figure>
+<p>配置成功后，CentOS7 重启：</p>
+<figure class="highlight yaml"><figcaption><span>Yaml</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="string">systemctl</span> <span class="string">daemon-reload</span>     <span class="comment">#重启加速配置文件</span></span><br><span class="line"><span class="string">systemctl</span> <span class="string">restart</span> <span class="string">docker</span>    <span class="comment">#重启docker后台服务</span></span><br><span class="line"><span class="string">systemctl</span> <span class="string">docker</span> <span class="string">statle</span>     <span class="comment">#开启docker服务</span></span><br><span class="line"><span class="string">systemctl</span> <span class="string">docker</span> <span class="string">stop</span>       <span class="comment">#关闭docker服务</span></span><br></pre></td></tr></table></figure>
+<p>下棋给大家说一下在 docker 上安装 mysql 数据库并且映射端口号外部进行连接<br>
+如哪里错误请指点出来，大家一起讨论学习</p>
+<h2 id="各位有问题也可以搜索微信公众号码坑私信我大家一起讨论学习"><a class="markdownIt-Anchor" href="#各位有问题也可以搜索微信公众号码坑私信我大家一起讨论学习">#</a> 💍 各位有问题也可以搜索微信公众号” 码坑” 私信我，大家一起讨论学习。</h2>
+<p><img data-src="https://qr.api.cli.im/newqr/create?data=http%253A%252F%252Fweixin.qq.com%252Fr%252FxTkRCRjERUU6rVxq92zX&amp;level=H&amp;transparent=0&amp;bgcolor=%23ffffff&amp;forecolor=%2368B56B&amp;blockpixel=12&amp;marginblock=2&amp;logourl=https://mhimg.clewm.net/cli/images/beautify/new/logo/35.png&amp;size=400&amp;logoshape=ellipse&amp;foretype=2&amp;gradient_way=vertical&amp;forecolor2=%2304777A&amp;eye_use_fore=1&amp;background=//static.clewm.net/cli/images/background/31.png&amp;qrcode_eyes=circle_circle&amp;outcolor=%23063492&amp;incolor=%231183E8&amp;body_type=17&amp;water_ratio=1&amp;qr_rotate=0&amp;text=&amp;kid=bizcliim&amp;time=1598267946&amp;key=5d831a6325d08f0fe6e1b90c8f28ea26" alt="微信公众号"></p>
+
+      <div class="tags">
+          <a href="/tags/Docker/" rel="tag"><i class="ic i-tag"></i> Docker</a>
+      </div>
+  </div>
+
+   <footer>
+
+    <div class="meta">
+  <span class="item">
+    <span class="icon">
+      <i class="ic i-calendar-check"></i>
+    </span>
+    <span class="text">更新于</span>
+    <time title="修改时间：2020-10-17 00:15:29" itemprop="dateModified" datetime="2020-10-17T00:15:29+08:00">2020-10-17</time>
+  </span>
+  <span id="java/docker/" class="item leancloud_visitors" data-flag-title="Docker安装部署" title="阅读次数">
+      <span class="icon">
+        <i class="ic i-eye"></i>
+      </span>
+      <span class="text">阅读次数</span>
+      <span class="leancloud-visitors-count"></span>
+      <span class="text">次</span>
+  </span>
+</div>
+
+      
+<div class="reward">
+  <button><i class="ic i-heartbeat"></i> 赞赏</button>
+  <p>请我喝[茶]~(￣▽￣)~*</p>
+  <div id="qr">
+      
+      <div>
+        <img data-src="/images/wechatpay.png" alt="码坑 微信支付">
+        <p>微信支付</p>
+      </div>
+      
+      <div>
+        <img data-src="/images/alipay.png" alt="码坑 支付宝支付">
+        <p>支付宝支付</p>
+      </div>
+      
+      <div>
+        <img data-src="/images/paypal.png" alt="码坑 QQ支付">
+        <p>QQ支付</p>
+      </div>
+  </div>
+</div>
+
+      
+
+<div id="copyright">
+<ul>
+  <li class="author">
+    <strong>本文作者： </strong>码坑 <i class="ic i-at"><em>@</em></i>码坑的博客
+  </li>
+  <li class="link">
+    <strong>本文链接：</strong>
+    <a href="https://ahjie668.github.io/ahjie668/java/docker/" title="Docker安装部署">https://ahjie668.github.io/ahjie668/java/docker/</a>
+  </li>
+  <li class="license">
+    <strong>版权声明： </strong>本站所有文章除特别声明外，均采用 <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC9kZWVkLnpo"><i class="ic i-creative-commons"><em>(CC)</em></i>BY-NC-SA</span> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+  </footer>
+
+</article>
+
+  </div>
+  
+
+<div class="nav">
+    <div class="item left">
+      
+
+  <a href="/java/Maven%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;tva2.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1giclj61ylzj20zk0m8b29.jpg" title="Maven的安装及配置">
+  <span class="type">上一篇</span>
+  <span class="category"><i class="ic i-flag"></i> JAVA编程语言</span>
+  <h3>Maven的安装及配置</h3>
+  </a>
+
+    </div>
+    <div class="item right">
+      
+
+  <a href="/java/sort/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;tva2.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1gipetlbztpj20zk0m84qp.jpg" title="Java中的数组排序">
+  <span class="type">下一篇</span>
+  <span class="category"><i class="ic i-flag"></i> sort</span>
+  <h3>Java中的数组排序</h3>
+  </a>
+
+    </div>
+</div>
+
+  
+  <div class="wrap" id="comments"></div>
+
+
+        </div>
+        <div id="sidebar">
+          
+
+<div class="inner">
+
+  <div class="panels">
+    <div class="inner">
+      <div class="contents panel pjax" data-title="文章目录">
+          <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%89%8D%E8%A8%80"><span class="toc-number">1.</span> <span class="toc-text"> 💍 前言</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1%E5%89%8D%E6%8F%90%E6%9D%A1%E4%BB%B6"><span class="toc-number">2.</span> <span class="toc-text"> 💍 1. 前提条件</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#11%E5%86%85%E6%A0%B8"><span class="toc-number">2.1.</span> <span class="toc-text"> 💍 1.1. 内核</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#12device-mapper"><span class="toc-number">2.2.</span> <span class="toc-text"> 💍 1.2.Device Mapper</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2%E5%AE%89%E8%A3%85"><span class="toc-number">3.</span> <span class="toc-text"> 💍 2. 安装</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#221%E5%87%86%E5%A4%87"><span class="toc-number">3.1.</span> <span class="toc-text"> 💍 2.2.1. 准备</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#222%E5%AE%89%E8%A3%85"><span class="toc-number">3.2.</span> <span class="toc-text"> 💍 2.2.2. 安装</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%89%E8%A3%85%E6%9C%80%E6%96%B0%E7%89%88%E6%9C%AC"><span class="toc-number">4.</span> <span class="toc-text"> 💍 安装最新版本：</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#221%E5%87%86%E5%A4%87-2"><span class="toc-number">4.1.</span> <span class="toc-text"> 💍 2.2.1. 准备</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#222yum%E5%AE%89%E8%A3%85"><span class="toc-number">4.2.</span> <span class="toc-text"> 2.2.2.yum 安装</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3%E4%BD%BF%E7%94%A8"><span class="toc-number">5.</span> <span class="toc-text"> 3. 使用</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4%E5%88%A0%E9%99%A4"><span class="toc-number">6.</span> <span class="toc-text"> 💍 4. 删除</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5%E6%B3%A8%E6%84%8F"><span class="toc-number">7.</span> <span class="toc-text"> 💍 5. 注意</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#51%E6%89%8B%E5%8A%A8%E6%8C%82%E8%BD%BDcgroup"><span class="toc-number">7.1.</span> <span class="toc-text"> 💍 5.1. 手动挂载 cgroup</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#52%E4%BB%A5%E9%9D%9Eroot%E7%94%A8%E6%88%B7%E7%AE%A1%E7%90%86docker"><span class="toc-number">7.2.</span> <span class="toc-text"> 💍 5.2. 以非 root 用户管理 docker</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#53%E9%95%9C%E5%83%8F%E5%8A%A0%E9%80%9F"><span class="toc-number">7.3.</span> <span class="toc-text"> 💍 5.3. 镜像加速</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%90%84%E4%BD%8D%E6%9C%89%E9%97%AE%E9%A2%98%E4%B9%9F%E5%8F%AF%E4%BB%A5%E6%90%9C%E7%B4%A2%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7%E7%A0%81%E5%9D%91%E7%A7%81%E4%BF%A1%E6%88%91%E5%A4%A7%E5%AE%B6%E4%B8%80%E8%B5%B7%E8%AE%A8%E8%AE%BA%E5%AD%A6%E4%B9%A0"><span class="toc-number">8.</span> <span class="toc-text"> 💍 各位有问题也可以搜索微信公众号” 码坑” 私信我，大家一起讨论学习。</span></a></li></ol>
+      </div>
+      <div class="related panel pjax" data-title="系列文章">
+        <ul>
+          <li class="active"><a href="/java/docker/" rel="bookmark" title="Docker安装部署">Docker安装部署</a></li><li><a href="/java/java%E5%9F%BA%E7%A1%80/" rel="bookmark" title="JAVA的JDK安装步骤">JAVA的JDK安装步骤</a></li><li><a href="/java/sort/" rel="bookmark" title="Java中的数组排序">Java中的数组排序</a></li><li><a href="/java/Maven%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE/" rel="bookmark" title="Maven的安装及配置">Maven的安装及配置</a></li><li><a href="/java/pom%E6%8A%A5%E9%94%99/" rel="bookmark" title="pom.xml的标签报错 Element ‘project‘ cannot have character [children], because the type‘s content**">pom.xml的标签报错 Element ‘project‘ cannot have character [children], because the type‘s content**</a></li>
+        </ul>
+      </div>
+      <div class="overview panel" data-title="站点概览">
+        <div class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <img class="image" itemprop="image" alt="码坑"
+      data-src="/images/avatar.jpg">
+  <p class="name" itemprop="name">码坑</p>
+  <div class="description" itemprop="description">本人是小白,初次与各位相遇,请多多指教,谢谢 じ萌喵喵ルゞ Ю↘ 珂ル°</div>
+</div>
+
+<nav class="state">
+    <div class="item posts">
+      <a href="/archives/">
+        <span class="count">10</span>
+        <span class="name">文章</span>
+      </a>
+    </div>
+    <div class="item categories">
+      <a href="/categories/">
+        <span class="count">12</span>
+        <span class="name">分类</span>
+      </a>
+    </div>
+    <div class="item tags">
+      <a href="/tags/">
+        <span class="count">9</span>
+        <span class="name">标签</span>
+      </a>
+    </div>
+</nav>
+
+<div class="social">
+      <span class="exturl item github" data-url="aHR0cHM6Ly9naXRodWIuY29tL3lvdXJuYW1l" title="https:&#x2F;&#x2F;github.com&#x2F;yourname"><i class="ic i-github"></i></span>
+      <span class="exturl item twitter" data-url="aHR0cHM6Ly90d2l0dGVyLmNvbS95b3VybmFtZQ==" title="https:&#x2F;&#x2F;twitter.com&#x2F;yourname"><i class="ic i-twitter"></i></span>
+      <span class="exturl item zhihu" data-url="aHR0cHM6Ly93d3cuemhpaHUuY29tL3Blb3BsZS95b3VybmFtZQ==" title="https:&#x2F;&#x2F;www.zhihu.com&#x2F;people&#x2F;yourname"><i class="ic i-zhihu"></i></span>
+      <span class="exturl item music" data-url="aHR0cHM6Ly9tdXNpYy4xNjMuY29tLyMvdXNlci9ob21lP2lkPXlvdXJpZA==" title="https:&#x2F;&#x2F;music.163.com&#x2F;#&#x2F;user&#x2F;home?id&#x3D;yourid"><i class="ic i-cloud-music"></i></span>
+      <span class="exturl item weibo" data-url="aHR0cHM6Ly93ZWliby5jb20veW91cm5hbWU=" title="https:&#x2F;&#x2F;weibo.com&#x2F;yourname"><i class="ic i-weibo"></i></span>
+      <span class="exturl item about" data-url="aHR0cHM6Ly9hYm91dC5tZS95b3VybmFtZQ==" title="https:&#x2F;&#x2F;about.me&#x2F;yourname"><i class="ic i-address-card"></i></span>
+</div>
+
+<ul class="menu">
+  
+    
+  <li class="item">
+    <a href="/" rel="section"><i class="ic i-home"></i>首页</a>
+  </li>
+
+        
+  <li class="item dropdown">
+    <a href="javascript:void(0);"><i class="ic i-feather"></i>文章</a>
+    <ul class="submenu">
+
+        
+  <li class="item">
+    <a href="/archives/" rel="section"><i class="ic i-list-alt"></i>归档</a>
+  </li>
+
+        
+  <li class="item">
+    <a href="/categories/" rel="section"><i class="ic i-th"></i>分类</a>
+  </li>
+
+        
+  <li class="item">
+    <a href="/tags/" rel="section"><i class="ic i-tags"></i>标签</a>
+  </li>
+
+  </ul>
+    
+  <li class="item">
+    <a href="/about/" rel="section"><i class="ic i-user"></i>关于</a>
+  </li>
+
+    
+  <li class="item">
+    <a href="/friends/" rel="section"><i class="ic i-heart"></i>友链</a>
+  </li>
+
+
+</ul>
+
+      </div>
+    </div>
+  </div>
+
+  <ul id="quick">
+    <li class="prev pjax">
+        <a href="/java/Maven%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE/" rel="prev" title="上一篇"><i class="ic i-chevron-left"></i></a>
+    </li>
+    <li class="up"><i class="ic i-arrow-up"></i></li>
+    <li class="down"><i class="ic i-arrow-down"></i></li>
+    <li class="next pjax">
+        <a href="/java/sort/" rel="next" title="下一篇"><i class="ic i-chevron-right"></i></a>
+    </li>
+    <li class="percent"></li>
+  </ul>
+</div>
+
+
+        </div>
+        <div class="dimmer"></div>
+      </div>
+    </main>
+    <footer id="footer">
+      <div class="inner">
+        <div class="widgets">
+          
+<div class="rpost pjax">
+  <h2>随机文章</h2>
+  <ul>
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/java/" title="分类于 JAVA编程语言">JAVA编程语言</a>
+</div>
+
+    <span><a href="/java/Maven%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE/" title="Maven的安装及配置">Maven的安装及配置</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/web/" title="分类于 web前端">web前端</a>
+</div>
+
+    <span><a href="/web/imageAPI/" title="随机图片API">随机图片API</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/java/" title="分类于 JAVA编程语言">JAVA编程语言</a>
+</div>
+
+    <span><a href="/java/pom%E6%8A%A5%E9%94%99/" title="pom.xml的标签报错 Element ‘project‘ cannot have character [children], because the type‘s content**">pom.xml的标签报错 Element ‘project‘ cannot have character [children], because the type‘s content**</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/java/" title="分类于 JAVA编程语言">JAVA编程语言</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/java/java%E5%9F%BA%E7%A1%80/" title="分类于 java基础">java基础</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/java/java%E5%9F%BA%E7%A1%80/Maven%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE/" title="分类于 Maven安装配置">Maven安装配置</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/java/java%E5%9F%BA%E7%A1%80/Maven%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE/docker/" title="分类于 docker">docker</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/java/java%E5%9F%BA%E7%A1%80/Maven%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE/docker/pom%E6%8A%A5%E9%94%99/" title="分类于 pom报错">pom报错</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/java/java%E5%9F%BA%E7%A1%80/Maven%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE/docker/pom%E6%8A%A5%E9%94%99/sort/" title="分类于 sort">sort</a>
+</div>
+
+    <span><a href="/java/sort/" title="Java中的数组排序">Java中的数组排序</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/java/" title="分类于 JAVA编程语言">JAVA编程语言</a>
+</div>
+
+    <span><a href="/java/docker/" title="Docker安装部署">Docker安装部署</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/Other-extensions/" title="分类于 其他扩展">其他扩展</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/Other-extensions/hexo%E5%88%86%E7%B1%BBand%E6%A0%87%E7%AD%BE404/" title="分类于 hexo分类and标签404">hexo分类and标签404</a>
+</div>
+
+    <span><a href="/Other-extensions/hexo/" title="hexo分类and标签404">hexo分类and标签404</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/java/" title="分类于 JAVA编程语言">JAVA编程语言</a>
+</div>
+
+    <span><a href="/java/java%E5%9F%BA%E7%A1%80/" title="JAVA的JDK安装步骤">JAVA的JDK安装步骤</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/web/" title="分类于 web前端">web前端</a>
+</div>
+
+    <span><a href="/web/%E5%BD%A9%E8%89%B2%E6%96%87%E5%AD%97/" title="js文字闪动效果">js文字闪动效果</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/web/" title="分类于 web前端">web前端</a>
+</div>
+
+    <span><a href="/web/%E5%85%89%E6%A0%87%E5%8A%A8%E7%94%BB/" title="利用html+javaSrcipt+css3实现光标动画">利用html+javaSrcipt+css3实现光标动画</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/web/" title="分类于 web前端">web前端</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/web/react%E5%92%8Cvue/" title="分类于 react和vue">react和vue</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/web/react%E5%92%8Cvue/%E5%BD%A9%E8%89%B2%E6%96%87%E5%AD%97/" title="分类于 彩色文字">彩色文字</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/web/react%E5%92%8Cvue/%E5%BD%A9%E8%89%B2%E6%96%87%E5%AD%97/%E5%85%89%E6%A0%87%E5%8A%A8%E7%94%BB/" title="分类于 光标动画">光标动画</a>
+</div>
+
+    <span><a href="/web/react%E5%92%8Cvue/" title="React.js与Vue.js流行框架的比较">React.js与Vue.js流行框架的比较</a></span>
+  </li>
+
+  </ul>
+</div>
+<div>
+  <h2>最新评论</h2>
+  <ul class="leancloud-recent-comment"></ul>
+</div>
+
+        </div>
+        <div class="status">
+  <div class="copyright">
+    
+    &copy; 
+    <span itemprop="copyrightYear">2020</span>
+    <span class="with-love">
+      <i class="ic i-sakura rotate"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">码坑 @ Code pit</span>
+  </div>
+  <div class="count">
+    <span class="post-meta-item-icon">
+      <i class="ic i-chart-area"></i>
+    </span>
+    <span title="站点总字数">29k 字</span>
+
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="ic i-coffee"></i>
+    </span>
+    <span title="站点阅读时长">26 分钟</span>
+  </div>
+  <div class="powered-by">
+    基于 <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & Theme.<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2FtZWhpbWUvaGV4by10aGVtZS1zaG9rYQ==">Shoka</span>
+  </div>
+
+  <script type="text/javascript">document.write(unescape("%3Cspan id='cnzz_stat_icon_1279352119'%3E%3C/span%3E%3Cscript src='https://s4.cnzz.com/z_stat.php%3Fid%3D1279352119%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));</script>
+
+<span id="momk"></span><span id="momk" style="color: #ff0000;"></span>
+<script type="text/javascript">
+function NewDate(str) {
+str = str.split('-');
+var date = new Date();
+date.setUTCFullYear(str[0], str[1] - 1, str[2]);
+date.setUTCHours(0, 0, 0, 0);
+return date;
+}
+function momxc() {
+var birthDay =NewDate("2020-8-18");
+var today=new Date();
+var timeold=today.getTime()-birthDay.getTime();
+var sectimeold=timeold/1000
+var secondsold=Math.floor(sectimeold);
+var msPerDay=24*60*60*1000; var e_daysold=timeold/msPerDay;
+var daysold=Math.floor(e_daysold);
+var e_hrsold=(daysold-e_daysold)*-24;
+var hrsold=Math.floor(e_hrsold);
+var e_minsold=(hrsold-e_hrsold)*-60;
+var minsold=Math.floor((hrsold-e_hrsold)*-60); var seconds=Math.floor((minsold-e_minsold)*-60).toString();
+document.getElementById("momk").innerHTML = "本站已安全运行"+daysold+"天"+hrsold+"小时"+minsold+"分"+seconds+"秒";
+setTimeout(momxc, 1000);
+}momxc();
+</script>  <style>
+#momk{animation:change 10s infinite;font-weight:800; }
+@keyframes change{0%{color:#5cb85c;}25%{color:#556bd8;}50%{color:#e40707;}75%{color:#66e616;}100% {color:#67bd31;}}
+</style>
+ <br>
+ <!-- 整站统计 -->
+ <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+ <span id="busuanzi_container_site_pv">本站总访问量<span id="busuanzi_value_site_pv"></span>次</span>
+ <span class="post-meta-divider">|</span>
+ <span id="busuanzi_container_site_uv">本站访客数<span id="busuanzi_value_site_uv"</span>人</span>
+</div>
+
+      </div>
+    </footer>
+  </div>
+<script data-config type="text/javascript">
+  var LOCAL = {
+    path: 'java/docker/',
+    favicon: {
+      show: "码坑的博客",
+      hide: "码坑的博客"
+    },
+    search : {
+      placeholder: "文章搜索",
+      empty: "关于 「 ${query} 」，什么也没搜到",
+      stats: "${time} ms 内找到 ${hits} 条结果"
+    },
+    valine: true,fancybox: true,copyright: '复制成功，转载请遵守 <i class="ic i-creative-commons"></i>BY-NC-SA 协议。',
+    ignores : [
+      function(uri) {
+        return uri.includes('#');
+      },
+      function(uri) {
+        return new RegExp(LOCAL.path+"$").test(uri);
+      }
+    ]
+  };
+</script>
+
+<script src="https://cdn.polyfill.io/v2/polyfill.js"></script>
+
+<script src="//cdn.jsdelivr.net/combine/npm/pace-js@1.0.2/pace.min.js,npm/pjax@0.2.8/pjax.min.js,npm/whatwg-fetch@3.4.0/dist/fetch.umd.min.js,npm/animejs@3.2.0/lib/anime.min.js,npm/algoliasearch@4/dist/algoliasearch-lite.umd.js,npm/instantsearch.js@4/dist/instantsearch.production.min.js,npm/lozad@1/dist/lozad.min.js,npm/quicklink@2/dist/quicklink.umd.js"></script>
+
+<script src="/js/app.js?v=0.2.3"></script>
+
+
+  <script data-pjax>
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?iASNGexQaR5ypf8WgXK9KWr9-9Nh9j0Va";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
+ <script src='https://api.vvhan.com/api/snow'></script>  
+</html>
