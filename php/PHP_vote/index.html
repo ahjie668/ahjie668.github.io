@@ -117,12 +117,12 @@ Code pit = 码坑的博客 = 请多指教</title>
       </div>
       <div id="imgs" class="pjax">
         <ul>
-          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1gipetlbztpj20zk0m84qp.jpg"></li>
-          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1gipeu1usa7j20zk0m8b29.jpg"></li>
-          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1gicli9lfebj20zk0m84qp.jpg"></li>
-          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1gipexbei4hj20zk0m8npd.jpg"></li>
-          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1gipey0a334j20zk0m8qpt.jpg"></li>
-          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1gipeun65urj20zk0m81ii.jpg"></li>
+          <li class="item" data-background-image="https://tva4.sinaimg.cn/large/6833939bly1gipeyhsblkj20zk0m81kx.jpg"></li>
+          <li class="item" data-background-image="https://tva4.sinaimg.cn/large/6833939bly1gicm07ih54j20zk0m84qp.jpg"></li>
+          <li class="item" data-background-image="https://tva4.sinaimg.cn/large/6833939bly1giph4wqtg4j20zk0m8x6p.jpg"></li>
+          <li class="item" data-background-image="https://tva4.sinaimg.cn/large/6833939bly1gipesng5oej20zk0m87d4.jpg"></li>
+          <li class="item" data-background-image="https://tva4.sinaimg.cn/large/6833939bly1gipev1x5e4j20zk0m8b29.jpg"></li>
+          <li class="item" data-background-image="https://tva4.sinaimg.cn/large/6833939bly1giclflwv2aj20zk0m84qp.jpg"></li>
         </ul>
       </div>
     </header>
@@ -180,6 +180,7 @@ Code pit = 码坑的博客 = 请多指教</title>
 <h2 id="来吧-~-展示rainbow"><a class="markdownIt-Anchor" href="#来吧-~-展示rainbow"></a> 💍 [来吧 ~ 展示]{.rainbow}</h2>
 <p>[PHP代码部分:]{.rainbow}</p>
 <figure class="highlight php"><figcaption><span>PHP</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment">    * 判断投票</span></span><br><span class="line"><span class="comment">    * <span class="doctag">@param</span> VoteModel 投票表</span></span><br><span class="line"><span class="comment">    * <span class="doctag">@param</span> $uid 用户id</span></span><br><span class="line"><span class="comment">    * <span class="doctag">@param</span> $vid 投票作品id</span></span><br><span class="line"><span class="comment">    */</span></span><br><span class="line">   <span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">vote_up</span>(<span class="params">$uid, $vid</span>)</span></span><br><span class="line"><span class="function">   </span>&#123;</span><br><span class="line">       <span class="keyword">if</span> (Votes::get([<span class="string">&#x27;uid&#x27;</span> =&gt; $uid])) &#123;</span><br><span class="line">           $msg = [</span><br><span class="line">               <span class="string">&#x27;code&#x27;</span> =&gt; <span class="number">1002</span>,</span><br><span class="line">               <span class="string">&#x27;msg&#x27;</span> =&gt; <span class="string">&#x27;您已经投过票了&#x27;</span></span><br><span class="line">           ];</span><br><span class="line">           <span class="keyword">return</span> json($msg);</span><br><span class="line">       &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">           <span class="comment">//没有该投票,添加投票记录</span></span><br><span class="line">           $data = [</span><br><span class="line">               <span class="string">&#x27;uid&#x27;</span> =&gt; $uid,</span><br><span class="line">               <span class="string">&#x27;vid&#x27;</span> =&gt; $vid,</span><br><span class="line">           ];</span><br><span class="line">           (<span class="keyword">new</span> Votes())-&gt;save($data);</span><br><span class="line">       &#125;</span><br><span class="line">       <span class="comment">//获取当前id对应的投票公司</span></span><br><span class="line">       $res = Db::table(<span class="string">&#x27;vote&#x27;</span>)-&gt;where(<span class="string">&#x27;id&#x27;</span>,$vid)-&gt;find();</span><br><span class="line">       <span class="comment">//获取当前投票中的投票数</span></span><br><span class="line">       $total = intval($res[<span class="string">&#x27;total_votes&#x27;</span>]) + <span class="number">1</span>;</span><br><span class="line">       <span class="comment">//更新数据</span></span><br><span class="line">       $result = Db::table(<span class="string">&#x27;vote&#x27;</span>)-&gt;where(<span class="string">&#x27;id&#x27;</span>, $vid)-&gt;update([<span class="string">&#x27;total_votes&#x27;</span> =&gt; $total]);</span><br><span class="line">       <span class="comment">//判断投票数据是否成功</span></span><br><span class="line">       <span class="keyword">if</span> ($result == $result) &#123;</span><br><span class="line">           $msg = [</span><br><span class="line">               <span class="string">&#x27;code&#x27;</span> =&gt; <span class="string">&#x27;1000&#x27;</span>,</span><br><span class="line">               <span class="string">&#x27;msg&#x27;</span> =&gt; <span class="string">&#x27;投票成功&#x27;</span></span><br><span class="line">           ];</span><br><span class="line">           <span class="keyword">return</span> json($msg);</span><br><span class="line">       &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">           $msg = [</span><br><span class="line">               <span class="string">&#x27;code&#x27;</span> =&gt; <span class="string">&#x27;1001&#x27;</span>,</span><br><span class="line">               <span class="string">&#x27;msg&#x27;</span> =&gt; <span class="string">&#x27;系统服务器繁忙&#x27;</span></span><br><span class="line">           ];</span><br><span class="line">           <span class="keyword">return</span> json($msg);</span><br><span class="line">       &#125;</span><br><span class="line">   &#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h3 id="排行榜以及投票数都是简单操作这里话就不给大家演示提示排行榜直接从数据库查询记录票数的字段进行排序就可以了票数的话直接查询票数字段即可"><a class="markdownIt-Anchor" href="#排行榜以及投票数都是简单操作这里话就不给大家演示提示排行榜直接从数据库查询记录票数的字段进行排序就可以了票数的话直接查询票数字段即可"></a> 💍 排行榜,以及投票数,都是简单操作,这里话就不给大家演示,提示:排行榜直接从数据库查询记录票数的字段进行排序就可以了,票数的话直接查询票数字段即可.</h3>
 <p>[实现效果图如下]{.rainbow}</p>
 <p><img data-src="https://upimage.alexhchu.com/2021/03/10/92d38adf70a8d.png" alt="效果展示"></p>
 <p>[以上代码不以商用]{.rainbow}</p>
@@ -199,7 +200,7 @@ Code pit = 码坑的博客 = 请多指教</title>
       <i class="ic i-calendar-check"></i>
     </span>
     <span class="text">更新于</span>
-    <time title="修改时间：2021-03-10 10:24:47" itemprop="dateModified" datetime="2021-03-10T10:24:47+08:00">2021-03-10</time>
+    <time title="修改时间：2021-03-10 10:44:38" itemprop="dateModified" datetime="2021-03-10T10:44:38+08:00">2021-03-10</time>
   </span>
   <span id="php/PHP_vote/" class="item leancloud_visitors" data-flag-title="thinkphp5.0实现投票" title="阅读次数">
       <span class="icon">
@@ -262,7 +263,7 @@ Code pit = 码坑的博客 = 请多指教</title>
     <div class="item left">
       
 
-  <a href="/php/phpAPI/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1gicivghyooj20zk0m8dir.jpg" title="php文件上传API">
+  <a href="/php/phpAPI/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;tva4.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1gipexbei4hj20zk0m8npd.jpg" title="php文件上传API">
   <span class="type">上一篇</span>
   <span class="category"><i class="ic i-flag"></i> php文件上传API</span>
   <h3>php文件上传API</h3>
@@ -286,7 +287,7 @@ Code pit = 码坑的博客 = 请多指教</title>
   <div class="panels">
     <div class="inner">
       <div class="contents panel pjax" data-title="文章目录">
-          <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AE%80%E4%BB%8Brainbow"><span class="toc-number">1.</span> <span class="toc-text"> 💍 [简介]{.rainbow}</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9D%A5%E5%90%A7-~-%E5%B1%95%E7%A4%BArainbow"><span class="toc-number">2.</span> <span class="toc-text"> 💍 [来吧 ~ 展示]{.rainbow}</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BB%A5%E4%B8%8A%E5%B0%B1%E6%98%AFphp%E4%B8%AD%E6%8A%95%E7%A5%A8%E7%9A%84%E5%AE%9E%E7%8E%B0%E6%96%B9%E5%BC%8F%E5%A6%82%E6%9E%9C%E9%82%A3%E9%87%8C%E6%9C%89%E4%B8%8D%E8%B6%B3%E4%B9%8B%E5%A4%84%E8%AF%B7%E4%B8%8B%E6%96%B9%E8%AF%84%E8%AE%BA%E6%88%91%E4%BC%9A%E5%8F%8A%E6%97%B6%E7%BA%A0%E6%AD%A3%E9%94%99%E8%AF%AF%E6%9C%89%E5%85%B6%E4%BB%96%E7%9B%B8%E5%85%B3%E5%86%85%E5%AE%B9%E8%AF%B7%E6%94%B6%E8%97%8F%E7%A0%81%E5%9D%91%E7%9A%84%E5%8D%9A%E5%AE%A2%E8%B0%A2%E8%B0%A2"><span class="toc-number">3.</span> <span class="toc-text"> 💍 以上就是php中投票的实现方式,如果那里有不足之处请下方评论，我会及时纠正错误，有其他相关内容请收藏“码坑的博客”，谢谢！</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%8B%E4%B8%80%E6%9C%9F%E6%9B%B4%E6%96%B0%E4%BD%BF%E7%94%A8java%E5%AE%9E%E7%8E%B0%E6%8A%95%E7%A5%A8%E5%8A%9F%E8%83%BD%E6%9C%AC%E4%BA%BA%E6%98%AF%E4%B8%80%E4%B8%AA%E7%A8%8B%E5%BA%8F%E7%88%B1%E5%A5%BD%E8%80%85%E5%A6%82%E4%BB%A5%E4%B8%8A%E5%86%85%E5%AE%B9%E5%AF%B9%E4%BD%A0%E6%9C%89%E7%94%A8%E8%AF%B7%E8%AE%B0%E5%BE%97%E7%82%B9%E8%B5%9E%E5%88%86%E4%BA%AB%E5%93%A6"><span class="toc-number">4.</span> <span class="toc-text"> 💍 下一期更新使用Java实现投票功能,本人是一个程序爱好者,如以上内容对你有用,请记得点赞分享哦,</span></a></li></ol>
+          <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AE%80%E4%BB%8Brainbow"><span class="toc-number">1.</span> <span class="toc-text"> 💍 [简介]{.rainbow}</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9D%A5%E5%90%A7-~-%E5%B1%95%E7%A4%BArainbow"><span class="toc-number">2.</span> <span class="toc-text"> 💍 [来吧 ~ 展示]{.rainbow}</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8E%92%E8%A1%8C%E6%A6%9C%E4%BB%A5%E5%8F%8A%E6%8A%95%E7%A5%A8%E6%95%B0%E9%83%BD%E6%98%AF%E7%AE%80%E5%8D%95%E6%93%8D%E4%BD%9C%E8%BF%99%E9%87%8C%E8%AF%9D%E5%B0%B1%E4%B8%8D%E7%BB%99%E5%A4%A7%E5%AE%B6%E6%BC%94%E7%A4%BA%E6%8F%90%E7%A4%BA%E6%8E%92%E8%A1%8C%E6%A6%9C%E7%9B%B4%E6%8E%A5%E4%BB%8E%E6%95%B0%E6%8D%AE%E5%BA%93%E6%9F%A5%E8%AF%A2%E8%AE%B0%E5%BD%95%E7%A5%A8%E6%95%B0%E7%9A%84%E5%AD%97%E6%AE%B5%E8%BF%9B%E8%A1%8C%E6%8E%92%E5%BA%8F%E5%B0%B1%E5%8F%AF%E4%BB%A5%E4%BA%86%E7%A5%A8%E6%95%B0%E7%9A%84%E8%AF%9D%E7%9B%B4%E6%8E%A5%E6%9F%A5%E8%AF%A2%E7%A5%A8%E6%95%B0%E5%AD%97%E6%AE%B5%E5%8D%B3%E5%8F%AF"><span class="toc-number">2.1.</span> <span class="toc-text"> 💍 排行榜,以及投票数,都是简单操作,这里话就不给大家演示,提示:排行榜直接从数据库查询记录票数的字段进行排序就可以了,票数的话直接查询票数字段即可.</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BB%A5%E4%B8%8A%E5%B0%B1%E6%98%AFphp%E4%B8%AD%E6%8A%95%E7%A5%A8%E7%9A%84%E5%AE%9E%E7%8E%B0%E6%96%B9%E5%BC%8F%E5%A6%82%E6%9E%9C%E9%82%A3%E9%87%8C%E6%9C%89%E4%B8%8D%E8%B6%B3%E4%B9%8B%E5%A4%84%E8%AF%B7%E4%B8%8B%E6%96%B9%E8%AF%84%E8%AE%BA%E6%88%91%E4%BC%9A%E5%8F%8A%E6%97%B6%E7%BA%A0%E6%AD%A3%E9%94%99%E8%AF%AF%E6%9C%89%E5%85%B6%E4%BB%96%E7%9B%B8%E5%85%B3%E5%86%85%E5%AE%B9%E8%AF%B7%E6%94%B6%E8%97%8F%E7%A0%81%E5%9D%91%E7%9A%84%E5%8D%9A%E5%AE%A2%E8%B0%A2%E8%B0%A2"><span class="toc-number">3.</span> <span class="toc-text"> 💍 以上就是php中投票的实现方式,如果那里有不足之处请下方评论，我会及时纠正错误，有其他相关内容请收藏“码坑的博客”，谢谢！</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%8B%E4%B8%80%E6%9C%9F%E6%9B%B4%E6%96%B0%E4%BD%BF%E7%94%A8java%E5%AE%9E%E7%8E%B0%E6%8A%95%E7%A5%A8%E5%8A%9F%E8%83%BD%E6%9C%AC%E4%BA%BA%E6%98%AF%E4%B8%80%E4%B8%AA%E7%A8%8B%E5%BA%8F%E7%88%B1%E5%A5%BD%E8%80%85%E5%A6%82%E4%BB%A5%E4%B8%8A%E5%86%85%E5%AE%B9%E5%AF%B9%E4%BD%A0%E6%9C%89%E7%94%A8%E8%AF%B7%E8%AE%B0%E5%BE%97%E7%82%B9%E8%B5%9E%E5%88%86%E4%BA%AB%E5%93%A6"><span class="toc-number">4.</span> <span class="toc-text"> 💍 下一期更新使用Java实现投票功能,本人是一个程序爱好者,如以上内容对你有用,请记得点赞分享哦,</span></a></li></ol>
       </div>
       <div class="related panel pjax" data-title="系列文章">
         <ul>
@@ -408,22 +409,12 @@ Code pit = 码坑的博客 = 请多指教</title>
   <li class="item">
     
 <div class="breadcrumb">
-<a href="/categories/java/" title="分类于 JAVA后端开发">JAVA后端开发</a>
-</div>
-
-    <span><a href="/java/pom%E6%8A%A5%E9%94%99/" title="pom.xml的标签报错 Element ‘project‘ cannot have character [children], because the type‘s content**">pom.xml的标签报错 Element ‘project‘ cannot have character [children], because the type‘s content**</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/Other-extensions/" title="分类于 其他扩展">其他扩展</a>
+<a href="/categories/php/" title="分类于 PHP后端开发">PHP后端开发</a>
 <i class="ic i-angle-right"></i>
-<a href="/categories/Other-extensions/hexo%E5%88%86%E7%B1%BBand%E6%A0%87%E7%AD%BE404/" title="分类于 hexo分类and标签404">hexo分类and标签404</a>
+<a href="/categories/php/thinkphp5-0%E5%AE%9E%E7%8E%B0%E6%8A%95%E7%A5%A8/" title="分类于 thinkphp5.0实现投票">thinkphp5.0实现投票</a>
 </div>
 
-    <span><a href="/Other-extensions/hexo/" title="hexo分类and标签404">hexo分类and标签404</a></span>
+    <span><a href="/php/PHP_vote/" title="thinkphp5.0实现投票">thinkphp5.0实现投票</a></span>
   </li>
 
       
@@ -433,17 +424,7 @@ Code pit = 码坑的博客 = 请多指教</title>
 <a href="/categories/web/" title="分类于 web前端">web前端</a>
 </div>
 
-    <span><a href="/web/%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0/" title="文件上传">文件上传</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/java/" title="分类于 JAVA后端开发">JAVA后端开发</a>
-</div>
-
-    <span><a href="/java/Maven%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE/" title="Maven的安装及配置">Maven的安装及配置</a></span>
+    <span><a href="/web/%E5%85%89%E6%A0%87%E5%8A%A8%E7%94%BB/" title="利用html+javaSrcipt+css3实现光标动画">利用html+javaSrcipt+css3实现光标动画</a></span>
   </li>
 
       
@@ -460,10 +441,10 @@ Code pit = 码坑的博客 = 请多指教</title>
   <li class="item">
     
 <div class="breadcrumb">
-<a href="/categories/web/" title="分类于 web前端">web前端</a>
+<a href="/categories/java/" title="分类于 JAVA后端开发">JAVA后端开发</a>
 </div>
 
-    <span><a href="/web/%E5%85%89%E6%A0%87%E5%8A%A8%E7%94%BB/" title="利用html+javaSrcipt+css3实现光标动画">利用html+javaSrcipt+css3实现光标动画</a></span>
+    <span><a href="/java/pom%E6%8A%A5%E9%94%99/" title="pom.xml的标签报错 Element ‘project‘ cannot have character [children], because the type‘s content**">pom.xml的标签报错 Element ‘project‘ cannot have character [children], because the type‘s content**</a></span>
   </li>
 
       
@@ -482,22 +463,26 @@ Code pit = 码坑的博客 = 请多指教</title>
   <li class="item">
     
 <div class="breadcrumb">
-<a href="/categories/java/" title="分类于 JAVA后端开发">JAVA后端开发</a>
+<a href="/categories/web/" title="分类于 web前端">web前端</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/web/react%E5%92%8Cvue/" title="分类于 react和vue">react和vue</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/web/react%E5%92%8Cvue/%E5%BD%A9%E8%89%B2%E6%96%87%E5%AD%97/" title="分类于 彩色文字">彩色文字</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/web/react%E5%92%8Cvue/%E5%BD%A9%E8%89%B2%E6%96%87%E5%AD%97/%E5%85%89%E6%A0%87%E5%8A%A8%E7%94%BB/" title="分类于 光标动画">光标动画</a>
 </div>
 
-    <span><a href="/java/docker/" title="Docker安装部署">Docker安装部署</a></span>
+    <span><a href="/web/react%E5%92%8Cvue/" title="React.js与Vue.js流行框架的比较">React.js与Vue.js流行框架的比较</a></span>
   </li>
 
       
   <li class="item">
     
 <div class="breadcrumb">
-<a href="/categories/php/" title="分类于 PHP后端开发">PHP后端开发</a>
-<i class="ic i-angle-right"></i>
-<a href="/categories/php/thinkphp5-0%E5%AE%9E%E7%8E%B0%E6%8A%95%E7%A5%A8/" title="分类于 thinkphp5.0实现投票">thinkphp5.0实现投票</a>
+<a href="/categories/web/" title="分类于 web前端">web前端</a>
 </div>
 
-    <span><a href="/php/PHP_vote/" title="thinkphp5.0实现投票">thinkphp5.0实现投票</a></span>
+    <span><a href="/web/%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0/" title="文件上传">文件上传</a></span>
   </li>
 
       
@@ -508,6 +493,26 @@ Code pit = 码坑的博客 = 请多指教</title>
 </div>
 
     <span><a href="/web/%E5%BD%A9%E8%89%B2%E6%96%87%E5%AD%97/" title="js文字闪动效果">js文字闪动效果</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/java/" title="分类于 JAVA后端开发">JAVA后端开发</a>
+</div>
+
+    <span><a href="/java/java%E5%9F%BA%E7%A1%80/" title="JAVA的JDK安装步骤">JAVA的JDK安装步骤</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/java/" title="分类于 JAVA后端开发">JAVA后端开发</a>
+</div>
+
+    <span><a href="/java/Maven%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE/" title="Maven的安装及配置">Maven的安装及配置</a></span>
   </li>
 
   </ul>
