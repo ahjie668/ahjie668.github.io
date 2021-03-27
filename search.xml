@@ -1,6 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>在线承接各类开发项目</title>
+    <url>/Other-extensions/extension/</url>
+    <content><![CDATA[<h2 id="阿杰从今天开始承接互联网各类开发项目"><a class="markdownIt-Anchor" href="#阿杰从今天开始承接互联网各类开发项目"></a> 阿杰从今天开始承接互联网各类开发项目</h2>
+<p>现如今的社会,互联网无处不在我们的身边</p>
+<p>生活中我们都会使用微信或支付宝等软件APP,但是再这些APP上面有一个方便快捷的程序叫 “微信小程序” &amp;&amp; “支付宝小程序”</p>
+<p>很多电商平台也是有自己小程序,我们就不用去下载APP或者打开浏览器输入网址进入某个网站</p>
+<p>如果你也是准备入驻互联网,阿杰在此期待你的到来.</p>
+<p>如果你想拥有自己网站.后台管理系统.APP.小程序</p>
+<h1 id="阿杰承接项目如下"><a class="markdownIt-Anchor" href="#阿杰承接项目如下"></a> 阿杰承接项目如下</h1>
+<p><img data-src="https://upimage.alexhchu.com/2021/03/27/6feb3e36566c5.jpg" alt="码坑"></p>
+<h3 id="心动不如行动rainbow"><a class="markdownIt-Anchor" href="#心动不如行动rainbow"></a> [心动不如行动:]{.rainbow}</h3>
+<h3 id="期待你的加入"><a class="markdownIt-Anchor" href="#期待你的加入"></a> 期待你的加入!</h3>
+]]></content>
+      <categories>
+        <category>其他扩展</category>
+        <category>hexo分类and标签404</category>
+        <category>在线承接各类开发项目</category>
+      </categories>
+      <tags>
+        <tag>Hexo</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>hexo分类and标签404</title>
     <url>/Other-extensions/hexo/</url>
     <content><![CDATA[<h2 id="404分类and标签错误处理"><a class="markdownIt-Anchor" href="#404分类and标签错误处理"></a> 💍 404分类and标签错误处理</h2>
@@ -25,6 +48,66 @@
       </categories>
       <tags>
         <tag>Hexo</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>thinkphp5.0实现投票</title>
+    <url>/php/PHP_vote/</url>
+    <content><![CDATA[<h2 id="简介rainbow"><a class="markdownIt-Anchor" href="#简介rainbow"></a> 💍 [简介]{.rainbow}</h2>
+<p>现在投票的功能,不管是Web端,小程序端,APP端,现在投票这个功能可以说还是挺火的<br>
+今天呢,阿杰就给大家带来一个利用php中thinkphp5.0框架集合实现一个投票的功能,<br>
+我这边投票是用在了微信小程序端上，废话不多说，下面就给大家演示代码.</p>
+<p>💍 [在文章底部点击赞赏,请我喝杯奶茶哦!]{.rainbow}</p>
+<p>💍 [正在努力学习~ ~ ~ ~ ~ ~ ~ ~]{.rainbow}</p>
+<h2 id="来吧-~-展示rainbow"><a class="markdownIt-Anchor" href="#来吧-~-展示rainbow"></a> 💍 [来吧 ~ 展示]{.rainbow}</h2>
+<p>[PHP代码部分:]{.rainbow}</p>
+<figure class="highlight php"><figcaption><span>PHP</span></figcaption><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment">    * 判断投票</span></span><br><span class="line"><span class="comment">    * <span class="doctag">@param</span> VoteModel 投票表</span></span><br><span class="line"><span class="comment">    * <span class="doctag">@param</span> $uid 用户id</span></span><br><span class="line"><span class="comment">    * <span class="doctag">@param</span> $vid 投票作品id</span></span><br><span class="line"><span class="comment">    */</span></span><br><span class="line">   <span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">vote_up</span>(<span class="params">$uid, $vid</span>)</span></span><br><span class="line"><span class="function">   </span>&#123;</span><br><span class="line">       <span class="keyword">if</span> (Votes::get([<span class="string">&#x27;uid&#x27;</span> =&gt; $uid])) &#123;</span><br><span class="line">           $msg = [</span><br><span class="line">               <span class="string">&#x27;code&#x27;</span> =&gt; <span class="number">1002</span>,</span><br><span class="line">               <span class="string">&#x27;msg&#x27;</span> =&gt; <span class="string">&#x27;您已经投过票了&#x27;</span></span><br><span class="line">           ];</span><br><span class="line">           <span class="keyword">return</span> json($msg);</span><br><span class="line">       &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">           <span class="comment">//没有该投票,添加投票记录</span></span><br><span class="line">           $data = [</span><br><span class="line">               <span class="string">&#x27;uid&#x27;</span> =&gt; $uid,</span><br><span class="line">               <span class="string">&#x27;vid&#x27;</span> =&gt; $vid,</span><br><span class="line">           ];</span><br><span class="line">           (<span class="keyword">new</span> Votes())-&gt;save($data);</span><br><span class="line">       &#125;</span><br><span class="line">       <span class="comment">//获取当前id对应的投票公司</span></span><br><span class="line">       $res = Db::table(<span class="string">&#x27;vote&#x27;</span>)-&gt;where(<span class="string">&#x27;id&#x27;</span>,$vid)-&gt;find();</span><br><span class="line">       <span class="comment">//获取当前投票中的投票数</span></span><br><span class="line">       $total = intval($res[<span class="string">&#x27;total_votes&#x27;</span>]) + <span class="number">1</span>;</span><br><span class="line">       <span class="comment">//更新数据</span></span><br><span class="line">       $result = Db::table(<span class="string">&#x27;vote&#x27;</span>)-&gt;where(<span class="string">&#x27;id&#x27;</span>, $vid)-&gt;update([<span class="string">&#x27;total_votes&#x27;</span> =&gt; $total]);</span><br><span class="line">       <span class="comment">//判断投票数据是否成功</span></span><br><span class="line">       <span class="keyword">if</span> ($result == $result) &#123;</span><br><span class="line">           $msg = [</span><br><span class="line">               <span class="string">&#x27;code&#x27;</span> =&gt; <span class="string">&#x27;1000&#x27;</span>,</span><br><span class="line">               <span class="string">&#x27;msg&#x27;</span> =&gt; <span class="string">&#x27;投票成功&#x27;</span></span><br><span class="line">           ];</span><br><span class="line">           <span class="keyword">return</span> json($msg);</span><br><span class="line">       &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">           $msg = [</span><br><span class="line">               <span class="string">&#x27;code&#x27;</span> =&gt; <span class="string">&#x27;1001&#x27;</span>,</span><br><span class="line">               <span class="string">&#x27;msg&#x27;</span> =&gt; <span class="string">&#x27;系统服务器繁忙&#x27;</span></span><br><span class="line">           ];</span><br><span class="line">           <span class="keyword">return</span> json($msg);</span><br><span class="line">       &#125;</span><br><span class="line">   &#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h3 id="排行榜以及投票数都是简单操作这里话就不给大家演示提示排行榜直接从数据库查询记录票数的字段进行排序就可以了票数的话直接查询票数字段即可"><a class="markdownIt-Anchor" href="#排行榜以及投票数都是简单操作这里话就不给大家演示提示排行榜直接从数据库查询记录票数的字段进行排序就可以了票数的话直接查询票数字段即可"></a> 💍 排行榜,以及投票数,都是简单操作,这里话就不给大家演示,提示:排行榜直接从数据库查询记录票数的字段进行排序就可以了,票数的话直接查询票数字段即可.</h3>
+<p>[实现效果图如下]{.rainbow}</p>
+<p><img data-src="https://upimage.alexhchu.com/2021/03/10/92d38adf70a8d.png" alt="效果展示"></p>
+<p>[以上代码不以商用]{.rainbow}</p>
+<h2 id="以上就是php中投票的实现方式如果那里有不足之处请下方评论我会及时纠正错误有其他相关内容请收藏码坑的博客谢谢"><a class="markdownIt-Anchor" href="#以上就是php中投票的实现方式如果那里有不足之处请下方评论我会及时纠正错误有其他相关内容请收藏码坑的博客谢谢"></a> 💍 以上就是php中投票的实现方式,如果那里有不足之处请下方评论，我会及时纠正错误，有其他相关内容请收藏“码坑的博客”，谢谢！</h2>
+<h2 id="下一期更新使用java实现投票功能本人是一个程序爱好者如以上内容对你有用请记得点赞分享哦"><a class="markdownIt-Anchor" href="#下一期更新使用java实现投票功能本人是一个程序爱好者如以上内容对你有用请记得点赞分享哦"></a> 💍 下一期更新使用Java实现投票功能,本人是一个程序爱好者,如以上内容对你有用,请记得点赞分享哦,</h2>
+]]></content>
+      <categories>
+        <category>PHP后端开发</category>
+        <category>thinkphp5.0实现投票</category>
+      </categories>
+      <tags>
+        <tag>php</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>php文件上传API</title>
+    <url>/php/phpAPI/</url>
+    <content><![CDATA[<h2 id="简介rainbow"><a class="markdownIt-Anchor" href="#简介rainbow"></a> 💍 [简介]{.rainbow}</h2>
+<p>文件上传这个功能,是我们程序员在开发过程中基本都能遇到，文件上传功能今天就用php来说说吧!<br>
+我呢!<br>
+是一个小白，如果以下内容有错误的地方请各位大佬，指点一二<br>
+以下内容如果对你有用 [↓ ↓ ↓]{.label .info}</p>
+<p>💍 [在文章底部点击赞赏,请我喝杯奶茶哦!]{.rainbow}</p>
+<p>💍 [正在努力学习~ ~ ~ ~ ~ ~ ~ ~]{.rainbow}</p>
+<h2 id="来吧-~-展示rainbow"><a class="markdownIt-Anchor" href="#来吧-~-展示rainbow"></a> 💍 [来吧 ~ 展示]{.rainbow}</h2>
+<p>[废话不多说，直接上代码]{.rainbow}</p>
+<p>[PHP代码部分:]{.rainbow}</p>
+<figure class="highlight php"><figcaption><span>PHP</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Demo</span></span></span><br><span class="line"><span class="class"></span>&#123;</span><br><span class="line">        <span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">upload</span>(<span class="params"></span>)</span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="comment">// 获取表单上传文件 例如上传了001.jpg</span></span><br><span class="line">        $file = request()-&gt;file(<span class="string">&#x27;img&#x27;</span>);</span><br><span class="line">        <span class="comment">// 移动到框架应用根目录/public/uploads/ 目录下</span></span><br><span class="line">        <span class="keyword">if</span> ($file) &#123;</span><br><span class="line">            $info = $file-&gt;move(ROOT_PATH . <span class="string">&#x27;public&#x27;</span> . DS . <span class="string">&#x27;upload&#x27;</span>);  <span class="comment">//保存路径</span></span><br><span class="line">            <span class="keyword">if</span> ($info) &#123;</span><br><span class="line">                <span class="keyword">return</span> json([<span class="string">&#x27;code&#x27;</span> =&gt; <span class="number">1</span>, <span class="string">&#x27;url&#x27;</span> =&gt; $info-&gt;getSaveName()]); <span class="comment">//成功</span></span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                <span class="keyword">return</span> json([<span class="string">&#x27;code&#x27;</span> =&gt; <span class="number">0</span>, <span class="string">&#x27;data&#x27;</span> =&gt; $file-&gt;getError()]);    <span class="comment">//失败</span></span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>[HTML代码部分:]{.rainbow}</p>
+<figure class="highlight html"><figcaption><span>html</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;row cl&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">label</span> <span class="attr">class</span>=<span class="string">&quot;form-label col-xs-4 col-sm-3&quot;</span>&gt;</span>上传头像：<span class="tag">&lt;/<span class="name">label</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;formControls col-xs-8 col-sm-9&quot;</span>&gt;</span>  <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">&quot;btn-upload form-group&quot;</span>&gt;</span></span><br><span class="line">             <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;file&quot;</span> <span class="attr">onchange</span>=<span class="string">&quot;img_up(this)&quot;</span> <span class="attr">id</span>=<span class="string">&quot;img&quot;</span> <span class="attr">name</span>=<span class="string">&quot;img&quot;</span> <span class="attr">multiple</span>=<span class="string">&quot;multiple&quot;</span>/&gt;</span></span><br><span class="line">                <span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;thumbnail&quot;</span>&gt;</span></span><br><span class="line">                    <span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">&quot;__UPLOAD__/&#123;$product_info.img&#125;&quot;</span> <span class="attr">alt</span>=<span class="string">&quot;&quot;</span> <span class="attr">style</span>=<span class="string">&quot;width: 100px; height: 100px&quot;</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>[Ajax代码部分:]{.rainbow}</p>
+<figure class="highlight js"><figcaption><span>JS</span></figcaption><table><tr><td class="code"><pre><span class="line">&lt;script type=<span class="string">&quot;text/javascript&quot;</span>&gt;</span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">img_up</span>(<span class="params">e</span>) </span>&#123;</span><br><span class="line">        <span class="keyword">let</span> file = e.files[<span class="number">0</span>];</span><br><span class="line">        <span class="keyword">var</span> formData = <span class="keyword">new</span> FormData();</span><br><span class="line">        formData.append(<span class="string">&#x27;img&#x27;</span>, file);</span><br><span class="line">        $.ajax(&#123;</span><br><span class="line">            url: <span class="string">&#x27;&#123;:url(\&#x27;Product/upload\&#x27;)&#125;&#x27;</span>,</span><br><span class="line">            type: <span class="string">&#x27;POST&#x27;</span>,</span><br><span class="line">            data: formData,</span><br><span class="line">            processData: <span class="literal">false</span>,</span><br><span class="line">            contentType: <span class="literal">false</span>,</span><br><span class="line">            success: <span class="function"><span class="keyword">function</span> (<span class="params">data</span>) </span>&#123;</span><br><span class="line">                <span class="built_in">console</span>.log(data)</span><br><span class="line">                <span class="keyword">if</span> (data.code == <span class="number">1</span>) &#123;</span><br><span class="line">                    <span class="keyword">var</span> dome = <span class="string">&#x27;&lt;img src=&quot;__UPLOAD__/&#x27;</span> + data.url + <span class="string">&#x27;&quot; alt=&quot;&quot; style=&quot;width: 120px;height: 120px;&quot;/&gt;&lt;input type=&quot;hidden&quot; value=&quot;&#x27;</span> + data.url + <span class="string">&#x27;&quot; name=&quot;img&quot;&gt;&#x27;</span>;</span><br><span class="line">                    $(<span class="string">&#x27;#thumbnail&#x27;</span>).html(dome);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;, <span class="attr">error</span>: <span class="function"><span class="keyword">function</span> (<span class="params">res</span>) </span>&#123;</span><br><span class="line">                <span class="built_in">console</span>.log(res)</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;)</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+<p>[实现效果图如下]{.rainbow}</p>
+<h3 id="图一"><a class="markdownIt-Anchor" href="#图一"></a> 图一</h3>
+<p><img data-src="https://upimage.alexhchu.com/2020/12/04/179282e2b863b.png" alt="图一"></p>
+<h3 id="图二"><a class="markdownIt-Anchor" href="#图二"></a> 图二</h3>
+<p><img data-src="https://upimage.alexhchu.com/2020/12/04/b2a4e3979d7ec.png" alt="图二"></p>
+<h2 id="以上就是php中api的使用方式如果那里有不足之处请下方评论我会及时纠正错误有其他相关内容请收藏码坑的博客谢谢"><a class="markdownIt-Anchor" href="#以上就是php中api的使用方式如果那里有不足之处请下方评论我会及时纠正错误有其他相关内容请收藏码坑的博客谢谢"></a> 💍 以上就是php中API的使用方式,如果那里有不足之处请下方评论，我会及时纠正错误，有其他相关内容请收藏“码坑的博客”，谢谢！</h2>
+]]></content>
+      <categories>
+        <category>PHP后端开发</category>
+        <category>php文件上传API</category>
+      </categories>
+      <tags>
+        <tag>php</tag>
       </tags>
   </entry>
   <entry>
@@ -416,66 +499,6 @@ Dcolor();
       </categories>
       <tags>
         <tag>JavaScript</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>php文件上传API</title>
-    <url>/php/phpAPI/</url>
-    <content><![CDATA[<h2 id="简介rainbow"><a class="markdownIt-Anchor" href="#简介rainbow"></a> 💍 [简介]{.rainbow}</h2>
-<p>文件上传这个功能,是我们程序员在开发过程中基本都能遇到，文件上传功能今天就用php来说说吧!<br>
-我呢!<br>
-是一个小白，如果以下内容有错误的地方请各位大佬，指点一二<br>
-以下内容如果对你有用 [↓ ↓ ↓]{.label .info}</p>
-<p>💍 [在文章底部点击赞赏,请我喝杯奶茶哦!]{.rainbow}</p>
-<p>💍 [正在努力学习~ ~ ~ ~ ~ ~ ~ ~]{.rainbow}</p>
-<h2 id="来吧-~-展示rainbow"><a class="markdownIt-Anchor" href="#来吧-~-展示rainbow"></a> 💍 [来吧 ~ 展示]{.rainbow}</h2>
-<p>[废话不多说，直接上代码]{.rainbow}</p>
-<p>[PHP代码部分:]{.rainbow}</p>
-<figure class="highlight php"><figcaption><span>PHP</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Demo</span></span></span><br><span class="line"><span class="class"></span>&#123;</span><br><span class="line">        <span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">upload</span>(<span class="params"></span>)</span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="comment">// 获取表单上传文件 例如上传了001.jpg</span></span><br><span class="line">        $file = request()-&gt;file(<span class="string">&#x27;img&#x27;</span>);</span><br><span class="line">        <span class="comment">// 移动到框架应用根目录/public/uploads/ 目录下</span></span><br><span class="line">        <span class="keyword">if</span> ($file) &#123;</span><br><span class="line">            $info = $file-&gt;move(ROOT_PATH . <span class="string">&#x27;public&#x27;</span> . DS . <span class="string">&#x27;upload&#x27;</span>);  <span class="comment">//保存路径</span></span><br><span class="line">            <span class="keyword">if</span> ($info) &#123;</span><br><span class="line">                <span class="keyword">return</span> json([<span class="string">&#x27;code&#x27;</span> =&gt; <span class="number">1</span>, <span class="string">&#x27;url&#x27;</span> =&gt; $info-&gt;getSaveName()]); <span class="comment">//成功</span></span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                <span class="keyword">return</span> json([<span class="string">&#x27;code&#x27;</span> =&gt; <span class="number">0</span>, <span class="string">&#x27;data&#x27;</span> =&gt; $file-&gt;getError()]);    <span class="comment">//失败</span></span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<p>[HTML代码部分:]{.rainbow}</p>
-<figure class="highlight html"><figcaption><span>html</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;row cl&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">label</span> <span class="attr">class</span>=<span class="string">&quot;form-label col-xs-4 col-sm-3&quot;</span>&gt;</span>上传头像：<span class="tag">&lt;/<span class="name">label</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;formControls col-xs-8 col-sm-9&quot;</span>&gt;</span>  <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">&quot;btn-upload form-group&quot;</span>&gt;</span></span><br><span class="line">             <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;file&quot;</span> <span class="attr">onchange</span>=<span class="string">&quot;img_up(this)&quot;</span> <span class="attr">id</span>=<span class="string">&quot;img&quot;</span> <span class="attr">name</span>=<span class="string">&quot;img&quot;</span> <span class="attr">multiple</span>=<span class="string">&quot;multiple&quot;</span>/&gt;</span></span><br><span class="line">                <span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;thumbnail&quot;</span>&gt;</span></span><br><span class="line">                    <span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">&quot;__UPLOAD__/&#123;$product_info.img&#125;&quot;</span> <span class="attr">alt</span>=<span class="string">&quot;&quot;</span> <span class="attr">style</span>=<span class="string">&quot;width: 100px; height: 100px&quot;</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<p>[Ajax代码部分:]{.rainbow}</p>
-<figure class="highlight js"><figcaption><span>JS</span></figcaption><table><tr><td class="code"><pre><span class="line">&lt;script type=<span class="string">&quot;text/javascript&quot;</span>&gt;</span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">img_up</span>(<span class="params">e</span>) </span>&#123;</span><br><span class="line">        <span class="keyword">let</span> file = e.files[<span class="number">0</span>];</span><br><span class="line">        <span class="keyword">var</span> formData = <span class="keyword">new</span> FormData();</span><br><span class="line">        formData.append(<span class="string">&#x27;img&#x27;</span>, file);</span><br><span class="line">        $.ajax(&#123;</span><br><span class="line">            url: <span class="string">&#x27;&#123;:url(\&#x27;Product/upload\&#x27;)&#125;&#x27;</span>,</span><br><span class="line">            type: <span class="string">&#x27;POST&#x27;</span>,</span><br><span class="line">            data: formData,</span><br><span class="line">            processData: <span class="literal">false</span>,</span><br><span class="line">            contentType: <span class="literal">false</span>,</span><br><span class="line">            success: <span class="function"><span class="keyword">function</span> (<span class="params">data</span>) </span>&#123;</span><br><span class="line">                <span class="built_in">console</span>.log(data)</span><br><span class="line">                <span class="keyword">if</span> (data.code == <span class="number">1</span>) &#123;</span><br><span class="line">                    <span class="keyword">var</span> dome = <span class="string">&#x27;&lt;img src=&quot;__UPLOAD__/&#x27;</span> + data.url + <span class="string">&#x27;&quot; alt=&quot;&quot; style=&quot;width: 120px;height: 120px;&quot;/&gt;&lt;input type=&quot;hidden&quot; value=&quot;&#x27;</span> + data.url + <span class="string">&#x27;&quot; name=&quot;img&quot;&gt;&#x27;</span>;</span><br><span class="line">                    $(<span class="string">&#x27;#thumbnail&#x27;</span>).html(dome);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;, <span class="attr">error</span>: <span class="function"><span class="keyword">function</span> (<span class="params">res</span>) </span>&#123;</span><br><span class="line">                <span class="built_in">console</span>.log(res)</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;)</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
-<p>[实现效果图如下]{.rainbow}</p>
-<h3 id="图一"><a class="markdownIt-Anchor" href="#图一"></a> 图一</h3>
-<p><img data-src="https://upimage.alexhchu.com/2020/12/04/179282e2b863b.png" alt="图一"></p>
-<h3 id="图二"><a class="markdownIt-Anchor" href="#图二"></a> 图二</h3>
-<p><img data-src="https://upimage.alexhchu.com/2020/12/04/b2a4e3979d7ec.png" alt="图二"></p>
-<h2 id="以上就是php中api的使用方式如果那里有不足之处请下方评论我会及时纠正错误有其他相关内容请收藏码坑的博客谢谢"><a class="markdownIt-Anchor" href="#以上就是php中api的使用方式如果那里有不足之处请下方评论我会及时纠正错误有其他相关内容请收藏码坑的博客谢谢"></a> 💍 以上就是php中API的使用方式,如果那里有不足之处请下方评论，我会及时纠正错误，有其他相关内容请收藏“码坑的博客”，谢谢！</h2>
-]]></content>
-      <categories>
-        <category>PHP后端开发</category>
-        <category>php文件上传API</category>
-      </categories>
-      <tags>
-        <tag>php</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>thinkphp5.0实现投票</title>
-    <url>/php/PHP_vote/</url>
-    <content><![CDATA[<h2 id="简介rainbow"><a class="markdownIt-Anchor" href="#简介rainbow"></a> 💍 [简介]{.rainbow}</h2>
-<p>现在投票的功能,不管是Web端,小程序端,APP端,现在投票这个功能可以说还是挺火的<br>
-今天呢,阿杰就给大家带来一个利用php中thinkphp5.0框架集合实现一个投票的功能,<br>
-我这边投票是用在了微信小程序端上，废话不多说，下面就给大家演示代码.</p>
-<p>💍 [在文章底部点击赞赏,请我喝杯奶茶哦!]{.rainbow}</p>
-<p>💍 [正在努力学习~ ~ ~ ~ ~ ~ ~ ~]{.rainbow}</p>
-<h2 id="来吧-~-展示rainbow"><a class="markdownIt-Anchor" href="#来吧-~-展示rainbow"></a> 💍 [来吧 ~ 展示]{.rainbow}</h2>
-<p>[PHP代码部分:]{.rainbow}</p>
-<figure class="highlight php"><figcaption><span>PHP</span></figcaption><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment">    * 判断投票</span></span><br><span class="line"><span class="comment">    * <span class="doctag">@param</span> VoteModel 投票表</span></span><br><span class="line"><span class="comment">    * <span class="doctag">@param</span> $uid 用户id</span></span><br><span class="line"><span class="comment">    * <span class="doctag">@param</span> $vid 投票作品id</span></span><br><span class="line"><span class="comment">    */</span></span><br><span class="line">   <span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">vote_up</span>(<span class="params">$uid, $vid</span>)</span></span><br><span class="line"><span class="function">   </span>&#123;</span><br><span class="line">       <span class="keyword">if</span> (Votes::get([<span class="string">&#x27;uid&#x27;</span> =&gt; $uid])) &#123;</span><br><span class="line">           $msg = [</span><br><span class="line">               <span class="string">&#x27;code&#x27;</span> =&gt; <span class="number">1002</span>,</span><br><span class="line">               <span class="string">&#x27;msg&#x27;</span> =&gt; <span class="string">&#x27;您已经投过票了&#x27;</span></span><br><span class="line">           ];</span><br><span class="line">           <span class="keyword">return</span> json($msg);</span><br><span class="line">       &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">           <span class="comment">//没有该投票,添加投票记录</span></span><br><span class="line">           $data = [</span><br><span class="line">               <span class="string">&#x27;uid&#x27;</span> =&gt; $uid,</span><br><span class="line">               <span class="string">&#x27;vid&#x27;</span> =&gt; $vid,</span><br><span class="line">           ];</span><br><span class="line">           (<span class="keyword">new</span> Votes())-&gt;save($data);</span><br><span class="line">       &#125;</span><br><span class="line">       <span class="comment">//获取当前id对应的投票公司</span></span><br><span class="line">       $res = Db::table(<span class="string">&#x27;vote&#x27;</span>)-&gt;where(<span class="string">&#x27;id&#x27;</span>,$vid)-&gt;find();</span><br><span class="line">       <span class="comment">//获取当前投票中的投票数</span></span><br><span class="line">       $total = intval($res[<span class="string">&#x27;total_votes&#x27;</span>]) + <span class="number">1</span>;</span><br><span class="line">       <span class="comment">//更新数据</span></span><br><span class="line">       $result = Db::table(<span class="string">&#x27;vote&#x27;</span>)-&gt;where(<span class="string">&#x27;id&#x27;</span>, $vid)-&gt;update([<span class="string">&#x27;total_votes&#x27;</span> =&gt; $total]);</span><br><span class="line">       <span class="comment">//判断投票数据是否成功</span></span><br><span class="line">       <span class="keyword">if</span> ($result == $result) &#123;</span><br><span class="line">           $msg = [</span><br><span class="line">               <span class="string">&#x27;code&#x27;</span> =&gt; <span class="string">&#x27;1000&#x27;</span>,</span><br><span class="line">               <span class="string">&#x27;msg&#x27;</span> =&gt; <span class="string">&#x27;投票成功&#x27;</span></span><br><span class="line">           ];</span><br><span class="line">           <span class="keyword">return</span> json($msg);</span><br><span class="line">       &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">           $msg = [</span><br><span class="line">               <span class="string">&#x27;code&#x27;</span> =&gt; <span class="string">&#x27;1001&#x27;</span>,</span><br><span class="line">               <span class="string">&#x27;msg&#x27;</span> =&gt; <span class="string">&#x27;系统服务器繁忙&#x27;</span></span><br><span class="line">           ];</span><br><span class="line">           <span class="keyword">return</span> json($msg);</span><br><span class="line">       &#125;</span><br><span class="line">   &#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<h3 id="排行榜以及投票数都是简单操作这里话就不给大家演示提示排行榜直接从数据库查询记录票数的字段进行排序就可以了票数的话直接查询票数字段即可"><a class="markdownIt-Anchor" href="#排行榜以及投票数都是简单操作这里话就不给大家演示提示排行榜直接从数据库查询记录票数的字段进行排序就可以了票数的话直接查询票数字段即可"></a> 💍 排行榜,以及投票数,都是简单操作,这里话就不给大家演示,提示:排行榜直接从数据库查询记录票数的字段进行排序就可以了,票数的话直接查询票数字段即可.</h3>
-<p>[实现效果图如下]{.rainbow}</p>
-<p><img data-src="https://upimage.alexhchu.com/2021/03/10/92d38adf70a8d.png" alt="效果展示"></p>
-<p>[以上代码不以商用]{.rainbow}</p>
-<h2 id="以上就是php中投票的实现方式如果那里有不足之处请下方评论我会及时纠正错误有其他相关内容请收藏码坑的博客谢谢"><a class="markdownIt-Anchor" href="#以上就是php中投票的实现方式如果那里有不足之处请下方评论我会及时纠正错误有其他相关内容请收藏码坑的博客谢谢"></a> 💍 以上就是php中投票的实现方式,如果那里有不足之处请下方评论，我会及时纠正错误，有其他相关内容请收藏“码坑的博客”，谢谢！</h2>
-<h2 id="下一期更新使用java实现投票功能本人是一个程序爱好者如以上内容对你有用请记得点赞分享哦"><a class="markdownIt-Anchor" href="#下一期更新使用java实现投票功能本人是一个程序爱好者如以上内容对你有用请记得点赞分享哦"></a> 💍 下一期更新使用Java实现投票功能,本人是一个程序爱好者,如以上内容对你有用,请记得点赞分享哦,</h2>
-]]></content>
-      <categories>
-        <category>PHP后端开发</category>
-        <category>thinkphp5.0实现投票</category>
-      </categories>
-      <tags>
-        <tag>php</tag>
       </tags>
   </entry>
   <entry>
