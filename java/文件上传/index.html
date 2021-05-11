@@ -1,0 +1,722 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#FFF">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+<link rel="icon" type="image/ico" sizes="32x32" href="/images/favicon.ico">
+  <meta http-equiv="Cache-Control" content="no-transform">
+  <meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+<link rel="alternate" type="application/rss+xml" title="码坑的博客" href="https://ahjie.top/rss.xml" />
+<link rel="alternate" type="application/atom+xml" title="码坑的博客" href="https://ahjie.top/atom.xml" />
+<link rel="alternate" type="application/json" title="码坑的博客" href="https://ahjie.top/feed.json" />
+
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Mulish:300,300italic,400,400italic,700,700italic%7CFredericka%20the%20Great:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20JP:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20SC:300,300italic,400,400italic,700,700italic%7CInconsolata:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="/css/app.css?v=0.2.3">
+
+  
+  <meta name="keywords" content="JAVA" />
+
+
+<link rel="canonical" href="https://ahjie.top/java/%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0/">
+
+
+
+  <title>
+阿里云对象存储Oss - sort - pom报错 - docker - Maven安装配置 - java基础 - 阿里云对象存储Oss - JAVA后端开发 |
+Code pit = 码坑的博客 = 请多指教</title>
+<meta name="generator" content="Hexo 5.0.2"></head>
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div id="loading">
+    <div class="cat">
+      <div class="body"></div>
+      <div class="head">
+        <div class="face"></div>
+      </div>
+      <div class="foot">
+        <div class="tummy-end"></div>
+        <div class="bottom"></div>
+        <div class="legs left"></div>
+        <div class="legs right"></div>
+      </div>
+      <div class="paw">
+        <div class="hands left"></div>
+        <div class="hands right"></div>
+      </div>
+    </div>
+  </div>
+  <div id="container">
+    <header id="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="inner">
+        <div id="brand">
+          <div class="pjax">
+          
+  <h1 itemprop="name headline">阿里云对象存储Oss
+  </h1>
+  
+<div class="meta">
+  <span class="item" title="创建时间：2021-05-11 11:19:23">
+    <span class="icon">
+      <i class="ic i-calendar"></i>
+    </span>
+    <span class="text">发表于</span>
+    <time itemprop="dateCreated datePublished" datetime="2021-05-11T11:19:23+08:00">2021-05-11</time>
+  </span>
+  <span class="item" title="本文字数">
+    <span class="icon">
+      <i class="ic i-pen"></i>
+    </span>
+    <span class="text">本文字数</span>
+    <span>4.3k</span>
+    <span class="text">字</span>
+  </span>
+  <span class="item" title="阅读时长">
+    <span class="icon">
+      <i class="ic i-clock"></i>
+    </span>
+    <span class="text">阅读时长</span>
+    <span>4 分钟</span>
+  </span>
+</div>
+
+
+          </div>
+        </div>
+        <nav id="nav">
+  <div class="inner">
+    <div class="toggle">
+      <div class="lines" aria-label="切换导航栏">
+        <span class="line"></span>
+        <span class="line"></span>
+        <span class="line"></span>
+      </div>
+    </div>
+    <ul class="menu">
+      <li class="item title"><a href="/" rel="start">Code pit</a></li>
+    </ul>
+    <ul class="right">
+      <li class="item theme">
+        <i class="ic i-sun"></i>
+      </li>
+      <li class="item search">
+        <i class="ic i-search"></i>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+      </div>
+      <div id="imgs" class="pjax">
+        <ul>
+          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1gipet4bz0yj20zk0m8e81.jpg"></li>
+          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1gicivghyooj20zk0m8dir.jpg"></li>
+          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1gipexj2jgzj20zk0m8b09.jpg"></li>
+          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1gipexoj0moj20zk0m8kgu.jpg"></li>
+          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1gipet8c1a2j20zk0m8kct.jpg"></li>
+          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1gipewf5l51j20zk0m8b29.jpg"></li>
+        </ul>
+      </div>
+    </header>
+    <div id="waves">
+      <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+        <defs>
+          <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+        </defs>
+        <g class="parallax">
+          <use xlink:href="#gentle-wave" x="48" y="0" />
+          <use xlink:href="#gentle-wave" x="48" y="3" />
+          <use xlink:href="#gentle-wave" x="48" y="5" />
+          <use xlink:href="#gentle-wave" x="48" y="7" />
+        </g>
+      </svg>
+    </div>
+    <main id="main">
+      <div class="inner">
+        <div id="content" class="pjax">
+          
+  <div class="article wrap">
+    
+<div class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+<i class="ic i-home"></i>
+<span><a href="/">首页</a></span><i class="ic i-angle-right"></i>
+<span  itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a href="/categories/java/" itemprop="item" rel="index" title="分类于 JAVA后端开发"><span itemprop="name">JAVA后端开发</span></a>
+<meta itemprop="position" content="1" /></span>
+<i class="ic i-angle-right"></i>
+<span  itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a href="/categories/java/%E9%98%BF%E9%87%8C%E4%BA%91%E5%AF%B9%E8%B1%A1%E5%AD%98%E5%82%A8Oss/" itemprop="item" rel="index" title="分类于 阿里云对象存储Oss"><span itemprop="name">阿里云对象存储Oss</span></a>
+<meta itemprop="position" content="2" /></span>
+<i class="ic i-angle-right"></i>
+<span  itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a href="/categories/java/%E9%98%BF%E9%87%8C%E4%BA%91%E5%AF%B9%E8%B1%A1%E5%AD%98%E5%82%A8Oss/java%E5%9F%BA%E7%A1%80/" itemprop="item" rel="index" title="分类于 java基础"><span itemprop="name">java基础</span></a>
+<meta itemprop="position" content="3" /></span>
+<i class="ic i-angle-right"></i>
+<span  itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a href="/categories/java/%E9%98%BF%E9%87%8C%E4%BA%91%E5%AF%B9%E8%B1%A1%E5%AD%98%E5%82%A8Oss/java%E5%9F%BA%E7%A1%80/Maven%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE/" itemprop="item" rel="index" title="分类于 Maven安装配置"><span itemprop="name">Maven安装配置</span></a>
+<meta itemprop="position" content="4" /></span>
+<i class="ic i-angle-right"></i>
+<span  itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a href="/categories/java/%E9%98%BF%E9%87%8C%E4%BA%91%E5%AF%B9%E8%B1%A1%E5%AD%98%E5%82%A8Oss/java%E5%9F%BA%E7%A1%80/Maven%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE/docker/" itemprop="item" rel="index" title="分类于 docker"><span itemprop="name">docker</span></a>
+<meta itemprop="position" content="5" /></span>
+<i class="ic i-angle-right"></i>
+<span  itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a href="/categories/java/%E9%98%BF%E9%87%8C%E4%BA%91%E5%AF%B9%E8%B1%A1%E5%AD%98%E5%82%A8Oss/java%E5%9F%BA%E7%A1%80/Maven%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE/docker/pom%E6%8A%A5%E9%94%99/" itemprop="item" rel="index" title="分类于 pom报错"><span itemprop="name">pom报错</span></a>
+<meta itemprop="position" content="6" /></span>
+<i class="ic i-angle-right"></i>
+<span  class="current" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a href="/categories/java/%E9%98%BF%E9%87%8C%E4%BA%91%E5%AF%B9%E8%B1%A1%E5%AD%98%E5%82%A8Oss/java%E5%9F%BA%E7%A1%80/Maven%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE/docker/pom%E6%8A%A5%E9%94%99/sort/" itemprop="item" rel="index" title="分类于 sort"><span itemprop="name">sort</span></a>
+<meta itemprop="position" content="7" /></span>
+</div>
+
+    <article itemscope itemtype="http://schema.org/Article" class="post block" lang="zh-Hans">
+  <link itemprop="mainEntityOfPage" href="https://ahjie.top/java/%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0/">
+
+  <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="image" content="/images/avatar.jpg">
+    <meta itemprop="name" content="码坑">
+    <meta itemprop="description" content="请多指教, 本人是小白,初次与各位相遇,请多多指教,谢谢 じ萌喵喵ルゞ Ю↘ 珂ル°">
+  </span>
+
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="码坑的博客">
+  </span>
+
+  <div class="body md" itemprop="articleBody">
+    
+
+    <h2 id="阿里云对象存储oss介绍"><a class="markdownIt-Anchor" href="#阿里云对象存储oss介绍"></a> 💍 阿里云对象存储Oss介绍</h2>
+<hr>
+<p>阿里云对象存储服务（Object Storage Service，简称OSS），是阿里云对外提供的海量、安全、低成本、高可靠的云存储服务。您可以通过本文档提供的简单的REST接口，在任何时间、任何地点、任何互联网设备上进行上传和下载数据。基于OSS，您可以搭建出各种多媒体分享网站、网盘、个人和企业数据备份等基于大规模数据的服务。</p>
+<hr>
+<h3 id="使用限制"><a class="markdownIt-Anchor" href="#使用限制"></a> 使用限制</h3>
+<p>您使用的OSS资源和相关功能，都有一定的限制，具体请参见<span class="exturl" data-url="aHR0cHM6Ly9oZWxwLmFsaXl1bi5jb20vZG9jdW1lbnRfZGV0YWlsLzU0NDY0Lmh0bT9zcG09YTJjNGcuMTExODY2MjMuMi43LjM0N2RmMmVlSk5mN3N5I2NvbmNlcHQtcHprLWNyZy10ZGI=">OSS使用限制</span>。</p>
+<h3 id="使用说明"><a class="markdownIt-Anchor" href="#使用说明"></a> 使用说明</h3>
+<p>OSS API参考主要介绍接口的请求语法、相关参数含义以及请求和返回示例。如果要进行快速二次开发，建议您使用SDK开发包。关于SDK的安装和使用，请参见<span class="exturl" data-url="aHR0cHM6Ly9oZWxwLmFsaXl1bi5jb20vZG9jdW1lbnRfZGV0YWlsLzUyODM0Lmh0bT9zcG09YTJjNGcuMTExODY2MjMuMi44LjM0N2RmMmVlRkV2RTBII3QyMjI1OC5odG1s">OSS SDK参考</span>。</p>
+<h3 id="错误码"><a class="markdownIt-Anchor" href="#错误码"></a> 错误码</h3>
+<p>请参见<span class="exturl" data-url="aHR0cHM6Ly9oZWxwLmFsaXl1bi5jb20va25vd2xlZGdlX2RldGFpbC8zMjAwNS5odG1sP3NwbT1hMmM0Zy4xMTE4NjYyMy4yLjExLjM0N2RmMmVlSk5mN3N5">OSS常见错误响应</span>。</p>
+<h2 id="资源术语"><a class="markdownIt-Anchor" href="#资源术语"></a> 💍 资源术语</h2>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>英文</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>存储空间</td>
+<td>Bucket</td>
+<td>存储空间是您用于存储对象（Object）的容器，所有的对象都必须隶属于某个存储空间。</td>
+</tr>
+<tr>
+<td>对象/文件</td>
+<td>Object</td>
+<td>对象是 OSS 存储数据的基本单元，也被称为OSS的文件。对象由元信息（Object Meta）、用户数据（Data）和文件名（Key）组成。对象由存储空间内部唯一的Key来标识。</td>
+</tr>
+<tr>
+<td>地域</td>
+<td>Region</td>
+<td>地域表示 OSS 的数据中心所在物理位置。您可以根据费用、请求来源等综合选择数据存储的地域。详情请查看<span class="exturl" data-url="aHR0cHM6Ly9oZWxwLmFsaXl1bi5jb20vZG9jdW1lbnRfZGV0YWlsLzMxODM3Lmh0bT9zcG09YTJjNGcuMTExODY2MjMuMi4xMi4zNDdkZjJlZUZ6dGlraCNjb25jZXB0LXp0NC1jdnktNWRi">OSS已经开通的Region</span>。</td>
+</tr>
+<tr>
+<td>访问域名</td>
+<td>Endpoint</td>
+<td>Endpoint 表示OSS对外服务的访问域名。OSS以HTTP RESTful API的形式对外提供服务，当访问不同地域的时候，需要不同的域名。通过内网和外网访问同一个地域所需要的域名也是不同的。具体的内容请参见<span class="exturl" data-url="aHR0cHM6Ly9oZWxwLmFsaXl1bi5jb20vZG9jdW1lbnRfZGV0YWlsLzMxODM3Lmh0bT9zcG09YTJjNGcuMTExODY2MjMuMi4xMy4zNDdkZjJlZU5VUXNKMiNjb25jZXB0LXp0NC1jdnktNWRi">各个Region对应的Endpoint</span>。</td>
+</tr>
+<tr>
+<td>访问密钥</td>
+<td>AccessKey</td>
+<td>AccessKey，简称 AK，指的是访问身份验证中用到的AccessKeyId 和AccessKeySecret。OSS通过使用AccessKeyId 和AccessKeySecret对称加密的方法来验证某个请求的发送者身份。AccessKeyId用于标识用户，AccessKeySecret是用户用于加密签名字符串和OSS用来验证签名字符串的密钥，其中AccessKeySecret 必须保密。</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="我们以java实现oss文件上传"><a class="markdownIt-Anchor" href="#我们以java实现oss文件上传"></a> 💍 我们以[Java]实现oss文件上传</h2>
+<h3 id="我们先创建一个包名service"><a class="markdownIt-Anchor" href="#我们先创建一个包名service"></a> 我们先创建一个包名(service)</h3>
+<figure class="highlight java"><figcaption><span>Java</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">package</span> com.ahjie.oss.service;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> org.springframework.web.multipart.MultipartFile;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@ProjectName</span>: ahjie_parent</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@Package</span>: com.ahjie.oss.service</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@ClassName</span>: OssService</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@Author</span>: 码 坑</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@Description</span>: OssService</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@Date</span>: 2021/5/10 16:51</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@Version</span>: 1.0</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">OssService</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//上传头像到oss</span></span><br><span class="line">    <span class="function">String <span class="title">uploadFileAvatar</span><span class="params">(MultipartFile file)</span></span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="在从service包创建一个文件impl"><a class="markdownIt-Anchor" href="#在从service包创建一个文件impl"></a> 在从service包创建一个文件(impl)</h3>
+<figure class="highlight java"><figcaption><span>Java</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">package</span> com.ahjie.oss.service.impl;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> com.aliyun.oss.OSS;</span><br><span class="line"><span class="keyword">import</span> com.aliyun.oss.OSSClientBuilder;</span><br><span class="line"><span class="keyword">import</span> com.ahjie.oss.service.OssService;</span><br><span class="line"><span class="keyword">import</span> com.ahjie.oss.utlis.ConstantPropertiesUtils;</span><br><span class="line"><span class="keyword">import</span> org.springframework.stereotype.Service;</span><br><span class="line"><span class="keyword">import</span> org.springframework.web.multipart.MultipartFile;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.io.InputStream;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@ProjectName</span>: ahjie_parent</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@Package</span>: com.ahjie.oss.service.impl</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@ClassName</span>: OssServiceImpl</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@Author</span>: 码 坑</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@Description</span>: OssServiceImpl</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@Date</span>: 2021/5/10 16:53</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@Version</span>: 1.0</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="meta">@Service</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">OssServiceImpl</span> <span class="keyword">implements</span> <span class="title">OssService</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//上传头像到oss</span></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">uploadFileAvatar</span><span class="params">(MultipartFile file)</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 通过工具类获取值 ConstantPropertiesUtils</span></span><br><span class="line">        String endpoint = ConstantPropertiesUtils.END_POIND;</span><br><span class="line">        <span class="comment">// 阿里云账号AccessKey拥有所有API的访问权限，风险很高。强烈建议您创建并使用RAM用户进行API访问或日常运维，请登录RAM控制台创建RAM用户。</span></span><br><span class="line">        String accessKeyId = ConstantPropertiesUtils.ACCESS_KEY_ID;</span><br><span class="line">        String accessKeySecret = ConstantPropertiesUtils.ACCESS_KEY_SECRET;</span><br><span class="line">        String bucketName = ConstantPropertiesUtils.BUCKET_NAME;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">try</span> &#123;</span><br><span class="line">            <span class="comment">// 创建OSSClient实例。</span></span><br><span class="line">            OSS ossClient = <span class="keyword">new</span> OSSClientBuilder().build(endpoint, accessKeyId, accessKeySecret);</span><br><span class="line"></span><br><span class="line">            <span class="comment">// 获取文件上传的输入流</span></span><br><span class="line">            InputStream inputStream = file.getInputStream();</span><br><span class="line"></span><br><span class="line">            <span class="comment">//获取文件名称</span></span><br><span class="line">            String filename = file.getOriginalFilename();</span><br><span class="line">            <span class="comment">// 调用oss方法实现文件上传</span></span><br><span class="line">            <span class="comment">//第一个参数 Bucket名称</span></span><br><span class="line">            <span class="comment">//第二个参数 上传到oss文件路径和文件名称</span></span><br><span class="line">            <span class="comment">//第三个参数 上传文件输入流</span></span><br><span class="line">            ossClient.putObject(bucketName, filename, inputStream);</span><br><span class="line">            <span class="comment">// 关闭OSSClient。</span></span><br><span class="line">            ossClient.shutdown();</span><br><span class="line"></span><br><span class="line">            <span class="comment">//把上传的之后路径返回</span></span><br><span class="line">            <span class="comment">//需要把文件上传到阿里云oss路径手动拼接出来</span></span><br><span class="line">            String url = <span class="string">&quot;https://&quot;</span> + bucketName + <span class="string">&quot;.&quot;</span> + endpoint + <span class="string">&quot;/&quot;</span> + filename;</span><br><span class="line">            <span class="keyword">return</span> url;</span><br><span class="line">        &#125; <span class="keyword">catch</span> (Exception e) &#123;</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">null</span>;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h2 id="然后再创建一个controller包名"><a class="markdownIt-Anchor" href="#然后再创建一个controller包名"></a> 💍 然后再创建一个(controller)包名</h2>
+<p>在controller下创建一个类即可</p>
+<figure class="highlight java"><figcaption><span>Java</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">package</span> com.ahjie.oss.controller;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> com.atguigu.oss.service.OssService;</span><br><span class="line"><span class="keyword">import</span> com.atguigu.utils.commutils.R;</span><br><span class="line"><span class="keyword">import</span> io.swagger.annotations.Api;</span><br><span class="line"><span class="keyword">import</span> io.swagger.annotations.ApiOperation;</span><br><span class="line"><span class="keyword">import</span> org.springframework.beans.factory.annotation.Autowired;</span><br><span class="line"><span class="keyword">import</span> org.springframework.web.bind.annotation.CrossOrigin;</span><br><span class="line"><span class="keyword">import</span> org.springframework.web.bind.annotation.PostMapping;</span><br><span class="line"><span class="keyword">import</span> org.springframework.web.bind.annotation.RequestMapping;</span><br><span class="line"><span class="keyword">import</span> org.springframework.web.bind.annotation.RestController;</span><br><span class="line"><span class="keyword">import</span> org.springframework.web.multipart.MultipartFile;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@ProjectName</span>: ahjie_parent</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@Package</span>: com.ahjie.oss.controller</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@ClassName</span>: OssController</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@Author</span>: 码 坑</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@Description</span>: OssController</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@Date</span>: 2021/5/10 16:50</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@Version</span>: 1.0</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="meta">@Api(description = &quot;Oss文件上传&quot;)</span></span><br><span class="line"><span class="meta">@RestController</span></span><br><span class="line"><span class="meta">@RequestMapping(&quot;/eduoss/fileoss&quot;)</span></span><br><span class="line"><span class="meta">@CrossOrigin</span> <span class="comment">//防止调用跨越</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">OssController</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Autowired</span></span><br><span class="line">    <span class="keyword">private</span> OssService ossService;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//上传文件方法</span></span><br><span class="line">    <span class="meta">@PostMapping</span></span><br><span class="line">    <span class="meta">@ApiOperation(value = &quot;文件上传&quot;)</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> R <span class="title">uploadoss</span><span class="params">(MultipartFile file)</span> </span>&#123;</span><br><span class="line">        <span class="comment">//获取上传文件 MultipartFile</span></span><br><span class="line">        <span class="comment">//返回上传阿里oss的文件路径</span></span><br><span class="line">        String url = ossService.uploadFileAvatar(file);</span><br><span class="line">        <span class="keyword">return</span> R.ok().data(<span class="string">&quot;url&quot;</span>, url);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h3 id="以下是oss文件上传测试测试结果"><a class="markdownIt-Anchor" href="#以下是oss文件上传测试测试结果"></a> 以下是oss文件上传测试测试结果</h3>
+<p><img data-src="https://upimage.alexhchu.com/2021/05/11/1f457ba6ed97e.png" alt="测试效果图"></p>
+<hr>
+<h3 id="以上内容以java实现阿里云对象存储oss文件上传的实现步骤如果以上内容对你有帮助可以请我喝奶茶哦-后期持续更新更多java相关内容感谢一直以来对码坑博客支持的朋友"><a class="markdownIt-Anchor" href="#以上内容以java实现阿里云对象存储oss文件上传的实现步骤如果以上内容对你有帮助可以请我喝奶茶哦-后期持续更新更多java相关内容感谢一直以来对码坑博客支持的朋友"></a> 以上内容以Java实现阿里云对象存储Oss文件上传的实现步骤,如果以上内容对你有帮助，可以请我(喝奶茶哦!) 后期持续更新更多Java相关内容,感谢一直以来对&lt;码坑&gt;博客支持的朋友!</h3>
+<hr>
+
+      <div class="tags">
+          <a href="/tags/JAVA/" rel="tag"><i class="ic i-tag"></i> JAVA</a>
+      </div>
+  </div>
+
+   <footer>
+
+    <div class="meta">
+  <span class="item">
+    <span class="icon">
+      <i class="ic i-calendar-check"></i>
+    </span>
+    <span class="text">更新于</span>
+    <time title="修改时间：2021-05-11 12:01:14" itemprop="dateModified" datetime="2021-05-11T12:01:14+08:00">2021-05-11</time>
+  </span>
+  <span id="java/文件上传/" class="item leancloud_visitors" data-flag-title="阿里云对象存储Oss" title="阅读次数">
+      <span class="icon">
+        <i class="ic i-eye"></i>
+      </span>
+      <span class="text">阅读次数</span>
+      <span class="leancloud-visitors-count"></span>
+      <span class="text">次</span>
+  </span>
+</div>
+
+      
+<div class="reward">
+  <button><i class="ic i-heartbeat"></i> 赞赏</button>
+  <p>请我喝[茶]~(￣▽￣)~*</p>
+  <div id="qr">
+      
+      <div>
+        <img data-src="/images/wechatpay.png" alt="码坑 微信支付">
+        <p>微信支付</p>
+      </div>
+      
+      <div>
+        <img data-src="/images/alipay.png" alt="码坑 支付宝支付">
+        <p>支付宝支付</p>
+      </div>
+      
+      <div>
+        <img data-src="/images/paypal.png" alt="码坑 QQ支付">
+        <p>QQ支付</p>
+      </div>
+  </div>
+</div>
+
+      
+
+<div id="copyright">
+<ul>
+  <li class="author">
+    <strong>本文作者： </strong>码坑 <i class="ic i-at"><em>@</em></i>码坑的博客
+  </li>
+  <li class="link">
+    <strong>本文链接：</strong>
+    <a href="https://ahjie.top/java/%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0/" title="阿里云对象存储Oss">https://ahjie.top/java/文件上传/</a>
+  </li>
+  <li class="license">
+    <strong>版权声明： </strong>本站所有文章除特别声明外，均采用 <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC9kZWVkLnpo"><i class="ic i-creative-commons"><em>(CC)</em></i>BY-NC-SA</span> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+  </footer>
+
+</article>
+
+  </div>
+  
+
+<div class="nav">
+    <div class="item left">
+      
+
+  <a href="/java/generate/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;tva3.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1giclg5ms2rj20zk0m8u0x.jpg" title="Java中代码生成器">
+  <span class="type">上一篇</span>
+  <span class="category"><i class="ic i-flag"></i> Java中代码生成器</span>
+  <h3>Java中代码生成器</h3>
+  </a>
+
+    </div>
+    <div class="item right">
+    </div>
+</div>
+
+  
+  <div class="wrap" id="comments"></div>
+
+
+        </div>
+        <div id="sidebar">
+          
+
+<div class="inner">
+
+  <div class="panels">
+    <div class="inner">
+      <div class="contents panel pjax" data-title="文章目录">
+          <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%98%BF%E9%87%8C%E4%BA%91%E5%AF%B9%E8%B1%A1%E5%AD%98%E5%82%A8oss%E4%BB%8B%E7%BB%8D"><span class="toc-number">1.</span> <span class="toc-text"> 💍 阿里云对象存储Oss介绍</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8%E9%99%90%E5%88%B6"><span class="toc-number">1.1.</span> <span class="toc-text"> 使用限制</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E"><span class="toc-number">1.2.</span> <span class="toc-text"> 使用说明</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%94%99%E8%AF%AF%E7%A0%81"><span class="toc-number">1.3.</span> <span class="toc-text"> 错误码</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%B5%84%E6%BA%90%E6%9C%AF%E8%AF%AD"><span class="toc-number">2.</span> <span class="toc-text"> 💍 资源术语</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%88%91%E4%BB%AC%E4%BB%A5java%E5%AE%9E%E7%8E%B0oss%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0"><span class="toc-number">3.</span> <span class="toc-text"> 💍 我们以[Java]实现oss文件上传</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%88%91%E4%BB%AC%E5%85%88%E5%88%9B%E5%BB%BA%E4%B8%80%E4%B8%AA%E5%8C%85%E5%90%8Dservice"><span class="toc-number">3.1.</span> <span class="toc-text"> 我们先创建一个包名(service)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9C%A8%E4%BB%8Eservice%E5%8C%85%E5%88%9B%E5%BB%BA%E4%B8%80%E4%B8%AA%E6%96%87%E4%BB%B6impl"><span class="toc-number">3.2.</span> <span class="toc-text"> 在从service包创建一个文件(impl)</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%84%B6%E5%90%8E%E5%86%8D%E5%88%9B%E5%BB%BA%E4%B8%80%E4%B8%AAcontroller%E5%8C%85%E5%90%8D"><span class="toc-number">4.</span> <span class="toc-text"> 💍 然后再创建一个(controller)包名</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BB%A5%E4%B8%8B%E6%98%AFoss%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0%E6%B5%8B%E8%AF%95%E6%B5%8B%E8%AF%95%E7%BB%93%E6%9E%9C"><span class="toc-number">4.1.</span> <span class="toc-text"> 以下是oss文件上传测试测试结果</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BB%A5%E4%B8%8A%E5%86%85%E5%AE%B9%E4%BB%A5java%E5%AE%9E%E7%8E%B0%E9%98%BF%E9%87%8C%E4%BA%91%E5%AF%B9%E8%B1%A1%E5%AD%98%E5%82%A8oss%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0%E7%9A%84%E5%AE%9E%E7%8E%B0%E6%AD%A5%E9%AA%A4%E5%A6%82%E6%9E%9C%E4%BB%A5%E4%B8%8A%E5%86%85%E5%AE%B9%E5%AF%B9%E4%BD%A0%E6%9C%89%E5%B8%AE%E5%8A%A9%E5%8F%AF%E4%BB%A5%E8%AF%B7%E6%88%91%E5%96%9D%E5%A5%B6%E8%8C%B6%E5%93%A6-%E5%90%8E%E6%9C%9F%E6%8C%81%E7%BB%AD%E6%9B%B4%E6%96%B0%E6%9B%B4%E5%A4%9Ajava%E7%9B%B8%E5%85%B3%E5%86%85%E5%AE%B9%E6%84%9F%E8%B0%A2%E4%B8%80%E7%9B%B4%E4%BB%A5%E6%9D%A5%E5%AF%B9%E7%A0%81%E5%9D%91%E5%8D%9A%E5%AE%A2%E6%94%AF%E6%8C%81%E7%9A%84%E6%9C%8B%E5%8F%8B"><span class="toc-number">4.2.</span> <span class="toc-text"> 以上内容以Java实现阿里云对象存储Oss文件上传的实现步骤,如果以上内容对你有帮助，可以请我(喝奶茶哦!) 后期持续更新更多Java相关内容,感谢一直以来对&lt;码坑&gt;博客支持的朋友!</span></a></li></ol></li></ol>
+      </div>
+      <div class="related panel pjax" data-title="系列文章">
+        <ul>
+          <li class="active"><a href="/java/%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0/" rel="bookmark" title="阿里云对象存储Oss">阿里云对象存储Oss</a></li>
+        </ul>
+      </div>
+      <div class="overview panel" data-title="站点概览">
+        <div class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <img class="image" itemprop="image" alt="码坑"
+      data-src="/images/avatar.jpg">
+  <p class="name" itemprop="name">码坑</p>
+  <div class="description" itemprop="description">本人是小白,初次与各位相遇,请多多指教,谢谢 じ萌喵喵ルゞ Ю↘ 珂ル°</div>
+</div>
+
+<nav class="state">
+    <div class="item posts">
+      <a href="/archives/">
+        <span class="count">16</span>
+        <span class="name">文章</span>
+      </a>
+    </div>
+    <div class="item categories">
+      <a href="/categories/">
+        <span class="count">23</span>
+        <span class="name">分类</span>
+      </a>
+    </div>
+    <div class="item tags">
+      <a href="/tags/">
+        <span class="count">10</span>
+        <span class="name">标签</span>
+      </a>
+    </div>
+</nav>
+
+<div class="social">
+      <span class="exturl item github" data-url="aHR0cHM6Ly9naXRodWIuY29tL3lvdXJuYW1l" title="https:&#x2F;&#x2F;github.com&#x2F;yourname"><i class="ic i-github"></i></span>
+      <span class="exturl item twitter" data-url="aHR0cHM6Ly90d2l0dGVyLmNvbS95b3VybmFtZQ==" title="https:&#x2F;&#x2F;twitter.com&#x2F;yourname"><i class="ic i-twitter"></i></span>
+      <span class="exturl item zhihu" data-url="aHR0cHM6Ly93d3cuemhpaHUuY29tL3Blb3BsZS95b3VybmFtZQ==" title="https:&#x2F;&#x2F;www.zhihu.com&#x2F;people&#x2F;yourname"><i class="ic i-zhihu"></i></span>
+      <span class="exturl item music" data-url="aHR0cHM6Ly9tdXNpYy4xNjMuY29tLyMvdXNlci9ob21lP2lkPXlvdXJpZA==" title="https:&#x2F;&#x2F;music.163.com&#x2F;#&#x2F;user&#x2F;home?id&#x3D;yourid"><i class="ic i-cloud-music"></i></span>
+      <span class="exturl item weibo" data-url="aHR0cHM6Ly93ZWliby5jb20veW91cm5hbWU=" title="https:&#x2F;&#x2F;weibo.com&#x2F;yourname"><i class="ic i-weibo"></i></span>
+      <span class="exturl item about" data-url="aHR0cHM6Ly9hYm91dC5tZS95b3VybmFtZQ==" title="https:&#x2F;&#x2F;about.me&#x2F;yourname"><i class="ic i-address-card"></i></span>
+</div>
+
+<ul class="menu">
+  
+    
+  <li class="item">
+    <a href="/" rel="section"><i class="ic i-home"></i>首页</a>
+  </li>
+
+        
+  <li class="item dropdown">
+    <a href="javascript:void(0);"><i class="ic i-feather"></i>文章</a>
+    <ul class="submenu">
+
+        
+  <li class="item">
+    <a href="/archives/" rel="section"><i class="ic i-list-alt"></i>归档</a>
+  </li>
+
+        
+  <li class="item">
+    <a href="/categories/" rel="section"><i class="ic i-th"></i>分类</a>
+  </li>
+
+        
+  <li class="item">
+    <a href="/tags/" rel="section"><i class="ic i-tags"></i>标签</a>
+  </li>
+
+  </ul>
+    
+  <li class="item">
+    <a href="/about/" rel="section"><i class="ic i-user"></i>关于</a>
+  </li>
+
+    
+  <li class="item">
+    <a href="/friends/" rel="section"><i class="ic i-heart"></i>友链</a>
+  </li>
+
+    
+  <li class="item">
+    <a href="/Guoman/" rel="section"><i class="ic i-magic"></i>影视</a>
+  </li>
+
+
+</ul>
+
+      </div>
+    </div>
+  </div>
+
+  <ul id="quick">
+    <li class="prev pjax">
+    </li>
+    <li class="up"><i class="ic i-arrow-up"></i></li>
+    <li class="down"><i class="ic i-arrow-down"></i></li>
+    <li class="next pjax">
+    </li>
+    <li class="percent"></li>
+  </ul>
+</div>
+
+
+        </div>
+        <div class="dimmer"></div>
+      </div>
+    </main>
+    <footer id="footer">
+      <div class="inner">
+        <div class="widgets">
+          
+<div class="rpost pjax">
+  <h2>随机文章</h2>
+  <ul>
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/Other-extensions/" title="分类于 其他扩展">其他扩展</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/Other-extensions/hexo%E5%88%86%E7%B1%BBand%E6%A0%87%E7%AD%BE404/" title="分类于 hexo分类and标签404">hexo分类and标签404</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/Other-extensions/hexo%E5%88%86%E7%B1%BBand%E6%A0%87%E7%AD%BE404/%E5%9C%A8%E7%BA%BF%E6%89%BF%E6%8E%A5%E5%90%84%E7%B1%BB%E5%BC%80%E5%8F%91%E9%A1%B9%E7%9B%AE/" title="分类于 在线承接各类开发项目">在线承接各类开发项目</a>
+</div>
+
+    <span><a href="/Other-extensions/extension/" title="在线承接各类开发项目">在线承接各类开发项目</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/web/" title="分类于 web前端">web前端</a>
+</div>
+
+    <span><a href="/web/%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0/" title="文件上传">文件上传</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/web/" title="分类于 web前端">web前端</a>
+</div>
+
+    <span><a href="/web/%E5%85%89%E6%A0%87%E5%8A%A8%E7%94%BB/" title="利用html+javaSrcipt+css3实现光标动画">利用html+javaSrcipt+css3实现光标动画</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/web/" title="分类于 web前端">web前端</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/web/react%E5%92%8Cvue/" title="分类于 react和vue">react和vue</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/web/react%E5%92%8Cvue/%E5%BD%A9%E8%89%B2%E6%96%87%E5%AD%97/" title="分类于 彩色文字">彩色文字</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/web/react%E5%92%8Cvue/%E5%BD%A9%E8%89%B2%E6%96%87%E5%AD%97/%E5%85%89%E6%A0%87%E5%8A%A8%E7%94%BB/" title="分类于 光标动画">光标动画</a>
+</div>
+
+    <span><a href="/web/react%E5%92%8Cvue/" title="React.js与Vue.js流行框架的比较">React.js与Vue.js流行框架的比较</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/php/" title="分类于 PHP后端开发">PHP后端开发</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/php/thinkphp5-0%E5%AE%9E%E7%8E%B0%E6%8A%95%E7%A5%A8/" title="分类于 thinkphp5.0实现投票">thinkphp5.0实现投票</a>
+</div>
+
+    <span><a href="/php/PHP_vote/" title="thinkphp5.0实现投票">thinkphp5.0实现投票</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/java/" title="分类于 JAVA后端开发">JAVA后端开发</a>
+</div>
+
+    <span><a href="/java/pom%E6%8A%A5%E9%94%99/" title="pom.xml的标签报错 Element ‘project‘ cannot have character [children], because the type‘s content**">pom.xml的标签报错 Element ‘project‘ cannot have character [children], because the type‘s content**</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/web/" title="分类于 web前端">web前端</a>
+</div>
+
+    <span><a href="/web/%E5%BD%A9%E8%89%B2%E6%96%87%E5%AD%97/" title="js文字闪动效果">js文字闪动效果</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/Other-extensions/" title="分类于 其他扩展">其他扩展</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/Other-extensions/hexo%E5%88%86%E7%B1%BBand%E6%A0%87%E7%AD%BE404/" title="分类于 hexo分类and标签404">hexo分类and标签404</a>
+</div>
+
+    <span><a href="/Other-extensions/hexo/" title="hexo分类and标签404">hexo分类and标签404</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/java/" title="分类于 JAVA后端开发">JAVA后端开发</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/java/java%E5%9F%BA%E7%A1%80/" title="分类于 java基础">java基础</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/java/java%E5%9F%BA%E7%A1%80/Maven%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE/" title="分类于 Maven安装配置">Maven安装配置</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/java/java%E5%9F%BA%E7%A1%80/Maven%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE/docker/" title="分类于 docker">docker</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/java/java%E5%9F%BA%E7%A1%80/Maven%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE/docker/pom%E6%8A%A5%E9%94%99/" title="分类于 pom报错">pom报错</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/java/java%E5%9F%BA%E7%A1%80/Maven%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE/docker/pom%E6%8A%A5%E9%94%99/sort/" title="分类于 sort">sort</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/java/java%E5%9F%BA%E7%A1%80/Maven%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE/docker/pom%E6%8A%A5%E9%94%99/sort/Java%E4%B8%AD%E4%BB%A3%E7%A0%81%E7%94%9F%E6%88%90%E5%99%A8/" title="分类于 Java中代码生成器">Java中代码生成器</a>
+</div>
+
+    <span><a href="/java/generate/" title="Java中代码生成器">Java中代码生成器</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/java/" title="分类于 JAVA后端开发">JAVA后端开发</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/java/java%E5%9F%BA%E7%A1%80/" title="分类于 java基础">java基础</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/java/java%E5%9F%BA%E7%A1%80/Maven%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE/" title="分类于 Maven安装配置">Maven安装配置</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/java/java%E5%9F%BA%E7%A1%80/Maven%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE/docker/" title="分类于 docker">docker</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/java/java%E5%9F%BA%E7%A1%80/Maven%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE/docker/pom%E6%8A%A5%E9%94%99/" title="分类于 pom报错">pom报错</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/java/java%E5%9F%BA%E7%A1%80/Maven%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE/docker/pom%E6%8A%A5%E9%94%99/sort/" title="分类于 sort">sort</a>
+</div>
+
+    <span><a href="/java/sort/" title="Java中的数组排序">Java中的数组排序</a></span>
+  </li>
+
+  </ul>
+</div>
+<div>
+  <h2>最新评论</h2>
+  <ul class="leancloud-recent-comment"></ul>
+</div>
+
+        </div>
+        <div class="status">
+  <div class="copyright">
+    
+    &copy; 2020 – 
+    <span itemprop="copyrightYear">2021</span>
+    <span class="with-love">
+      <i class="ic i-sakura rotate"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">码坑 @ Code pit</span>
+  </div>
+  <div class="count">
+    <span class="post-meta-item-icon">
+      <i class="ic i-chart-area"></i>
+    </span>
+    <span title="站点总字数">42k 字</span>
+
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="ic i-coffee"></i>
+    </span>
+    <span title="站点阅读时长">38 分钟</span>
+  </div>
+
+
+  <script type="text/javascript">document.write(unescape("%3Cspan id='cnzz_stat_icon_1279352119'%3E%3C/span%3E%3Cscript src='https://s4.cnzz.com/z_stat.php%3Fid%3D1279352119%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));</script>
+
+<span id="momk"></span><span id="momk" style="color: #ff0000;"></span>
+<script type="text/javascript">
+function NewDate(str) {
+str = str.split('-');
+var date = new Date();
+date.setUTCFullYear(str[0], str[1] - 1, str[2]);
+date.setUTCHours(0, 0, 0, 0);
+return date;
+}
+function momxc() {
+var birthDay =NewDate("2020-8-18");
+var today=new Date();
+var timeold=today.getTime()-birthDay.getTime();
+var sectimeold=timeold/1000
+var secondsold=Math.floor(sectimeold);
+var msPerDay=24*60*60*1000; var e_daysold=timeold/msPerDay;
+var daysold=Math.floor(e_daysold);
+var e_hrsold=(daysold-e_daysold)*-24;
+var hrsold=Math.floor(e_hrsold);
+var e_minsold=(hrsold-e_hrsold)*-60;
+var minsold=Math.floor((hrsold-e_hrsold)*-60); var seconds=Math.floor((minsold-e_minsold)*-60).toString();
+document.getElementById("momk").innerHTML = "本站已安全运行"+daysold+"天"+hrsold+"小时"+minsold+"分"+seconds+"秒";
+setTimeout(momxc, 1000);
+}momxc();
+</script>  <style>
+#momk{animation:change 10s infinite;font-weight:800; }
+@keyframes change{0%{color:#5cb85c;}25%{color:#556bd8;}50%{color:#e40707;}75%{color:#66e616;}100% {color:#67bd31;}}
+</style>
+ <br>
+ <!-- 整站统计 -->
+ <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+ <span id="busuanzi_container_site_pv">本站总访问量<span id="busuanzi_value_site_pv"></span>次</span>
+ <span class="post-meta-divider">|</span>
+ <span id="busuanzi_container_site_uv">本站访客数<span id="busuanzi_value_site_uv"</span>人</span>
+</div>
+
+      </div>
+    </footer>
+  </div>
+<script data-config type="text/javascript">
+  var LOCAL = {
+    path: 'java/文件上传/',
+    favicon: {
+      show: "码坑的博客",
+      hide: "码坑的博客"
+    },
+    search : {
+      placeholder: "文章搜索",
+      empty: "关于 「 ${query} 」，什么也没搜到",
+      stats: "${time} ms 内找到 ${hits} 条结果"
+    },
+    valine: true,fancybox: true,copyright: '复制成功，转载请遵守 <i class="ic i-creative-commons"></i>BY-NC-SA 协议。',
+    ignores : [
+      function(uri) {
+        return uri.includes('#');
+      },
+      function(uri) {
+        return new RegExp(LOCAL.path+"$").test(uri);
+      }
+    ]
+  };
+</script>
+
+<script src="https://cdn.polyfill.io/v2/polyfill.js"></script>
+
+<script src="//cdn.jsdelivr.net/combine/npm/pace-js@1.0.2/pace.min.js,npm/pjax@0.2.8/pjax.min.js,npm/whatwg-fetch@3.4.0/dist/fetch.umd.min.js,npm/animejs@3.2.0/lib/anime.min.js,npm/algoliasearch@4/dist/algoliasearch-lite.umd.js,npm/instantsearch.js@4/dist/instantsearch.production.min.js,npm/lozad@1/dist/lozad.min.js,npm/quicklink@2/dist/quicklink.umd.js"></script>
+
+<script src="/js/app.js?v=0.2.3"></script>
+
+
+  <script data-pjax>
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?iASNGexQaR5ypf8WgXK9KWr9-9Nh9j0Va";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
+ <script src='https://api.vvhan.com/api/snow'></script>  
+</html>
