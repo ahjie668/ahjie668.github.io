@@ -738,35 +738,6 @@ Vue.js 是一个开源 JavaScript 框架，能够开发单页面应用程序。�
       </tags>
   </entry>
   <entry>
-    <title>文件上传</title>
-    <url>/web/%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0/</url>
-    <content><![CDATA[<h2 id="文件上传"><a class="markdownIt-Anchor" href="#文件上传">#</a> 💍 <span class="rainbow">文件上传</span></h2>
-<ul>
-<li>我们这里实现的文件上传的功能不是通过 Vue—teact 现在主流的框架实现的，这里的话我们是通过 Bootstrap 框架实现的，当然实现文件</li>
-<li>上传这个功能呢，可以使用多种办法实现，这里呢我就用 Bootstrap 来实现文件上传的功能。</li>
-<li>此上传功能有 / 删除 / 预览 / 左右排序 / 功能这个功能是一个可以满足你在项目中的需求。</li>
-</ul>
-<h2 id="效果如如下"><a class="markdownIt-Anchor" href="#效果如如下">#</a> 💍 <span class="rainbow">效果如如下:</span></h2>
-<p><img data-src="https://upimage.alexhchu.com/2020/10/27/ef2f182c0753e.png" alt="image.png"></p>
-<ul>
-<li>图片大小可以自定义上传</li>
-<li>图片一次可以上传多少张，自定义即可.</li>
-</ul>
-<figure class="highlight html"><figcaption><span>html</span></figcaption><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"><span class="meta">&lt;!DOCTYPE <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;utf-8&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>cupload例子<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">h3</span> <span class="attr">align</span>=<span class="string">&quot;center&quot;</span>&gt;</span>初始化加载图片(5张, 已有三张)<span class="tag">&lt;/<span class="name">h3</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;cupload-1&quot;</span> <span class="attr">align</span>=<span class="string">&quot;center&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;static/js/cupload.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">&quot;text/javascript&quot;</span>&gt;</span></span><br><span class="line"><span class="javascript">        <span class="keyword">var</span> cupload6 = <span class="keyword">new</span> Cupload (&#123;</span></span><br><span class="line"><span class="javascript">            ele : <span class="string">&#x27;#cupload-1&#x27;</span>,</span></span><br><span class="line">            num  : 5,</span><br><span class="line"><span class="javascript">            data : [<span class="string">&quot;./static/image/1.jpg&quot;</span>, <span class="string">&quot;./static/image/2.png&quot;</span>, <span class="string">&quot;./static/image/3.jpg&quot;</span>],</span></span><br><span class="line">    );</span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<h2 id="总结"><a class="markdownIt-Anchor" href="#总结">#</a> 💍 <span class="rainbow">总结</span></h2>
-<h3 id="如果有伙伴需要js代码的请下方留言"><a class="markdownIt-Anchor" href="#如果有伙伴需要js代码的请下方留言">#</a> <span class="rainbow">如果有伙伴需要 js 代码的请下方留言！</span></h3>
-<p>以上就是本文关于前端中的文件上传代码详解的全部内容，希望对大家有所帮助。感兴趣的朋友可以继续参阅本站其他前端相关专题，如有不足之处，欢迎留言指出。感谢朋友们对本站的支持！</p>
-]]></content>
-      <categories>
-        <category>web前端</category>
-      </categories>
-      <tags>
-        <tag>html</tag>
-        <tag>JavaScript</tag>
-        <tag>css</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>js文字闪动效果</title>
     <url>/web/%E5%BD%A9%E8%89%B2%E6%96%87%E5%AD%97/</url>
     <content><![CDATA[<p>利用 javaSrcipt (js) 实现对文字的如跑马灯一样的效果。</p>
@@ -800,6 +771,35 @@ Dcolor();
       </categories>
       <tags>
         <tag>JavaScript</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>文件上传</title>
+    <url>/web/%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0/</url>
+    <content><![CDATA[<h2 id="文件上传"><a class="markdownIt-Anchor" href="#文件上传">#</a> 💍 <span class="rainbow">文件上传</span></h2>
+<ul>
+<li>我们这里实现的文件上传的功能不是通过 Vue—teact 现在主流的框架实现的，这里的话我们是通过 Bootstrap 框架实现的，当然实现文件</li>
+<li>上传这个功能呢，可以使用多种办法实现，这里呢我就用 Bootstrap 来实现文件上传的功能。</li>
+<li>此上传功能有 / 删除 / 预览 / 左右排序 / 功能这个功能是一个可以满足你在项目中的需求。</li>
+</ul>
+<h2 id="效果如如下"><a class="markdownIt-Anchor" href="#效果如如下">#</a> 💍 <span class="rainbow">效果如如下:</span></h2>
+<p><img data-src="https://upimage.alexhchu.com/2020/10/27/ef2f182c0753e.png" alt="image.png"></p>
+<ul>
+<li>图片大小可以自定义上传</li>
+<li>图片一次可以上传多少张，自定义即可.</li>
+</ul>
+<figure class="highlight html"><figcaption><span>html</span></figcaption><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"><span class="meta">&lt;!DOCTYPE <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;utf-8&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>cupload例子<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">h3</span> <span class="attr">align</span>=<span class="string">&quot;center&quot;</span>&gt;</span>初始化加载图片(5张, 已有三张)<span class="tag">&lt;/<span class="name">h3</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;cupload-1&quot;</span> <span class="attr">align</span>=<span class="string">&quot;center&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;static/js/cupload.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">&quot;text/javascript&quot;</span>&gt;</span></span><br><span class="line"><span class="javascript">        <span class="keyword">var</span> cupload6 = <span class="keyword">new</span> Cupload (&#123;</span></span><br><span class="line"><span class="javascript">            ele : <span class="string">&#x27;#cupload-1&#x27;</span>,</span></span><br><span class="line">            num  : 5,</span><br><span class="line"><span class="javascript">            data : [<span class="string">&quot;./static/image/1.jpg&quot;</span>, <span class="string">&quot;./static/image/2.png&quot;</span>, <span class="string">&quot;./static/image/3.jpg&quot;</span>],</span></span><br><span class="line">    );</span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h2 id="总结"><a class="markdownIt-Anchor" href="#总结">#</a> 💍 <span class="rainbow">总结</span></h2>
+<h3 id="如果有伙伴需要js代码的请下方留言"><a class="markdownIt-Anchor" href="#如果有伙伴需要js代码的请下方留言">#</a> <span class="rainbow">如果有伙伴需要 js 代码的请下方留言！</span></h3>
+<p>以上就是本文关于前端中的文件上传代码详解的全部内容，希望对大家有所帮助。感兴趣的朋友可以继续参阅本站其他前端相关专题，如有不足之处，欢迎留言指出。感谢朋友们对本站的支持！</p>
+]]></content>
+      <categories>
+        <category>web前端</category>
+      </categories>
+      <tags>
+        <tag>html</tag>
+        <tag>JavaScript</tag>
+        <tag>css</tag>
       </tags>
   </entry>
   <entry>
