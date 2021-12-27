@@ -1,0 +1,63 @@
+<?xml version="1.0"?>
+<rss version="2.0">
+    <channel>
+        <title>码坑的博客 • Posts by &#34;hexo&#34; tag</title>
+        <link>https://ahjie.top</link>
+        <description>本人是小白,初次与各位相遇,请多多指教,谢谢 じ萌喵喵ルゞ Ю↘ 珂ル°</description>
+        <language>zh-Hans</language>
+        <pubDate>Sat, 27 Mar 2021 17:37:01 +0800</pubDate>
+        <lastBuildDate>Sat, 27 Mar 2021 17:37:01 +0800</lastBuildDate>
+        <category>其他</category>
+        <category>Hexo</category>
+        <category>JAVA</category>
+        <category>Maven</category>
+        <category>php</category>
+        <category>html</category>
+        <category>JavaScript</category>
+        <category>css</category>
+        <category>React</category>
+        <category>Vue</category>
+        <category>Docker</category>
+        <item>
+            <guid isPermalink="true">https://ahjie.top/Other-extensions/extension/</guid>
+            <title>在线承接各类开发项目</title>
+            <link>https://ahjie.top/Other-extensions/extension/</link>
+            <category>Hexo</category>
+            <pubDate>Sat, 27 Mar 2021 17:37:01 +0800</pubDate>
+            <description><![CDATA[ &lt;h2 id=&#34;阿杰从今天开始承接互联网各类开发项目&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#阿杰从今天开始承接互联网各类开发项目&#34;&gt;#&lt;/a&gt; 阿杰从今天开始承接互联网各类开发项目&lt;/h2&gt;
+&lt;p&gt;现如今的社会，互联网无处不在我们的身边&lt;/p&gt;
+&lt;p&gt;生活中我们都会使用微信或支付宝等软件 APP, 但是再这些 APP 上面有一个方便快捷的程序叫 “微信小程序” &amp;amp;&amp;amp; “支付宝小程序”&lt;/p&gt;
+&lt;p&gt;很多电商平台也是有自己小程序，我们就不用去下载 APP 或者打开浏览器输入网址进入某个网站&lt;/p&gt;
+&lt;p&gt;如果你也是准备入驻互联网，阿杰在此期待你的到来.&lt;/p&gt;
+&lt;p&gt;如果你想拥有自己网站。后台管理系统.APP. 小程序&lt;/p&gt;
+&lt;h1 id=&#34;阿杰承接项目如下&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#阿杰承接项目如下&#34;&gt;#&lt;/a&gt; 阿杰承接项目如下&lt;/h1&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://upimage.alexhchu.com/2021/03/27/6feb3e36566c5.jpg&#34; alt=&#34;码坑&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;心动不如行动&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#心动不如行动&#34;&gt;#&lt;/a&gt; &lt;span class=&#34;rainbow&#34;&gt;心动不如行动:&lt;/span&gt;&lt;/h3&gt;
+&lt;h3 id=&#34;期待你的加入&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#期待你的加入&#34;&gt;#&lt;/a&gt; 期待你的加入！&lt;/h3&gt;
+ ]]></description>
+        </item>
+        <item>
+            <guid isPermalink="true">https://ahjie.top/Other-extensions/hexo/</guid>
+            <title>hexo分类and标签404</title>
+            <link>https://ahjie.top/Other-extensions/hexo/</link>
+            <category>Hexo</category>
+            <pubDate>Thu, 20 Aug 2020 16:29:52 +0800</pubDate>
+            <description><![CDATA[ &lt;h2 id=&#34;404分类and标签错误处理&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#404分类and标签错误处理&#34;&gt;#&lt;/a&gt; 💍 404 分类 and 标签错误处理&lt;/h2&gt;
+&lt;p&gt;突然发现博客中，部分分类打不开，点击出现 404，在标签中查看，也是小部分标签点击 404，但是在所有文章中该分类下的文章都能打开，后来发现这些 404 的标签或分类名都是后来修改过的，原先的名称开头是大写名称&lt;/p&gt;
+&lt;p&gt;将大写字母改成小写，hexo 部署正确，但是博客上还是不正确出现 404&lt;/p&gt;
+&lt;p&gt;网上查了许多资料，才发现，git 中设置了大小写不敏感&lt;/p&gt;
+&lt;a id=&#34;more&#34;&gt;&lt;/a&gt;
+&lt;h2 id=&#34;解决方法如下&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#解决方法如下&#34;&gt;#&lt;/a&gt; 💍 解决方法如下&lt;/h2&gt;
+&lt;p&gt;修改 git 设置不忽略大小写&lt;/p&gt;
+&lt;p&gt;进入博客文件夹，进入 git 目录：.deploy_git ，修改 .git 文件中的配置文件 config，将 ignorecase=true 改为 ignorecase=false&lt;/p&gt;
+&lt;figure class=&#34;highlight yaml&#34;&gt;&lt;figcaption&gt;&lt;span&gt;Yaml&lt;/span&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;string&#34;&gt;vim&lt;/span&gt; &lt;span class=&#34;string&#34;&gt;.&lt;/span&gt; &lt;span class=&#34;string&#34;&gt;deploy_git/.git/config&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;string&#34;&gt;ignorecase&lt;/span&gt; &lt;span class=&#34;string&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;literal&#34;&gt;false&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;如果还没有解决，清空部署到 github 上的文件，重新发布：&lt;/p&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption&gt;&lt;span&gt;Bash&lt;/span&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;built_in&#34;&gt;cd&lt;/span&gt; .deploy_git&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;git rm -rf *&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;git commit -m &lt;span class=&#34;string&#34;&gt;&amp;#x27;clean all file&amp;#x27;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;git push&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;进入博客文件夹，用 hexo 重新生成部署&lt;/p&gt;
+&lt;figure class=&#34;highlight plain&#34;&gt;&lt;figcaption&gt;&lt;span&gt;Hexo&lt;/span&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;hexo clean&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;hexo g &lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;hexo d or hexo g -d&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;&lt;font style=&#34;color: red;&#34;&gt;这些问题都是自己开始搭建博客的时候出现的一些问题，希望能够帮助到各位，&lt;br&gt;
+如果那里错误，请指点出来，大家一起讨论。&lt;/font&gt;&lt;/p&gt;
+ ]]></description>
+        </item>
+    </channel>
+</rss>

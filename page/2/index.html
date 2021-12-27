@@ -1,0 +1,997 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#FFF">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+<link rel="icon" type="image/ico" sizes="32x32" href="/images/favicon.ico">
+  <meta http-equiv="Cache-Control" content="no-transform">
+  <meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+<link rel="alternate" type="application/rss+xml" title="码坑的博客" href="https://ahjie.top/rss.xml" />
+<link rel="alternate" type="application/atom+xml" title="码坑的博客" href="https://ahjie.top/atom.xml" />
+<link rel="alternate" type="application/json" title="码坑的博客" href="https://ahjie.top/feed.json" />
+
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Mulish:300,300italic,400,400italic,700,700italic%7CFredericka%20the%20Great:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20JP:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20SC:300,300italic,400,400italic,700,700italic%7CInconsolata:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="/css/app.css?v=0.2.3">
+
+  
+
+<link rel="canonical" href="https://ahjie.top/page/2/">
+
+
+
+  <title>Code pit = 码坑的博客 = 请多指教</title>
+<meta name="generator" content="Hexo 5.0.2"></head>
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div id="loading">
+    <div class="cat">
+      <div class="body"></div>
+      <div class="head">
+        <div class="face"></div>
+      </div>
+      <div class="foot">
+        <div class="tummy-end"></div>
+        <div class="bottom"></div>
+        <div class="legs left"></div>
+        <div class="legs right"></div>
+      </div>
+      <div class="paw">
+        <div class="hands left"></div>
+        <div class="hands right"></div>
+      </div>
+    </div>
+  </div>
+  <div id="container">
+    <header id="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="inner">
+        <div id="brand">
+          <div class="pjax">
+          
+            <a href="/" class="logo" rel="start"><p class="artboard">Code pit</p>
+              <h1 itemprop="name headline" class="title">码坑的博客</h1>
+            </a>
+            <p class="meta" itemprop="description">= 请多指教 =</p>
+          
+          </div>
+        </div>
+        <nav id="nav">
+  <div class="inner">
+    <div class="toggle">
+      <div class="lines" aria-label="切换导航栏">
+        <span class="line"></span>
+        <span class="line"></span>
+        <span class="line"></span>
+      </div>
+    </div>
+    <ul class="menu">
+      <li class="item title"><a href="/" rel="start">Code pit</a></li>
+    </ul>
+    <ul class="right">
+      <li class="item theme">
+        <i class="ic i-sun"></i>
+      </li>
+      <li class="item search">
+        <i class="ic i-search"></i>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+      </div>
+      <div id="imgs" class="pjax">
+        <ul>
+          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1giclx29mstj20zk0m8hdt.jpg"></li>
+          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1gicis3attqj20zk0m8k7l.jpg"></li>
+          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1gipetv6p75j20zk0m8x6p.jpg"></li>
+          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1gipeubcbajj20zk0m8h1h.jpg"></li>
+          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1gipew28b65j20zk0m8hdt.jpg"></li>
+          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1gicitcxhpij20zk0m8hdt.jpg"></li>
+        </ul>
+      </div>
+    </header>
+    <div id="waves">
+      <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+        <defs>
+          <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+        </defs>
+        <g class="parallax">
+          <use xlink:href="#gentle-wave" x="48" y="0" />
+          <use xlink:href="#gentle-wave" x="48" y="3" />
+          <use xlink:href="#gentle-wave" x="48" y="5" />
+          <use xlink:href="#gentle-wave" x="48" y="7" />
+        </g>
+      </svg>
+    </div>
+    <main id="main">
+      <div class="inner">
+        <div id="content" class="pjax">
+          
+  <div class="index wrap">
+    <div class="segments posts">
+        
+<article class="item">
+  <div class="cover">
+    <a href="/java/sort/" itemprop="url" title="Java中的数组排序"><img data-src="https://tva3.sinaimg.cn/mw690/6833939bly1gipev1x5e4j20zk0m8b29.jpg"></a>
+  </div>
+  <div class="info">
+    
+<div class="meta">
+  <span class="item" title="创建时间：2020-10-15 20:08:10">
+    <span class="icon">
+      <i class="ic i-calendar"></i>
+    </span>
+    <time itemprop="dateCreated datePublished" datetime="2020-10-15T20:08:10+08:00">2020-10-15</time>
+  </span>
+  <span class="item" title="本文字数">
+    <span class="icon">
+      <i class="ic i-pen"></i>
+    </span>
+    <span>2.5k</span>
+    <span class="text">字</span>
+  </span>
+  <span class="item" title="阅读时长">
+    <span class="icon">
+      <i class="ic i-clock"></i>
+    </span>
+    <span>2 分钟</span>
+  </span>
+</div>
+
+    <h3><a href="/java/sort/" itemprop="url" title="Java中的数组排序">Java中的数组排序</a></h3>
+    <div class="excerpt">
+        # 💍 冒泡排序
+
+基本思想:
+冒泡排序法：顾名思义，从下到上，两两进行比较，越小的越往上，从而形成由小到大的排序。冒泡排序的基本思想是对比相邻的原始值，如果满足条件就交换元素值，把较小的元素移到数组前面，把大的元素移动到数组的后面，这样较小的元素就像气泡从底部上升到顶部。
+
+JAVA1234567891011121314151617181920212223242526272829303132class Demo &amp;#123; public static void main(String[] args) &amp;#123; int[] arr1 = &amp;#123;3, 22,...
+    </div>
+    <div class="meta footer">
+      <span>
+        <a href="/categories/java/java%E5%9F%BA%E7%A1%80/Maven%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE/docker/pom%E6%8A%A5%E9%94%99/sort/" itemprop="url" title="sort"><i class="ic i-flag"></i>sort</a>
+      </span>
+    </div>
+    <a href="/java/sort/" itemprop="url" title="Java中的数组排序" class="btn">more...</a>
+  </div>
+</article>
+
+        
+<article class="item">
+  <div class="cover">
+    <a href="/java/docker/" itemprop="url" title="Docker安装部署"><img data-src="https://api.dongmanxingkong.com/suijitupian/acg/1080p/index.php"></a>
+  </div>
+  <div class="info">
+    
+<div class="meta">
+  <span class="item" title="创建时间：2020-08-27 23:39:38">
+    <span class="icon">
+      <i class="ic i-calendar"></i>
+    </span>
+    <time itemprop="dateCreated datePublished" datetime="2020-08-27T23:39:38+08:00">2020-08-27</time>
+  </span>
+  <span class="item" title="本文字数">
+    <span class="icon">
+      <i class="ic i-pen"></i>
+    </span>
+    <span>6.4k</span>
+    <span class="text">字</span>
+  </span>
+  <span class="item" title="阅读时长">
+    <span class="icon">
+      <i class="ic i-clock"></i>
+    </span>
+    <span>6 分钟</span>
+  </span>
+</div>
+
+    <h3><a href="/java/docker/" itemprop="url" title="Docker安装部署">Docker安装部署</a></h3>
+    <div class="excerpt">
+        # 💍 前言
+
+从 2017 年 3 月开始 docker 在原来的基础上分为两个分支版本: Docker CE 和 Docker EE。
+
+Docker CE 即社区免费版，Docker EE 即企业版，强调安全，但需付费使用。
+
+Docker 官方建议要 CentOS7.0 及以上系统版本，本文介绍 Docker CE 在 CentOS 下的安装使用。
+
+# 💍 1. 前提条件
+# 💍 1.1. 内核
+Docker 运行对内核要求比较高，因此一般建议直接在 Ubuntu 这样的平台运行。但作为一个容器标准，Docker 也是支持其他如 CentOS, Mac OS X,...
+    </div>
+    <div class="meta footer">
+      <span>
+        <a href="/categories/java/" itemprop="url" title="JAVA后端开发"><i class="ic i-flag"></i>JAVA后端开发</a>
+      </span>
+    </div>
+    <a href="/java/docker/" itemprop="url" title="Docker安装部署" class="btn">more...</a>
+  </div>
+</article>
+
+        
+<article class="item">
+  <div class="cover">
+    <a href="/java/Maven%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE/" itemprop="url" title="Maven的安装及配置"><img data-src="https://api-misc.iclart.com/v1/acgapi"></a>
+  </div>
+  <div class="info">
+    
+<div class="meta">
+  <span class="item" title="创建时间：2020-08-25 22:19:12">
+    <span class="icon">
+      <i class="ic i-calendar"></i>
+    </span>
+    <time itemprop="dateCreated datePublished" datetime="2020-08-25T22:19:12+08:00">2020-08-25</time>
+  </span>
+  <span class="item" title="本文字数">
+    <span class="icon">
+      <i class="ic i-pen"></i>
+    </span>
+    <span>12k</span>
+    <span class="text">字</span>
+  </span>
+  <span class="item" title="阅读时长">
+    <span class="icon">
+      <i class="ic i-clock"></i>
+    </span>
+    <span>11 分钟</span>
+  </span>
+</div>
+
+    <h3><a href="/java/Maven%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE/" itemprop="url" title="Maven的安装及配置">Maven的安装及配置</a></h3>
+    <div class="excerpt">
+        # 💍安装本地 Maven
+Maven 下载地址:https://maven.apache.org/download.cgi
+
+点击箭头所指的链接进行下载
+
+下载好了以后解压到你要存储的盘符，我存放地址是
+
+# 💍 环境变量
+
+系统变量：MAVEN_HOME = F:\dev\apache-maven-3.6.1
+系统变量:path = % MAVEN_HOME%\bin
+MAVEN_HOME:
+
+path:
+
+# 💍 然后 win+R 运行 cmd 输入 mvn -version，如图所示则配置成功
+
+# 💍 配置 settings 文件
+
+在...
+    </div>
+    <div class="meta footer">
+      <span>
+        <a href="/categories/java/" itemprop="url" title="JAVA后端开发"><i class="ic i-flag"></i>JAVA后端开发</a>
+      </span>
+    </div>
+    <a href="/java/Maven%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE/" itemprop="url" title="Maven的安装及配置" class="btn">more...</a>
+  </div>
+</article>
+
+        
+<article class="item">
+  <div class="cover">
+    <a href="/java/pom%E6%8A%A5%E9%94%99/" itemprop="url" title="pom.xml的标签报错 Element ‘project‘ cannot have character [children], because the type‘s content**"><img data-src="https://tva3.sinaimg.cn/mw690/6833939bly1gipesx5fdwj20zk0m81kx.jpg"></a>
+  </div>
+  <div class="info">
+    
+<div class="meta">
+  <span class="item" title="创建时间：2020-08-25 21:45:50">
+    <span class="icon">
+      <i class="ic i-calendar"></i>
+    </span>
+    <time itemprop="dateCreated datePublished" datetime="2020-08-25T21:45:50+08:00">2020-08-25</time>
+  </span>
+  <span class="item" title="本文字数">
+    <span class="icon">
+      <i class="ic i-pen"></i>
+    </span>
+    <span>461</span>
+    <span class="text">字</span>
+  </span>
+  <span class="item" title="阅读时长">
+    <span class="icon">
+      <i class="ic i-clock"></i>
+    </span>
+    <span>1 分钟</span>
+  </span>
+</div>
+
+    <h3><a href="/java/pom%E6%8A%A5%E9%94%99/" itemprop="url" title="pom.xml的标签报错 Element ‘project‘ cannot have character [children], because the type‘s content**">pom.xml的标签报错 Element ‘project‘ cannot have character [children], because the type‘s content**</a></h3>
+    <div class="excerpt">
+        CSDN 地址:https://blog.csdn.net/qq_44841432/article/details/107768197
+# 💍 pom.xml 的报错
+
+JAVA12345//首先看到的报错的标签&amp;lt;project&amp;gt;..............&amp;lt;/project&amp;gt;
+其实这个错误的来源是某些编译器导致的，比如现在我们常用的开发工具 -&amp;gt;IDEA -&amp;gt;Eclipse, 这个两种工具，其中 IDEA...
+    </div>
+    <div class="meta footer">
+      <span>
+        <a href="/categories/java/" itemprop="url" title="JAVA后端开发"><i class="ic i-flag"></i>JAVA后端开发</a>
+      </span>
+    </div>
+    <a href="/java/pom%E6%8A%A5%E9%94%99/" itemprop="url" title="pom.xml的标签报错 Element ‘project‘ cannot have character [children], because the type‘s content**" class="btn">more...</a>
+  </div>
+</article>
+
+        
+<article class="item">
+  <div class="cover">
+    <a href="/web/react%E5%92%8Cvue/" itemprop="url" title="React.js与Vue.js流行框架的比较"><img data-src="https://tva3.sinaimg.cn/mw690/6833939bly1giclize41wj20zk0m87gk.jpg"></a>
+  </div>
+  <div class="info">
+    
+<div class="meta">
+  <span class="item" title="创建时间：2020-08-21 20:33:25">
+    <span class="icon">
+      <i class="ic i-calendar"></i>
+    </span>
+    <time itemprop="dateCreated datePublished" datetime="2020-08-21T20:33:25+08:00">2020-08-21</time>
+  </span>
+  <span class="item" title="本文字数">
+    <span class="icon">
+      <i class="ic i-pen"></i>
+    </span>
+    <span>4.1k</span>
+    <span class="text">字</span>
+  </span>
+  <span class="item" title="阅读时长">
+    <span class="icon">
+      <i class="ic i-clock"></i>
+    </span>
+    <span>4 分钟</span>
+  </span>
+</div>
+
+    <h3><a href="/web/react%E5%92%8Cvue/" itemprop="url" title="React.js与Vue.js流行框架的比较">React.js与Vue.js流行框架的比较</a></h3>
+    <div class="excerpt">
+        <p>JavaScript 是世界上最流行的语言之一，React 和 Vue 是 JS 最流行的两个框架。但哪一款最适合你？</p>
+<p>JavaScript 越来越受欢迎，许多科技巨头正在从中获益。每天都会出现大量的框架和语言，我们无法跟上所有这些框架和语言的步伐。很难确定哪些值得关注。</p>
+<p>JavaScript 的世界正以前所未有的速度和作为软件开发的公司，我们无法承受忽视这个时代的讨论最多的框架 - React.js 和 Vue.js。因此，在 React 与 Vue 的比较中，我们将根据每个框架的重要优缺点，以及市场趋势和见解，帮助您选择最佳框架。我们拥有一批技术娴熟的开发人员，他们可以随时了解 Vue.js 和 React 开发的各个方面。</p>
+<h3 id="让我们深入了解细节"><a class="markdownIt-Anchor" href="#让我们深入了解细节">#</a> 💍 让我们深入了解细节：</h3>
+<p>在进一步阅读之前，请确保您清楚地了解 React 和 Vue.js 是什么。它们是高度重视且广泛使用的 JavaScript 框架，用于界面设计。</p>
+      
+    </div>
+    <div class="meta footer">
+      <span>
+        <a href="/categories/web/react%E5%92%8Cvue/%E5%BD%A9%E8%89%B2%E6%96%87%E5%AD%97/%E5%85%89%E6%A0%87%E5%8A%A8%E7%94%BB/" itemprop="url" title="光标动画"><i class="ic i-flag"></i>光标动画</a>
+      </span>
+    </div>
+    <a href="/web/react%E5%92%8Cvue/" itemprop="url" title="React.js与Vue.js流行框架的比较" class="btn">more...</a>
+  </div>
+</article>
+
+        
+<article class="item">
+  <div class="cover">
+    <a href="/Other-extensions/hexo/" itemprop="url" title="hexo分类and标签404"><img data-src="https://tva3.sinaimg.cn/mw690/6833939bly1giclip4jbpj20zk0m87cv.jpg"></a>
+  </div>
+  <div class="info">
+    
+<div class="meta">
+  <span class="item" title="创建时间：2020-08-20 16:29:52">
+    <span class="icon">
+      <i class="ic i-calendar"></i>
+    </span>
+    <time itemprop="dateCreated datePublished" datetime="2020-08-20T16:29:52+08:00">2020-08-20</time>
+  </span>
+  <span class="item" title="本文字数">
+    <span class="icon">
+      <i class="ic i-pen"></i>
+    </span>
+    <span>542</span>
+    <span class="text">字</span>
+  </span>
+  <span class="item" title="阅读时长">
+    <span class="icon">
+      <i class="ic i-clock"></i>
+    </span>
+    <span>1 分钟</span>
+  </span>
+</div>
+
+    <h3><a href="/Other-extensions/hexo/" itemprop="url" title="hexo分类and标签404">hexo分类and标签404</a></h3>
+    <div class="excerpt">
+        <h2 id="404分类and标签错误处理"><a class="markdownIt-Anchor" href="#404分类and标签错误处理">#</a> 💍 404 分类 and 标签错误处理</h2>
+<p>突然发现博客中，部分分类打不开，点击出现 404，在标签中查看，也是小部分标签点击 404，但是在所有文章中该分类下的文章都能打开，后来发现这些 404 的标签或分类名都是后来修改过的，原先的名称开头是大写名称</p>
+<p>将大写字母改成小写，hexo 部署正确，但是博客上还是不正确出现 404</p>
+<p>网上查了许多资料，才发现，git 中设置了大小写不敏感</p>
+      
+    </div>
+    <div class="meta footer">
+      <span>
+        <a href="/categories/Other-extensions/hexo%E5%88%86%E7%B1%BBand%E6%A0%87%E7%AD%BE404/%E7%89%B9%E5%88%AB%E7%9A%84%E6%83%8A%E5%96%9C/%E9%9F%B3%E4%B9%90%E7%BD%91%E7%AB%99/" itemprop="url" title="音乐网站"><i class="ic i-flag"></i>音乐网站</a>
+      </span>
+    </div>
+    <a href="/Other-extensions/hexo/" itemprop="url" title="hexo分类and标签404" class="btn">more...</a>
+  </div>
+</article>
+
+        
+<article class="item">
+  <div class="cover">
+    <a href="/java/java%E5%9F%BA%E7%A1%80/" itemprop="url" title="JAVA的JDK安装步骤"><img data-src="https://tva3.sinaimg.cn/mw690/6833939bly1giclhpw3lwj20zk0m8gvw.jpg"></a>
+  </div>
+  <div class="info">
+    
+<div class="meta">
+  <span class="item" title="创建时间：2020-08-20 15:50:41">
+    <span class="icon">
+      <i class="ic i-calendar"></i>
+    </span>
+    <time itemprop="dateCreated datePublished" datetime="2020-08-20T15:50:41+08:00">2020-08-20</time>
+  </span>
+  <span class="item" title="本文字数">
+    <span class="icon">
+      <i class="ic i-pen"></i>
+    </span>
+    <span>467</span>
+    <span class="text">字</span>
+  </span>
+  <span class="item" title="阅读时长">
+    <span class="icon">
+      <i class="ic i-clock"></i>
+    </span>
+    <span>1 分钟</span>
+  </span>
+</div>
+
+    <h3><a href="/java/java%E5%9F%BA%E7%A1%80/" itemprop="url" title="JAVA的JDK安装步骤">JAVA的JDK安装步骤</a></h3>
+    <div class="excerpt">
+        <p>对于一个 JAVA 或 android 开发者来说，JDK 的安装是做任何事的前提。但现在有好多教程的 JDK 安装配置方法繁琐重复，容易误导新手，本教程可以说是最简单经典实用的配置方法。</p>
+<h2 id="快速开始"><a class="markdownIt-Anchor" href="#快速开始">#</a> 💍 快速开始</h2>
+<h3 id="步骤一"><a class="markdownIt-Anchor" href="#步骤一">#</a> 💍步骤一</h3>
+<p>首先我们当然需要去 oracle 官网下载 JDK。<br>
+点击蓝色圈住的图片，选择相应版本并下载。x86 是 32 位版，64 是 64 位系统版。<br>
+<img data-src="https://exp-picture.cdn.bcebos.com/2f2909e951e10ef8f928728e2324d8e9cdd2ccd1.jpg?x-bce-process=image%2Fresize%2Cm_lfit%2Cw_500%2Climit_1" alt="步骤一"></p>
+      
+    </div>
+    <div class="meta footer">
+      <span>
+        <a href="/categories/java/" itemprop="url" title="JAVA后端开发"><i class="ic i-flag"></i>JAVA后端开发</a>
+      </span>
+    </div>
+    <a href="/java/java%E5%9F%BA%E7%A1%80/" itemprop="url" title="JAVA的JDK安装步骤" class="btn">more...</a>
+  </div>
+</article>
+
+        
+<article class="item">
+  <div class="cover">
+    <a href="/web/%E5%85%89%E6%A0%87%E5%8A%A8%E7%94%BB/" itemprop="url" title="利用html+javaSrcipt+css3实现光标动画"><img data-src="https://tva3.sinaimg.cn/mw690/6833939bly1gicli9lfebj20zk0m84qp.jpg"></a>
+  </div>
+  <div class="info">
+    
+<div class="meta">
+  <span class="item" title="创建时间：2020-08-19 23:24:27">
+    <span class="icon">
+      <i class="ic i-calendar"></i>
+    </span>
+    <time itemprop="dateCreated datePublished" datetime="2020-08-19T23:24:27+08:00">2020-08-19</time>
+  </span>
+  <span class="item" title="本文字数">
+    <span class="icon">
+      <i class="ic i-pen"></i>
+    </span>
+    <span>1.5k</span>
+    <span class="text">字</span>
+  </span>
+  <span class="item" title="阅读时长">
+    <span class="icon">
+      <i class="ic i-clock"></i>
+    </span>
+    <span>1 分钟</span>
+  </span>
+</div>
+
+    <h3><a href="/web/%E5%85%89%E6%A0%87%E5%8A%A8%E7%94%BB/" itemprop="url" title="利用html+javaSrcipt+css3实现光标动画">利用html+javaSrcipt+css3实现光标动画</a></h3>
+    <div class="excerpt">
+        <p>这个案例也是通过 javaSrcipt (js) 实现，这个案例相对比较简单，先是整体的 HTML 代码结构，这个案例呢 javaSrcipt (js) 是直接写在我们 HTML 的内部，<br>
+没有通过外链的方式实现，因为代码量较少直接写在了整体结构之中，其实这个案例不仅仅是纯的 javaSrcipt (js) 代码，本案例只是利用了 javaSrcipt (js)<br>
+ 的一个时间来控制光标闪动的时间而已，而我们的 CSS3 样式呢，主要是让文字颜色，利用 background 使文字产生渐变的效果。</p>
+      
+    </div>
+    <div class="meta footer">
+      <span>
+        <a href="/categories/web/" itemprop="url" title="web前端"><i class="ic i-flag"></i>web前端</a>
+      </span>
+    </div>
+    <a href="/web/%E5%85%89%E6%A0%87%E5%8A%A8%E7%94%BB/" itemprop="url" title="利用html+javaSrcipt+css3实现光标动画" class="btn">more...</a>
+  </div>
+</article>
+
+        
+<article class="item">
+  <div class="cover">
+    <a href="/web/%E5%BD%A9%E8%89%B2%E6%96%87%E5%AD%97/" itemprop="url" title="js文字闪动效果"><img data-src="https://tva3.sinaimg.cn/mw690/6833939bly1gipetv6p75j20zk0m8x6p.jpg"></a>
+  </div>
+  <div class="info">
+    
+<div class="meta">
+  <span class="item" title="创建时间：2020-08-19 22:17:37">
+    <span class="icon">
+      <i class="ic i-calendar"></i>
+    </span>
+    <time itemprop="dateCreated datePublished" datetime="2020-08-19T22:17:37+08:00">2020-08-19</time>
+  </span>
+  <span class="item" title="本文字数">
+    <span class="icon">
+      <i class="ic i-pen"></i>
+    </span>
+    <span>237</span>
+    <span class="text">字</span>
+  </span>
+  <span class="item" title="阅读时长">
+    <span class="icon">
+      <i class="ic i-clock"></i>
+    </span>
+    <span>1 分钟</span>
+  </span>
+</div>
+
+    <h3><a href="/web/%E5%BD%A9%E8%89%B2%E6%96%87%E5%AD%97/" itemprop="url" title="js文字闪动效果">js文字闪动效果</a></h3>
+    <div class="excerpt">
+        <p>利用 javaSrcipt (js) 实现对文字的如跑马灯一样的效果。</p>
+<h2 id="效果如下"><a class="markdownIt-Anchor" href="#效果如下">#</a> 💍 效果如下:</h2>
+<script>
+var Tname="欢迎来到码坑的博客";
+var Tlen=Tname.length;
+document.write("<div id='a' style='font-size:40px;'>"+Tname+"</div>");
+var col=new Array("#4FFFF","#3333FF","#FFCC00","chartreuse","#FFCC00","#CC33FF");
+var ic=0;
+function Dcolor(){
+  var Strname="";
+  for (i=0;i<Tlen;++i){
+    var Strname=Strname+"<font color="+col[ic]+">"+Tname.substring(i,i+1)+"</font>";
+	ic=ic+1;
+  	if (ic==col.length) ic=0;
+  }
+  a.innerHTML=Strname;
+  setTimeout("Dcolor()",200);
+}
+Dcolor();
+</script>
+      
+    </div>
+    <div class="meta footer">
+      <span>
+        <a href="/categories/web/" itemprop="url" title="web前端"><i class="ic i-flag"></i>web前端</a>
+      </span>
+    </div>
+    <a href="/web/%E5%BD%A9%E8%89%B2%E6%96%87%E5%AD%97/" itemprop="url" title="js文字闪动效果" class="btn">more...</a>
+  </div>
+</article>
+
+    </div>
+
+  </div>
+
+  
+  <nav class="pagination">
+    <div class="inner">
+    <a class="extend prev" rel="prev" href="/"><i class="ic i-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span>
+    </div>
+  </nav>
+
+
+
+        </div>
+        <div id="sidebar">
+          
+<div class="inner">
+
+  <div class="panels">
+    <div class="inner">
+      <div class="contents panel pjax" data-title="文章目录">
+      </div>
+      <div class="related panel pjax" data-title="系列文章">
+      </div>
+      <div class="overview panel" data-title="站点概览">
+        <div class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <img class="image" itemprop="image" alt="码坑"
+      data-src="/images/avatar.jpg">
+  <p class="name" itemprop="name">码坑</p>
+  <div class="description" itemprop="description">本人是小白,初次与各位相遇,请多多指教,谢谢 じ萌喵喵ルゞ Ю↘ 珂ル°</div>
+</div>
+
+<nav class="state">
+    <div class="item posts">
+      <a href="/archives/">
+        <span class="count">21</span>
+        <span class="name">文章</span>
+      </a>
+    </div>
+    <div class="item categories">
+      <a href="/categories/">
+        <span class="count">39</span>
+        <span class="name">分类</span>
+      </a>
+    </div>
+    <div class="item tags">
+      <a href="/tags/">
+        <span class="count">11</span>
+        <span class="name">标签</span>
+      </a>
+    </div>
+</nav>
+
+<div class="social">
+      <span class="exturl item github" data-url="aHR0cHM6Ly9naXRodWIuY29tL3lvdXJuYW1l" title="https:&#x2F;&#x2F;github.com&#x2F;yourname"><i class="ic i-github"></i></span>
+      <span class="exturl item twitter" data-url="aHR0cHM6Ly90d2l0dGVyLmNvbS95b3VybmFtZQ==" title="https:&#x2F;&#x2F;twitter.com&#x2F;yourname"><i class="ic i-twitter"></i></span>
+      <span class="exturl item zhihu" data-url="aHR0cHM6Ly93d3cuemhpaHUuY29tL3Blb3BsZS95b3VybmFtZQ==" title="https:&#x2F;&#x2F;www.zhihu.com&#x2F;people&#x2F;yourname"><i class="ic i-zhihu"></i></span>
+      <span class="exturl item music" data-url="aHR0cHM6Ly9tdXNpYy4xNjMuY29tLyMvdXNlci9ob21lP2lkPXlvdXJpZA==" title="https:&#x2F;&#x2F;music.163.com&#x2F;#&#x2F;user&#x2F;home?id&#x3D;yourid"><i class="ic i-cloud-music"></i></span>
+      <span class="exturl item weibo" data-url="aHR0cHM6Ly93ZWliby5jb20veW91cm5hbWU=" title="https:&#x2F;&#x2F;weibo.com&#x2F;yourname"><i class="ic i-weibo"></i></span>
+      <span class="exturl item about" data-url="aHR0cHM6Ly9hYm91dC5tZS95b3VybmFtZQ==" title="https:&#x2F;&#x2F;about.me&#x2F;yourname"><i class="ic i-address-card"></i></span>
+</div>
+
+<ul class="menu">
+  
+    
+  <li class="item">
+    <a href="/" rel="section"><i class="ic i-home"></i>首页</a>
+  </li>
+
+        
+  <li class="item dropdown">
+    <a href="javascript:void(0);"><i class="ic i-feather"></i>文章</a>
+    <ul class="submenu">
+
+        
+  <li class="item">
+    <a href="/archives/" rel="section"><i class="ic i-list-alt"></i>归档</a>
+  </li>
+
+        
+  <li class="item">
+    <a href="/categories/" rel="section"><i class="ic i-th"></i>分类</a>
+  </li>
+
+        
+  <li class="item">
+    <a href="/tags/" rel="section"><i class="ic i-tags"></i>标签</a>
+  </li>
+
+  </ul>
+    
+  <li class="item">
+    <a href="/about/" rel="section"><i class="ic i-user"></i>关于</a>
+  </li>
+
+    
+  <li class="item">
+    <a href="/friends/" rel="section"><i class="ic i-heart"></i>友链</a>
+  </li>
+
+    
+  <li class="item">
+    <a href="/Guoman/" rel="section"><i class="ic i-magic"></i>影视</a>
+  </li>
+
+
+</ul>
+
+      </div>
+    </div>
+  </div>
+
+  <ul id="quick">
+    <li class="prev pjax">
+    </li>
+    <li class="up"><i class="ic i-arrow-up"></i></li>
+    <li class="down"><i class="ic i-arrow-down"></i></li>
+    <li class="next pjax">
+    </li>
+    <li class="percent"></li>
+  </ul>
+</div>
+
+        </div>
+        <div class="dimmer"></div>
+      </div>
+    </main>
+    <footer id="footer">
+      <div class="inner">
+        <div class="widgets">
+          
+<div class="rpost pjax">
+  <h2>随机文章</h2>
+  <ul>
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/java/" title="分类于 JAVA后端开发">JAVA后端开发</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/java/java%E5%9F%BA%E7%A1%80/" title="分类于 java基础">java基础</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/java/java%E5%9F%BA%E7%A1%80/Maven%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE/" title="分类于 Maven安装配置">Maven安装配置</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/java/java%E5%9F%BA%E7%A1%80/Maven%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE/docker/" title="分类于 docker">docker</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/java/java%E5%9F%BA%E7%A1%80/Maven%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE/docker/pom%E6%8A%A5%E9%94%99/" title="分类于 pom报错">pom报错</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/java/java%E5%9F%BA%E7%A1%80/Maven%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE/docker/pom%E6%8A%A5%E9%94%99/sort/" title="分类于 sort">sort</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/java/java%E5%9F%BA%E7%A1%80/Maven%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE/docker/pom%E6%8A%A5%E9%94%99/sort/Java%E4%B8%AD%E4%BB%A3%E7%A0%81%E7%94%9F%E6%88%90%E5%99%A8/" title="分类于 Java中代码生成器">Java中代码生成器</a>
+</div>
+
+    <span><a href="/java/generate/" title="Java中代码生成器">Java中代码生成器</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/php/" title="分类于 PHP后端开发">PHP后端开发</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/php/php%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0API/" title="分类于 php文件上传API">php文件上传API</a>
+</div>
+
+    <span><a href="/php/phpAPI/" title="php文件上传API">php文件上传API</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/web/" title="分类于 web前端">web前端</a>
+</div>
+
+    <span><a href="/web/%E5%BD%A9%E8%89%B2%E6%96%87%E5%AD%97/" title="js文字闪动效果">js文字闪动效果</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/java/" title="分类于 JAVA后端开发">JAVA后端开发</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/java/%E7%8E%8B%E8%80%85%E8%8D%A3%E8%80%80%E4%B8%AD%E4%B8%80%E4%B8%AA%E8%8B%B1%E9%9B%84%E6%98%AF%E6%80%8E%E4%B9%88%E8%A2%AB%E4%BA%A7%E7%94%9F%E7%9A%84%EF%BC%9F/" title="分类于 王者荣耀中一个英雄是怎么被产生的？">王者荣耀中一个英雄是怎么被产生的？</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/java/%E7%8E%8B%E8%80%85%E8%8D%A3%E8%80%80%E4%B8%AD%E4%B8%80%E4%B8%AA%E8%8B%B1%E9%9B%84%E6%98%AF%E6%80%8E%E4%B9%88%E8%A2%AB%E4%BA%A7%E7%94%9F%E7%9A%84%EF%BC%9F/%E9%98%BF%E9%87%8C%E4%BA%91%E5%AF%B9%E8%B1%A1%E5%AD%98%E5%82%A8Oss/" title="分类于 阿里云对象存储Oss">阿里云对象存储Oss</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/java/%E7%8E%8B%E8%80%85%E8%8D%A3%E8%80%80%E4%B8%AD%E4%B8%80%E4%B8%AA%E8%8B%B1%E9%9B%84%E6%98%AF%E6%80%8E%E4%B9%88%E8%A2%AB%E4%BA%A7%E7%94%9F%E7%9A%84%EF%BC%9F/%E9%98%BF%E9%87%8C%E4%BA%91%E5%AF%B9%E8%B1%A1%E5%AD%98%E5%82%A8Oss/LinkedeList%E5%92%8CArrayList%E7%9A%84%E5%8C%BA%E5%88%AB/" title="分类于 LinkedeList和ArrayList的区别">LinkedeList和ArrayList的区别</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/java/%E7%8E%8B%E8%80%85%E8%8D%A3%E8%80%80%E4%B8%AD%E4%B8%80%E4%B8%AA%E8%8B%B1%E9%9B%84%E6%98%AF%E6%80%8E%E4%B9%88%E8%A2%AB%E4%BA%A7%E7%94%9F%E7%9A%84%EF%BC%9F/%E9%98%BF%E9%87%8C%E4%BA%91%E5%AF%B9%E8%B1%A1%E5%AD%98%E5%82%A8Oss/LinkedeList%E5%92%8CArrayList%E7%9A%84%E5%8C%BA%E5%88%AB/java%E5%9F%BA%E7%A1%80/" title="分类于 java基础">java基础</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/java/%E7%8E%8B%E8%80%85%E8%8D%A3%E8%80%80%E4%B8%AD%E4%B8%80%E4%B8%AA%E8%8B%B1%E9%9B%84%E6%98%AF%E6%80%8E%E4%B9%88%E8%A2%AB%E4%BA%A7%E7%94%9F%E7%9A%84%EF%BC%9F/%E9%98%BF%E9%87%8C%E4%BA%91%E5%AF%B9%E8%B1%A1%E5%AD%98%E5%82%A8Oss/LinkedeList%E5%92%8CArrayList%E7%9A%84%E5%8C%BA%E5%88%AB/java%E5%9F%BA%E7%A1%80/Maven%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE/" title="分类于 Maven安装配置">Maven安装配置</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/java/%E7%8E%8B%E8%80%85%E8%8D%A3%E8%80%80%E4%B8%AD%E4%B8%80%E4%B8%AA%E8%8B%B1%E9%9B%84%E6%98%AF%E6%80%8E%E4%B9%88%E8%A2%AB%E4%BA%A7%E7%94%9F%E7%9A%84%EF%BC%9F/%E9%98%BF%E9%87%8C%E4%BA%91%E5%AF%B9%E8%B1%A1%E5%AD%98%E5%82%A8Oss/LinkedeList%E5%92%8CArrayList%E7%9A%84%E5%8C%BA%E5%88%AB/java%E5%9F%BA%E7%A1%80/Maven%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE/docker/" title="分类于 docker">docker</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/java/%E7%8E%8B%E8%80%85%E8%8D%A3%E8%80%80%E4%B8%AD%E4%B8%80%E4%B8%AA%E8%8B%B1%E9%9B%84%E6%98%AF%E6%80%8E%E4%B9%88%E8%A2%AB%E4%BA%A7%E7%94%9F%E7%9A%84%EF%BC%9F/%E9%98%BF%E9%87%8C%E4%BA%91%E5%AF%B9%E8%B1%A1%E5%AD%98%E5%82%A8Oss/LinkedeList%E5%92%8CArrayList%E7%9A%84%E5%8C%BA%E5%88%AB/java%E5%9F%BA%E7%A1%80/Maven%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE/docker/pom%E6%8A%A5%E9%94%99/" title="分类于 pom报错">pom报错</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/java/%E7%8E%8B%E8%80%85%E8%8D%A3%E8%80%80%E4%B8%AD%E4%B8%80%E4%B8%AA%E8%8B%B1%E9%9B%84%E6%98%AF%E6%80%8E%E4%B9%88%E8%A2%AB%E4%BA%A7%E7%94%9F%E7%9A%84%EF%BC%9F/%E9%98%BF%E9%87%8C%E4%BA%91%E5%AF%B9%E8%B1%A1%E5%AD%98%E5%82%A8Oss/LinkedeList%E5%92%8CArrayList%E7%9A%84%E5%8C%BA%E5%88%AB/java%E5%9F%BA%E7%A1%80/Maven%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE/docker/pom%E6%8A%A5%E9%94%99/sort/" title="分类于 sort">sort</a>
+</div>
+
+    <span><a href="/java/LinkedeList%E5%92%8CArrayList%E7%9A%84%E5%8C%BA%E5%88%AB/" title="LinkedeList和ArrayList的区别">LinkedeList和ArrayList的区别</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/Other-extensions/" title="分类于 其他扩展">其他扩展</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/Other-extensions/hexo%E5%88%86%E7%B1%BBand%E6%A0%87%E7%AD%BE404/" title="分类于 hexo分类and标签404">hexo分类and标签404</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/Other-extensions/hexo%E5%88%86%E7%B1%BBand%E6%A0%87%E7%AD%BE404/%E7%89%B9%E5%88%AB%E7%9A%84%E6%83%8A%E5%96%9C/" title="分类于 特别的惊喜">特别的惊喜</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/Other-extensions/hexo%E5%88%86%E7%B1%BBand%E6%A0%87%E7%AD%BE404/%E7%89%B9%E5%88%AB%E7%9A%84%E6%83%8A%E5%96%9C/%E9%9F%B3%E4%B9%90%E7%BD%91%E7%AB%99/" title="分类于 音乐网站">音乐网站</a>
+</div>
+
+    <span><a href="/Other-extensions/hexo/" title="hexo分类and标签404">hexo分类and标签404</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/Other-extensions/" title="分类于 其他扩展">其他扩展</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/Other-extensions/hexo%E5%88%86%E7%B1%BBand%E6%A0%87%E7%AD%BE404/" title="分类于 hexo分类and标签404">hexo分类and标签404</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/Other-extensions/hexo%E5%88%86%E7%B1%BBand%E6%A0%87%E7%AD%BE404/%E7%89%B9%E5%88%AB%E7%9A%84%E6%83%8A%E5%96%9C/" title="分类于 特别的惊喜">特别的惊喜</a>
+</div>
+
+    <span><a href="/Other-extensions/expand/" title="特别的惊喜">特别的惊喜</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/java/" title="分类于 JAVA后端开发">JAVA后端开发</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/java/%E9%98%BF%E9%87%8C%E4%BA%91%E5%AF%B9%E8%B1%A1%E5%AD%98%E5%82%A8Oss/" title="分类于 阿里云对象存储Oss">阿里云对象存储Oss</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/java/%E9%98%BF%E9%87%8C%E4%BA%91%E5%AF%B9%E8%B1%A1%E5%AD%98%E5%82%A8Oss/java%E5%9F%BA%E7%A1%80/" title="分类于 java基础">java基础</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/java/%E9%98%BF%E9%87%8C%E4%BA%91%E5%AF%B9%E8%B1%A1%E5%AD%98%E5%82%A8Oss/java%E5%9F%BA%E7%A1%80/Maven%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE/" title="分类于 Maven安装配置">Maven安装配置</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/java/%E9%98%BF%E9%87%8C%E4%BA%91%E5%AF%B9%E8%B1%A1%E5%AD%98%E5%82%A8Oss/java%E5%9F%BA%E7%A1%80/Maven%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE/docker/" title="分类于 docker">docker</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/java/%E9%98%BF%E9%87%8C%E4%BA%91%E5%AF%B9%E8%B1%A1%E5%AD%98%E5%82%A8Oss/java%E5%9F%BA%E7%A1%80/Maven%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE/docker/pom%E6%8A%A5%E9%94%99/" title="分类于 pom报错">pom报错</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/java/%E9%98%BF%E9%87%8C%E4%BA%91%E5%AF%B9%E8%B1%A1%E5%AD%98%E5%82%A8Oss/java%E5%9F%BA%E7%A1%80/Maven%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE/docker/pom%E6%8A%A5%E9%94%99/sort/" title="分类于 sort">sort</a>
+</div>
+
+    <span><a href="/java/%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0/" title="阿里云对象存储Oss">阿里云对象存储Oss</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/Other-extensions/" title="分类于 其他扩展">其他扩展</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/Other-extensions/hexo%E5%88%86%E7%B1%BBand%E6%A0%87%E7%AD%BE404/" title="分类于 hexo分类and标签404">hexo分类and标签404</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/Other-extensions/hexo%E5%88%86%E7%B1%BBand%E6%A0%87%E7%AD%BE404/%E7%89%B9%E5%88%AB%E7%9A%84%E6%83%8A%E5%96%9C/" title="分类于 特别的惊喜">特别的惊喜</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/Other-extensions/hexo%E5%88%86%E7%B1%BBand%E6%A0%87%E7%AD%BE404/%E7%89%B9%E5%88%AB%E7%9A%84%E6%83%8A%E5%96%9C/%E9%9F%B3%E4%B9%90%E7%BD%91%E7%AB%99/" title="分类于 音乐网站">音乐网站</a>
+</div>
+
+    <span><a href="/Other-extensions/music/" title="音乐网站">音乐网站</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/java/" title="分类于 JAVA后端开发">JAVA后端开发</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/java/%E7%8E%8B%E8%80%85%E8%8D%A3%E8%80%80%E4%B8%AD%E4%B8%80%E4%B8%AA%E8%8B%B1%E9%9B%84%E6%98%AF%E6%80%8E%E4%B9%88%E8%A2%AB%E4%BA%A7%E7%94%9F%E7%9A%84%EF%BC%9F/" title="分类于 王者荣耀中一个英雄是怎么被产生的？">王者荣耀中一个英雄是怎么被产生的？</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/java/%E7%8E%8B%E8%80%85%E8%8D%A3%E8%80%80%E4%B8%AD%E4%B8%80%E4%B8%AA%E8%8B%B1%E9%9B%84%E6%98%AF%E6%80%8E%E4%B9%88%E8%A2%AB%E4%BA%A7%E7%94%9F%E7%9A%84%EF%BC%9F/%E9%98%BF%E9%87%8C%E4%BA%91%E5%AF%B9%E8%B1%A1%E5%AD%98%E5%82%A8Oss/" title="分类于 阿里云对象存储Oss">阿里云对象存储Oss</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/java/%E7%8E%8B%E8%80%85%E8%8D%A3%E8%80%80%E4%B8%AD%E4%B8%80%E4%B8%AA%E8%8B%B1%E9%9B%84%E6%98%AF%E6%80%8E%E4%B9%88%E8%A2%AB%E4%BA%A7%E7%94%9F%E7%9A%84%EF%BC%9F/%E9%98%BF%E9%87%8C%E4%BA%91%E5%AF%B9%E8%B1%A1%E5%AD%98%E5%82%A8Oss/java%E5%9F%BA%E7%A1%80/" title="分类于 java基础">java基础</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/java/%E7%8E%8B%E8%80%85%E8%8D%A3%E8%80%80%E4%B8%AD%E4%B8%80%E4%B8%AA%E8%8B%B1%E9%9B%84%E6%98%AF%E6%80%8E%E4%B9%88%E8%A2%AB%E4%BA%A7%E7%94%9F%E7%9A%84%EF%BC%9F/%E9%98%BF%E9%87%8C%E4%BA%91%E5%AF%B9%E8%B1%A1%E5%AD%98%E5%82%A8Oss/java%E5%9F%BA%E7%A1%80/Maven%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE/" title="分类于 Maven安装配置">Maven安装配置</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/java/%E7%8E%8B%E8%80%85%E8%8D%A3%E8%80%80%E4%B8%AD%E4%B8%80%E4%B8%AA%E8%8B%B1%E9%9B%84%E6%98%AF%E6%80%8E%E4%B9%88%E8%A2%AB%E4%BA%A7%E7%94%9F%E7%9A%84%EF%BC%9F/%E9%98%BF%E9%87%8C%E4%BA%91%E5%AF%B9%E8%B1%A1%E5%AD%98%E5%82%A8Oss/java%E5%9F%BA%E7%A1%80/Maven%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE/docker/" title="分类于 docker">docker</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/java/%E7%8E%8B%E8%80%85%E8%8D%A3%E8%80%80%E4%B8%AD%E4%B8%80%E4%B8%AA%E8%8B%B1%E9%9B%84%E6%98%AF%E6%80%8E%E4%B9%88%E8%A2%AB%E4%BA%A7%E7%94%9F%E7%9A%84%EF%BC%9F/%E9%98%BF%E9%87%8C%E4%BA%91%E5%AF%B9%E8%B1%A1%E5%AD%98%E5%82%A8Oss/java%E5%9F%BA%E7%A1%80/Maven%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE/docker/pom%E6%8A%A5%E9%94%99/" title="分类于 pom报错">pom报错</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/java/%E7%8E%8B%E8%80%85%E8%8D%A3%E8%80%80%E4%B8%AD%E4%B8%80%E4%B8%AA%E8%8B%B1%E9%9B%84%E6%98%AF%E6%80%8E%E4%B9%88%E8%A2%AB%E4%BA%A7%E7%94%9F%E7%9A%84%EF%BC%9F/%E9%98%BF%E9%87%8C%E4%BA%91%E5%AF%B9%E8%B1%A1%E5%AD%98%E5%82%A8Oss/java%E5%9F%BA%E7%A1%80/Maven%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE/docker/pom%E6%8A%A5%E9%94%99/sort/" title="分类于 sort">sort</a>
+</div>
+
+    <span><a href="/java/%E7%8E%8B%E8%80%85%E8%8D%A3%E8%80%80%E4%B8%80%E4%B8%AA%E8%8B%B1%E9%9B%84%E5%A6%82%E4%BD%95%E8%A2%AB%E4%BA%A7%E7%94%9F/" title="王者荣耀中一个英雄是怎么被产生的？">王者荣耀中一个英雄是怎么被产生的？</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/web/" title="分类于 web前端">web前端</a>
+</div>
+
+    <span><a href="/web/%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0/" title="文件上传">文件上传</a></span>
+  </li>
+
+  </ul>
+</div>
+<div>
+  <h2>最新评论</h2>
+  <ul class="leancloud-recent-comment"></ul>
+</div>
+
+        </div>
+        <div class="status">
+  <div class="copyright">
+    
+    &copy; 2020 – 
+    <span itemprop="copyrightYear">2021</span>
+    <span class="with-love">
+      <i class="ic i-sakura rotate"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">码坑 @ Code pit</span>
+  </div>
+  <div class="count">
+    <span class="post-meta-item-icon">
+      <i class="ic i-chart-area"></i>
+    </span>
+    <span title="站点总字数">54k 字</span>
+
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="ic i-coffee"></i>
+    </span>
+    <span title="站点阅读时长">49 分钟</span>
+  </div>
+
+
+  <script type="text/javascript">document.write(unescape("%3Cspan id='cnzz_stat_icon_1279352119'%3E%3C/span%3E%3Cscript src='https://s4.cnzz.com/z_stat.php%3Fid%3D1279352119%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));</script>
+
+<span id="momk"></span><span id="momk" style="color: #ff0000;"></span>
+<script type="text/javascript">
+function NewDate(str) {
+str = str.split('-');
+var date = new Date();
+date.setUTCFullYear(str[0], str[1] - 1, str[2]);
+date.setUTCHours(0, 0, 0, 0);
+return date;
+}
+function momxc() {
+var birthDay =NewDate("2020-8-18");
+var today=new Date();
+var timeold=today.getTime()-birthDay.getTime();
+var sectimeold=timeold/1000
+var secondsold=Math.floor(sectimeold);
+var msPerDay=24*60*60*1000; var e_daysold=timeold/msPerDay;
+var daysold=Math.floor(e_daysold);
+var e_hrsold=(daysold-e_daysold)*-24;
+var hrsold=Math.floor(e_hrsold);
+var e_minsold=(hrsold-e_hrsold)*-60;
+var minsold=Math.floor((hrsold-e_hrsold)*-60); var seconds=Math.floor((minsold-e_minsold)*-60).toString();
+document.getElementById("momk").innerHTML = "本站已安全运行"+daysold+"天"+hrsold+"小时"+minsold+"分"+seconds+"秒";
+setTimeout(momxc, 1000);
+}momxc();
+</script>  <style>
+#momk{animation:change 10s infinite;font-weight:800; }
+@keyframes change{0%{color:#5cb85c;}25%{color:#556bd8;}50%{color:#e40707;}75%{color:#66e616;}100% {color:#67bd31;}}
+</style>
+ <br>
+ <!-- 整站统计 -->
+ <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+ <span id="busuanzi_container_site_pv">本站总访问量<span id="busuanzi_value_site_pv"></span>次</span>
+ <span class="post-meta-divider">|</span>
+ <span id="busuanzi_container_site_uv">本站访客数<span id="busuanzi_value_site_uv"</span>人</span>
+</div>
+
+      </div>
+    </footer>
+  </div>
+<script data-config type="text/javascript">
+  var LOCAL = {
+    path: 'page/2/',
+    favicon: {
+      show: "码坑的博客",
+      hide: "码坑的博客"
+    },
+    search : {
+      placeholder: "文章搜索",
+      empty: "关于 「 ${query} 」，什么也没搜到",
+      stats: "${time} ms 内找到 ${hits} 条结果"
+    },
+    valine: true,fancybox: true,copyright: '复制成功，转载请遵守 <i class="ic i-creative-commons"></i>BY-NC-SA 协议。',
+    ignores : [
+      function(uri) {
+        return uri.includes('#');
+      },
+      function(uri) {
+        return new RegExp(LOCAL.path+"$").test(uri);
+      }
+    ]
+  };
+</script>
+
+<script src="https://cdn.polyfill.io/v2/polyfill.js"></script>
+
+<script src="//cdn.jsdelivr.net/combine/npm/pace-js@1.0.2/pace.min.js,npm/pjax@0.2.8/pjax.min.js,npm/whatwg-fetch@3.4.0/dist/fetch.umd.min.js,npm/animejs@3.2.0/lib/anime.min.js,npm/algoliasearch@4/dist/algoliasearch-lite.umd.js,npm/instantsearch.js@4/dist/instantsearch.production.min.js,npm/lozad@1/dist/lozad.min.js,npm/quicklink@2/dist/quicklink.umd.js"></script>
+
+<script src="/js/app.js?v=0.2.3"></script>
+
+
+  <script data-pjax>
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?iASNGexQaR5ypf8WgXK9KWr9-9Nh9j0Va";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
+ <script src='https://api.vvhan.com/api/snow'></script>  
+</html>

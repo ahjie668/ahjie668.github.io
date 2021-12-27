@@ -1,0 +1,48 @@
+{
+    "version": "https://jsonfeed.org/version/1",
+    "title": "码坑的博客 • All posts by \"其他扩展\" category",
+    "description": "本人是小白,初次与各位相遇,请多多指教,谢谢 じ萌喵喵ルゞ Ю↘ 珂ル°",
+    "home_page_url": "https://ahjie.top",
+    "items": [
+        {
+            "id": "https://ahjie.top/Other-extensions/music/",
+            "url": "https://ahjie.top/Other-extensions/music/",
+            "title": "音乐网站",
+            "date_published": "2021-09-04T11:24:32.982Z",
+            "content_html": "<h3 id=\"今天给大家说一个好消息我个人做了一个项目这个项目这个项目呢也不大功能也不是特别复杂只是呢做这个项目的初衷呢是因为我个人平时还是喜欢听歌的所以我想做一个属于自己的音乐网站来玩玩想怎么玩就怎么玩所以我动手做了这个项目\"><a class=\"markdownIt-Anchor\" href=\"#今天给大家说一个好消息我个人做了一个项目这个项目这个项目呢也不大功能也不是特别复杂只是呢做这个项目的初衷呢是因为我个人平时还是喜欢听歌的所以我想做一个属于自己的音乐网站来玩玩想怎么玩就怎么玩所以我动手做了这个项目\">#</a> 今天给大家说一个好消息，我个人做了一个项目，这个项目，这个项目呢，也不大，功能也不是特别复杂，只是呢，做这个项目的初衷呢，是因为我个人平时还是喜欢听歌的，所以我想做一个属于自己的音乐网站来玩玩，想怎么玩，就怎么玩，所以我动手做了这个项目.</h3>\n<h3 id=\"因为第一版本多少有点bug但是我想说的是目前还没有发现bug的所在有bug的话我及时维护并且同时这个项目呢我后期也会持续更新维护目前话第一版本已经完善等待9月中旬上线此项目这个不做推广只是单纯做一个来玩玩切记不做运营推广\"><a class=\"markdownIt-Anchor\" href=\"#因为第一版本多少有点bug但是我想说的是目前还没有发现bug的所在有bug的话我及时维护并且同时这个项目呢我后期也会持续更新维护目前话第一版本已经完善等待9月中旬上线此项目这个不做推广只是单纯做一个来玩玩切记不做运营推广\">#</a> 因为第一版本，多少有点 bug，但是我想说的是，目前还没有发现 bug 的所在，有 bug 的话，我及时维护并且，同时这个项目呢，我后期也会持续更新维护，目前话第一版本已经完善，等待 9 月中旬上线此项目，这个不做推广，只是单纯做一个来玩玩，切记，不做运营推广。</h3>\n<h3 id=\"因为毕竟做这个是需要版权授权的过多的我就不解释呢这个项目不做为开源项目有需要可以购买我直接定价吧-168元\"><a class=\"markdownIt-Anchor\" href=\"#因为毕竟做这个是需要版权授权的过多的我就不解释呢这个项目不做为开源项目有需要可以购买我直接定价吧-168元\">#</a> 因为毕竟做这个是需要版权授权的，过多的我就不解释呢，这个项目不做为开源项目，有需要可以购买，我直接定价吧，💍 <span class=\"rainbow\">￥168 元</span>。</h3>\n<p>💍 <span class=\"rainbow\">毕竟我写代码也需要时间和过多思考问题和解决问题，请谅解！</span>。</p>\n<p>💍 <span class=\"rainbow\">下面给大家看一下前端页面截图</span>。</p>\n<h3 id=\"前端首页截图\"><a class=\"markdownIt-Anchor\" href=\"#前端首页截图\">#</a> <span class=\"rainbow\">前端首页截图</span></h3>\n<p><img data-src=\"https://files.alexhchu.com/2021/09/04/be23d3898bb98.png\" alt=\"image.png\"></p>\n<h3 id=\"后端首页截图\"><a class=\"markdownIt-Anchor\" href=\"#后端首页截图\">#</a> <span class=\"rainbow\">后端首页截图</span></h3>\n<p><img data-src=\"https://files.alexhchu.com/2021/09/04/0c49c789624ab.png\" alt=\"image.png\"></p>\n<h3 id=\"后端首页截图-2\"><a class=\"markdownIt-Anchor\" href=\"#后端首页截图-2\">#</a> <span class=\"rainbow\">后端首页截图</span></h3>\n<p><img data-src=\"https://files.alexhchu.com/2021/09/04/819579a2e7771.png\" alt=\"image.png\"></p>\n",
+            "tags": [
+                "其他"
+            ]
+        },
+        {
+            "id": "https://ahjie.top/Other-extensions/expand/",
+            "url": "https://ahjie.top/Other-extensions/expand/",
+            "title": "特别的惊喜",
+            "date_published": "2021-08-19T14:46:48.333Z",
+            "content_html": "<p>最近一段时间都比较繁忙，没时间更新时间更新博客内容，还请大家谅解，</p>\n<p>那么今天和大家介绍一个我考虑了很久，要拿下的一个后台模板，这个模板我犹豫了半年没有勇气敢拿下，其中原因就不必多说，这个后台模板呢，不是因为页面美观，也不是页面有什么特效之类的东西，而是我看中了，这个后台模板中的一个功能，一个大家也想拥有的一个功能，我估计吧，做我们程序员这个行业没多久的人都想着有没有现成的功能以及源码，参照一下，其实吧，我说句实话没必要，因为只有自己通过自己思维写出来的程序，才能给自己带来一点成就感，因为毕竟是自己亲手写出来的，但是这个不是我说这个功能的重点。</p>\n<h3 id=\"先看功能图\"><a class=\"markdownIt-Anchor\" href=\"#先看功能图\">#</a> 先看功能图</h3>\n<p><img data-src=\"https://files.alexhchu.com/2021/08/19/e826e2cc7d906.png\" alt></p>\n<p>估计各位小伙伴看到这个不陌生吧，在现如今这个社会，沟通这个必不可少吧，当然这个不是我写的，我也没这个能力，这个功能就是我看重这个后台模板的最主要原因。</p>\n<p>大家都知道我们前端框架有很多，<br>\n例如:<br>\n<font style=\"color:green\"> <strong>Vue.React.Layui.Bootstrap 等框架！</strong> </font></p>\n<p>今天我们介绍这个前端框架就是<strong> Layui</strong></p>\n<p>Layui 这个框架我相信大家都不会陌生</p>\n<h3 id=\"给大家看一下layui官网图\"><a class=\"markdownIt-Anchor\" href=\"#给大家看一下layui官网图\">#</a> 给大家看一下 Layui 官网图</h3>\n<p><img data-src=\"https://files.alexhchu.com/2021/08/19/18f1026f91018.png\" alt></p>\n<h3 id=\"下面到我表演了\"><a class=\"markdownIt-Anchor\" href=\"#下面到我表演了\">#</a> 下面到我表演了！</h3>\n<p><img data-src=\"https://files.alexhchu.com/2021/08/19/5c14fc4350c3f.png\" alt></p>\n<p>这个就是忍痛割爱拿下来的，给大家看一下价格</p>\n<h3 id=\"单页版-iframe版-价格一样\"><a class=\"markdownIt-Anchor\" href=\"#单页版-iframe版-价格一样\">#</a> 单页版 || iframe 版 价格一样</h3>\n<p><img data-src=\"https://files.alexhchu.com/2021/08/19/05effed5d1b74.png\" alt></p>\n<h3 id=\"通用版\"><a class=\"markdownIt-Anchor\" href=\"#通用版\">#</a> 通用版</h3>\n<p><img data-src=\"https://files.alexhchu.com/2021/08/19/aad95b2def77c.png\" alt></p>\n<p>开始的时候，我惊了这么贵，后面想了一下人家作者做出来也不容易，买这个价格也不为过，所以我买了</p>\n<h3 id=\"后台主题\"><a class=\"markdownIt-Anchor\" href=\"#后台主题\">#</a> 后台主题</h3>\n<p><img data-src=\"https://files.alexhchu.com/2021/08/19/293a218e1be16.png\" alt></p>\n<p>最终后台模板程序效果，</p>\n<p><font style=\"color:red\">花了<strong>￥1600</strong> 大洋，拿下了！</font></p>\n<p>有朋友需要可以来联系我，记住不是白嫖哦，毕竟我也是花钱买的哦，</p>\n<p>联系我拿下此模板！可以通过微信公众号搜索 <font style=\"color:red\"><strong>码坑</strong></font> 私信我进行购买！</p>\n<p>价格定价为: <font style=\"color:red\"><strong>￥10 大洋</strong></font></p>\n",
+            "tags": [
+                "其他"
+            ]
+        },
+        {
+            "id": "https://ahjie.top/Other-extensions/extension/",
+            "url": "https://ahjie.top/Other-extensions/extension/",
+            "title": "在线承接各类开发项目",
+            "date_published": "2021-03-27T09:37:01.453Z",
+            "content_html": "<h2 id=\"阿杰从今天开始承接互联网各类开发项目\"><a class=\"markdownIt-Anchor\" href=\"#阿杰从今天开始承接互联网各类开发项目\">#</a> 阿杰从今天开始承接互联网各类开发项目</h2>\n<p>现如今的社会，互联网无处不在我们的身边</p>\n<p>生活中我们都会使用微信或支付宝等软件 APP, 但是再这些 APP 上面有一个方便快捷的程序叫 “微信小程序” &amp;&amp; “支付宝小程序”</p>\n<p>很多电商平台也是有自己小程序，我们就不用去下载 APP 或者打开浏览器输入网址进入某个网站</p>\n<p>如果你也是准备入驻互联网，阿杰在此期待你的到来.</p>\n<p>如果你想拥有自己网站。后台管理系统.APP. 小程序</p>\n<h1 id=\"阿杰承接项目如下\"><a class=\"markdownIt-Anchor\" href=\"#阿杰承接项目如下\">#</a> 阿杰承接项目如下</h1>\n<p><img data-src=\"https://upimage.alexhchu.com/2021/03/27/6feb3e36566c5.jpg\" alt=\"码坑\"></p>\n<h3 id=\"心动不如行动\"><a class=\"markdownIt-Anchor\" href=\"#心动不如行动\">#</a> <span class=\"rainbow\">心动不如行动:</span></h3>\n<h3 id=\"期待你的加入\"><a class=\"markdownIt-Anchor\" href=\"#期待你的加入\">#</a> 期待你的加入！</h3>\n",
+            "tags": [
+                "Hexo"
+            ]
+        },
+        {
+            "id": "https://ahjie.top/Other-extensions/hexo/",
+            "url": "https://ahjie.top/Other-extensions/hexo/",
+            "title": "hexo分类and标签404",
+            "date_published": "2020-08-20T08:29:52.301Z",
+            "content_html": "<h2 id=\"404分类and标签错误处理\"><a class=\"markdownIt-Anchor\" href=\"#404分类and标签错误处理\">#</a> 💍 404 分类 and 标签错误处理</h2>\n<p>突然发现博客中，部分分类打不开，点击出现 404，在标签中查看，也是小部分标签点击 404，但是在所有文章中该分类下的文章都能打开，后来发现这些 404 的标签或分类名都是后来修改过的，原先的名称开头是大写名称</p>\n<p>将大写字母改成小写，hexo 部署正确，但是博客上还是不正确出现 404</p>\n<p>网上查了许多资料，才发现，git 中设置了大小写不敏感</p>\n<a id=\"more\"></a>\n<h2 id=\"解决方法如下\"><a class=\"markdownIt-Anchor\" href=\"#解决方法如下\">#</a> 💍 解决方法如下</h2>\n<p>修改 git 设置不忽略大小写</p>\n<p>进入博客文件夹，进入 git 目录：.deploy_git ，修改 .git 文件中的配置文件 config，将 ignorecase=true 改为 ignorecase=false</p>\n<figure class=\"highlight yaml\"><figcaption><span>Yaml</span></figcaption><table><tr><td class=\"gutter\"><pre><span class=\"line\">1</span><br><span class=\"line\">2</span><br><span class=\"line\">3</span><br></pre></td><td class=\"code\"><pre><span class=\"line\"><span class=\"string\">vim</span> <span class=\"string\">.</span> <span class=\"string\">deploy_git/.git/config</span></span><br><span class=\"line\"></span><br><span class=\"line\"><span class=\"string\">ignorecase</span> <span class=\"string\">=</span> <span class=\"literal\">false</span></span><br></pre></td></tr></table></figure>\n<p>如果还没有解决，清空部署到 github 上的文件，重新发布：</p>\n<figure class=\"highlight bash\"><figcaption><span>Bash</span></figcaption><table><tr><td class=\"gutter\"><pre><span class=\"line\">1</span><br><span class=\"line\">2</span><br><span class=\"line\">3</span><br><span class=\"line\">4</span><br></pre></td><td class=\"code\"><pre><span class=\"line\"><span class=\"built_in\">cd</span> .deploy_git</span><br><span class=\"line\">git rm -rf *</span><br><span class=\"line\">git commit -m <span class=\"string\">&#x27;clean all file&#x27;</span></span><br><span class=\"line\">git push</span><br></pre></td></tr></table></figure>\n<p>进入博客文件夹，用 hexo 重新生成部署</p>\n<figure class=\"highlight plain\"><figcaption><span>Hexo</span></figcaption><table><tr><td class=\"gutter\"><pre><span class=\"line\">1</span><br><span class=\"line\">2</span><br><span class=\"line\">3</span><br></pre></td><td class=\"code\"><pre><span class=\"line\">hexo clean</span><br><span class=\"line\">hexo g </span><br><span class=\"line\">hexo d or hexo g -d</span><br></pre></td></tr></table></figure>\n<p><font style=\"color: red;\">这些问题都是自己开始搭建博客的时候出现的一些问题，希望能够帮助到各位，<br>\n如果那里错误，请指点出来，大家一起讨论。</font></p>\n",
+            "tags": [
+                "Hexo"
+            ]
+        }
+    ]
+}

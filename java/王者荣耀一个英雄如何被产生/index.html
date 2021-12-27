@@ -1,0 +1,731 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#FFF">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+<link rel="icon" type="image/ico" sizes="32x32" href="/images/favicon.ico">
+  <meta http-equiv="Cache-Control" content="no-transform">
+  <meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+<link rel="alternate" type="application/rss+xml" title="码坑的博客" href="https://ahjie.top/rss.xml" />
+<link rel="alternate" type="application/atom+xml" title="码坑的博客" href="https://ahjie.top/atom.xml" />
+<link rel="alternate" type="application/json" title="码坑的博客" href="https://ahjie.top/feed.json" />
+
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Mulish:300,300italic,400,400italic,700,700italic%7CFredericka%20the%20Great:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20JP:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20SC:300,300italic,400,400italic,700,700italic%7CInconsolata:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="/css/app.css?v=0.2.3">
+
+  
+  <meta name="keywords" content="JAVA" />
+
+
+<link rel="canonical" href="https://ahjie.top/java/%E7%8E%8B%E8%80%85%E8%8D%A3%E8%80%80%E4%B8%80%E4%B8%AA%E8%8B%B1%E9%9B%84%E5%A6%82%E4%BD%95%E8%A2%AB%E4%BA%A7%E7%94%9F/">
+
+
+
+  <title>
+王者荣耀中一个英雄是怎么被产生的？ - sort - pom报错 - docker - Maven安装配置 - java基础 - 阿里云对象存储Oss - 王者荣耀中一个英雄是怎么被产生的？ - JAVA后端开发 |
+Code pit = 码坑的博客 = 请多指教</title>
+<meta name="generator" content="Hexo 5.0.2"></head>
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div id="loading">
+    <div class="cat">
+      <div class="body"></div>
+      <div class="head">
+        <div class="face"></div>
+      </div>
+      <div class="foot">
+        <div class="tummy-end"></div>
+        <div class="bottom"></div>
+        <div class="legs left"></div>
+        <div class="legs right"></div>
+      </div>
+      <div class="paw">
+        <div class="hands left"></div>
+        <div class="hands right"></div>
+      </div>
+    </div>
+  </div>
+  <div id="container">
+    <header id="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="inner">
+        <div id="brand">
+          <div class="pjax">
+          
+  <h1 itemprop="name headline">王者荣耀中一个英雄是怎么被产生的？
+  </h1>
+  
+<div class="meta">
+  <span class="item" title="创建时间：2021-05-21 11:50:23">
+    <span class="icon">
+      <i class="ic i-calendar"></i>
+    </span>
+    <span class="text">发表于</span>
+    <time itemprop="dateCreated datePublished" datetime="2021-05-21T11:50:23+08:00">2021-05-21</time>
+  </span>
+  <span class="item" title="本文字数">
+    <span class="icon">
+      <i class="ic i-pen"></i>
+    </span>
+    <span class="text">本文字数</span>
+    <span>6.5k</span>
+    <span class="text">字</span>
+  </span>
+  <span class="item" title="阅读时长">
+    <span class="icon">
+      <i class="ic i-clock"></i>
+    </span>
+    <span class="text">阅读时长</span>
+    <span>6 分钟</span>
+  </span>
+</div>
+
+
+          </div>
+        </div>
+        <nav id="nav">
+  <div class="inner">
+    <div class="toggle">
+      <div class="lines" aria-label="切换导航栏">
+        <span class="line"></span>
+        <span class="line"></span>
+        <span class="line"></span>
+      </div>
+    </div>
+    <ul class="menu">
+      <li class="item title"><a href="/" rel="start">Code pit</a></li>
+    </ul>
+    <ul class="right">
+      <li class="item theme">
+        <i class="ic i-sun"></i>
+      </li>
+      <li class="item search">
+        <i class="ic i-search"></i>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+      </div>
+      <div id="imgs" class="pjax">
+        <ul>
+          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1gipesrnqv3j20zk0m8ava.jpg"></li>
+          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1gipexe4oykj20zk0m87ji.jpg"></li>
+          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1giclxxcb6rj20zk0m8b29.jpg"></li>
+          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1gicit31ffoj20zk0m8naf.jpg"></li>
+          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1gicmnywqgpj20zk0m8dwx.jpg"></li>
+          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1giciukx8a7j20zk0m8aio.jpg"></li>
+        </ul>
+      </div>
+    </header>
+    <div id="waves">
+      <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+        <defs>
+          <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+        </defs>
+        <g class="parallax">
+          <use xlink:href="#gentle-wave" x="48" y="0" />
+          <use xlink:href="#gentle-wave" x="48" y="3" />
+          <use xlink:href="#gentle-wave" x="48" y="5" />
+          <use xlink:href="#gentle-wave" x="48" y="7" />
+        </g>
+      </svg>
+    </div>
+    <main id="main">
+      <div class="inner">
+        <div id="content" class="pjax">
+          
+  <div class="article wrap">
+    
+<div class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+<i class="ic i-home"></i>
+<span><a href="/">首页</a></span><i class="ic i-angle-right"></i>
+<span  itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a href="/categories/java/" itemprop="item" rel="index" title="分类于 JAVA后端开发"><span itemprop="name">JAVA后端开发</span></a>
+<meta itemprop="position" content="1" /></span>
+<i class="ic i-angle-right"></i>
+<span  itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a href="/categories/java/%E7%8E%8B%E8%80%85%E8%8D%A3%E8%80%80%E4%B8%AD%E4%B8%80%E4%B8%AA%E8%8B%B1%E9%9B%84%E6%98%AF%E6%80%8E%E4%B9%88%E8%A2%AB%E4%BA%A7%E7%94%9F%E7%9A%84%EF%BC%9F/" itemprop="item" rel="index" title="分类于 王者荣耀中一个英雄是怎么被产生的？"><span itemprop="name">王者荣耀中一个英雄是怎么被产生的？</span></a>
+<meta itemprop="position" content="2" /></span>
+<i class="ic i-angle-right"></i>
+<span  itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a href="/categories/java/%E7%8E%8B%E8%80%85%E8%8D%A3%E8%80%80%E4%B8%AD%E4%B8%80%E4%B8%AA%E8%8B%B1%E9%9B%84%E6%98%AF%E6%80%8E%E4%B9%88%E8%A2%AB%E4%BA%A7%E7%94%9F%E7%9A%84%EF%BC%9F/%E9%98%BF%E9%87%8C%E4%BA%91%E5%AF%B9%E8%B1%A1%E5%AD%98%E5%82%A8Oss/" itemprop="item" rel="index" title="分类于 阿里云对象存储Oss"><span itemprop="name">阿里云对象存储Oss</span></a>
+<meta itemprop="position" content="3" /></span>
+<i class="ic i-angle-right"></i>
+<span  itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a href="/categories/java/%E7%8E%8B%E8%80%85%E8%8D%A3%E8%80%80%E4%B8%AD%E4%B8%80%E4%B8%AA%E8%8B%B1%E9%9B%84%E6%98%AF%E6%80%8E%E4%B9%88%E8%A2%AB%E4%BA%A7%E7%94%9F%E7%9A%84%EF%BC%9F/%E9%98%BF%E9%87%8C%E4%BA%91%E5%AF%B9%E8%B1%A1%E5%AD%98%E5%82%A8Oss/java%E5%9F%BA%E7%A1%80/" itemprop="item" rel="index" title="分类于 java基础"><span itemprop="name">java基础</span></a>
+<meta itemprop="position" content="4" /></span>
+<i class="ic i-angle-right"></i>
+<span  itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a href="/categories/java/%E7%8E%8B%E8%80%85%E8%8D%A3%E8%80%80%E4%B8%AD%E4%B8%80%E4%B8%AA%E8%8B%B1%E9%9B%84%E6%98%AF%E6%80%8E%E4%B9%88%E8%A2%AB%E4%BA%A7%E7%94%9F%E7%9A%84%EF%BC%9F/%E9%98%BF%E9%87%8C%E4%BA%91%E5%AF%B9%E8%B1%A1%E5%AD%98%E5%82%A8Oss/java%E5%9F%BA%E7%A1%80/Maven%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE/" itemprop="item" rel="index" title="分类于 Maven安装配置"><span itemprop="name">Maven安装配置</span></a>
+<meta itemprop="position" content="5" /></span>
+<i class="ic i-angle-right"></i>
+<span  itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a href="/categories/java/%E7%8E%8B%E8%80%85%E8%8D%A3%E8%80%80%E4%B8%AD%E4%B8%80%E4%B8%AA%E8%8B%B1%E9%9B%84%E6%98%AF%E6%80%8E%E4%B9%88%E8%A2%AB%E4%BA%A7%E7%94%9F%E7%9A%84%EF%BC%9F/%E9%98%BF%E9%87%8C%E4%BA%91%E5%AF%B9%E8%B1%A1%E5%AD%98%E5%82%A8Oss/java%E5%9F%BA%E7%A1%80/Maven%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE/docker/" itemprop="item" rel="index" title="分类于 docker"><span itemprop="name">docker</span></a>
+<meta itemprop="position" content="6" /></span>
+<i class="ic i-angle-right"></i>
+<span  itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a href="/categories/java/%E7%8E%8B%E8%80%85%E8%8D%A3%E8%80%80%E4%B8%AD%E4%B8%80%E4%B8%AA%E8%8B%B1%E9%9B%84%E6%98%AF%E6%80%8E%E4%B9%88%E8%A2%AB%E4%BA%A7%E7%94%9F%E7%9A%84%EF%BC%9F/%E9%98%BF%E9%87%8C%E4%BA%91%E5%AF%B9%E8%B1%A1%E5%AD%98%E5%82%A8Oss/java%E5%9F%BA%E7%A1%80/Maven%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE/docker/pom%E6%8A%A5%E9%94%99/" itemprop="item" rel="index" title="分类于 pom报错"><span itemprop="name">pom报错</span></a>
+<meta itemprop="position" content="7" /></span>
+<i class="ic i-angle-right"></i>
+<span  class="current" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a href="/categories/java/%E7%8E%8B%E8%80%85%E8%8D%A3%E8%80%80%E4%B8%AD%E4%B8%80%E4%B8%AA%E8%8B%B1%E9%9B%84%E6%98%AF%E6%80%8E%E4%B9%88%E8%A2%AB%E4%BA%A7%E7%94%9F%E7%9A%84%EF%BC%9F/%E9%98%BF%E9%87%8C%E4%BA%91%E5%AF%B9%E8%B1%A1%E5%AD%98%E5%82%A8Oss/java%E5%9F%BA%E7%A1%80/Maven%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE/docker/pom%E6%8A%A5%E9%94%99/sort/" itemprop="item" rel="index" title="分类于 sort"><span itemprop="name">sort</span></a>
+<meta itemprop="position" content="8" /></span>
+</div>
+
+    <article itemscope itemtype="http://schema.org/Article" class="post block" lang="zh-Hans">
+  <link itemprop="mainEntityOfPage" href="https://ahjie.top/java/%E7%8E%8B%E8%80%85%E8%8D%A3%E8%80%80%E4%B8%80%E4%B8%AA%E8%8B%B1%E9%9B%84%E5%A6%82%E4%BD%95%E8%A2%AB%E4%BA%A7%E7%94%9F/">
+
+  <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="image" content="/images/avatar.jpg">
+    <meta itemprop="name" content="码坑">
+    <meta itemprop="description" content="请多指教, 本人是小白,初次与各位相遇,请多多指教,谢谢 じ萌喵喵ルゞ Ю↘ 珂ル°">
+  </span>
+
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="码坑的博客">
+  </span>
+
+  <div class="body md" itemprop="articleBody">
+    
+
+    <h1 id="王者荣耀中一个英雄是怎么被产生的一"><a class="markdownIt-Anchor" href="#王者荣耀中一个英雄是怎么被产生的一">#</a> 王者荣耀中一个英雄是怎么被产生的？（一）</h1>
+<p>对象和类的小练习一） 我呢平时也会玩玩游戏，比如今天要说的这个王者荣耀，其实把这个游戏我平时没事的时候都会玩一下，然后突然脑洞打开，想了一下，我自己是一个学习程序的，何不模拟一下这个游戏里面一些东西出来玩玩，当然这并不是只是为了玩，顺便复习 Java 中 (OOP) 的相关的一些知识</p>
+<h2 id="前期准备"><a class="markdownIt-Anchor" href="#前期准备">#</a> 前期准备</h2>
+<p>我们要在 IDEA 上创建一个新的项目，创建好一个项目后，我们需要创建 5 个包，分别是英雄包，装备包，铭文包，野怪包，皮肤包</p>
+<p>然后我们就可以一个一个的实现这些功能了。</p>
+<p><img data-src="https://upimage.alexhchu.com/2021/05/21/ee67fdd50c402.png" alt="目录"></p>
+<h2 id="实现我的英雄梦"><a class="markdownIt-Anchor" href="#实现我的英雄梦">#</a> 实现我的英雄梦！</h2>
+<h3 id="1-英雄基本属性实现"><a class="markdownIt-Anchor" href="#1-英雄基本属性实现">#</a> 1. 英雄基本属性实现</h3>
+<figure class="highlight java"><figcaption><span>Java</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.example.demo.hero;</span><br><span class="line"><span class="keyword">import</span> lombok.Data;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@ProjectName</span>: demo</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@Package</span>: com.example.demo.hero</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@ClassName</span>: Hero</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@Author</span>: 码 坑</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@Description</span>: Hero</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@Date</span>: 2021/5/21 10:39</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@Version</span>: 1.0</span></span><br><span class="line"><span class="comment"> * 所有Get or Set 方法即用 <span class="doctag">@Data</span>注解替代</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="meta">@Data</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Hero</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> String name; <span class="comment">//英雄的名字</span></span><br><span class="line">    <span class="keyword">public</span> String type; <span class="comment">//英雄的职业</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">int</span> blood; <span class="comment">//英雄的基本血量</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">int</span> phyattack; <span class="comment">//英雄的基本物理攻击</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">int</span> Magicattavk; <span class="comment">//英雄的基本法术攻击</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">int</span> phyfangyu; <span class="comment">//英雄的基础防御</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">int</span> attavknum; <span class="comment">//普通伤害的值</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">int</span> move; <span class="comment">//移动速度</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">int</span> money; <span class="comment">//经济</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Hero</span><span class="params">(String name, String type, <span class="keyword">int</span> blood, <span class="keyword">int</span> phyattack, <span class="keyword">int</span> magicattavk, <span class="keyword">int</span> phyfangyu, <span class="keyword">int</span> attavknum, <span class="keyword">int</span> move, <span class="keyword">int</span> money)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.name = name;</span><br><span class="line">        <span class="keyword">this</span>.type = type;</span><br><span class="line">        <span class="keyword">this</span>.blood = blood;</span><br><span class="line">        <span class="keyword">this</span>.phyattack = phyattack;</span><br><span class="line">        Magicattavk = magicattavk;</span><br><span class="line">        <span class="keyword">this</span>.phyfangyu = phyfangyu;</span><br><span class="line">        <span class="keyword">this</span>.attavknum = attavknum;</span><br><span class="line">        <span class="keyword">this</span>.move = move;</span><br><span class="line">        <span class="keyword">this</span>.money = money;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//受到普通攻击</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">bnormalAttack</span><span class="params">(<span class="keyword">int</span> attavknum)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (<span class="keyword">this</span>.phyfangyu - <span class="keyword">this</span>.attavknum &lt;= <span class="number">0</span>) &#123;</span><br><span class="line">            <span class="keyword">int</span> res = <span class="keyword">this</span>.phyfangyu - <span class="keyword">this</span>.attavknum;</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">this</span>.blood + res;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> blood - <span class="keyword">this</span>.attavknum;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//普通攻击</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">znormalAttack</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (<span class="keyword">this</span>.type == <span class="string">&quot;射手&quot;</span> || <span class="keyword">this</span>.type == <span class="string">&quot;战士&quot;</span> || <span class="keyword">this</span>.type == <span class="string">&quot;刺客&quot;</span>) &#123;</span><br><span class="line">            <span class="keyword">this</span>.attavknum += phyattack;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (<span class="keyword">this</span>.type == <span class="string">&quot;法师&quot;</span>) &#123;</span><br><span class="line">            <span class="keyword">this</span>.attavknum += Magicattavk;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> attavknum;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"> </span><br></pre></td></tr></table></figure>
+<h2 id="2-装备包"><a class="markdownIt-Anchor" href="#2-装备包">#</a> 2. 装备包</h2>
+<p>装备太多了，我主要写一些我平时比较喜欢的几个装备，有兴趣的盆友可以自己练习多写几个</p>
+<h3 id="鞋子"><a class="markdownIt-Anchor" href="#鞋子">#</a> 鞋子</h3>
+<figure class="highlight java"><figcaption><span>Java</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.example.demo.equipment;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> lombok.Data;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 抵抗之靴</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@ProjectName</span>: demo</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@Package</span>: com.example.demo.equipment</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@ClassName</span>: Equipment</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@Author</span>: 码 坑</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@Description</span>: Equipment</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@Date</span>: 2021/5/21 10:43</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@Version</span>: 1.0</span></span><br><span class="line"><span class="comment"> * 所有Get or Set 方法即用 <span class="doctag">@Data</span>注解替代</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="meta">@Data</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Equipment</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 效果：减低敌方的攻击，也就是增加自己的物防</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">public</span> String name = <span class="string">&quot;抵抗之靴&quot;</span>;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">int</span> phyattack = <span class="number">200</span>;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">int</span> mckattack = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">int</span> move = <span class="number">200</span>;<span class="comment">//英雄移动速度+200；</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h3 id="反甲"><a class="markdownIt-Anchor" href="#反甲">#</a> 反甲</h3>
+<figure class="highlight java"><figcaption><span>Java</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.example.demo.equipment;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> lombok.Data;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 反甲</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@ProjectName</span>: demo</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@Package</span>: com.example.demo.equipment</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@ClassName</span>: The_armor</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@Author</span>: 码 坑</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@Description</span>: The_armor</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@Date</span>: 2021/5/21 10:46</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@Version</span>: 1.0</span></span><br><span class="line"><span class="comment"> * 所有Get or Set 方法即用 <span class="doctag">@Data</span>注解替代</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="meta">@Data</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">The_armor</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> String name = <span class="string">&quot;反甲&quot;</span>;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">int</span> phyattack = <span class="number">40</span>;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">int</span> phyfanyu = <span class="number">420</span>;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">double</span> fashang = <span class="number">0.2</span>; <span class="comment">//冷却时间</span></span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h3 id="暗影战斧"><a class="markdownIt-Anchor" href="#暗影战斧">#</a> 暗影战斧</h3>
+<figure class="highlight java"><figcaption><span>Java</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.example.demo.equipment;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> lombok.Data;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 暗影战斧</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@ProjectName</span>: demo</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@Package</span>: com.example.demo.equipment</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@ClassName</span>: Shadow_tomahawk</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@Author</span>: 码 坑</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@Description</span>: Shadow_tomahawk</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@Date</span>: 2021/5/21 10:49</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@Version</span>: 1.0</span></span><br><span class="line"><span class="comment"> * 所有Get or Set 方法即用 <span class="doctag">@Data</span>注解替代</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="meta">@Data</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Shadow_tomahawk</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> String name = <span class="string">&quot;暗影战斧&quot;</span>;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">int</span> phyattack = <span class="number">85</span>; <span class="comment">//加物理攻击85</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">int</span> blood = <span class="number">500</span>;   <span class="comment">//生命值加500</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">int</span> cool = <span class="number">15</span>;    <span class="comment">//冷却缩减15</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="3-没有经济来源怎么行野怪实现"><a class="markdownIt-Anchor" href="#3-没有经济来源怎么行野怪实现">#</a> 3. 没有经济来源怎么行？野怪实现</h2>
+<p>我主要写了野猪，小鸟，河蟹，小兵的类</p>
+<h3 id="野猪"><a class="markdownIt-Anchor" href="#野猪">#</a> 野猪</h3>
+<figure class="highlight java"><figcaption><span>Java</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.example.demo.creeps;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> lombok.Data;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 野猪</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@ProjectName</span>: demo</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@Package</span>: com.example.demo.creeps</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@ClassName</span>: pig</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@Author</span>: 码 坑</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@Description</span>: pig</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@Date</span>: 2021/5/21 10:51</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@Version</span>: 1.0</span></span><br><span class="line"><span class="comment"> * 所有Get or Set 方法即用 <span class="doctag">@Data</span>注解替代</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="meta">@Data</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">pig</span> </span>&#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">int</span> num = <span class="number">80</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h3 id="小鸟"><a class="markdownIt-Anchor" href="#小鸟">#</a> 小鸟</h3>
+<figure class="highlight java"><figcaption><span>Java</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.example.demo.creeps;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> lombok.Data;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 小鸟</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@ProjectName</span>: demo</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@Package</span>: com.example.demo.creeps</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@ClassName</span>: Bird</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@Author</span>: 码 坑</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@Description</span>: Bird</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@Date</span>: 2021/5/21 10:53</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@Version</span>: 1.0</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="meta">@Data</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Bird</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">int</span> num = <span class="number">150</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h3 id="河蟹"><a class="markdownIt-Anchor" href="#河蟹">#</a> 河蟹</h3>
+<figure class="highlight java"><figcaption><span>Java</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.example.demo.creeps;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> lombok.Data;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 河蟹</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@ProjectName</span>: demo</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@Package</span>: com.example.demo.creeps</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@ClassName</span>: Crabs</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@Author</span>: 码 坑</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@Description</span>: Crabs</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@Date</span>: 2021/5/21 10:54</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@Version</span>: 1.0</span></span><br><span class="line"><span class="comment"> * 所有Get or Set 方法即用 <span class="doctag">@Data</span>注解替代</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="meta">@Data</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Crabs</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">int</span> num = <span class="number">150</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h3 id="小兵"><a class="markdownIt-Anchor" href="#小兵">#</a> 小兵</h3>
+<figure class="highlight java"><figcaption><span>Java</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.example.demo.creeps;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> lombok.Data;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 小兵</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@ProjectName</span>: demo</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@Package</span>: com.example.demo.creeps</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@ClassName</span>: Soldiers</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@Author</span>: 码 坑</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@Description</span>: Soldiers</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@Date</span>: 2021/5/21 10:55</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@Version</span>: 1.0</span></span><br><span class="line"><span class="comment"> * 所有Get or Set 方法即用 <span class="doctag">@Data</span>注解替代</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="meta">@Data</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Soldiers</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">int</span> num = <span class="number">150</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h2 id="三-开始游戏啦"><a class="markdownIt-Anchor" href="#三-开始游戏啦">#</a> 三、开始游戏啦</h2>
+<figure class="highlight java"><figcaption><span>Java</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.example.demo;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> com.example.demo.creeps.Bird;</span><br><span class="line"><span class="keyword">import</span> com.example.demo.creeps.Crabs;</span><br><span class="line"><span class="keyword">import</span> com.example.demo.creeps.Soldiers;</span><br><span class="line"><span class="keyword">import</span> com.example.demo.creeps.pig;</span><br><span class="line"><span class="keyword">import</span> com.example.demo.equipment.Equipment;</span><br><span class="line"><span class="keyword">import</span> com.example.demo.equipment.Shadow_tomahawk;</span><br><span class="line"><span class="keyword">import</span> com.example.demo.equipment.The_armor;</span><br><span class="line"><span class="keyword">import</span> com.example.demo.hero.Hero;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">DemoApplication</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        Hero hero = <span class="keyword">new</span> Hero(<span class="string">&quot;亚瑟&quot;</span>, <span class="string">&quot;战士&quot;</span>, <span class="number">1000</span>, <span class="number">200</span>, <span class="number">0</span>, <span class="number">500</span>, <span class="number">200</span>, <span class="number">50</span>, <span class="number">0</span>);</span><br><span class="line">        System.out.println(hero.name);</span><br><span class="line">        System.out.println(hero.money);</span><br><span class="line">        <span class="comment">//开始发育(先产生野怪，小兵，河蟹的实例化对象)</span></span><br><span class="line">        pig pig1 = <span class="keyword">new</span> pig();</span><br><span class="line">        Bird Bird = <span class="keyword">new</span> Bird();</span><br><span class="line">        Soldiers soldiers = <span class="keyword">new</span> Soldiers();</span><br><span class="line">        Crabs crabs2 = <span class="keyword">new</span> Crabs();</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt;= <span class="number">10</span>; i++) &#123;  <span class="comment">//打了10轮</span></span><br><span class="line">            hero.money += pig1.getNum() + Bird.getNum() + soldiers.getNum() + crabs2.getNum();</span><br><span class="line">        &#125;</span><br><span class="line">        System.out.println(hero.name + <span class="string">&quot;的经济现在是&quot;</span> + hero.money);</span><br><span class="line"></span><br><span class="line">        <span class="comment">//开始创建装备类</span></span><br><span class="line">        System.out.println(<span class="string">&quot;购买装备前：&quot;</span>);</span><br><span class="line">        System.out.println(hero.name + <span class="string">&quot;当前的属性&quot;</span> + <span class="string">&quot;生命值：&quot;</span> + hero.blood + <span class="string">&quot;物理攻击：&quot;</span> + hero.phyattack + <span class="string">&quot;法术攻击：&quot;</span> + hero.Magicattavk +</span><br><span class="line">                <span class="string">&quot; 物理防御：&quot;</span> + hero.phyfangyu + <span class="string">&quot;移动速度：&quot;</span> + hero.move);</span><br><span class="line"></span><br><span class="line">        <span class="comment">//判断经济是否购买装备</span></span><br><span class="line">        <span class="keyword">if</span> (hero.money &gt;= <span class="number">200</span>) &#123;</span><br><span class="line">            Equipment equipment = <span class="keyword">new</span> Equipment();</span><br><span class="line">            System.out.println(hero.name + <span class="string">&quot;购买了&quot;</span> + equipment.name);</span><br><span class="line">            hero.phyfangyu += equipment.getPhyattack();</span><br><span class="line">            hero.move += equipment.getMove();</span><br><span class="line">            hero.money = hero.money - <span class="number">200</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (hero.money &gt;= <span class="number">1200</span>) &#123;</span><br><span class="line">            The_armor armor = <span class="keyword">new</span> The_armor();</span><br><span class="line">            System.out.println(hero.name + <span class="string">&quot;购买了&quot;</span> + armor.name);</span><br><span class="line">            hero.phyattack += armor.getPhyattack(); <span class="comment">//攻击力+</span></span><br><span class="line">            hero.phyfangyu += armor.getPhyfanyu();  <span class="comment">//防御力+</span></span><br><span class="line">            hero.money = hero.money - <span class="number">1200</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (hero.money &gt;= <span class="number">2000</span>) &#123;</span><br><span class="line">            Shadow_tomahawk tomahawk = <span class="keyword">new</span> Shadow_tomahawk();</span><br><span class="line">            System.out.println(hero.name + <span class="string">&quot;购买了&quot;</span> + tomahawk.name);</span><br><span class="line">            hero.phyattack += tomahawk.getPhyattack(); <span class="comment">//攻击力+</span></span><br><span class="line">            hero.blood += tomahawk.getBlood();  <span class="comment">//生命力+</span></span><br><span class="line">            hero.money = hero.money - <span class="number">2000</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        System.out.println(<span class="string">&quot;购买装备后：&quot;</span>);</span><br><span class="line">        System.out.println(hero.name + <span class="string">&quot;当前的属性&quot;</span> + <span class="string">&quot;生命值：&quot;</span> + hero.blood + <span class="string">&quot;物理攻击：&quot;</span> + hero.phyattack + <span class="string">&quot;法术攻击：&quot;</span> + hero.Magicattavk +</span><br><span class="line">                <span class="string">&quot; 物理防御：&quot;</span> + hero.phyfangyu + <span class="string">&quot;移动速度：&quot;</span> + hero.move);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p><img data-src="https://upimage.alexhchu.com/2021/05/21/ed8f51aaa9677.png" alt="效果"></p>
+<p>我基本可以实现简单的创建一个英雄，实现刷野怪，购买装备的简单操作，后序我将实现英雄的三个技能和铭文的实现，感谢支持！</p>
+<h3 id="码坑"><a class="markdownIt-Anchor" href="#码坑">#</a> 码坑</h3>
+<p>如以上内容对你有帮助，请转发收藏哦，更多相关内容请关注码坑公众号</p>
+<p><img data-src="https://upimage.alexhchu.com/2021/05/21/464918423d9be.jpg" alt="公众号"></p>
+<p><img data-src="https://upimage.alexhchu.com/2021/05/21/98ea8c4aa91bb.jpg" alt="码坑博客"></p>
+
+      <div class="tags">
+          <a href="/tags/JAVA/" rel="tag"><i class="ic i-tag"></i> JAVA</a>
+      </div>
+  </div>
+
+   <footer>
+
+    <div class="meta">
+  <span class="item">
+    <span class="icon">
+      <i class="ic i-calendar-check"></i>
+    </span>
+    <span class="text">更新于</span>
+    <time title="修改时间：2021-05-21 11:59:57" itemprop="dateModified" datetime="2021-05-21T11:59:57+08:00">2021-05-21</time>
+  </span>
+  <span id="java/王者荣耀一个英雄如何被产生/" class="item leancloud_visitors" data-flag-title="王者荣耀中一个英雄是怎么被产生的？" title="阅读次数">
+      <span class="icon">
+        <i class="ic i-eye"></i>
+      </span>
+      <span class="text">阅读次数</span>
+      <span class="leancloud-visitors-count"></span>
+      <span class="text">次</span>
+  </span>
+</div>
+
+      
+<div class="reward">
+  <button><i class="ic i-heartbeat"></i> 赞赏</button>
+  <p>请我喝[茶]~(￣▽￣)~*</p>
+  <div id="qr">
+      
+      <div>
+        <img data-src="/images/wechatpay.png" alt="码坑 微信支付">
+        <p>微信支付</p>
+      </div>
+      
+      <div>
+        <img data-src="/images/alipay.png" alt="码坑 支付宝支付">
+        <p>支付宝支付</p>
+      </div>
+      
+      <div>
+        <img data-src="/images/paypal.png" alt="码坑 QQ支付">
+        <p>QQ支付</p>
+      </div>
+  </div>
+</div>
+
+      
+
+<div id="copyright">
+<ul>
+  <li class="author">
+    <strong>本文作者： </strong>码坑 <i class="ic i-at"><em>@</em></i>码坑的博客
+  </li>
+  <li class="link">
+    <strong>本文链接：</strong>
+    <a href="https://ahjie.top/java/%E7%8E%8B%E8%80%85%E8%8D%A3%E8%80%80%E4%B8%80%E4%B8%AA%E8%8B%B1%E9%9B%84%E5%A6%82%E4%BD%95%E8%A2%AB%E4%BA%A7%E7%94%9F/" title="王者荣耀中一个英雄是怎么被产生的？">https://ahjie.top/java/王者荣耀一个英雄如何被产生/</a>
+  </li>
+  <li class="license">
+    <strong>版权声明： </strong>本站所有文章除特别声明外，均采用 <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC9kZWVkLnpo"><i class="ic i-creative-commons"><em>(CC)</em></i>BY-NC-SA</span> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+  </footer>
+
+</article>
+
+  </div>
+  
+
+<div class="nav">
+    <div class="item left">
+      
+
+  <a href="/java/%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;tva3.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1gicit31ffoj20zk0m8naf.jpg" title="阿里云对象存储Oss">
+  <span class="type">上一篇</span>
+  <span class="category"><i class="ic i-flag"></i> sort</span>
+  <h3>阿里云对象存储Oss</h3>
+  </a>
+
+    </div>
+    <div class="item right">
+      
+
+  <a href="/Other-extensions/expand/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;tva3.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1giclg5ms2rj20zk0m8u0x.jpg" title="特别的惊喜">
+  <span class="type">下一篇</span>
+  <span class="category"><i class="ic i-flag"></i> 特别的惊喜</span>
+  <h3>特别的惊喜</h3>
+  </a>
+
+    </div>
+</div>
+
+  
+  <div class="wrap" id="comments"></div>
+
+
+        </div>
+        <div id="sidebar">
+          
+
+<div class="inner">
+
+  <div class="panels">
+    <div class="inner">
+      <div class="contents panel pjax" data-title="文章目录">
+          <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%8E%8B%E8%80%85%E8%8D%A3%E8%80%80%E4%B8%AD%E4%B8%80%E4%B8%AA%E8%8B%B1%E9%9B%84%E6%98%AF%E6%80%8E%E4%B9%88%E8%A2%AB%E4%BA%A7%E7%94%9F%E7%9A%84%E4%B8%80"><span class="toc-number">1.</span> <span class="toc-text"> 王者荣耀中一个英雄是怎么被产生的？（一）</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%89%8D%E6%9C%9F%E5%87%86%E5%A4%87"><span class="toc-number">1.1.</span> <span class="toc-text"> 前期准备</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%9E%E7%8E%B0%E6%88%91%E7%9A%84%E8%8B%B1%E9%9B%84%E6%A2%A6"><span class="toc-number">1.2.</span> <span class="toc-text"> 实现我的英雄梦！</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E8%8B%B1%E9%9B%84%E5%9F%BA%E6%9C%AC%E5%B1%9E%E6%80%A7%E5%AE%9E%E7%8E%B0"><span class="toc-number">1.2.1.</span> <span class="toc-text"> 1. 英雄基本属性实现</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E8%A3%85%E5%A4%87%E5%8C%85"><span class="toc-number">1.3.</span> <span class="toc-text"> 2. 装备包</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%9E%8B%E5%AD%90"><span class="toc-number">1.3.1.</span> <span class="toc-text"> 鞋子</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8F%8D%E7%94%B2"><span class="toc-number">1.3.2.</span> <span class="toc-text"> 反甲</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9A%97%E5%BD%B1%E6%88%98%E6%96%A7"><span class="toc-number">1.3.3.</span> <span class="toc-text"> 暗影战斧</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-%E6%B2%A1%E6%9C%89%E7%BB%8F%E6%B5%8E%E6%9D%A5%E6%BA%90%E6%80%8E%E4%B9%88%E8%A1%8C%E9%87%8E%E6%80%AA%E5%AE%9E%E7%8E%B0"><span class="toc-number">1.4.</span> <span class="toc-text"> 3. 没有经济来源怎么行？野怪实现</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%87%8E%E7%8C%AA"><span class="toc-number">1.4.1.</span> <span class="toc-text"> 野猪</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B0%8F%E9%B8%9F"><span class="toc-number">1.4.2.</span> <span class="toc-text"> 小鸟</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B2%B3%E8%9F%B9"><span class="toc-number">1.4.3.</span> <span class="toc-text"> 河蟹</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B0%8F%E5%85%B5"><span class="toc-number">1.4.4.</span> <span class="toc-text"> 小兵</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%89-%E5%BC%80%E5%A7%8B%E6%B8%B8%E6%88%8F%E5%95%A6"><span class="toc-number">1.5.</span> <span class="toc-text"> 三、开始游戏啦</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%A0%81%E5%9D%91"><span class="toc-number">1.5.1.</span> <span class="toc-text"> 码坑</span></a></li></ol></li></ol></li></ol>
+      </div>
+      <div class="related panel pjax" data-title="系列文章">
+        <ul>
+          <li class="active"><a href="/java/%E7%8E%8B%E8%80%85%E8%8D%A3%E8%80%80%E4%B8%80%E4%B8%AA%E8%8B%B1%E9%9B%84%E5%A6%82%E4%BD%95%E8%A2%AB%E4%BA%A7%E7%94%9F/" rel="bookmark" title="王者荣耀中一个英雄是怎么被产生的？">王者荣耀中一个英雄是怎么被产生的？</a></li>
+        </ul>
+      </div>
+      <div class="overview panel" data-title="站点概览">
+        <div class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <img class="image" itemprop="image" alt="码坑"
+      data-src="/images/avatar.jpg">
+  <p class="name" itemprop="name">码坑</p>
+  <div class="description" itemprop="description">本人是小白,初次与各位相遇,请多多指教,谢谢 じ萌喵喵ルゞ Ю↘ 珂ル°</div>
+</div>
+
+<nav class="state">
+    <div class="item posts">
+      <a href="/archives/">
+        <span class="count">21</span>
+        <span class="name">文章</span>
+      </a>
+    </div>
+    <div class="item categories">
+      <a href="/categories/">
+        <span class="count">39</span>
+        <span class="name">分类</span>
+      </a>
+    </div>
+    <div class="item tags">
+      <a href="/tags/">
+        <span class="count">11</span>
+        <span class="name">标签</span>
+      </a>
+    </div>
+</nav>
+
+<div class="social">
+      <span class="exturl item github" data-url="aHR0cHM6Ly9naXRodWIuY29tL3lvdXJuYW1l" title="https:&#x2F;&#x2F;github.com&#x2F;yourname"><i class="ic i-github"></i></span>
+      <span class="exturl item twitter" data-url="aHR0cHM6Ly90d2l0dGVyLmNvbS95b3VybmFtZQ==" title="https:&#x2F;&#x2F;twitter.com&#x2F;yourname"><i class="ic i-twitter"></i></span>
+      <span class="exturl item zhihu" data-url="aHR0cHM6Ly93d3cuemhpaHUuY29tL3Blb3BsZS95b3VybmFtZQ==" title="https:&#x2F;&#x2F;www.zhihu.com&#x2F;people&#x2F;yourname"><i class="ic i-zhihu"></i></span>
+      <span class="exturl item music" data-url="aHR0cHM6Ly9tdXNpYy4xNjMuY29tLyMvdXNlci9ob21lP2lkPXlvdXJpZA==" title="https:&#x2F;&#x2F;music.163.com&#x2F;#&#x2F;user&#x2F;home?id&#x3D;yourid"><i class="ic i-cloud-music"></i></span>
+      <span class="exturl item weibo" data-url="aHR0cHM6Ly93ZWliby5jb20veW91cm5hbWU=" title="https:&#x2F;&#x2F;weibo.com&#x2F;yourname"><i class="ic i-weibo"></i></span>
+      <span class="exturl item about" data-url="aHR0cHM6Ly9hYm91dC5tZS95b3VybmFtZQ==" title="https:&#x2F;&#x2F;about.me&#x2F;yourname"><i class="ic i-address-card"></i></span>
+</div>
+
+<ul class="menu">
+  
+    
+  <li class="item">
+    <a href="/" rel="section"><i class="ic i-home"></i>首页</a>
+  </li>
+
+        
+  <li class="item dropdown">
+    <a href="javascript:void(0);"><i class="ic i-feather"></i>文章</a>
+    <ul class="submenu">
+
+        
+  <li class="item">
+    <a href="/archives/" rel="section"><i class="ic i-list-alt"></i>归档</a>
+  </li>
+
+        
+  <li class="item">
+    <a href="/categories/" rel="section"><i class="ic i-th"></i>分类</a>
+  </li>
+
+        
+  <li class="item">
+    <a href="/tags/" rel="section"><i class="ic i-tags"></i>标签</a>
+  </li>
+
+  </ul>
+    
+  <li class="item">
+    <a href="/about/" rel="section"><i class="ic i-user"></i>关于</a>
+  </li>
+
+    
+  <li class="item">
+    <a href="/friends/" rel="section"><i class="ic i-heart"></i>友链</a>
+  </li>
+
+    
+  <li class="item">
+    <a href="/Guoman/" rel="section"><i class="ic i-magic"></i>影视</a>
+  </li>
+
+
+</ul>
+
+      </div>
+    </div>
+  </div>
+
+  <ul id="quick">
+    <li class="prev pjax">
+        <a href="/java/%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0/" rel="prev" title="上一篇"><i class="ic i-chevron-left"></i></a>
+    </li>
+    <li class="up"><i class="ic i-arrow-up"></i></li>
+    <li class="down"><i class="ic i-arrow-down"></i></li>
+    <li class="next pjax">
+        <a href="/Other-extensions/expand/" rel="next" title="下一篇"><i class="ic i-chevron-right"></i></a>
+    </li>
+    <li class="percent"></li>
+  </ul>
+</div>
+
+
+        </div>
+        <div class="dimmer"></div>
+      </div>
+    </main>
+    <footer id="footer">
+      <div class="inner">
+        <div class="widgets">
+          
+<div class="rpost pjax">
+  <h2>随机文章</h2>
+  <ul>
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/java/" title="分类于 JAVA后端开发">JAVA后端开发</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/java/%E7%8E%8B%E8%80%85%E8%8D%A3%E8%80%80%E4%B8%AD%E4%B8%80%E4%B8%AA%E8%8B%B1%E9%9B%84%E6%98%AF%E6%80%8E%E4%B9%88%E8%A2%AB%E4%BA%A7%E7%94%9F%E7%9A%84%EF%BC%9F/" title="分类于 王者荣耀中一个英雄是怎么被产生的？">王者荣耀中一个英雄是怎么被产生的？</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/java/%E7%8E%8B%E8%80%85%E8%8D%A3%E8%80%80%E4%B8%AD%E4%B8%80%E4%B8%AA%E8%8B%B1%E9%9B%84%E6%98%AF%E6%80%8E%E4%B9%88%E8%A2%AB%E4%BA%A7%E7%94%9F%E7%9A%84%EF%BC%9F/%E9%98%BF%E9%87%8C%E4%BA%91%E5%AF%B9%E8%B1%A1%E5%AD%98%E5%82%A8Oss/" title="分类于 阿里云对象存储Oss">阿里云对象存储Oss</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/java/%E7%8E%8B%E8%80%85%E8%8D%A3%E8%80%80%E4%B8%AD%E4%B8%80%E4%B8%AA%E8%8B%B1%E9%9B%84%E6%98%AF%E6%80%8E%E4%B9%88%E8%A2%AB%E4%BA%A7%E7%94%9F%E7%9A%84%EF%BC%9F/%E9%98%BF%E9%87%8C%E4%BA%91%E5%AF%B9%E8%B1%A1%E5%AD%98%E5%82%A8Oss/java%E5%9F%BA%E7%A1%80/" title="分类于 java基础">java基础</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/java/%E7%8E%8B%E8%80%85%E8%8D%A3%E8%80%80%E4%B8%AD%E4%B8%80%E4%B8%AA%E8%8B%B1%E9%9B%84%E6%98%AF%E6%80%8E%E4%B9%88%E8%A2%AB%E4%BA%A7%E7%94%9F%E7%9A%84%EF%BC%9F/%E9%98%BF%E9%87%8C%E4%BA%91%E5%AF%B9%E8%B1%A1%E5%AD%98%E5%82%A8Oss/java%E5%9F%BA%E7%A1%80/Maven%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE/" title="分类于 Maven安装配置">Maven安装配置</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/java/%E7%8E%8B%E8%80%85%E8%8D%A3%E8%80%80%E4%B8%AD%E4%B8%80%E4%B8%AA%E8%8B%B1%E9%9B%84%E6%98%AF%E6%80%8E%E4%B9%88%E8%A2%AB%E4%BA%A7%E7%94%9F%E7%9A%84%EF%BC%9F/%E9%98%BF%E9%87%8C%E4%BA%91%E5%AF%B9%E8%B1%A1%E5%AD%98%E5%82%A8Oss/java%E5%9F%BA%E7%A1%80/Maven%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE/docker/" title="分类于 docker">docker</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/java/%E7%8E%8B%E8%80%85%E8%8D%A3%E8%80%80%E4%B8%AD%E4%B8%80%E4%B8%AA%E8%8B%B1%E9%9B%84%E6%98%AF%E6%80%8E%E4%B9%88%E8%A2%AB%E4%BA%A7%E7%94%9F%E7%9A%84%EF%BC%9F/%E9%98%BF%E9%87%8C%E4%BA%91%E5%AF%B9%E8%B1%A1%E5%AD%98%E5%82%A8Oss/java%E5%9F%BA%E7%A1%80/Maven%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE/docker/pom%E6%8A%A5%E9%94%99/" title="分类于 pom报错">pom报错</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/java/%E7%8E%8B%E8%80%85%E8%8D%A3%E8%80%80%E4%B8%AD%E4%B8%80%E4%B8%AA%E8%8B%B1%E9%9B%84%E6%98%AF%E6%80%8E%E4%B9%88%E8%A2%AB%E4%BA%A7%E7%94%9F%E7%9A%84%EF%BC%9F/%E9%98%BF%E9%87%8C%E4%BA%91%E5%AF%B9%E8%B1%A1%E5%AD%98%E5%82%A8Oss/java%E5%9F%BA%E7%A1%80/Maven%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE/docker/pom%E6%8A%A5%E9%94%99/sort/" title="分类于 sort">sort</a>
+</div>
+
+    <span><a href="/java/%E7%8E%8B%E8%80%85%E8%8D%A3%E8%80%80%E4%B8%80%E4%B8%AA%E8%8B%B1%E9%9B%84%E5%A6%82%E4%BD%95%E8%A2%AB%E4%BA%A7%E7%94%9F/" title="王者荣耀中一个英雄是怎么被产生的？">王者荣耀中一个英雄是怎么被产生的？</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/php/" title="分类于 PHP后端开发">PHP后端开发</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/php/php%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0API/" title="分类于 php文件上传API">php文件上传API</a>
+</div>
+
+    <span><a href="/php/phpAPI/" title="php文件上传API">php文件上传API</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/php/" title="分类于 PHP后端开发">PHP后端开发</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/php/thinkphp5-0%E5%AE%9E%E7%8E%B0%E6%8A%95%E7%A5%A8/" title="分类于 thinkphp5.0实现投票">thinkphp5.0实现投票</a>
+</div>
+
+    <span><a href="/php/PHP_vote/" title="thinkphp5.0实现投票">thinkphp5.0实现投票</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/web/" title="分类于 web前端">web前端</a>
+</div>
+
+    <span><a href="/web/%E5%85%89%E6%A0%87%E5%8A%A8%E7%94%BB/" title="利用html+javaSrcipt+css3实现光标动画">利用html+javaSrcipt+css3实现光标动画</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/java/" title="分类于 JAVA后端开发">JAVA后端开发</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/java/java%E5%9F%BA%E7%A1%80/" title="分类于 java基础">java基础</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/java/java%E5%9F%BA%E7%A1%80/Maven%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE/" title="分类于 Maven安装配置">Maven安装配置</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/java/java%E5%9F%BA%E7%A1%80/Maven%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE/docker/" title="分类于 docker">docker</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/java/java%E5%9F%BA%E7%A1%80/Maven%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE/docker/pom%E6%8A%A5%E9%94%99/" title="分类于 pom报错">pom报错</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/java/java%E5%9F%BA%E7%A1%80/Maven%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE/docker/pom%E6%8A%A5%E9%94%99/sort/" title="分类于 sort">sort</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/java/java%E5%9F%BA%E7%A1%80/Maven%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE/docker/pom%E6%8A%A5%E9%94%99/sort/Java%E4%B8%AD%E4%BB%A3%E7%A0%81%E7%94%9F%E6%88%90%E5%99%A8/" title="分类于 Java中代码生成器">Java中代码生成器</a>
+</div>
+
+    <span><a href="/java/generate/" title="Java中代码生成器">Java中代码生成器</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/java/" title="分类于 JAVA后端开发">JAVA后端开发</a>
+</div>
+
+    <span><a href="/java/docker/" title="Docker安装部署">Docker安装部署</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/java/" title="分类于 JAVA后端开发">JAVA后端开发</a>
+</div>
+
+    <span><a href="/java/Maven%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE/" title="Maven的安装及配置">Maven的安装及配置</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/java/" title="分类于 JAVA后端开发">JAVA后端开发</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/java/%E9%98%BF%E9%87%8C%E4%BA%91%E5%AF%B9%E8%B1%A1%E5%AD%98%E5%82%A8Oss/" title="分类于 阿里云对象存储Oss">阿里云对象存储Oss</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/java/%E9%98%BF%E9%87%8C%E4%BA%91%E5%AF%B9%E8%B1%A1%E5%AD%98%E5%82%A8Oss/java%E5%9F%BA%E7%A1%80/" title="分类于 java基础">java基础</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/java/%E9%98%BF%E9%87%8C%E4%BA%91%E5%AF%B9%E8%B1%A1%E5%AD%98%E5%82%A8Oss/java%E5%9F%BA%E7%A1%80/Maven%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE/" title="分类于 Maven安装配置">Maven安装配置</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/java/%E9%98%BF%E9%87%8C%E4%BA%91%E5%AF%B9%E8%B1%A1%E5%AD%98%E5%82%A8Oss/java%E5%9F%BA%E7%A1%80/Maven%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE/docker/" title="分类于 docker">docker</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/java/%E9%98%BF%E9%87%8C%E4%BA%91%E5%AF%B9%E8%B1%A1%E5%AD%98%E5%82%A8Oss/java%E5%9F%BA%E7%A1%80/Maven%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE/docker/pom%E6%8A%A5%E9%94%99/" title="分类于 pom报错">pom报错</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/java/%E9%98%BF%E9%87%8C%E4%BA%91%E5%AF%B9%E8%B1%A1%E5%AD%98%E5%82%A8Oss/java%E5%9F%BA%E7%A1%80/Maven%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE/docker/pom%E6%8A%A5%E9%94%99/sort/" title="分类于 sort">sort</a>
+</div>
+
+    <span><a href="/java/%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0/" title="阿里云对象存储Oss">阿里云对象存储Oss</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/web/" title="分类于 web前端">web前端</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/web/react%E5%92%8Cvue/" title="分类于 react和vue">react和vue</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/web/react%E5%92%8Cvue/%E5%BD%A9%E8%89%B2%E6%96%87%E5%AD%97/" title="分类于 彩色文字">彩色文字</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/web/react%E5%92%8Cvue/%E5%BD%A9%E8%89%B2%E6%96%87%E5%AD%97/%E5%85%89%E6%A0%87%E5%8A%A8%E7%94%BB/" title="分类于 光标动画">光标动画</a>
+</div>
+
+    <span><a href="/web/react%E5%92%8Cvue/" title="React.js与Vue.js流行框架的比较">React.js与Vue.js流行框架的比较</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/java/" title="分类于 JAVA后端开发">JAVA后端开发</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/java/java%E5%9F%BA%E7%A1%80/" title="分类于 java基础">java基础</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/java/java%E5%9F%BA%E7%A1%80/Maven%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE/" title="分类于 Maven安装配置">Maven安装配置</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/java/java%E5%9F%BA%E7%A1%80/Maven%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE/docker/" title="分类于 docker">docker</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/java/java%E5%9F%BA%E7%A1%80/Maven%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE/docker/pom%E6%8A%A5%E9%94%99/" title="分类于 pom报错">pom报错</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/java/java%E5%9F%BA%E7%A1%80/Maven%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE/docker/pom%E6%8A%A5%E9%94%99/sort/" title="分类于 sort">sort</a>
+</div>
+
+    <span><a href="/java/sort/" title="Java中的数组排序">Java中的数组排序</a></span>
+  </li>
+
+  </ul>
+</div>
+<div>
+  <h2>最新评论</h2>
+  <ul class="leancloud-recent-comment"></ul>
+</div>
+
+        </div>
+        <div class="status">
+  <div class="copyright">
+    
+    &copy; 2020 – 
+    <span itemprop="copyrightYear">2021</span>
+    <span class="with-love">
+      <i class="ic i-sakura rotate"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">码坑 @ Code pit</span>
+  </div>
+  <div class="count">
+    <span class="post-meta-item-icon">
+      <i class="ic i-chart-area"></i>
+    </span>
+    <span title="站点总字数">54k 字</span>
+
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="ic i-coffee"></i>
+    </span>
+    <span title="站点阅读时长">49 分钟</span>
+  </div>
+
+
+  <script type="text/javascript">document.write(unescape("%3Cspan id='cnzz_stat_icon_1279352119'%3E%3C/span%3E%3Cscript src='https://s4.cnzz.com/z_stat.php%3Fid%3D1279352119%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));</script>
+
+<span id="momk"></span><span id="momk" style="color: #ff0000;"></span>
+<script type="text/javascript">
+function NewDate(str) {
+str = str.split('-');
+var date = new Date();
+date.setUTCFullYear(str[0], str[1] - 1, str[2]);
+date.setUTCHours(0, 0, 0, 0);
+return date;
+}
+function momxc() {
+var birthDay =NewDate("2020-8-18");
+var today=new Date();
+var timeold=today.getTime()-birthDay.getTime();
+var sectimeold=timeold/1000
+var secondsold=Math.floor(sectimeold);
+var msPerDay=24*60*60*1000; var e_daysold=timeold/msPerDay;
+var daysold=Math.floor(e_daysold);
+var e_hrsold=(daysold-e_daysold)*-24;
+var hrsold=Math.floor(e_hrsold);
+var e_minsold=(hrsold-e_hrsold)*-60;
+var minsold=Math.floor((hrsold-e_hrsold)*-60); var seconds=Math.floor((minsold-e_minsold)*-60).toString();
+document.getElementById("momk").innerHTML = "本站已安全运行"+daysold+"天"+hrsold+"小时"+minsold+"分"+seconds+"秒";
+setTimeout(momxc, 1000);
+}momxc();
+</script>  <style>
+#momk{animation:change 10s infinite;font-weight:800; }
+@keyframes change{0%{color:#5cb85c;}25%{color:#556bd8;}50%{color:#e40707;}75%{color:#66e616;}100% {color:#67bd31;}}
+</style>
+ <br>
+ <!-- 整站统计 -->
+ <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+ <span id="busuanzi_container_site_pv">本站总访问量<span id="busuanzi_value_site_pv"></span>次</span>
+ <span class="post-meta-divider">|</span>
+ <span id="busuanzi_container_site_uv">本站访客数<span id="busuanzi_value_site_uv"</span>人</span>
+</div>
+
+      </div>
+    </footer>
+  </div>
+<script data-config type="text/javascript">
+  var LOCAL = {
+    path: 'java/王者荣耀一个英雄如何被产生/',
+    favicon: {
+      show: "码坑的博客",
+      hide: "码坑的博客"
+    },
+    search : {
+      placeholder: "文章搜索",
+      empty: "关于 「 ${query} 」，什么也没搜到",
+      stats: "${time} ms 内找到 ${hits} 条结果"
+    },
+    valine: true,fancybox: true,copyright: '复制成功，转载请遵守 <i class="ic i-creative-commons"></i>BY-NC-SA 协议。',
+    ignores : [
+      function(uri) {
+        return uri.includes('#');
+      },
+      function(uri) {
+        return new RegExp(LOCAL.path+"$").test(uri);
+      }
+    ]
+  };
+</script>
+
+<script src="https://cdn.polyfill.io/v2/polyfill.js"></script>
+
+<script src="//cdn.jsdelivr.net/combine/npm/pace-js@1.0.2/pace.min.js,npm/pjax@0.2.8/pjax.min.js,npm/whatwg-fetch@3.4.0/dist/fetch.umd.min.js,npm/animejs@3.2.0/lib/anime.min.js,npm/algoliasearch@4/dist/algoliasearch-lite.umd.js,npm/instantsearch.js@4/dist/instantsearch.production.min.js,npm/lozad@1/dist/lozad.min.js,npm/quicklink@2/dist/quicklink.umd.js"></script>
+
+<script src="/js/app.js?v=0.2.3"></script>
+
+
+  <script data-pjax>
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?iASNGexQaR5ypf8WgXK9KWr9-9Nh9j0Va";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
+ <script src='https://api.vvhan.com/api/snow'></script>  
+</html>
